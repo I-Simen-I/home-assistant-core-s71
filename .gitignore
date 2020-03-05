@@ -1,0 +1,37 @@
+# Folders #
+.idea
+*.cloud*
+*.storage/auth*
+*.storage/cloud*
+*.storage/core*
+*.storage/onboarding*
+*deps/*
+*tts/*
+
+# Files #
+.HA_VERSION
+.uuid
+home-assistant.log
+*.db*
+known_devices.yaml
+plex.conf
+secrets.yaml
+home-assistant_v2.db
+auth
+auth_provider.homeassistant
+cloud
+frontend.*
+
+core.config
+core.area_registry
+core.device_registry
+core.config_entries
+core.entity_registry
+core.restore_state
+mobile_app
+google_assistant
+hassio
+http
+
+onboarding
+person
