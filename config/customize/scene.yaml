@@ -1,0 +1,36 @@
+switch.house_scene_morgen:
+  icon: mdi:weather-sunset-up
+  friendly_name: Morgen
+
+switch.house_scene_dag:
+  icon: mdi:home
+  friendly_name: Dag
+
+switch.house_scene_kveld:
+  icon: mdi:weather-night
+  friendly_name: Kveld
+
+switch.house_scene_selskap:
+  icon: mdi:glass-wine
+  friendly_name: Selskap
+
+switch.house_scene_alt_av:
+  icon: mdi:power
+  friendly_name: Alt av
+
+#ETG 1
+switch.tv_rom_scene_dag:
+  icon: mdi:home
+  friendly_name: Dag
+
+switch.tv_rom_scene_kveld:
+  icon: mdi:weather-night
+  friendly_name: Kveld
+
+switch.tv_rom_scene_film:
+  icon: mdi:popcorn
+  friendly_name: Film
+
+switch.tv_rom_scene_av:
+  icon: mdi:power
+  friendly_name: Alt av

@@ -1,0 +1,21 @@
+ # ETG 2
+fibaro_climate_office_nora_power_usage:
+  friendly_name: 'Gulvvarme Kontor Nora'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >-
+    {{ state_attr('switch.office_nora_144_4_152', 'current_power_w') }}
+
+fibaro_climate_office_simen_power_usage:
+  friendly_name: 'Gulvvarme Kontor Simen'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >-
+    {{ state_attr('switch.office_simen_153_4_161', 'current_power_w') }}
+
+fibaro_climate_living_room_power_usage:
+  friendly_name: 'Gulvvarme Loftstue'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >-
+    {{ state_attr('switch.living_room_135_4_143', 'current_power_w') }}

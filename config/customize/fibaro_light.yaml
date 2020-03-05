@@ -1,0 +1,102 @@
+# ETG 0
+light.hall_74_1_77:
+  icon: mdi:ceiling-light
+  friendly_name: Takspotter
+
+light.stairway_54_1_57:
+  icon: mdi:ceiling-light
+  friendly_name: Takspotter i trapperom
+
+light.fitnessroom_99_1_102:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.laundry_room_104_1_107:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.technical_room_109_1_112:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.bedroom_east_129_1_132:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.bedroom_north_124_1_127:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.bathroom_114_1_117:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.bathroom_119_1_122:
+  icon: mdi:window-maximize
+  friendly_name: Speil
+
+# ETG 1
+light.hall_44_1_47:
+  icon: mdi:ceiling-light
+  friendly_name: Takspotter
+
+light.kitchen_49_1_52:
+  icon: mdi:ceiling-light
+  friendly_name: Takspotter
+
+light.kitchen_79_1_82:
+  icon: mdi:wall-sconce-flat
+  friendly_name: Innredning
+
+light.bathroom_39_1_42:
+  icon: mdi:ceiling-light
+  friendly_name: Takspotter
+
+light.bathroom_9_1_12:
+  icon: mdi:window-maximize
+  friendly_name: Speil
+
+light.tv_room_89_1_92:
+  icon: mdi:ceiling-light
+  friendly_name: Takspotter
+
+light.living_room_19_1_22:
+  icon: mdi:ceiling-light
+  friendly_name: Taklamper
+
+light.living_room_94_1_97:
+  icon: mdi:floor-lamp
+  friendly_name: Gulvlamper
+
+# ETG 2
+light.living_room_69_1_72:
+  icon: mdi:ceiling-light
+  friendly_name: Takspotter
+
+light.living_room_24_1_27:
+  icon: mdi:lightbulb-multiple-off
+  friendly_name: Spottkasser
+
+light.office_nora_14_1_17:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.office_simen_4_1_7:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.walk_in_closet_59_1_62:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.bedroom_84_1_87:
+  icon: mdi:ceiling-light
+  friendly_name: Taklampe
+
+light.bathroom_34_1_37:
+  icon: mdi:window-maximize
+  friendly_name: Speil
+
+light.bathroom_29_1_32:
+  icon: mdi:ceiling-light
+  friendly_name: Takspotter

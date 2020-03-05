@@ -1,0 +1,14 @@
+sensor.netatmo_s71_inne_stue_temperature:
+  friendly_name: Temperatur
+
+sensor.netatmo_s71_inne_stue_humidity:
+  friendly_name: Luftfuktighet
+
+sensor.netatmo_s71_inne_stue_noise:
+  friendly_name: Støy
+
+sensor.netatmo_s71_inne_stue_pressure:
+  friendly_name: Trykk
+
+sensor.netatmo_s71_inne_stue_co2:
+  friendly_name: CO2

@@ -1,0 +1,193 @@
+- name: house_morgen
+  entities:
+    #ETG_1
+    light.hall_44_1_47:
+      state: on
+      brightness: 80
+    light.kitchen_49_1_52:
+      state: on
+      brightness: 120
+    #ETG_2
+    light.living_room_69_1_72:
+      state: off
+      brightness: 255
+    light.bathroom_29_1_32:
+      state: on
+      brightness: 60
+    light.bathroom_34_1_37:
+      state: off
+    # Input booleans
+    input_boolean.scene_morgen:
+      state: on
+    input_boolean.scene_dag:
+      state: off
+    input_boolean.scene_kveld:
+      state: off
+    input_boolean.scene_selskap:
+      state: off
+    input_boolean.scene_alt_av:
+      state: off
+
+- name: house_dag
+  entities:
+    #ETG_1
+    light.hall_44_1_47:
+      state: on
+      brightness: 255
+    #ETG_2
+    light.living_room_69_1_72:
+      state: on
+      brightness: 255
+    # Input booleans
+    input_boolean.scene_morgen:
+      state: off
+    input_boolean.scene_dag:
+      state: on
+    input_boolean.scene_kveld:
+      state: off
+    input_boolean.scene_selskap:
+      state: off
+    input_boolean.scene_alt_av:
+      state: off
+
+- name: house_kveld
+  entities:
+    #ETG_1
+    light.hall_44_1_47:
+      state: on
+      brightness: 80
+    light.living_room_94_1_97:
+      state: on
+      brightness: 255
+    #ETG_2
+    light.living_room_69_1_72:
+      state: on
+      brightness: 80
+    light.living_room_177_0_178:
+      state: on
+    # Input booleans
+    input_boolean.scene_morgen:
+      state: off
+    input_boolean.scene_dag:
+      state: off
+    input_boolean.scene_kveld:
+      state: on
+    input_boolean.scene_selskap:
+      state: off
+    input_boolean.scene_alt_av:
+      state: off
+
+- name: house_selskap
+  entities:
+    #ETG_1
+    light.hall_44_1_47:
+      state: on
+      brightness: 120
+    light.kitchen_49_1_52:
+      state: on
+      brightness: 120
+    light.kitchen_79_1_82:
+      state: on
+    light.living_room_19_1_22:
+      state: on
+      brightness: 120
+    light.living_room_94_1_97:
+      state: on
+      brightness: 255
+    #ETG_2
+    light.living_room_69_1_72:
+      state: on
+      brightness: 120
+    light.living_room_177_0_178:
+      state: on
+        # Input booleans
+    input_boolean.scene_morgen:
+      state: off
+    input_boolean.scene_dag:
+      state: off
+    input_boolean.scene_kveld:
+      state: off
+    input_boolean.scene_selskap:
+      state: on
+    input_boolean.scene_alt_av:
+      state: off
+
+- name: house_alt_av
+  entities:
+    #ETG_0
+    light.laundry_room_104_1_107:
+      state: off
+    light.bathroom_114_1_117:
+      state: off
+    light.bathroom_119_1_122:
+      state: off
+    light.hall_74_1_77:
+      state: off
+      brightness: 255
+    light.stairway_54_1_57:
+      state: off
+      brightness: 255
+    light.fitnessroom_99_1_102:
+      state: off
+    light.technical_room_109_1_112:
+      state: off
+    light.bedroom_north_124_1_127:
+      state: off
+    light.bedroom_east_129_1_132:
+      state: off
+    #ETG_1
+    light.hall_44_1_47:
+      state: off
+      brightness: 255
+    light.bathroom_9_1_12:
+      state: off
+    light.bathroom_39_1_42:
+      state: off
+      brightness: 255
+    light.tv_room_89_1_92:
+      state: off
+      brightness: 255
+    light.living_room_19_1_22:
+      state: off
+      brightness: 255
+    light.living_room_94_1_97:
+      state: off
+      brightness: 255
+    light.kitchen_49_1_52:
+      state: off
+      brightness: 255
+    light.kitchen_79_1_82:
+      state: off
+    #ETG_2
+    light.living_room_24_1_27:
+      state: off
+      brightness: 255
+    light.living_room_69_1_72:
+      state: off
+      brightness: 255
+    light.living_room_177_0_178:
+      state: off
+    light.bedroom_84_1_87:
+      state: off
+    light.walk_in_closet_59_1_62:
+      state: off
+    light.bathroom_29_1_32:
+      state: off
+      brightness: 255
+    light.bathroom_34_1_37:
+      state: off
+    light.office_simen_4_1_7:
+      state: off
+    light.office_nora_14_1_17:
+      state: off
+    # Input booleans
+    input_boolean.scene_morgen:
+      state: off
+    input_boolean.scene_dag:
+      state: off
+    input_boolean.scene_kveld:
+      state: off
+    input_boolean.scene_selskap:
+      state: off
+    input_boolean.scene_alt_av:
+      state: on

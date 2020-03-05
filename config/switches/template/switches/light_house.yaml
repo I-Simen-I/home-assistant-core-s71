@@ -1,0 +1,79 @@
+#Huset
+house_scene_morgen:
+  value_template: "{{ is_state('input_boolean.scene_morgen', 'on') }}"
+  turn_on:
+    service: scene.turn_on
+    data:
+      entity_id: scene.house_morgen
+  turn_off:
+
+house_scene_dag:
+  value_template: "{{ is_state('input_boolean.scene_dag', 'on') }}"
+  turn_on:
+    service: scene.turn_on
+    data:
+      entity_id: scene.house_dag
+  turn_off:
+
+house_scene_kveld:
+  value_template: "{{ is_state('input_boolean.scene_kveld', 'on') }}"
+  turn_on:
+    service: scene.turn_on
+    data:
+      entity_id: scene.house_kveld
+  turn_off:
+
+house_scene_selskap:
+  value_template: "{{ is_state('input_boolean.scene_selskap', 'on') }}"
+  turn_on:
+    service: scene.turn_on
+    data:
+      entity_id: scene.house_selskap
+  turn_off:
+
+house_scene_alt_av:
+  value_template: "{{ is_state('input_boolean.scene_alt_av', 'on') }}"
+  turn_on:
+    service: scene.turn_on
+    data:
+      entity_id: scene.house_alt_av
+  turn_off:
+
+#Rom
+#ETG 0
+
+#ETG 1
+#TV-rom
+tv_rom_scene_dag:
+  value_template: "{{ is_state('input_boolean.scene_tv_rom_dag', 'on') }}"
+  turn_on:
+    service: scene.turn_on
+    data:
+      entity_id: scene.tv_rom_dag
+  turn_off:
+
+tv_rom_scene_kveld:
+  value_template: "{{ is_state('input_boolean.scene_tv_rom_kveld', 'on') }}"
+  turn_on:
+    service: scene.turn_on
+    data:
+      entity_id: scene.tv_rom_kveld
+  turn_off:
+
+tv_rom_scene_film:
+  value_template: "{{ is_state('input_boolean.scene_tv_rom_film', 'on') }}"
+  turn_on:
+    service: scene.turn_on
+    data:
+      entity_id: scene.tv_rom_film
+  turn_off:
+
+tv_rom_scene_av:
+  value_template: "{{ is_state('input_boolean.scene_tv_rom_av', 'on') }}"
+  turn_on:
+    service: scene.turn_on
+    data:
+      entity_id: scene.tv_rom_av
+  turn_off:
+
+#ETG 2

@@ -1,0 +1,17 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:map-marker",
+                "id": "jobb",
+                "latitude": 59.91453119910707,
+                "longitude": 10.721167623996736,
+                "name": "Jobb",
+                "passive": false,
+                "radius": 118.09472298000992
+            }
+        ]
+    },
+    "key": "zone",
+    "version": 1
+}

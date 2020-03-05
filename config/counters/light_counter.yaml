@@ -1,0 +1,6 @@
+light_counter:
+    name: Antall lys på
+    icon: mdi:lightbulb-on
+    initial: 0
+    step: 1
+    minimum: 0

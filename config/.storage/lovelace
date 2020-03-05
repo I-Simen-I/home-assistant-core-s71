@@ -1,0 +1,561 @@
+{
+    "data": {
+        "config": {
+            "resources": [
+                {
+                    "type": "js",
+                    "url": "/local/custom_ui/weather-card.js"
+                }
+            ],
+            "title": "S71",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.house_scene_morgen",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                },
+                                {
+                                    "entity": "switch.house_scene_dag",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                },
+                                {
+                                    "entity": "switch.house_scene_kveld",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                },
+                                {
+                                    "entity": "switch.house_scene_selskap",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                },
+                                {
+                                    "entity": "switch.house_scene_alt_av",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                }
+                            ],
+                            "show_icon": true,
+                            "show_name": true,
+                            "show_state": false,
+                            "title": "Stemning",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "counter.light_counter"
+                                },
+                                {
+                                    "entity": "counter.thermostat_counter"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_temperature"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_humidity"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Status Inne",
+                            "type": "entities"
+                        },
+                        {
+                            "entity_sun": "sensor.sun_state",
+                            "entity_weather": "weather.s71",
+                            "netatmo_humidity": "sensor.netatmo_s71_ute_ost_humidity",
+                            "netatmo_pressure": "sensor.netatmo_s71_inne_stue_pressure",
+                            "netatmo_temp": "sensor.netatmo_s71_ute_ost_temperature",
+                            "type": "custom:weather-card"
+                        },
+                        {
+                            "aspect_ratio": "50%",
+                            "camera_image": "camera.front_door",
+                            "entity": "camera.front_door",
+                            "name": "D\u00f8rklokke",
+                            "show_name": true,
+                            "show_state": true,
+                            "type": "picture-entity"
+                        }
+                    ],
+                    "icon": "mdi:home-assistant",
+                    "path": "status",
+                    "title": "status"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.stairway_54_1_57"
+                                },
+                                {
+                                    "entity": "light.hall_74_1_77"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Gang",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.laundry_room_104_1_107"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Vaskerom",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.technical_room_109_1_112"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_wall_plug_rack_power_usage"
+                                },
+                                {
+                                    "entity": "sensor.plex_poseidon"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Teknisk rom",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.fitnessroom_99_1_102"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Treningsrom",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.bedroom_east_129_1_132"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Soverom (\u00d8st)",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.bedroom_north_124_1_127"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Soverom (Nord)",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.bathroom_114_1_117"
+                                },
+                                {
+                                    "entity": "light.bathroom_119_1_122"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Bad",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:home-floor-0",
+                    "path": "etg-0",
+                    "title": "etg 0"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.hall_44_1_47"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Gang",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.bathroom_39_1_42"
+                                },
+                                {
+                                    "entity": "light.bathroom_9_1_12"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Bad",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.tv_room_89_1_92"
+                                },
+                                {
+                                    "entity": "switch.tv_room_181_0_182"
+                                }
+                            ],
+                            "footer": {
+                                "entities": [
+                                    {
+                                        "entity": "switch.tv_rom_scene_dag"
+                                    },
+                                    {
+                                        "entity": "switch.tv_rom_scene_kveld"
+                                    },
+                                    {
+                                        "entity": "switch.tv_rom_scene_film"
+                                    },
+                                    {
+                                        "entity": "switch.tv_rom_scene_av"
+                                    }
+                                ],
+                                "type": "buttons"
+                            },
+                            "show_header_toggle": false,
+                            "title": "Tv-rom",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.kitchen_49_1_52"
+                                },
+                                {
+                                    "entity": "light.kitchen_79_1_82"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Kj\u00f8kken",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.living_room_19_1_22"
+                                },
+                                {
+                                    "entity": "light.living_room_94_1_97"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_temperature"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_humidity"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_noise"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_pressure"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_co2"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Stue",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:home-floor-1",
+                    "path": "etg-1",
+                    "title": "etg 1"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.office_simen_4_1_7"
+                                },
+                                {
+                                    "entity": "climate.office_simen_153_1_156"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_wall_plug_pc_power_usage"
+                                },
+                                {
+                                    "entity": "switch.office_simen_173_0_174"
+                                },
+                                {
+                                    "entity": "switch.office_simen_175_0_176"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Kontor Simen",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.living_room_69_1_72"
+                                },
+                                {
+                                    "entity": "light.living_room_177_0_178"
+                                },
+                                {
+                                    "entity": "climate.living_room_135_1_138"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Loftstue",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.office_nora_14_1_17"
+                                },
+                                {
+                                    "entity": "climate.office_nora_144_1_147"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Kontor Nora",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.bathroom_29_1_32"
+                                },
+                                {
+                                    "entity": "light.bathroom_34_1_37"
+                                },
+                                {
+                                    "entity": "switch.bathroom_187_1_190"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Bad",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.walk_in_closet_59_1_62"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Walk in closet",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.bedroom_84_1_87"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Soverom",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:home-floor-2",
+                    "path": "etg-2",
+                    "title": "etg 2"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.tibber_grid_company"
+                                },
+                                {
+                                    "entity": "sensor.tibber_eac"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "detail": 2,
+                            "entity": "sensor.electricity_price_soholsgata_71",
+                            "graph": "line",
+                            "name": "NOK/kWh siste 24t",
+                            "type": "sensor"
+                        },
+                        {
+                            "detail": 2,
+                            "entity": "sensor.office_nora_144_0_1_146",
+                            "graph": "line",
+                            "icon": "mdi:flash",
+                            "name": "Spenning i nett siste 24t",
+                            "type": "sensor"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "cards": null,
+                                    "entity": "sensor.fibaro_wall_plug_pc_power_usage",
+                                    "max": 1000,
+                                    "min": 0,
+                                    "severity": {
+                                        "green": 0,
+                                        "red": 800,
+                                        "yellow": 400
+                                    },
+                                    "theme": "default",
+                                    "type": "gauge",
+                                    "unit": "w"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_wall_plug_rack_power_usage",
+                                    "max": 750,
+                                    "min": 0,
+                                    "severity": {
+                                        "green": 0,
+                                        "red": 550,
+                                        "yellow": 400
+                                    },
+                                    "theme": "default",
+                                    "type": "gauge",
+                                    "unit": "w"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "cards": null,
+                                    "entity": "sensor.fibaro_climate_office_nora_power_usage",
+                                    "max": 1000,
+                                    "min": 0,
+                                    "severity": {
+                                        "green": 0,
+                                        "red": 800,
+                                        "yellow": 400
+                                    },
+                                    "theme": "default",
+                                    "type": "gauge",
+                                    "unit": "w"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_climate_office_simen_power_usage",
+                                    "max": 1000,
+                                    "min": 0,
+                                    "severity": {
+                                        "green": 0,
+                                        "red": 800,
+                                        "yellow": 400
+                                    },
+                                    "theme": "default",
+                                    "type": "gauge",
+                                    "unit": "w"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_climate_living_room_power_usage",
+                                    "max": 1000,
+                                    "min": 0,
+                                    "severity": {
+                                        "green": 0,
+                                        "red": 800,
+                                        "yellow": 400
+                                    },
+                                    "theme": "default",
+                                    "type": "gauge",
+                                    "unit": "w"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        }
+                    ],
+                    "icon": "mdi:flash",
+                    "panel": false,
+                    "path": "powerusage",
+                    "title": "Str\u00f8m"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.netatmo_s71_inne_stue_temperature",
+                                    "graph": "line",
+                                    "name": "Temperatur inne",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.netatmo_s71_ute_ost_temperature",
+                                    "graph": "line",
+                                    "name": "Temperatur ute",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.netatmo_s71_inne_stue_humidity",
+                                    "graph": "line",
+                                    "name": "Luftfuktighet inne",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "detail": 0,
+                                    "entity": "sensor.netatmo_s71_ute_ost_humidity",
+                                    "graph": "line",
+                                    "name": "Luftfuktighet ute",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.netatmo_s71_inne_stue_co2",
+                                    "graph": "line",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "detail": 2,
+                                    "entity": "sensor.netatmo_s71_inne_stue_pressure",
+                                    "graph": "line",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        }
+                    ],
+                    "icon": "mdi:weather-partly-cloudy",
+                    "panel": false
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

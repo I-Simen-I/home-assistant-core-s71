@@ -1,0 +1,53 @@
+#TV-room
+- name: tv_rom_dag
+  entities:
+    light.tv_room_89_1_92:
+      state: on
+      brightness: 255
+    input_boolean.scene_tv_rom_dag:
+      state: on
+    input_boolean.scene_tv_rom_kveld:
+      state: off
+    input_boolean.scene_tv_rom_film:
+      state: off
+    input_boolean.scene_tv_rom_av:
+      state: off
+- name: tv_rom_kveld
+  entities:
+    light.tv_room_89_1_92:
+      state: on
+      brightness: 80
+    input_boolean.scene_tv_rom_dag:
+      state: off
+    input_boolean.scene_tv_rom_kveld:
+      state: on
+    input_boolean.scene_tv_rom_film:
+      state: off
+    input_boolean.scene_tv_rom_av:
+      state: off
+- name: tv_rom_film
+  entities:
+    light.tv_room_89_1_92:
+      state: on
+      brightness: 40
+    input_boolean.scene_tv_rom_dag:
+      state: off
+    input_boolean.scene_tv_rom_kveld:
+      state: off
+    input_boolean.scene_tv_rom_film:
+      state: on
+    input_boolean.scene_tv_rom_av:
+      state: off
+- name: tv_rom_av
+  entities:
+    light.tv_room_89_1_92:
+      state: off
+      brightness: 255
+    input_boolean.scene_tv_rom_dag:
+      state: off
+    input_boolean.scene_tv_rom_kveld:
+      state: off
+    input_boolean.scene_tv_rom_film:
+      state: off
+    input_boolean.scene_tv_rom_av:
+      state: on

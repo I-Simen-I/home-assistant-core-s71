@@ -1,0 +1,27 @@
+scene_morgen:
+  initial: off
+
+scene_dag:
+  initial: off
+
+scene_kveld:
+  initial: off
+
+scene_selskap:
+  initial: off
+
+scene_alt_av:
+  initial: off
+
+#ETG 1
+scene_tv_rom_dag:
+  initial: off
+
+scene_tv_rom_kveld:
+  initial: off
+
+scene_tv_rom_film:
+  initial: off
+
+scene_tv_rom_av:
+  initial: off

@@ -1,0 +1,15 @@
+# ETG 0
+fibaro_wall_plug_rack_power_usage:
+  friendly_name: 'Server'
+  icon_template: 'mdi:server'
+  unit_of_measurement: "w"
+  value_template: >-
+    {{ state_attr('switch.bathroom_179_0_180', 'current_power_w') }}
+
+# ETG 2
+fibaro_wall_plug_pc_power_usage:
+  friendly_name: 'PC'
+  icon_template: 'mdi:desktop-tower'
+  unit_of_measurement: "w"
+  value_template: >-
+    {{ state_attr('switch.office_simen_173_0_174', 'current_power_w') }}

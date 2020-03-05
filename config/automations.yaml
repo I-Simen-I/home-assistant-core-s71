@@ -1,0 +1,228 @@
+- id: '1583432040450'
+  alias: Scene=house_dag, Tid=16:30, Dager=Alle
+  description: ''
+  trigger:
+  - at: '16:30:00'
+    platform: time
+  condition: []
+  action:
+  - scene: scene.house_dag
+- id: '1583432092936'
+  alias: Scene=house_kveld, Tid=18:00, Dager=Alle
+  description: ''
+  trigger:
+  - at: '18:00:00'
+    platform: time
+  condition: []
+  action:
+  - scene: scene.house_kveld
+- id: '1583432394622'
+  alias: Scene=house_morgen, Tid=05:30, Dager=Ukedager
+  description: ''
+  trigger:
+  - at: 05:30
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - scene: scene.house_morgen
+- id: '1583432669456'
+  alias: Scene=house_alt_av, Tid=22:30, Dager=Man,Tir,Ons,Tor,Sun
+  description: ''
+  trigger:
+  - at: '22:30:00'
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - sun
+  action:
+  - scene: scene.house_alt_av
+- id: '1583432767167'
+  alias: Scene=house_alt_av, Tid=01:30, Dager=Lør,Søn
+  description: ''
+  trigger:
+  - at: 01:30:00
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - sat
+    - sun
+  action:
+  - scene: scene.house_alt_av
+- id: '1583433106041'
+  alias: Switch=Støvsuger, Service=turn_on, Tid=15:00
+  description: ''
+  trigger:
+  - at: '15:00:00'
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.office_simen_175_0_176
+    service: switch.turn_on
+- id: '1583433154447'
+  alias: Switch=Støvsuger, Service=turn_off, Tid=22:00
+  description: ''
+  trigger:
+  - at: '22:00:00'
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.office_simen_175_0_176
+    service: switch.turn_off
+- id: '1583433214285'
+  alias: Switch=Servantskap, Service=turn_on, Tid=16:00
+  description: ''
+  trigger:
+  - at: '16:00:00'
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.bathroom_187_1_190
+    service: switch.turn_on
+- id: '1583433271638'
+  alias: Switch=Servantskap, Service=turn_off, Tid=22:30
+  description: ''
+  trigger:
+  - at: '22:30:00'
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.bathroom_187_1_190
+    service: switch.turn_off
+- id: '1583434699664'
+  alias: counter light_counter increment
+  description: ''
+  trigger:
+  - entity_id: light.laundry_room_104_1_107, light.bathroom_114_1_117, light.bathroom_119_1_122,
+      light.hall_74_1_77, light.stairway_54_1_57, light.fitnessroom_99_1_102, light.technical_room_109_1_112,
+      light.bedroom_north_124_1_127, light.bedroom_east_129_1_132, light.hall_44_1_47,
+      light.bathroom_9_1_12, light.bathroom_39_1_42, light.tv_room_89_1_92, light.living_room_19_1_22,
+      light.living_room_94_1_97, light.kitchen_49_1_52, light.kitchen_79_1_82, light.living_room_24_1_27,
+      light.living_room_69_1_72, light.living_room_177_0_178, light.bedroom_84_1_87,
+      light.walk_in_closet_59_1_62, light.bathroom_29_1_32, light.bathroom_34_1_37,
+      light.office_simen_4_1_7, light.office_nora_14_1_17
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.light_counter
+    service: counter.increment
+- id: '1583435215986'
+  alias: counter light_counter decrement
+  description: ''
+  trigger:
+  - entity_id: light.laundry_room_104_1_107, light.bathroom_114_1_117, light.bathroom_119_1_122,
+      light.hall_74_1_77, light.stairway_54_1_57, light.fitnessroom_99_1_102, light.technical_room_109_1_112,
+      light.bedroom_north_124_1_127, light.bedroom_east_129_1_132, light.hall_44_1_47,
+      light.bathroom_9_1_12, light.bathroom_39_1_42, light.tv_room_89_1_92, light.living_room_19_1_22,
+      light.living_room_94_1_97, light.kitchen_49_1_52, light.kitchen_79_1_82, light.living_room_24_1_27,
+      light.living_room_69_1_72, light.living_room_177_0_178, light.bedroom_84_1_87,
+      light.walk_in_closet_59_1_62, light.bathroom_29_1_32, light.bathroom_34_1_37,
+      light.office_simen_4_1_7, light.office_nora_14_1_17
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.light_counter
+    service: counter.decrement
+- id: '1583435633930'
+  alias: counter thermostat_counter decrement
+  description: ''
+  trigger:
+  - entity_id: switch.office_nora_144_4_152, switch.office_simen_153_4_161, switch.living_room_135_4_143
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.thermostat_counter
+    service: counter.decrement
+- id: '1583435692725'
+  alias: counter thermostat_counter increment
+  description: ''
+  trigger:
+  - entity_id: switch.office_nora_144_4_152, switch.office_simen_153_4_161, switch.living_room_135_4_143
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.thermostat_counter
+    service: counter.increment
+- id: '1583436389800'
+  alias: Scene=tv_room_av, condition=light is off
+  description: ''
+  trigger:
+  - entity_id: light.tv_room_89_1_92
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - scene: scene.tv_rom_av
+- id: '1583436463753'
+  alias: Scene=tv_room_av, condition=light is on
+  description: ''
+  trigger:
+  - entity_id: light.tv_room_89_1_92
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: input_boolean.scene_tv_rom_av
+    service: input_boolean.turn_off
+- id: '1583436784718'
+  alias: input_boolean=scene_alt_av, service=turn_on, condition=light_counter is equal
+    to 0
+  description: ''
+  trigger:
+  - above: '-1'
+    below: '1'
+    entity_id: counter.light_counter
+    platform: numeric_state
+  condition: []
+  action:
+  - data: {}
+    entity_id: input_boolean.scene_alt_av
+    service: input_boolean.turn_on
+  - data: {}
+    entity_id: input_boolean.scene_morgen, input_boolean.scene_dag, input_boolean.scene_kveld,
+      input_boolean.scene_selskap
+    service: input_boolean.turn_off
+- id: '1583436934987'
+  alias: input_boolean=scene_alt_av, service=turn_off, condition=light_counter is
+    greater than 0
+  description: ''
+  trigger:
+  - above: '0'
+    entity_id: counter.light_counter
+    platform: numeric_state
+  condition: []
+  action:
+  - data: {}
+    entity_id: input_boolean.scene_alt_av
+    service: input_boolean.turn_off

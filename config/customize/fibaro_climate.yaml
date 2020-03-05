@@ -1,0 +1,9 @@
+# ETG 2
+climate.living_room_135_1_138:
+  friendly_name: Termostat
+
+climate.office_nora_144_1_147:
+  friendly_name: Termostat
+
+climate.office_simen_153_1_156:
+  friendly_name: Termostat

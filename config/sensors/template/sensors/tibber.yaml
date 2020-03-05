@@ -1,0 +1,33 @@
+tibber_grid_company:
+  friendly_name: 'Netteier'
+  icon_template: 'mdi:transmission-tower'
+  value_template: >-
+    {{ state_attr('sensor.electricity_price_soholsgata_71', 'grid_company') }}
+
+tibber_eac:
+  friendly_name: 'Estimert årlig forbruk'
+  icon_template: 'mdi:chart-line'
+  unit_of_measurement: "kWh"
+  value_template: >-
+    {{ state_attr('sensor.electricity_price_soholsgata_71', 'estimated_annual_consumption') }}
+
+tibber_price_min:
+  friendly_name: 'Min'
+  icon_template: 'mdi:currency-usd'
+  unit_of_measurement: "NOK/kWh"
+  value_template: >-
+    {{ state_attr('sensor.electricity_price_soholsgata_71', 'min_price') }}
+
+tibber_price_avg:
+  friendly_name: 'Avg'
+  icon_template: 'mdi:currency-usd'
+  unit_of_measurement: "NOK/kWh"
+  value_template: >-
+    {{ state_attr('sensor.electricity_price_soholsgata_71', 'avg_price') }}
+
+tibber_price_max:
+  friendly_name: 'Max'
+  icon_template: 'mdi:currency-usd'
+  unit_of_measurement: "NOK/kWh"
+  value_template: >-
+    {{ state_attr('sensor.electricity_price_soholsgata_71', 'max_price') }}
