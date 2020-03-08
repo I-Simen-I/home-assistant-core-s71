@@ -35,3 +35,12 @@ tibber:
 netatmo:
   client_id: !secret netatmo_client_id_key
   client_secret: !secret netatmo_client_secret_key
+
+speedtestdotnet:
+  server_id: 8018
+  scan_interval:
+    minutes: 120
+  monitored_conditions:
+    - ping
+    - download
+    - upload
