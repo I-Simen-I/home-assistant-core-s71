@@ -226,3 +226,19 @@
   - data: {}
     entity_id: input_boolean.scene_alt_av
     service: input_boolean.turn_off
+- id: '1583472778798'
+  alias: Scene=house_alt_av, Tid=06:30, Dager=Ukedager
+  description: ''
+  trigger:
+  - at: 06:30:00
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - scene: scene.house_alt_av
