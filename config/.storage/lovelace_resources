@@ -1,0 +1,13 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": "e8a732232d5b40e6ad03216211f5bc20",
+                "type": "js",
+                "url": "/local/custom_ui/weather-card.js"
+            }
+        ]
+    },
+    "key": "lovelace_resources",
+    "version": 1
+}

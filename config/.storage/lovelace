@@ -1,12 +1,6 @@
 {
     "data": {
         "config": {
-            "resources": [
-                {
-                    "type": "js",
-                    "url": "/local/custom_ui/weather-card.js"
-                }
-            ],
             "title": "S71",
             "views": [
                 {
@@ -378,118 +372,6 @@
                     "icon": "mdi:home-floor-2",
                     "path": "etg-2",
                     "title": "etg 2"
-                },
-                {
-                    "badges": [],
-                    "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.tibber_grid_company"
-                                },
-                                {
-                                    "entity": "sensor.tibber_eac"
-                                }
-                            ],
-                            "type": "entities"
-                        },
-                        {
-                            "detail": 2,
-                            "entity": "sensor.electricity_price_soholsgata_71",
-                            "graph": "line",
-                            "name": "NOK/kWh siste 24t",
-                            "type": "sensor"
-                        },
-                        {
-                            "detail": 2,
-                            "entity": "sensor.office_nora_144_0_1_146",
-                            "graph": "line",
-                            "icon": "mdi:flash",
-                            "name": "Spenning i nett siste 24t",
-                            "type": "sensor"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "cards": null,
-                                    "entity": "sensor.fibaro_wall_plug_pc_power_usage",
-                                    "max": 1000,
-                                    "min": 0,
-                                    "severity": {
-                                        "green": 0,
-                                        "red": 800,
-                                        "yellow": 400
-                                    },
-                                    "theme": "default",
-                                    "type": "gauge",
-                                    "unit": "w"
-                                },
-                                {
-                                    "entity": "sensor.fibaro_wall_plug_rack_power_usage",
-                                    "max": 750,
-                                    "min": 0,
-                                    "severity": {
-                                        "green": 0,
-                                        "red": 550,
-                                        "yellow": 400
-                                    },
-                                    "theme": "default",
-                                    "type": "gauge",
-                                    "unit": "w"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "cards": null,
-                                    "entity": "sensor.fibaro_climate_office_nora_power_usage",
-                                    "max": 1000,
-                                    "min": 0,
-                                    "severity": {
-                                        "green": 0,
-                                        "red": 800,
-                                        "yellow": 400
-                                    },
-                                    "theme": "default",
-                                    "type": "gauge",
-                                    "unit": "w"
-                                },
-                                {
-                                    "entity": "sensor.fibaro_climate_office_simen_power_usage",
-                                    "max": 1000,
-                                    "min": 0,
-                                    "severity": {
-                                        "green": 0,
-                                        "red": 800,
-                                        "yellow": 400
-                                    },
-                                    "theme": "default",
-                                    "type": "gauge",
-                                    "unit": "w"
-                                },
-                                {
-                                    "entity": "sensor.fibaro_climate_living_room_power_usage",
-                                    "max": 1000,
-                                    "min": 0,
-                                    "severity": {
-                                        "green": 0,
-                                        "red": 800,
-                                        "yellow": 400
-                                    },
-                                    "theme": "default",
-                                    "type": "gauge",
-                                    "unit": "w"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        }
-                    ],
-                    "icon": "mdi:flash",
-                    "panel": false,
-                    "path": "powerusage",
-                    "title": "Str\u00f8m"
                 },
                 {
                     "badges": [],

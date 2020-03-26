@@ -1,0 +1,39 @@
+{
+    "data": {
+        "config": {
+            "title": "S71",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "detail": 3,
+                            "entity": "sensor.speedtest_ping",
+                            "graph": "line",
+                            "name": "Ping",
+                            "type": "sensor"
+                        },
+                        {
+                            "detail": 3,
+                            "entity": "sensor.speedtest_download",
+                            "graph": "line",
+                            "name": "Nedlasting",
+                            "type": "sensor"
+                        },
+                        {
+                            "detail": 3,
+                            "entity": "sensor.speedtest_upload",
+                            "graph": "line",
+                            "name": "Opplasting",
+                            "type": "sensor"
+                        }
+                    ],
+                    "icon": "mdi:speedometer",
+                    "title": "ISP_STATS"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_network",
+    "version": 1
+}

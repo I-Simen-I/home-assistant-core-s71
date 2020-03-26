@@ -1,0 +1,44 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:flash",
+                "id": "lovelace_stats",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": true,
+                "title": "Powerusage",
+                "url_path": "lovelace-stats"
+            },
+            {
+                "icon": "mdi:wan",
+                "id": "lovelace_network",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": true,
+                "title": "Network",
+                "url_path": "lovelace-network"
+            },
+            {
+                "icon": "mdi:radiator",
+                "id": "lovelace_heating",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": true,
+                "title": "Heating",
+                "url_path": "lovelace-heating"
+            },
+            {
+                "icon": "mdi:tools",
+                "id": "lovelace_maintenance",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": true,
+                "title": "Maintenance",
+                "url_path": "lovelace-maintenance"
+            }
+        ]
+    },
+    "key": "lovelace_dashboards",
+    "version": 1
+}

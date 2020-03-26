@@ -1,0 +1,51 @@
+{
+    "data": {
+        "config": {
+            "title": "S71",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_temperature"
+                                },
+                                {
+                                    "entity": "counter.thermostat_counter"
+                                }
+                            ],
+                            "title": "Status",
+                            "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "climate.living_room_135_1_138",
+                                    "name": "Loftstue",
+                                    "type": "thermostat"
+                                },
+                                {
+                                    "entity": "climate.office_nora_144_1_147",
+                                    "name": "Kontor Nora",
+                                    "type": "thermostat"
+                                },
+                                {
+                                    "entity": "climate.office_simen_153_1_156",
+                                    "name": "Kontor Simen",
+                                    "type": "thermostat"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        }
+                    ],
+                    "icon": "mdi:thermostat",
+                    "path": "termostater",
+                    "title": "Termostater"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_heating",
+    "version": 1
+}
