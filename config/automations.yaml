@@ -242,3 +242,58 @@
     - fri
   action:
   - scene: scene.house_alt_av
+- id: '1584648685473'
+  alias: notify motion detected ring_doorbel
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.front_door_motion
+    from: 'off'
+    platform: state
+    to: Detected
+  condition:
+  - condition: device
+    device_id: 14ec831b103f4488bf9338477abab59d
+    domain: device_tracker
+    entity_id: device_tracker.sm_g975f_2
+    type: is_not_home
+  action:
+  - data:
+      message: Det er bevegelse ved inngangsdøren
+      title: Bevegelse oppdaget
+    service: notify.mobile_app_simens_galaxy_s10
+- id: '1584649059617'
+  alias: notify slow internet
+  description: ''
+  trigger:
+  - below: '50'
+    entity_id: sensor.speedtest_download
+    platform: numeric_state
+  - below: '50'
+    entity_id: sensor.speedtest_upload
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: DL eller UL er under 50 mbits
+      title: Internett
+    service: notify.mobile_app_simens_galaxy_s10
+  - data:
+      message: DL eller UL er under 50 mbits
+      title: Internett
+    service: notify.mobile_app_simen_sin_ipad
+- id: '1585150325058'
+  alias: notify low battery
+  description: ''
+  trigger:
+  - below: '20'
+    entity_id: sensor.front_door_battery
+    platform: numeric_state
+  - below: '20'
+    entity_id: sensor.netatmo_s71_ute_ost_battery_percent
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: Sjekk batteri på enheter
+      title: Lavt batteri
+    service: notify.mobile_app_simens_galaxy_s10
