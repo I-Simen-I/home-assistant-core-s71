@@ -8,10 +8,10 @@
   action:
   - scene: scene.house_dag
 - id: '1583432092936'
-  alias: Scene=house_kveld, Tid=18:00, Dager=Alle
+  alias: Scene=house_kveld, Tid=19:00, Dager=Alle
   description: ''
   trigger:
-  - at: '18:00:00'
+  - at: '19:00:00'
     platform: time
   condition: []
   action:
