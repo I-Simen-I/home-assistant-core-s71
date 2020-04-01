@@ -92,6 +92,22 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "light.laundry_room_104_1_107"
+                                },
+                                {
+                                    "entity": "sensor.bosch_wawh26m9sn_state"
+                                },
+                                {
+                                    "entity": "sensor.bosch_wtwh7579sn_state"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Vaskerom",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
                                     "entity": "light.stairway_54_1_57"
                                 },
                                 {
@@ -100,16 +116,6 @@
                             ],
                             "show_header_toggle": false,
                             "title": "Gang",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.laundry_room_104_1_107"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Vaskerom",
                             "type": "entities"
                         },
                         {
@@ -239,6 +245,12 @@
                                 },
                                 {
                                     "entity": "light.kitchen_79_1_82"
+                                },
+                                {
+                                    "entity": "sensor.siemens_hm876gdb6s_state"
+                                },
+                                {
+                                    "entity": "sensor.siemens_cs856gdb7s_state"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -272,6 +284,12 @@
                             "show_header_toggle": false,
                             "title": "Stue",
                             "type": "entities"
+                        },
+                        {
+                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                            "image": "/local/images/devices/xiaomi_roborock_s5.png",
+                            "name": "LingLing",
+                            "type": "custom:xiaomi-vacuum-card"
                         }
                     ],
                     "icon": "mdi:home-floor-1",
