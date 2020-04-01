@@ -1,0 +1,2 @@
+- platform: home_connect
+  refresh_token: !secret home_connect_refresh_token

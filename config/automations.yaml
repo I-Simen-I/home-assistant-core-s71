@@ -297,3 +297,71 @@
       message: Sjekk batteri på enheter
       title: Lavt batteri
     service: notify.mobile_app_simens_galaxy_s10
+- id: '1585677159829'
+  alias: notify stekeovn finished
+  description: ''
+  trigger:
+  - entity_id: sensor.siemens_hm876gdb6s_state
+    platform: state
+    to: Ferdig
+  condition: []
+  action:
+  - data:
+      message: Ovnsprogrammet er ferdig
+      title: Stekeovn
+    service: notify.mobile_app_simens_galaxy_s10
+  - data:
+      message: Ovnsprogrammet er ferdig
+      title: Stekeovn
+    service: notify.mobile_app_nora_sin_iphone
+- id: '1585677575120'
+  alias: notify dampovn finished
+  description: ''
+  trigger:
+  - entity_id: sensor.siemens_cs856gdb7s_state
+    platform: state
+    to: Ferdig
+  condition: []
+  action:
+  - data:
+      message: Ovnsprogrammet er ferdig
+      title: Dampovn
+    service: notify.mobile_app_simens_galaxy_s10
+  - data:
+      message: Ovnsprogrammet er ferdig
+      title: Dampovn
+    service: notify.mobile_app_nora_sin_iphone
+- id: '1585677715815'
+  alias: notify vaskemaskin finished
+  description: ''
+  trigger:
+  - entity_id: sensor.bosch_wawh26m9sn_state
+    platform: state
+    to: Ferdig
+  condition: []
+  action:
+  - data:
+      message: Programmet er ferdig
+      title: Vaskemaskin
+    service: notify.mobile_app_simens_galaxy_s10
+  - data:
+      message: Programmet er ferdig
+      title: Vaskemaskin
+    service: notify.mobile_app_nora_sin_iphone
+- id: '1585677804672'
+  alias: notify tørketommel finished
+  description: ''
+  trigger:
+  - entity_id: sensor.bosch_wtwh7579sn_state
+    platform: state
+    to: Ferdig
+  condition: []
+  action:
+  - data:
+      message: Programmet er ferdig
+      title: Tørketormmel
+    service: notify.mobile_app_simens_galaxy_s10
+  - data:
+      message: Programmet er ferdig
+      title: Tørketormmel
+    service: notify.mobile_app_nora_sin_iphone

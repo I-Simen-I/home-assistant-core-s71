@@ -1,0 +1,15 @@
+sensor.siemens_cs856gdb7s_state:
+  friendly_name: 'Dampovn'
+  icon: mdi:dishwasher
+
+sensor.siemens_hm876gdb6s_state:
+  friendly_name: 'Stekeovn'
+  icon: mdi:window-maximize
+
+sensor.bosch_wawh26m9sn_state:
+  friendly_name: 'Vaskemaskin'
+  icon: mdi:washing-machine
+
+sensor.bosch_wtwh7579sn_state:
+  friendly_name: 'Tørketrommel'
+  icon: mdi:tumble-dryer
