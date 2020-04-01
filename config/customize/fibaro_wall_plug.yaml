@@ -17,5 +17,5 @@ switch.office_simen_173_0_174:
   friendly_name: PC
 
 switch.office_simen_175_0_176:
-  icon: mdi:power-socket-eu
-  friendly_name: Støvsuger
+  icon: mdi:battery-charging-70
+  friendly_name: Støvsugerlader
