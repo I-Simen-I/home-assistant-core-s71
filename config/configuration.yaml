@@ -44,3 +44,8 @@ speedtestdotnet:
     - ping
     - download
     - upload
+
+vacuum:
+  - platform: xiaomi_miio
+    host: !secret roborock_s5_ip_lingling
+    token: !secret roborock_s5_token_lingling
