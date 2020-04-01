@@ -9,6 +9,7 @@
 * [Ring Doorbell 2](https://shop.ring.com/products/video-doorbell-2)
 * [Home Connect](https://www.home-connect.com/no/no/)
 * [Xiaomi Roborock](https://en.roborock.com/)
+* [Speedtest.net](https://www.speedtest.net/)
 
 # Images
 ![](doc/images/hac_1.png)
