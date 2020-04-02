@@ -46,6 +46,69 @@ DOOR_STATE_MAP = {
     "locked":"Låst"
 }
 
+PROGRAM_STATE_MAP = {
+    "unknown":"N/A",
+    # Oven
+    "hotaireco":"Varmluft eco",
+    "topbottomheatingeco":"Over-/undervarme eco",
+    "pizzasetting":"Pizzainstilling",
+    "slowcook":"Slow-cooking",
+    "hotair":"4D-varmluft",
+    "topbottomheating":"Over-/undervarme",
+    "hotairgrilling":"Varmluftsgrilling",
+    "bottomheating":"Undervarme",
+    "keepwarm":"Hold varm",
+    "preheatovenware":"Forvarming av ildfaste former",
+    "frozenheatupspecial":"CoolStart-funksjon",
+    "grilllargearea":"Grill, stort område",
+    "grilllargearea":"Grill, lite område",
+    "90watt":"90 W",
+    "180watt":"180 W",
+    "360watt":"360 W",
+    "600watt":"600 W",
+    "max":"Maks W",
+    "preheating":"Forvarming",
+    "pyrolysis":"Pyrolyse selvrengjøring",
+
+    # Steam oven
+    "reheat":"Gjenoppvarming",
+    "steam":"Damp",
+    "doughproving":"Etterheving",
+    "defrosting":"Tining",
+    "drying":"Tørkefunksjon",
+    "descale":"Avkalking",
+    "ecolysis":"Rengjøringsfunksjon",
+
+    # Washer / Dryer
+    "cotton":"Bomull",
+    "cottoneco":"Bomull Eco",
+    "easycare":"Lettstelt",
+    "mix":"Blandet",
+    "delicatessilk":"Finvask/silke",
+    "wool":"Ull",
+    "rinsespindrain":"Skylling",
+    "drumclean":"Trommelrengjøring",
+    "super15":"Super Quick 15",
+    "sensitive":"Allergi pluss",
+    "sportfitness":"Sportstøy",
+    "nightwash":"Nattvask",
+    "duvet":"Dyner",
+    "auto30":"Auto 30",
+    "auto40":"Auto 40",
+    "auto60":"Auto 60",
+    "synthetic":"Lettstelt",
+    "delicates":"Finvask",
+    "woolfinish":"Ullfinish",
+    "timecold":"Tidsstyrt program kaldt",
+    "timewarm":"Tidsstyrt program varmt",
+    "hygiene":"Allergi pluss",
+    "super40":"Super Quick 40",
+    "towels":"Håndklær",
+    "outdoor":"Sportstøy",
+    "downfeathers":"Dunplagg",
+    "blankets":"Dyner",
+    "businessshirts":"Skjorter/Bluser"
+}
 
 def _build_api_url(suffix, haId=None):
     base_url = BASE_URL + 'api/'
@@ -158,23 +221,23 @@ class HCDataReader:
     def handle_key_value(self, key, value):
         updated = True
         if key == 'DISCONNECTED':
-            self._state['state'] = STATE_UNAVAILABLE
-            self._state['door'] = STATE_UNKNOWN
-            self._state['program'] = STATE_UNKNOWN
-            self._state['remaining'] = STATE_UNKNOWN
-            self._state['elapsed'] = STATE_UNKNOWN
+            self._state['state'] = "Frakoblet"
+            self._state['door'] = "N/A"
+            self._state['program'] = "N/A"
+            self._state['remaining'] = "N/A"
+            self._state['elapsed'] = "N/A"
         elif key == 'BSH.Common.Status.DoorState':
             self._state['door'] = DOOR_STATE_MAP[value.rsplit('.',1)[1].lower()]
         elif key == 'BSH.Common.Status.OperationState':
             self._state['state'] = OPERATION_STATE_MAP[value.rsplit('.',1)[1].lower()]
         elif key == 'BSH.Common.Root.ActiveProgram':
-            self._state['program'] = value.rsplit('.',1)[1].lower()
+            self._state['program'] = PROGRAM_STATE_MAP[value.rsplit('.',1)[1].lower()]
         elif key == 'BSH.Common.Option.RemainingProgramTime':
-            self._state['remaining'] = int(value)
+            self._state['remaining'] = str(datetime.timedelta(seconds=int(value)))
         elif key == 'BSH.Common.Option.ElapsedProgramTime':
-            self._state['elapsed'] = int(value)
+            self._state['elapsed'] = str(datetime.timedelta(seconds=int(value)))
         elif key == 'BSH.Common.Root.SelectedProgram':
-            self._state['program'] = 'None'
+            self._state['program'] = PROGRAM_STATE_MAP[value.rsplit('.',1)[1].lower()]
         else:
             _LOGGER.debug('Ignored key-value pair: %s,%s', key, value)
             updated = False
@@ -239,7 +302,7 @@ class HCDataReader:
     def get_data(self, key):
         if key in self._state:
             return self._state[key]
-        return STATE_UNKNOWN
+        return "N/A"
 
     async def fetch_initial_state(self):
         _LOGGER.debug("Fetching initial state")
