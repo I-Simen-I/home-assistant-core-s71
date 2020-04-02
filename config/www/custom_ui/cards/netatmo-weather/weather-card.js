@@ -5,7 +5,7 @@ class WeatherCard extends HTMLElement {
             const link = document.createElement('link');
             link.type = 'text/css';
             link.rel = 'stylesheet';
-            link.href = '/local/custom_ui/weather-card.css';
+            link.href = '/local/custom_ui/cards/netatmo-weather/weather-card.css';
             card.appendChild(link);
             this.content = document.createElement('div');
             this.content.className = 'card';

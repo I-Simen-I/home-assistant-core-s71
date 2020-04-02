@@ -4,17 +4,17 @@
             {
                 "id": "e8a732232d5b40e6ad03216211f5bc20",
                 "type": "js",
-                "url": "/local/custom_ui/weather-card.js"
+                "url": "/local/custom_ui/cards/netatmo-weather/weather-card.js"
             },
             {
                 "id": "d0130eef90c24489b9ff994696ccdc1b",
                 "type": "module",
-                "url": "/local/custom_ui/xiaomi-vacuum-card.js"
+                "url": "/local/custom_ui/cards/xiaomi-vacuum/xiaomi-vacuum-card.js"
             },
             {
                 "id": "062a78e7f11749dfb75a33f9d76a7d80",
                 "type": "module",
-                "url": "/local/custom_ui/multiple-entity-row.js?v=3.1.1"
+                "url": "/local/custom_ui/cards/multiple-entity-row/multiple-entity-row.js?v=3.1.1"
             }
         ]
     },
