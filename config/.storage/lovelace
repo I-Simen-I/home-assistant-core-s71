@@ -95,10 +95,40 @@
                                     "entity": "light.laundry_room_104_1_107"
                                 },
                                 {
-                                    "entity": "sensor.bosch_wawh26m9sn_state"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.bosch_wawh26m9sn_door",
+                                            "name": "D\u00f8r"
+                                        },
+                                        {
+                                            "entity": "sensor.bosch_wawh26m9sn_program",
+                                            "name": "Program"
+                                        },
+                                        {
+                                            "entity": "sensor.bosch_wawh26m9sn_remaining",
+                                            "name": "Tid"
+                                        }
+                                    ],
+                                    "entity": "sensor.bosch_wawh26m9sn_state",
+                                    "type": "custom:multiple-entity-row"
                                 },
                                 {
-                                    "entity": "sensor.bosch_wtwh7579sn_state"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.bosch_wtwh7579sn_door",
+                                            "name": "D\u00f8r"
+                                        },
+                                        {
+                                            "entity": "sensor.bosch_wtwh7579sn_program",
+                                            "name": "Program"
+                                        },
+                                        {
+                                            "entity": "sensor.bosch_wtwh7579sn_remaining",
+                                            "name": "Tid"
+                                        }
+                                    ],
+                                    "entity": "sensor.bosch_wtwh7579sn_state",
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -211,6 +241,55 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "light.kitchen_49_1_52"
+                                },
+                                {
+                                    "entity": "light.kitchen_79_1_82"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.siemens_hm876gdb6s_door",
+                                            "name": "D\u00f8r"
+                                        },
+                                        {
+                                            "entity": "sensor.siemens_hm876gdb6s_program",
+                                            "name": "Program"
+                                        },
+                                        {
+                                            "entity": "sensor.siemens_hm876gdb6s_elapsed",
+                                            "name": "Tid"
+                                        }
+                                    ],
+                                    "entity": "sensor.siemens_hm876gdb6s_state",
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.siemens_cs856gdb7s_door",
+                                            "name": "D\u00f8r"
+                                        },
+                                        {
+                                            "entity": "sensor.siemens_cs856gdb7s_program",
+                                            "name": "Program"
+                                        },
+                                        {
+                                            "entity": "sensor.siemens_cs856gdb7s_elapsed",
+                                            "name": "Tid"
+                                        }
+                                    ],
+                                    "entity": "sensor.siemens_cs856gdb7s_state",
+                                    "type": "custom:multiple-entity-row"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Kj\u00f8kken",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
                                     "entity": "light.tv_room_89_1_92"
                                 },
                                 {
@@ -236,25 +315,6 @@
                             },
                             "show_header_toggle": false,
                             "title": "Tv-rom",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.kitchen_49_1_52"
-                                },
-                                {
-                                    "entity": "light.kitchen_79_1_82"
-                                },
-                                {
-                                    "entity": "sensor.siemens_hm876gdb6s_state"
-                                },
-                                {
-                                    "entity": "sensor.siemens_cs856gdb7s_state"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Kj\u00f8kken",
                             "type": "entities"
                         },
                         {
@@ -308,10 +368,15 @@
                                     "entity": "climate.office_simen_153_1_156"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_wall_plug_pc_power_usage"
-                                },
-                                {
-                                    "entity": "switch.office_simen_173_0_174"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.fibaro_wall_plug_pc_power_usage",
+                                            "name": "Forbruk"
+                                        }
+                                    ],
+                                    "entity": "switch.office_simen_173_0_174",
+                                    "toggle": true,
+                                    "type": "custom:multiple-entity-row"
                                 },
                                 {
                                     "entity": "switch.office_simen_175_0_176"
