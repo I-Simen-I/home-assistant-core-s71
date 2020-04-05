@@ -33,10 +33,10 @@
   action:
   - scene: scene.house_morgen
 - id: '1583432669456'
-  alias: Scene=house_alt_av, Tid=22:30, Dager=Man,Tir,Ons,Tor,Sun
+  alias: Scene=house_alt_av, Tid=22:45, Dager=Man,Tir,Ons,Tor,Sun
   description: ''
   trigger:
-  - at: '22:30:00'
+  - at: '22:45:00'
     platform: time
   condition:
   - condition: time
@@ -365,3 +365,27 @@
       message: Programmet er ferdig
       title: Tørketormmel
     service: notify.mobile_app_nora_sin_iphone
+- id: '1586126391305'
+  alias: counter roborock_dustbin_counter_lingling increment
+  description: ''
+  trigger:
+  - at: '16:00:00'
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.roborock_dustbin_counter_lingling
+    service: counter.increment
+- id: '1586126529481'
+  alias: notify roborock dust bin full
+  description: ''
+  trigger:
+  - entity_id: counter.roborock_dustbin_counter_lingling
+    platform: state
+    to: '100'
+  condition: []
+  action:
+  - data:
+      message: Støvbeholder må tømmes
+      title: LingLing
+    service: notify.mobile_app_simens_galaxy_s10

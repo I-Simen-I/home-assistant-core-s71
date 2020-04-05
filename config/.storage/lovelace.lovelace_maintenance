@@ -21,15 +21,27 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "sensor.battery_level"
+                                    "entity": "sensor.simen_sin_ipad_battery_level"
                                 },
                                 {
                                     "entity": "sensor.battery_level_2"
                                 },
                                 {
                                     "entity": "sensor.battery_level_3"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "counter.roborock_dustbin_counter_lingling",
+                                            "name": "Dust bin %"
+                                        }
+                                    ],
+                                    "entity": "vacuum.xiaomi_vacuum_cleaner",
+                                    "name": "LingLing",
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
+                            "show_header_toggle": false,
                             "title": "Enheter",
                             "type": "entities"
                         }
