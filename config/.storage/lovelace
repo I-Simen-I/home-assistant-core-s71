@@ -409,6 +409,17 @@
                                 },
                                 {
                                     "entity": "climate.office_nora_144_1_147"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.fibaro_wall_plug_desk_power_usage",
+                                            "name": "Forbruk"
+                                        }
+                                    ],
+                                    "entity": "switch.office_nora_192_0_193",
+                                    "toggle": true,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,

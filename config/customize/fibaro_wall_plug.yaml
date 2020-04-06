@@ -19,3 +19,7 @@ switch.office_simen_173_0_174:
 switch.office_simen_175_0_176:
   icon: mdi:battery-charging-70
   friendly_name: Støvsugerlader
+
+switch.office_nora_192_0_193:
+  icon: mdi:desk
+  friendly_name: Skrivebord

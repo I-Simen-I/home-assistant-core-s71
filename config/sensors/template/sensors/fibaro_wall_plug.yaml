@@ -13,3 +13,10 @@ fibaro_wall_plug_pc_power_usage:
   unit_of_measurement: "w"
   value_template: >-
     {{ state_attr('switch.office_simen_173_0_174', 'current_power_w') }}
+
+fibaro_wall_plug_desk_power_usage:
+  friendly_name: 'Skrivebord'
+  icon_template: 'mdi:desk'
+  unit_of_measurement: "w"
+  value_template: >-
+    {{ state_attr('switch.office_nora_192_0_193', 'current_power_w') }}
