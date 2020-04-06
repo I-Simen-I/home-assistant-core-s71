@@ -1,14 +1,32 @@
 # ETG 0
 fibaro_motion_sensor_battery_level_etg0_hall:
-  friendly_name: 'Bevegelsessensor gang ETG 0'
-  icon_template: 'mdi:battery-70'
+  friendly_name: 'Bevegelsessensor gang ETG 0 batterinivå'
+  icon_template: >-
+    {% if (state_attr('binary_sensor.hall_194_0_195', 'battery_level') > 70) %}
+      mdi:battery
+    {% elif (state_attr('binary_sensor.hall_194_0_195', 'battery_level') > 50) %}
+      mdi:battery-70
+    {% elif (state_attr('binary_sensor.hall_194_0_195', 'battery_level') > 20) %}
+      mdi:battery-30
+    {% elif (state_attr('binary_sensor.hall_194_0_195', 'battery_level') < 20) %}
+      mdi:battery-10
+    {% endif %}
   unit_of_measurement: "%"
   value_template: >-
     {{ state_attr('binary_sensor.hall_194_0_195', 'battery_level') }}
 
 fibaro_motion_sensor_battery_level_etg0_stairway:
-  friendly_name: 'Bevegelsessensor trapperom ETG 0'
-  icon_template: 'mdi:battery-70'
+  friendly_name: 'Bevegelsessensor trapperom ETG 0 batterinivå'
+  icon_template: >-
+    {% if (state_attr('binary_sensor.stairway_200_0_201', 'battery_level') > 70) %}
+      mdi:battery
+    {% elif (state_attr('binary_sensor.stairway_200_0_201', 'battery_level') > 50) %}
+      mdi:battery-70
+    {% elif (state_attr('binary_sensor.stairway_200_0_201', 'battery_level') > 20) %}
+      mdi:battery-30
+    {% elif (state_attr('binary_sensor.stairway_200_0_201', 'battery_level') < 20) %}
+      mdi:battery-10
+    {% endif %}
   unit_of_measurement: "%"
   value_template: >-
     {{ state_attr('binary_sensor.stairway_200_0_201', 'battery_level') }}
