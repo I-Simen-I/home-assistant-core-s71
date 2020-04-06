@@ -1,0 +1,15 @@
+# ETG 0
+fibaro_door_sensor_laundry_room:
+  friendly_name: 'Ytterdør'
+  icon_template: >-
+    {% if is_state('binary_sensor.laundry_room_206_0_207', 'on') %}
+      mdi:door-open
+    {% else %}
+      mdi:door
+    {% endif %}
+  value_template: >-
+    {% if is_state('binary_sensor.laundry_room_206_0_207', 'on') %}
+      Åpen
+    {% else %}
+      Lukket
+    {% endif %}

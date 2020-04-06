@@ -95,6 +95,9 @@
                                     "entity": "light.laundry_room_104_1_107"
                                 },
                                 {
+                                    "entity": "sensor.laundry_room_206_0_1_208"
+                                },
+                                {
                                     "entities": [
                                         {
                                             "entity": "sensor.bosch_wawh26m9sn_door",
@@ -129,6 +132,9 @@
                                     ],
                                     "entity": "sensor.bosch_wtwh7579sn_state",
                                     "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_door_sensor_laundry_room"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -142,6 +148,9 @@
                                 },
                                 {
                                     "entity": "light.hall_74_1_77"
+                                },
+                                {
+                                    "entity": "sensor.stairway_200_0_1_202"
                                 }
                             ],
                             "show_header_toggle": false,
