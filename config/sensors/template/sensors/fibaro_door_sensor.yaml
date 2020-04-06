@@ -13,3 +13,10 @@ fibaro_door_sensor_laundry_room:
     {% else %}
       Lukket
     {% endif %}
+
+fibaro_door_sensor_battery_level_laundry_room:
+  friendly_name: 'Dørsensor vaskerom batterinivå'
+  icon_template: 'mdi:battery-70'
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ state_attr('binary_sensor.laundry_room_206_0_207', 'battery_level') }}

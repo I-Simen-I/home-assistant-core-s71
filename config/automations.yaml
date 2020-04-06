@@ -291,6 +291,15 @@
   - below: '20'
     entity_id: sensor.netatmo_s71_ute_ost_battery_percent
     platform: numeric_state
+  - below: '30'
+    entity_id: sensor.fibaro_door_sensor_battery_level_laundry_room
+    platform: numeric_state
+  - below: '30'
+    entity_id: sensor.fibaro_motion_sensor_battery_level_etg0_hall
+    platform: numeric_state
+  - below: '30'
+    entity_id: sensor.fibaro_motion_sensor_battery_level_etg0_stairway
+    platform: numeric_state
   condition: []
   action:
   - data:
