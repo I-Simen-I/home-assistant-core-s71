@@ -303,6 +303,12 @@
                                 },
                                 {
                                     "entity": "switch.tv_room_181_0_182"
+                                },
+                                {
+                                    "entity": "cover.rullgardiner_side"
+                                },
+                                {
+                                    "entity": "cover.rullgardin_bak"
                                 }
                             ],
                             "footer": {

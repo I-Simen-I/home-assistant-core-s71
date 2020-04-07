@@ -21,6 +21,7 @@ group: !include_dir_merge_named groups/
 sensor: !include_dir_merge_list sensors/
 counter: !include_dir_merge_named counters/
 switch: !include_dir_merge_list switches/
+cover: !include_dir_merge_list covers/
 
 #Plugins
 fibaro:
@@ -49,3 +50,6 @@ vacuum:
   - platform: xiaomi_miio
     host: !secret roborock_s5_ip_lingling
     token: !secret roborock_s5_token_lingling
+
+tradfri:
+  host: !secret ikea_tradfri_gateway_ip

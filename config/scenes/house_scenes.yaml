@@ -65,6 +65,9 @@
       brightness: 80
     light.living_room_177_0_178:
       state: on
+    cover.rullgardiner_side:
+      state: open
+      current_position: 50
     # Input booleans
     input_boolean.scene_morgen:
       state: off
@@ -100,7 +103,7 @@
       brightness: 120
     light.living_room_177_0_178:
       state: on
-        # Input booleans
+    # Input booleans
     input_boolean.scene_morgen:
       state: off
     input_boolean.scene_dag:
@@ -158,6 +161,12 @@
       brightness: 255
     light.kitchen_79_1_82:
       state: off
+    cover.rullgardin_bak:
+      state: open
+      current_position: 100
+    cover.rullgardiner_side:
+      state: open
+      current_position: 100
     #ETG_2
     light.living_room_24_1_27:
       state: off

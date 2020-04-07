@@ -1,0 +1,10 @@
+- platform: group
+  name: Rullgardiner side
+  entities:
+    - cover.tradfri_blind
+    - cover.tradfri_blind_2
+
+- platform: group
+  name: Rullgardin bak
+  entities:
+    - cover.tradfri_blind_3

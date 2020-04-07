@@ -30,6 +30,10 @@
     light.tv_room_89_1_92:
       state: on
       brightness: 40
+    cover.rullgardin_bak:
+      state: closed
+    cover.rullgardiner_side:
+      state: closed
     input_boolean.scene_tv_rom_dag:
       state: off
     input_boolean.scene_tv_rom_kveld:
