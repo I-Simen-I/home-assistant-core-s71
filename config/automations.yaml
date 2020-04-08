@@ -398,3 +398,15 @@
       message: Støvbeholder må tømmes
       title: LingLing
     service: notify.mobile_app_simens_galaxy_s10
+- id: '1586292981334'
+  alias: Scene=tv_rom_film, condition=plex_apple_tv_state is playing
+  description: ''
+  trigger:
+  - entity_id: media_player.plex_plex_for_apple_tv_stua
+    platform: state
+    to: playing
+  condition: []
+  action:
+  - data: {}
+    entity_id: scene.tv_rom_film
+    service: scene.turn_on
