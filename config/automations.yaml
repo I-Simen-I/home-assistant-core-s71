@@ -8,10 +8,10 @@
   action:
   - scene: scene.house_dag
 - id: '1583432092936'
-  alias: Scene=house_kveld, Tid=19:00, Dager=Alle
+  alias: Scene=house_kveld, Tid=19:30, Dager=Alle
   description: ''
   trigger:
-  - at: '19:00:00'
+  - at: '19:30:00'
     platform: time
   condition: []
   action:
@@ -410,3 +410,15 @@
   - data: {}
     entity_id: scene.tv_rom_film
     service: scene.turn_on
+- id: '1586799578619'
+  alias: cover=rullgardiner_side, tid=18:30, rullgardiner=70%
+  description: ''
+  trigger:
+  - at: '18:30:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      position: 30
+    entity_id: cover.rullgardiner_side
+    service: cover.set_cover_position
