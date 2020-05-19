@@ -112,11 +112,11 @@
   - entity_id: light.laundry_room_104_1_107, light.bathroom_114_1_117, light.bathroom_119_1_122,
       light.hall_74_1_77, light.stairway_54_1_57, light.fitnessroom_99_1_102, light.technical_room_109_1_112,
       light.bedroom_north_124_1_127, light.bedroom_east_129_1_132, light.hall_44_1_47,
-      light.bathroom_9_1_12, light.bathroom_39_1_42, light.tv_room_89_1_92, light.living_room_19_1_22,
-      light.living_room_94_1_97, light.kitchen_49_1_52, light.kitchen_79_1_82, light.living_room_24_1_27,
-      light.living_room_69_1_72, light.living_room_177_0_178, light.bedroom_84_1_87,
-      light.walk_in_closet_59_1_62, light.bathroom_29_1_32, light.bathroom_34_1_37,
-      light.office_simen_4_1_7, light.office_nora_14_1_17
+      light.bathroom_9_1_12, light.bathroom_39_1_42, light.tv_room_89_1_92, light.tv_room_sofa,
+      light.living_room_19_1_22, light.living_room_94_1_97, light.kitchen_49_1_52,
+      light.kitchen_79_1_82, light.living_room_24_1_27, light.living_room_69_1_72,
+      light.living_room_177_0_178, light.bedroom_84_1_87, light.walk_in_closet_59_1_62,
+      light.bathroom_29_1_32, light.bathroom_34_1_37, light.office_simen_4_1_7, light.office_nora_14_1_17
     from: 'off'
     platform: state
     to: 'on'
@@ -132,11 +132,11 @@
   - entity_id: light.laundry_room_104_1_107, light.bathroom_114_1_117, light.bathroom_119_1_122,
       light.hall_74_1_77, light.stairway_54_1_57, light.fitnessroom_99_1_102, light.technical_room_109_1_112,
       light.bedroom_north_124_1_127, light.bedroom_east_129_1_132, light.hall_44_1_47,
-      light.bathroom_9_1_12, light.bathroom_39_1_42, light.tv_room_89_1_92, light.living_room_19_1_22,
-      light.living_room_94_1_97, light.kitchen_49_1_52, light.kitchen_79_1_82, light.living_room_24_1_27,
-      light.living_room_69_1_72, light.living_room_177_0_178, light.bedroom_84_1_87,
-      light.walk_in_closet_59_1_62, light.bathroom_29_1_32, light.bathroom_34_1_37,
-      light.office_simen_4_1_7, light.office_nora_14_1_17
+      light.bathroom_9_1_12, light.bathroom_39_1_42, light.tv_room_89_1_92, light.tv_room_sofa,
+      light.living_room_19_1_22, light.living_room_94_1_97, light.kitchen_49_1_52,
+      light.kitchen_79_1_82, light.living_room_24_1_27, light.living_room_69_1_72,
+      light.living_room_177_0_178, light.bedroom_84_1_87, light.walk_in_closet_59_1_62,
+      light.bathroom_29_1_32, light.bathroom_34_1_37, light.office_simen_4_1_7, light.office_nora_14_1_17
     from: 'on'
     platform: state
     to: 'off'
@@ -175,18 +175,29 @@
   alias: Scene=tv_room_av, condition=light is off
   description: ''
   trigger:
-  - entity_id: light.tv_room_89_1_92
+  - entity_id: light.tv_room_89_1_92, light.tv_room_sofa
     from: 'on'
     platform: state
     to: 'off'
-  condition: []
+  condition:
+  - condition: state
+    entity_id: light.tv_room_sofa
+    state: 'off'
+  - condition: state
+    entity_id: light.tv_room_89_1_92
+    state: 'off'
   action:
-  - scene: scene.tv_rom_av
+  - data: {}
+    entity_id: input_boolean.scene_tv_rom_av
+    service: input_boolean.turn_on
+  - data: {}
+    entity_id: input_boolean.scene_tv_rom_dag, input_boolean.scene_tv_rom_kveld, input_boolean.scene_tv_rom_film
+    service: input_boolean.turn_off
 - id: '1583436463753'
   alias: Scene=tv_room_av, condition=light is on
   description: ''
   trigger:
-  - entity_id: light.tv_room_89_1_92
+  - entity_id: light.tv_room_89_1_92, light.tv_room_sofa
     from: 'off'
     platform: state
     to: 'on'

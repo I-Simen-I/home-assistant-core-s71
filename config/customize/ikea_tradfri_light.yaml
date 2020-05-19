@@ -1,0 +1,4 @@
+# ETG 1
+light.tv_room_sofa:
+  icon: mdi:sofa
+  friendly_name: Sofa

@@ -4,6 +4,8 @@
     light.tv_room_89_1_92:
       state: on
       brightness: 255
+    light.tv_room_sofa:
+      state: off
     input_boolean.scene_tv_rom_dag:
       state: on
     input_boolean.scene_tv_rom_kveld:
@@ -17,6 +19,8 @@
     light.tv_room_89_1_92:
       state: on
       brightness: 80
+    light.tv_room_sofa:
+      state: off
     input_boolean.scene_tv_rom_dag:
       state: off
     input_boolean.scene_tv_rom_kveld:
@@ -28,8 +32,9 @@
 - name: tv_rom_film
   entities:
     light.tv_room_89_1_92:
+      state: off
+    light.tv_room_sofa:
       state: on
-      brightness: 40
     cover.rullgardin_bak:
       state: closed
     cover.rullgardiner_side:
@@ -47,6 +52,8 @@
     light.tv_room_89_1_92:
       state: off
       brightness: 255
+    light.tv_room_sofa:
+      state: off
     input_boolean.scene_tv_rom_dag:
       state: off
     input_boolean.scene_tv_rom_kveld:

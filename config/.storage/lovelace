@@ -302,6 +302,9 @@
                                     "entity": "light.tv_room_89_1_92"
                                 },
                                 {
+                                    "entity": "light.tv_room_sofa"
+                                },
+                                {
                                     "entity": "switch.tv_room_181_0_182"
                                 },
                                 {

@@ -12,6 +12,7 @@
 * [Home Connect](https://www.home-connect.com/no/no/)
 * [Xiaomi Roborock](https://en.roborock.com/)
 * [IKEA Trådfri rullgardin](https://www.ikea.com/no/no/p/fyrtur-lystett-rullegardin-tradlos-batteridrevet-gra-90408170/)
+* [IKEA Trådfri RGB pære](https://www.ikea.com/no/no/p/tradfri-led-paere-e27-600-lumen-kan-dimmes-tradlost-farge-og-varmhvit-til-kaldhvit-farge-og-hvitt-spektrum-globe-opalhvit-00408612/)
 * [Speedtest.net](https://www.speedtest.net/)
 
 # Images

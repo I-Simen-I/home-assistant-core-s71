@@ -1,0 +1,7 @@
+- platform: group
+  name: tv_room_sofa
+  entities:
+    - light.sofa_hoyre
+    - light.sofa_venstre
+    - light.tv_benk_hoyre
+    - light.tv_benk_venstre

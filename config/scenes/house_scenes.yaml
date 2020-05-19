@@ -147,6 +147,8 @@
     light.tv_room_89_1_92:
       state: off
       brightness: 255
+    light.tv_room_sofa:
+      state: off
     light.living_room_19_1_22:
       state: off
       brightness: 255
