@@ -8,10 +8,10 @@
   action:
   - scene: scene.house_dag
 - id: '1583432092936'
-  alias: Scene=house_kveld, Tid=19:30, Dager=Alle
+  alias: Scene=house_kveld, Tid=20:30, Dager=Alle
   description: ''
   trigger:
-  - at: '19:30:00'
+  - at: '20:30:00'
     platform: time
   condition: []
   action:
@@ -95,10 +95,10 @@
     entity_id: switch.bathroom_187_1_190
     service: switch.turn_on
 - id: '1583433271638'
-  alias: Switch=Servantskap, Service=turn_off, Tid=22:30
+  alias: Switch=Servantskap, Service=turn_off, Tid=23:00
   description: ''
   trigger:
-  - at: '22:30:00'
+  - at: '23:00:00'
     platform: time
   condition: []
   action:
@@ -411,10 +411,10 @@
     entity_id: scene.tv_rom_film
     service: scene.turn_on
 - id: '1586799578619'
-  alias: cover=rullgardiner_side, tid=18:30, rullgardiner=70%
+  alias: cover=rullgardiner_side, tid=16:30, rullgardiner=70%
   description: ''
   trigger:
-  - at: '18:30:00'
+  - at: '16:30:00'
     platform: time
   condition: []
   action:
