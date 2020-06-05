@@ -54,14 +54,44 @@
                                     "entity": "counter.thermostat_counter"
                                 },
                                 {
-                                    "entity": "sensor.netatmo_s71_inne_stue_temperature"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.stairway_216_0_1_218",
+                                            "name": "Etg 0"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_210_0_1_212",
+                                            "name": "Etg 1"
+                                        },
+                                        {
+                                            "entity": "sensor.netatmo_s71_inne_stue_temperature",
+                                            "name": "Etg 2"
+                                        }
+                                    ],
+                                    "entity": "sensor.average_temperature",
+                                    "type": "custom:multiple-entity-row"
                                 },
                                 {
-                                    "entity": "sensor.netatmo_s71_inne_stue_humidity"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.stairway_216_0_3_220",
+                                            "name": "Etg 0"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_210_0_3_214",
+                                            "name": "Etg 1"
+                                        },
+                                        {
+                                            "entity": "sensor.netatmo_s71_inne_stue_humidity",
+                                            "name": "Etg 2"
+                                        }
+                                    ],
+                                    "entity": "sensor.average_humidity",
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,
-                            "title": "Status Inne",
+                            "title": "Status inne",
                             "type": "entities"
                         },
                         {
@@ -84,7 +114,8 @@
                     ],
                     "icon": "mdi:home-assistant",
                     "path": "status",
-                    "title": "status"
+                    "title": "status",
+                    "visible": []
                 },
                 {
                     "badges": [],
@@ -150,7 +181,10 @@
                                     "entity": "light.hall_74_1_77"
                                 },
                                 {
-                                    "entity": "sensor.stairway_200_0_1_202"
+                                    "entity": "sensor.stairway_216_0_1_218"
+                                },
+                                {
+                                    "entity": "sensor.stairway_216_0_3_220"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -344,19 +378,10 @@
                                     "entity": "light.living_room_94_1_97"
                                 },
                                 {
-                                    "entity": "sensor.netatmo_s71_inne_stue_temperature"
+                                    "entity": "sensor.living_room_210_0_1_212"
                                 },
                                 {
-                                    "entity": "sensor.netatmo_s71_inne_stue_humidity"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_s71_inne_stue_noise"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_s71_inne_stue_pressure"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_s71_inne_stue_co2"
+                                    "entity": "sensor.living_room_210_0_3_214"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -414,6 +439,21 @@
                                 },
                                 {
                                     "entity": "climate.living_room_135_1_138"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_temperature"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_humidity"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_noise"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_pressure"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_co2"
                                 }
                             ],
                             "show_header_toggle": false,

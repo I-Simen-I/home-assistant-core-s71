@@ -1,0 +1,23 @@
+average_temperature:
+  friendly_name: 'Temperatur'
+  icon_template: 'mdi:thermometer'
+  value_template: >-
+    {{ ((
+            float(states('sensor.stairway_216_0_1_218'))
+          + float(states('sensor.living_room_210_0_1_212'))
+          + float(states('sensor.netatmo_s71_inne_stue_temperature'))
+         )  / 3) | round(1)
+    }}
+  unit_of_measurement: '°C'
+
+average_humidity:
+  friendly_name: 'Luftfuktighet'
+  icon_template: 'mdi:water-percent'
+  value_template: >-
+    {{ ((
+            float(states('sensor.stairway_216_0_3_220'))
+          + float(states('sensor.living_room_210_0_3_214'))
+          + float(states('sensor.netatmo_s71_inne_stue_humidity'))
+         )  / 3) | round(0)
+    }}
+  unit_of_measurement: '%'

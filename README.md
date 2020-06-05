@@ -14,6 +14,7 @@
 * [IKEA Trådfri rullgardin](https://www.ikea.com/no/no/p/fyrtur-lystett-rullegardin-tradlos-batteridrevet-gra-90408170/)
 * [IKEA Trådfri RGB pære](https://www.ikea.com/no/no/p/tradfri-led-paere-e27-600-lumen-kan-dimmes-tradlost-farge-og-varmhvit-til-kaldhvit-farge-og-hvitt-spektrum-globe-opalhvit-00408612/)
 * [Speedtest.net](https://www.speedtest.net/)
+* [Aeotec MultiSensor 6](https://aeotec.com/z-wave-sensor/)
 
 # Images
 ![](doc/images/hac_1.png)

@@ -1,0 +1,164 @@
+{
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "content": "# Temperatur",
+                            "type": "markdown"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.stairway_216_0_1_218",
+                                    "max": 40,
+                                    "min": 0,
+                                    "name": "Etg 0",
+                                    "severity": {
+                                        "green": 17,
+                                        "red": 30,
+                                        "yellow": 24
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.living_room_210_0_1_212",
+                                    "max": 40,
+                                    "min": 0,
+                                    "name": "Etg 1",
+                                    "severity": {
+                                        "green": 17,
+                                        "red": 30,
+                                        "yellow": 24
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_temperature",
+                                    "max": 40,
+                                    "min": 0,
+                                    "name": "Etg 2",
+                                    "severity": {
+                                        "green": 17,
+                                        "red": 30,
+                                        "yellow": 24
+                                    },
+                                    "type": "gauge"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "detail": 2,
+                            "entity": "sensor.average_temperature",
+                            "graph": "line",
+                            "name": "Gjennomsnittlig temperatur",
+                            "type": "sensor"
+                        },
+                        {
+                            "content": "# Luftfuktighet",
+                            "type": "markdown"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.stairway_216_0_3_220",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "Etg 0",
+                                    "severity": {
+                                        "green": 25,
+                                        "red": 50,
+                                        "yellow": 40
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.living_room_210_0_3_214",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "Etg 1",
+                                    "severity": {
+                                        "green": 25,
+                                        "red": 50,
+                                        "yellow": 40
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_humidity",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "Etg 2",
+                                    "severity": {
+                                        "green": 25,
+                                        "red": 50,
+                                        "yellow": 40
+                                    },
+                                    "type": "gauge"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "detail": 2,
+                            "entity": "sensor.average_humidity",
+                            "graph": "line",
+                            "name": "Gjennomsnittlig luftfuktighet",
+                            "type": "sensor"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "counter.thermostat_counter"
+                                }
+                            ],
+                            "title": "Varmematter",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:chart-bar",
+                    "path": "stats",
+                    "title": "stats"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entity": "climate.living_room_135_1_138",
+                                    "name": "Loftstue",
+                                    "type": "thermostat"
+                                },
+                                {
+                                    "entity": "climate.office_nora_144_1_147",
+                                    "name": "Kontor (Nora)",
+                                    "type": "thermostat"
+                                },
+                                {
+                                    "entity": "climate.office_simen_153_1_156",
+                                    "name": "Kontor (Simen)",
+                                    "type": "thermostat"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "aspect_ratio": "80%",
+                            "type": "iframe",
+                            "url": "https://homesolutions.systemair.com/"
+                        }
+                    ],
+                    "icon": "mdi:fan",
+                    "path": "controller",
+                    "title": "controller"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_climate",
+    "version": 1
+}
