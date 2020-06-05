@@ -260,7 +260,7 @@
   - entity_id: binary_sensor.front_door_motion
     from: 'off'
     platform: state
-    to: Detected
+    to: 'on'
   condition:
   - condition: device
     device_id: 14ec831b103f4488bf9338477abab59d
