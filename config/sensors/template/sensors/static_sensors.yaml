@@ -1,0 +1,15 @@
+# Climate
+multiple_entity_row_climate:
+  friendly_name: 'Klima'
+  icon_template: 'mdi:home-heart'
+  value_template: 1
+
+multiple_entity_row_temperature:
+  friendly_name: 'Temperatur'
+  icon_template: 'mdi:thermometer'
+  value_template: 1
+
+multiple_entity_row_humidity:
+  friendly_name: 'Luftfuktighet'
+  icon_template: 'mdi:water-percent'
+  value_template: 1

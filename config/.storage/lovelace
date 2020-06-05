@@ -68,7 +68,12 @@
                                             "name": "Etg 2"
                                         }
                                     ],
-                                    "entity": "sensor.average_temperature",
+                                    "entity": "sensor.multiple_entity_row_temperature",
+                                    "secondary_info": {
+                                        "entity": "sensor.average_temperature",
+                                        "name": null
+                                    },
+                                    "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
                                 {
@@ -86,7 +91,12 @@
                                             "name": "Etg 2"
                                         }
                                     ],
-                                    "entity": "sensor.average_humidity",
+                                    "entity": "sensor.multiple_entity_row_humidity",
+                                    "secondary_info": {
+                                        "entity": "sensor.average_humidity",
+                                        "name": null
+                                    },
+                                    "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 }
                             ],
@@ -126,7 +136,14 @@
                                     "entity": "light.laundry_room_104_1_107"
                                 },
                                 {
-                                    "entity": "sensor.laundry_room_206_0_1_208"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.laundry_room_206_0_1_208"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 },
                                 {
                                     "entities": [
@@ -181,10 +198,17 @@
                                     "entity": "light.hall_74_1_77"
                                 },
                                 {
-                                    "entity": "sensor.stairway_216_0_1_218"
-                                },
-                                {
-                                    "entity": "sensor.stairway_216_0_3_220"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.stairway_216_0_1_218"
+                                        },
+                                        {
+                                            "entity": "sensor.stairway_216_0_3_220"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -197,10 +221,19 @@
                                     "entity": "light.technical_room_109_1_112"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_wall_plug_rack_power_usage"
-                                },
-                                {
-                                    "entity": "sensor.plex_poseidon"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.plex_poseidon",
+                                            "name": "Plex"
+                                        },
+                                        {
+                                            "entity": "sensor.fibaro_wall_plug_rack_power_usage",
+                                            "name": "Forbruk"
+                                        }
+                                    ],
+                                    "entity": "sensor.fibaro_wall_plug_rack_power_usage",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -378,10 +411,17 @@
                                     "entity": "light.living_room_94_1_97"
                                 },
                                 {
-                                    "entity": "sensor.living_room_210_0_1_212"
-                                },
-                                {
-                                    "entity": "sensor.living_room_210_0_3_214"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.living_room_210_0_1_212"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_210_0_3_214"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -441,19 +481,23 @@
                                     "entity": "climate.living_room_135_1_138"
                                 },
                                 {
-                                    "entity": "sensor.netatmo_s71_inne_stue_temperature"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_s71_inne_stue_humidity"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_s71_inne_stue_noise"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_s71_inne_stue_pressure"
-                                },
-                                {
-                                    "entity": "sensor.netatmo_s71_inne_stue_co2"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.netatmo_s71_inne_stue_temperature"
+                                        },
+                                        {
+                                            "entity": "sensor.netatmo_s71_inne_stue_humidity"
+                                        },
+                                        {
+                                            "entity": "sensor.netatmo_s71_inne_stue_noise"
+                                        },
+                                        {
+                                            "entity": "sensor.netatmo_s71_inne_stue_co2"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -532,7 +576,7 @@
                             "cards": [
                                 {
                                     "detail": 2,
-                                    "entity": "sensor.netatmo_s71_inne_stue_temperature",
+                                    "entity": "sensor.average_temperature",
                                     "graph": "line",
                                     "name": "Temperatur inne",
                                     "type": "sensor"
@@ -551,7 +595,7 @@
                             "cards": [
                                 {
                                     "detail": 2,
-                                    "entity": "sensor.netatmo_s71_inne_stue_humidity",
+                                    "entity": "sensor.average_humidity",
                                     "graph": "line",
                                     "name": "Luftfuktighet inne",
                                     "type": "sensor"
