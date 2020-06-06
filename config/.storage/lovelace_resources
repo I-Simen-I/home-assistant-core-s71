@@ -15,6 +15,11 @@
                 "id": "062a78e7f11749dfb75a33f9d76a7d80",
                 "type": "module",
                 "url": "/local/custom_ui/cards/multiple-entity-row/multiple-entity-row.js?v=3.1.1"
+            },
+            {
+                "id": "25b45c33737440f5ab33977bc74ea5ad",
+                "type": "module",
+                "url": "/local/custom_ui/cards/mini-graph-card/mini-graph-card-bundle.js"
             }
         ]
     },

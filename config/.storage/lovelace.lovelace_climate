@@ -1,6 +1,7 @@
 {
     "data": {
         "config": {
+            "title": "S71",
             "views": [
                 {
                     "badges": [],
@@ -51,11 +52,28 @@
                             "type": "horizontal-stack"
                         },
                         {
-                            "detail": 2,
-                            "entity": "sensor.average_temperature",
-                            "graph": "line",
-                            "name": "Gjennomsnittlig temperatur",
-                            "type": "sensor"
+                            "align_state": "center",
+                            "entities": [
+                                {
+                                    "entity": "sensor.average_temperature",
+                                    "name": "Gjennomsnitt"
+                                },
+                                {
+                                    "entity": "sensor.stairway_216_0_1_218",
+                                    "name": "Etg 0"
+                                },
+                                {
+                                    "entity": "sensor.living_room_210_0_1_212",
+                                    "name": "Etg 1"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_temperature",
+                                    "name": "Etg 2"
+                                }
+                            ],
+                            "hours_to_show": 168,
+                            "name": "Temperatur",
+                            "type": "custom:mini-graph-card"
                         },
                         {
                             "content": "# Luftfuktighet",
@@ -103,11 +121,28 @@
                             "type": "horizontal-stack"
                         },
                         {
-                            "detail": 2,
-                            "entity": "sensor.average_humidity",
-                            "graph": "line",
-                            "name": "Gjennomsnittlig luftfuktighet",
-                            "type": "sensor"
+                            "align_state": "center",
+                            "entities": [
+                                {
+                                    "entity": "sensor.average_humidity",
+                                    "name": "Gjennomsnitt"
+                                },
+                                {
+                                    "entity": "sensor.stairway_216_0_3_220",
+                                    "name": "Etg 0"
+                                },
+                                {
+                                    "entity": "sensor.living_room_210_0_3_214",
+                                    "name": "Etg 1"
+                                },
+                                {
+                                    "entity": "sensor.netatmo_s71_inne_stue_humidity",
+                                    "name": "Etg 2"
+                                }
+                            ],
+                            "hours_to_show": 168,
+                            "name": "Luftfuktighet",
+                            "type": "custom:mini-graph-card"
                         },
                         {
                             "entities": [
