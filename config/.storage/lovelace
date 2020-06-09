@@ -56,11 +56,11 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.stairway_222_0_1_224",
+                                            "entity": "sensor.stairway_228_0_1_230",
                                             "name": "Etg 0"
                                         },
                                         {
-                                            "entity": "sensor.living_room_210_0_1_212",
+                                            "entity": "sensor.living_room_234_0_1_236",
                                             "name": "Etg 1"
                                         },
                                         {
@@ -79,11 +79,11 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.stairway_222_0_3_226",
+                                            "entity": "sensor.stairway_228_0_3_232",
                                             "name": "Etg 0"
                                         },
                                         {
-                                            "entity": "sensor.living_room_210_0_3_214",
+                                            "entity": "sensor.living_room_234_0_3_238",
                                             "name": "Etg 1"
                                         },
                                         {
@@ -200,10 +200,10 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.stairway_222_0_1_224"
+                                            "entity": "sensor.stairway_228_0_1_230"
                                         },
                                         {
-                                            "entity": "sensor.stairway_222_0_3_226"
+                                            "entity": "sensor.stairway_228_0_3_232"
                                         }
                                     ],
                                     "entity": "sensor.multiple_entity_row_climate",
@@ -413,10 +413,10 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.living_room_210_0_1_212"
+                                            "entity": "sensor.living_room_234_0_1_236"
                                         },
                                         {
-                                            "entity": "sensor.living_room_210_0_3_214"
+                                            "entity": "sensor.living_room_234_0_3_238"
                                         }
                                     ],
                                     "entity": "sensor.multiple_entity_row_climate",

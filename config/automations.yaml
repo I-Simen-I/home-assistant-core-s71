@@ -311,6 +311,12 @@
   - below: '30'
     entity_id: sensor.fibaro_motion_sensor_battery_level_etg0_stairway
     platform: numeric_state
+  - below: '30'
+    entity_id: sensor.stairway_228_battery_level
+    platform: numeric_state
+  - below: '30'
+    entity_id: sensor.living_room_234_battery_level
+    platform: numeric_state
   condition: []
   action:
   - data:

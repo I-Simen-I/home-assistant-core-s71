@@ -44,6 +44,12 @@
                                 },
                                 {
                                     "entity": "sensor.fibaro_motion_sensor_battery_level_etg0_stairway"
+                                },
+                                {
+                                    "entity": "sensor.stairway_228_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.living_room_234_battery_level"
                                 }
                             ],
                             "show_header_toggle": false,

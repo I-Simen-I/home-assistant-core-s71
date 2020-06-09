@@ -3,8 +3,8 @@ average_temperature:
   icon_template: 'mdi:thermometer'
   value_template: >-
     {{ ((
-            float(states('sensor.stairway_222_0_1_224'))
-          + float(states('sensor.living_room_210_0_1_212'))
+            float(states('sensor.stairway_228_0_1_230'))
+          + float(states('sensor.living_room_234_0_1_236'))
           + float(states('sensor.netatmo_s71_inne_stue_temperature'))
          )  / 3) | round(1)
     }}
@@ -15,8 +15,8 @@ average_humidity:
   icon_template: 'mdi:water-percent'
   value_template: >-
     {{ ((
-            float(states('sensor.stairway_222_0_3_226'))
-          + float(states('sensor.living_room_210_0_3_214'))
+            float(states('sensor.stairway_228_0_3_232'))
+          + float(states('sensor.living_room_234_0_3_238'))
           + float(states('sensor.netatmo_s71_inne_stue_humidity'))
          )  / 3) | round(0)
     }}

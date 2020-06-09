@@ -1,13 +1,13 @@
 # ETG 0
-sensor.stairway_222_0_1_224:
+sensor.stairway_228_0_1_230:
   friendly_name: Temperatur
 
-sensor.stairway_222_0_3_226:
+sensor.stairway_228_0_3_232:
   friendly_name: Luftfuktighet
 
 # ETG 1
-sensor.living_room_210_0_1_212:
+sensor.living_room_234_0_1_236:
   friendly_name: Temperatur
 
-sensor.living_room_210_0_3_214:
+sensor.living_room_234_0_3_238:
   friendly_name: Luftfuktighet
