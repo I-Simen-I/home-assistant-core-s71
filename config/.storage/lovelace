@@ -56,7 +56,7 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.stairway_216_0_1_218",
+                                            "entity": "sensor.stairway_222_0_1_224",
                                             "name": "Etg 0"
                                         },
                                         {
@@ -79,7 +79,7 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.stairway_216_0_3_220",
+                                            "entity": "sensor.stairway_222_0_3_226",
                                             "name": "Etg 0"
                                         },
                                         {
@@ -200,10 +200,10 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.stairway_216_0_1_218"
+                                            "entity": "sensor.stairway_222_0_1_224"
                                         },
                                         {
-                                            "entity": "sensor.stairway_216_0_3_220"
+                                            "entity": "sensor.stairway_222_0_3_226"
                                         }
                                     ],
                                     "entity": "sensor.multiple_entity_row_climate",
@@ -568,68 +568,6 @@
                     "icon": "mdi:home-floor-2",
                     "path": "etg-2",
                     "title": "etg 2"
-                },
-                {
-                    "badges": [],
-                    "cards": [
-                        {
-                            "cards": [
-                                {
-                                    "detail": 2,
-                                    "entity": "sensor.average_temperature",
-                                    "graph": "line",
-                                    "name": "Temperatur inne",
-                                    "type": "sensor"
-                                },
-                                {
-                                    "detail": 2,
-                                    "entity": "sensor.netatmo_s71_ute_ost_temperature",
-                                    "graph": "line",
-                                    "name": "Temperatur ute",
-                                    "type": "sensor"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "detail": 2,
-                                    "entity": "sensor.average_humidity",
-                                    "graph": "line",
-                                    "name": "Luftfuktighet inne",
-                                    "type": "sensor"
-                                },
-                                {
-                                    "detail": 0,
-                                    "entity": "sensor.netatmo_s71_ute_ost_humidity",
-                                    "graph": "line",
-                                    "name": "Luftfuktighet ute",
-                                    "type": "sensor"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "detail": 2,
-                                    "entity": "sensor.netatmo_s71_inne_stue_co2",
-                                    "graph": "line",
-                                    "type": "sensor"
-                                },
-                                {
-                                    "detail": 2,
-                                    "entity": "sensor.netatmo_s71_inne_stue_pressure",
-                                    "graph": "line",
-                                    "type": "sensor"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        }
-                    ],
-                    "icon": "mdi:weather-partly-cloudy",
-                    "panel": false
                 }
             ]
         }

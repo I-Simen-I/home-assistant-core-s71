@@ -2,33 +2,6 @@
     "data": {
         "items": [
             {
-                "icon": "mdi:flash",
-                "id": "lovelace_stats",
-                "mode": "storage",
-                "require_admin": true,
-                "show_in_sidebar": true,
-                "title": "Powerusage",
-                "url_path": "lovelace-stats"
-            },
-            {
-                "icon": "mdi:wan",
-                "id": "lovelace_network",
-                "mode": "storage",
-                "require_admin": true,
-                "show_in_sidebar": true,
-                "title": "Network",
-                "url_path": "lovelace-network"
-            },
-            {
-                "icon": "mdi:tools",
-                "id": "lovelace_maintenance",
-                "mode": "storage",
-                "require_admin": true,
-                "show_in_sidebar": true,
-                "title": "Maintenance",
-                "url_path": "lovelace-maintenance"
-            },
-            {
                 "icon": "mdi:home-heart",
                 "id": "lovelace_climate",
                 "mode": "storage",
@@ -36,6 +9,15 @@
                 "show_in_sidebar": true,
                 "title": "Climate",
                 "url_path": "lovelace-climate"
+            },
+            {
+                "icon": "mdi:tools",
+                "id": "lovelace_management",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": true,
+                "title": "Management",
+                "url_path": "lovelace-management"
             }
         ]
     },

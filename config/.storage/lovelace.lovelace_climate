@@ -1,7 +1,7 @@
 {
     "data": {
         "config": {
-            "title": "S71",
+            "title": "Klima",
             "views": [
                 {
                     "badges": [],
@@ -11,55 +11,35 @@
                             "type": "markdown"
                         },
                         {
-                            "cards": [
+                            "align_state": "center",
+                            "color_thresholds": [
                                 {
-                                    "entity": "sensor.stairway_216_0_1_218",
-                                    "max": 40,
-                                    "min": 0,
-                                    "name": "Etg 0",
-                                    "severity": {
-                                        "green": 17,
-                                        "red": 30,
-                                        "yellow": 24
-                                    },
-                                    "type": "gauge"
+                                    "color": "#0da035",
+                                    "value": 22
                                 },
                                 {
-                                    "entity": "sensor.living_room_210_0_1_212",
-                                    "max": 40,
-                                    "min": 0,
-                                    "name": "Etg 1",
-                                    "severity": {
-                                        "green": 17,
-                                        "red": 30,
-                                        "yellow": 24
-                                    },
-                                    "type": "gauge"
+                                    "color": "#f4b400",
+                                    "value": 25
                                 },
                                 {
-                                    "entity": "sensor.netatmo_s71_inne_stue_temperature",
-                                    "max": 40,
-                                    "min": 0,
-                                    "name": "Etg 2",
-                                    "severity": {
-                                        "green": 17,
-                                        "red": 30,
-                                        "yellow": 24
-                                    },
-                                    "type": "gauge"
+                                    "color": "#df4c1e",
+                                    "value": 30
                                 }
                             ],
-                            "type": "horizontal-stack"
+                            "entities": [
+                                "sensor.average_temperature"
+                            ],
+                            "hours_to_show": 168,
+                            "name": "Gjennomsnittlig temperatur",
+                            "show": {
+                                "labels": true
+                            },
+                            "type": "custom:mini-graph-card"
                         },
                         {
-                            "align_state": "center",
                             "entities": [
                                 {
-                                    "entity": "sensor.average_temperature",
-                                    "name": "Gjennomsnitt"
-                                },
-                                {
-                                    "entity": "sensor.stairway_216_0_1_218",
+                                    "entity": "sensor.stairway_222_0_1_224",
                                     "name": "Etg 0"
                                 },
                                 {
@@ -73,6 +53,11 @@
                             ],
                             "hours_to_show": 168,
                             "name": "Temperatur",
+                            "show": {
+                                "fill": false,
+                                "labels": true,
+                                "state": false
+                            },
                             "type": "custom:mini-graph-card"
                         },
                         {
@@ -80,55 +65,43 @@
                             "type": "markdown"
                         },
                         {
-                            "cards": [
+                            "align_state": "center",
+                            "color_thresholds": [
                                 {
-                                    "entity": "sensor.stairway_216_0_3_220",
-                                    "max": 100,
-                                    "min": 0,
-                                    "name": "Etg 0",
-                                    "severity": {
-                                        "green": 25,
-                                        "red": 50,
-                                        "yellow": 40
-                                    },
-                                    "type": "gauge"
+                                    "color": "#df4c1e",
+                                    "value": 20
                                 },
                                 {
-                                    "entity": "sensor.living_room_210_0_3_214",
-                                    "max": 100,
-                                    "min": 0,
-                                    "name": "Etg 1",
-                                    "severity": {
-                                        "green": 25,
-                                        "red": 50,
-                                        "yellow": 40
-                                    },
-                                    "type": "gauge"
+                                    "color": "#f4b400",
+                                    "value": 25
                                 },
                                 {
-                                    "entity": "sensor.netatmo_s71_inne_stue_humidity",
-                                    "max": 100,
-                                    "min": 0,
-                                    "name": "Etg 2",
-                                    "severity": {
-                                        "green": 25,
-                                        "red": 50,
-                                        "yellow": 40
-                                    },
-                                    "type": "gauge"
+                                    "color": "#0da035",
+                                    "value": 35
+                                },
+                                {
+                                    "color": "#f4b400",
+                                    "value": 45
+                                },
+                                {
+                                    "color": "#df4c1e",
+                                    "value": 50
                                 }
                             ],
-                            "type": "horizontal-stack"
+                            "entities": [
+                                "sensor.average_humidity"
+                            ],
+                            "hours_to_show": 168,
+                            "name": "Gjennomsnittlig luftfuktighet",
+                            "show": {
+                                "labels": true
+                            },
+                            "type": "custom:mini-graph-card"
                         },
                         {
-                            "align_state": "center",
                             "entities": [
                                 {
-                                    "entity": "sensor.average_humidity",
-                                    "name": "Gjennomsnitt"
-                                },
-                                {
-                                    "entity": "sensor.stairway_216_0_3_220",
+                                    "entity": "sensor.stairway_222_0_3_226",
                                     "name": "Etg 0"
                                 },
                                 {
@@ -142,25 +115,26 @@
                             ],
                             "hours_to_show": 168,
                             "name": "Luftfuktighet",
+                            "show": {
+                                "fill": false,
+                                "labels": true,
+                                "state": false
+                            },
                             "type": "custom:mini-graph-card"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "counter.thermostat_counter"
-                                }
-                            ],
-                            "title": "Varmematter",
-                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:chart-bar",
+                    "panel": false,
                     "path": "stats",
                     "title": "stats"
                 },
                 {
                     "badges": [],
                     "cards": [
+                        {
+                            "entity": "counter.thermostat_counter",
+                            "type": "entity"
+                        },
                         {
                             "cards": [
                                 {

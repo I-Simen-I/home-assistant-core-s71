@@ -1,8 +1,8 @@
 # ETG 0
-sensor.stairway_216_0_1_218:
+sensor.stairway_222_0_1_224:
   friendly_name: Temperatur
 
-sensor.stairway_216_0_3_220:
+sensor.stairway_222_0_3_226:
   friendly_name: Luftfuktighet
 
 # ETG 1

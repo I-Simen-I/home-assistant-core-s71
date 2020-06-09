@@ -1,0 +1,323 @@
+{
+    "data": {
+        "config": {
+            "title": "Admin",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.netatmo_s71_ute_ost_battery_percent"
+                                },
+                                {
+                                    "entity": "sensor.front_door_battery"
+                                }
+                            ],
+                            "title": "Ute",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.simen_sin_ipad_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.battery_level_2"
+                                },
+                                {
+                                    "entity": "sensor.battery_level_3"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Enheter",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.fibaro_door_sensor_battery_level_laundry_room"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_motion_sensor_battery_level_etg0_hall"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_motion_sensor_battery_level_etg0_stairway"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Sensorer",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:battery-charging-20",
+                    "path": "battery",
+                    "title": "Battery"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "counter.roborock_dustbin_counter_lingling",
+                                            "name": "Dust bin %"
+                                        }
+                                    ],
+                                    "entity": "vacuum.xiaomi_vacuum_cleaner",
+                                    "name": "LingLing",
+                                    "type": "custom:multiple-entity-row"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Enheter",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:tools",
+                    "path": "maintenance",
+                    "title": "Maintenance"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "align_state": "center",
+                            "color_thresholds": [
+                                {
+                                    "color": "#0da035",
+                                    "value": 10
+                                },
+                                {
+                                    "color": "#f4b400",
+                                    "value": 15
+                                },
+                                {
+                                    "color": "#df4c1e",
+                                    "value": 25
+                                }
+                            ],
+                            "entities": [
+                                "sensor.speedtest_ping"
+                            ],
+                            "hours_to_show": 72,
+                            "name": "Ping",
+                            "show": {
+                                "labels": true
+                            },
+                            "type": "custom:mini-graph-card"
+                        },
+                        {
+                            "align_state": "center",
+                            "color_thresholds": [
+                                {
+                                    "color": "#df4c1e",
+                                    "value": 60
+                                },
+                                {
+                                    "color": "#f4b400",
+                                    "value": 75
+                                },
+                                {
+                                    "color": "#0da035",
+                                    "value": 90
+                                }
+                            ],
+                            "entities": [
+                                "sensor.speedtest_download"
+                            ],
+                            "hours_to_show": 72,
+                            "name": "Nedlasting",
+                            "show": {
+                                "labels": true
+                            },
+                            "type": "custom:mini-graph-card"
+                        },
+                        {
+                            "align_state": "center",
+                            "color_thresholds": [
+                                {
+                                    "color": "#df4c1e",
+                                    "value": 60
+                                },
+                                {
+                                    "color": "#f4b400",
+                                    "value": 75
+                                },
+                                {
+                                    "color": "#0da035",
+                                    "value": 90
+                                }
+                            ],
+                            "entities": [
+                                "sensor.speedtest_upload"
+                            ],
+                            "hours_to_show": 72,
+                            "name": "Opplasting",
+                            "show": {
+                                "labels": true
+                            },
+                            "type": "custom:mini-graph-card"
+                        }
+                    ],
+                    "icon": "mdi:wan",
+                    "path": "network",
+                    "title": "Network"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.tibber_grid_company"
+                                },
+                                {
+                                    "entity": "sensor.tibber_eac"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "align_state": "center",
+                            "color_thresholds": [
+                                {
+                                    "color": "#0da035",
+                                    "value": 0.4
+                                },
+                                {
+                                    "color": "#f4b400",
+                                    "value": 0.6
+                                },
+                                {
+                                    "color": "#df4c1e",
+                                    "value": 0.7
+                                }
+                            ],
+                            "entities": [
+                                "sensor.electricity_price_soholsgata_71"
+                            ],
+                            "hours_to_show": 168,
+                            "icon": "mdi:currency-usd",
+                            "name": "NOK/kWh siste 7 dager",
+                            "show": {
+                                "labels": true
+                            },
+                            "type": "custom:mini-graph-card"
+                        },
+                        {
+                            "align_state": "center",
+                            "color_thresholds": [
+                                {
+                                    "color": "#df4c1e",
+                                    "value": 210
+                                },
+                                {
+                                    "color": "#f4b400",
+                                    "value": 220
+                                },
+                                {
+                                    "color": "#0da035",
+                                    "value": 230
+                                },
+                                {
+                                    "color": "#f4b400",
+                                    "value": 240
+                                },
+                                {
+                                    "color": "#df4c1e",
+                                    "value": 250
+                                }
+                            ],
+                            "entities": [
+                                "sensor.office_simen_153_0_1_155"
+                            ],
+                            "hours_to_show": 168,
+                            "icon": "mdi:flash",
+                            "name": "Spenning i nett siste 7 dager",
+                            "show": {
+                                "labels": true
+                            },
+                            "type": "custom:mini-graph-card"
+                        }
+                    ],
+                    "icon": "mdi:transmission-tower",
+                    "path": "tibber",
+                    "title": "Tibber"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.fibaro_climate_office_nora_power_usage",
+                                    "max": 600,
+                                    "min": 0,
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_climate_office_simen_power_usage",
+                                    "max": 600,
+                                    "min": 0,
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_climate_living_room_power_usage",
+                                    "max": 600,
+                                    "min": 0,
+                                    "type": "gauge"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.fibaro_wall_plug_rack_power_usage",
+                                    "max": 850,
+                                    "min": 0,
+                                    "severity": {
+                                        "green": 0,
+                                        "red": 750,
+                                        "yellow": 500
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_wall_plug_pc_power_usage",
+                                    "max": 1200,
+                                    "min": 0,
+                                    "name": "Skrivebord (Simen)",
+                                    "severity": {
+                                        "green": 0,
+                                        "red": 900,
+                                        "yellow": 700
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_wall_plug_desk_power_usage",
+                                    "max": 200,
+                                    "min": 0,
+                                    "name": "Skrivebord (Nora)",
+                                    "type": "gauge"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        }
+                    ],
+                    "icon": "mdi:flash",
+                    "panel": false,
+                    "path": "live-powerusage",
+                    "title": "Live powerusage"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_management",
+    "version": 1
+}
