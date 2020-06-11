@@ -1,6 +1,0 @@
-roborock_dustbin_counter_lingling:
-  name: LingLing Dust bin
-  icon: mdi:delete
-  initial: 0
-  step: 20
-  minimum: 0

@@ -67,15 +67,8 @@
                         {
                             "entities": [
                                 {
-                                    "entities": [
-                                        {
-                                            "entity": "counter.roborock_dustbin_counter_lingling",
-                                            "name": "Dust bin %"
-                                        }
-                                    ],
                                     "entity": "vacuum.xiaomi_vacuum_cleaner",
-                                    "name": "LingLing",
-                                    "type": "custom:multiple-entity-row"
+                                    "name": "LingLing"
                                 }
                             ],
                             "show_header_toggle": false,

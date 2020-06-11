@@ -391,30 +391,28 @@
       message: Programmet er ferdig
       title: Tørketormmel
     service: notify.mobile_app_nora_sin_iphone
-- id: '1586126391305'
-  alias: counter roborock_dustbin_counter_lingling increment
+- id: '1586126529481'
+  alias: notify roborock empty dust bin
   description: ''
   trigger:
   - at: '16:00:00'
     platform: time
-  condition: []
-  action:
-  - data: {}
-    entity_id: counter.roborock_dustbin_counter_lingling
-    service: counter.increment
-- id: '1586126529481'
-  alias: notify roborock dust bin full
-  description: ''
-  trigger:
-  - entity_id: counter.roborock_dustbin_counter_lingling
-    platform: state
-    to: '100'
-  condition: []
+  condition:
+  - condition: time
+    weekday:
+    - mon
   action:
   - data:
       message: Støvbeholder må tømmes
       title: LingLing
     service: notify.mobile_app_simens_galaxy_s10
+  - data:
+      command: app_goto_target
+      params:
+      - 30500
+      - 21500
+    entity_id: vacuum.xiaomi_vacuum_cleaner
+    service: vacuum.send_command
 - id: '1586292981334'
   alias: Scene=tv_rom_film, condition=plex_apple_tv_state is playing
   description: ''
