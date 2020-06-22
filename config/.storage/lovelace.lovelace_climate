@@ -27,7 +27,7 @@
                                 }
                             ],
                             "entities": [
-                                "sensor.average_temperature"
+                                "sensor.inside_avg_temperature"
                             ],
                             "hours_to_show": 168,
                             "name": "Gjennomsnittlig temperatur",
@@ -47,7 +47,7 @@
                                     "name": "Etg 1"
                                 },
                                 {
-                                    "entity": "sensor.netatmo_s71_inne_stue_temperature",
+                                    "entity": "sensor.living_room_240_0_1_242",
                                     "name": "Etg 2"
                                 }
                             ],
@@ -89,7 +89,7 @@
                                 }
                             ],
                             "entities": [
-                                "sensor.average_humidity"
+                                "sensor.inside_avg_humidity"
                             ],
                             "hours_to_show": 168,
                             "name": "Gjennomsnittlig luftfuktighet",
@@ -109,7 +109,7 @@
                                     "name": "Etg 1"
                                 },
                                 {
-                                    "entity": "sensor.netatmo_s71_inne_stue_humidity",
+                                    "entity": "sensor.living_room_240_0_3_244",
                                     "name": "Etg 2"
                                 }
                             ],
@@ -164,6 +164,154 @@
                     "icon": "mdi:fan",
                     "path": "controller",
                     "title": "controller"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "sensor.east_252_0_1_254",
+                            "max": 40,
+                            "min": 0,
+                            "name": "Ute - \u00d8st",
+                            "severity": {
+                                "green": 17,
+                                "red": 26,
+                                "yellow": 23
+                            },
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.south_246_0_1_248",
+                            "max": 40,
+                            "min": 0,
+                            "name": "Ute - S\u00f8r",
+                            "severity": {
+                                "green": 17,
+                                "red": 26,
+                                "yellow": 23
+                            },
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.stairway_228_0_1_230",
+                            "max": 40,
+                            "min": 0,
+                            "name": "Kjeller",
+                            "severity": {
+                                "green": 17,
+                                "red": 25,
+                                "yellow": 23
+                            },
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.living_room_234_0_1_236",
+                            "max": 40,
+                            "min": 0,
+                            "name": "Stue",
+                            "severity": {
+                                "green": 17,
+                                "red": 25,
+                                "yellow": 23
+                            },
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.living_room_240_0_1_242",
+                            "max": 40,
+                            "min": 0,
+                            "name": "Loftstue",
+                            "severity": {
+                                "green": 17,
+                                "red": 25,
+                                "yellow": 23
+                            },
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.laundry_room_206_0_1_208",
+                            "max": 40,
+                            "min": 0,
+                            "name": "Vaskerom",
+                            "severity": {
+                                "green": 17,
+                                "red": 25,
+                                "yellow": 23
+                            },
+                            "type": "gauge"
+                        }
+                    ],
+                    "icon": "mdi:thermometer",
+                    "path": "temperature",
+                    "title": "temperature"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "sensor.east_252_0_3_256",
+                            "max": 100,
+                            "min": 0,
+                            "name": "Ute - \u00d8st",
+                            "severity": {
+                                "green": 25,
+                                "red": 60,
+                                "yellow": 40
+                            },
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.south_246_0_3_250",
+                            "max": 100,
+                            "min": 0,
+                            "name": "Ute - S\u00f8r",
+                            "severity": {
+                                "green": 25,
+                                "red": 60,
+                                "yellow": 40
+                            },
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.stairway_228_0_3_232",
+                            "max": 100,
+                            "min": 0,
+                            "name": "Kjeller",
+                            "severity": {
+                                "green": 25,
+                                "red": 60,
+                                "yellow": 40
+                            },
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.living_room_234_0_3_238",
+                            "max": 100,
+                            "min": 0,
+                            "name": "Stue",
+                            "severity": {
+                                "green": 25,
+                                "red": 60,
+                                "yellow": 40
+                            },
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.living_room_240_0_3_244",
+                            "max": 100,
+                            "min": 0,
+                            "name": "Loftstue",
+                            "severity": {
+                                "green": 25,
+                                "red": 60,
+                                "yellow": 40
+                            },
+                            "type": "gauge"
+                        }
+                    ],
+                    "icon": "mdi:water-percent",
+                    "path": "humidity",
+                    "title": "Humidity"
                 }
             ]
         }

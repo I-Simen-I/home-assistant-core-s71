@@ -64,13 +64,13 @@
                                             "name": "Etg 1"
                                         },
                                         {
-                                            "entity": "sensor.netatmo_s71_inne_stue_temperature",
+                                            "entity": "sensor.living_room_240_0_1_242",
                                             "name": "Etg 2"
                                         }
                                     ],
                                     "entity": "sensor.multiple_entity_row_temperature",
                                     "secondary_info": {
-                                        "entity": "sensor.average_temperature",
+                                        "entity": "sensor.inside_avg_temperature",
                                         "name": null
                                     },
                                     "show_state": false,
@@ -87,13 +87,13 @@
                                             "name": "Etg 1"
                                         },
                                         {
-                                            "entity": "sensor.netatmo_s71_inne_stue_humidity",
+                                            "entity": "sensor.living_room_240_0_3_244",
                                             "name": "Etg 2"
                                         }
                                     ],
                                     "entity": "sensor.multiple_entity_row_humidity",
                                     "secondary_info": {
-                                        "entity": "sensor.average_humidity",
+                                        "entity": "sensor.inside_avg_humidity",
                                         "name": null
                                     },
                                     "show_state": false,
@@ -107,9 +107,8 @@
                         {
                             "entity_sun": "sensor.sun_state",
                             "entity_weather": "weather.s71",
-                            "netatmo_humidity": "sensor.netatmo_s71_ute_ost_humidity",
-                            "netatmo_pressure": "sensor.netatmo_s71_inne_stue_pressure",
-                            "netatmo_temp": "sensor.netatmo_s71_ute_ost_temperature",
+                            "sensor_humidity": "sensor.outside_avg_humidity",
+                            "sensor_temp": "sensor.outside_min_temperature",
                             "type": "custom:weather-card"
                         },
                         {
@@ -483,16 +482,10 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.netatmo_s71_inne_stue_temperature"
+                                            "entity": "sensor.living_room_240_0_1_242"
                                         },
                                         {
-                                            "entity": "sensor.netatmo_s71_inne_stue_humidity"
-                                        },
-                                        {
-                                            "entity": "sensor.netatmo_s71_inne_stue_noise"
-                                        },
-                                        {
-                                            "entity": "sensor.netatmo_s71_inne_stue_co2"
+                                            "entity": "sensor.living_room_240_0_3_244"
                                         }
                                     ],
                                     "entity": "sensor.multiple_entity_row_climate",

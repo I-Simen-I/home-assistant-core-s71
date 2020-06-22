@@ -1,0 +1,33 @@
+- platform: min_max
+  name: outside_min_temperature
+  type: min
+  round_digits: 1
+  entity_ids:
+    - sensor.east_252_0_1_254
+    - sensor.south_246_0_1_248
+
+- platform: min_max
+  name: outside_avg_humidity
+  type: mean
+  round_digits: 1
+  entity_ids:
+    - sensor.east_252_0_3_256
+    - sensor.south_246_0_3_250
+
+- platform: min_max
+  name: inside_avg_temperature
+  type: mean
+  round_digits: 1
+  entity_ids:
+    - sensor.stairway_228_0_1_230
+    - sensor.living_room_234_0_1_236
+    - sensor.living_room_240_0_1_242
+
+- platform: min_max
+  name: inside_avg_humidity
+  type: mean
+  round_digits: 1
+  entity_ids:
+    - sensor.stairway_228_0_3_232
+    - sensor.living_room_234_0_3_238
+    - sensor.living_room_240_0_3_244

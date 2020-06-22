@@ -11,3 +11,47 @@ sensor.living_room_234_0_1_236:
 
 sensor.living_room_234_0_3_238:
   friendly_name: Luftfuktighet
+
+# ETG 2
+sensor.living_room_240_0_1_242:
+  friendly_name: Temperatur
+
+sensor.living_room_240_0_3_244:
+  friendly_name: Luftfuktighet
+
+# UTE - East
+sensor.east_252_0_1_254:
+  friendly_name: Temperatur
+
+sensor.east_252_0_3_256:
+  friendly_name: Luftfuktighet
+
+sensor.east_252_0_2_255:
+  friendly_name: Belysningsstyrke
+
+# UTE - South
+sensor.south_246_0_1_248:
+  friendly_name: Temperatur
+
+sensor.south_246_0_3_250:
+  friendly_name: Luftfuktighet
+
+sensor.south_246_0_2_249:
+  friendly_name: Belysningsstyrke
+
+# STATS
+sensor.outside_min_temperature:
+  friendly_name: Temperatur
+  icon: mdi:thermometer
+
+sensor.outside_avg_humidity:
+  friendly_name: Luftfuktighet
+  icon: mdi:water-percent
+
+sensor.inside_avg_temperature:
+  friendly_name: Gjennomsnittlig temperatur
+  icon: mdi:thermometer
+
+sensor.inside_avg_humidity:
+  friendly_name: Gjennomsnittlig luftfuktighet
+  icon: mdi:water-percent
