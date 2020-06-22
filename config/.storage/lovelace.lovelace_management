@@ -55,10 +55,10 @@
                                     "entity": "sensor.living_room_240_battery_level"
                                 },
                                 {
-                                    "entity": "sensor.living_room_252_battery_level"
+                                    "entity": "sensor.east_252_battery_level"
                                 },
                                 {
-                                    "entity": "sensor.living_room_246_battery_level"
+                                    "entity": "sensor.south_246_battery_level"
                                 }
                             ],
                             "show_header_toggle": false,
