@@ -24,6 +24,14 @@
     - sensor.living_room_240_0_1_242
 
 - platform: min_max
+  name: outside_avg_lux
+  type: mean
+  round_digits: 1
+  entity_ids:
+    - sensor.east_252_0_2_255
+    - sensor.south_246_0_2_249
+
+- platform: min_max
   name: inside_avg_humidity
   type: mean
   round_digits: 1

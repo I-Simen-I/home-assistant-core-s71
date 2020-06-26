@@ -27,7 +27,7 @@ sensor.east_252_0_3_256:
   friendly_name: Luftfuktighet
 
 sensor.east_252_0_2_255:
-  friendly_name: Belysningsstyrke
+  friendly_name: Belysning
 
 # UTE - South
 sensor.south_246_0_1_248:
@@ -37,7 +37,7 @@ sensor.south_246_0_3_250:
   friendly_name: Luftfuktighet
 
 sensor.south_246_0_2_249:
-  friendly_name: Belysningsstyrke
+  friendly_name: Belysning
 
 # STATS
 sensor.outside_min_temperature:
@@ -47,6 +47,11 @@ sensor.outside_min_temperature:
 sensor.outside_avg_humidity:
   friendly_name: Luftfuktighet
   icon: mdi:water-percent
+
+sensor.outside_avg_lux:
+  friendly_name: Gjennomsnittlig belysning
+  icon: mdi:weather-sunny
+
 
 sensor.inside_avg_temperature:
   friendly_name: Gjennomsnittlig temperatur

@@ -1,19 +1,28 @@
 - id: '1583432040450'
-  alias: Scene=house_dag, Tid=16:30, Dager=Alle
+  alias: Scene=house_dag, Dager=Alle
   description: ''
   trigger:
-  - at: '16:30:00'
-    platform: time
-  condition: []
+  - above: '300'
+    below: '500'
+    entity_id: sensor.outside_avg_lux
+    platform: numeric_state
+  condition:
+  - after: '12:00:00'
+    before: '18:00:00'
+    condition: time
   action:
   - scene: scene.house_dag
 - id: '1583432092936'
-  alias: Scene=house_kveld, Tid=20:30, Dager=Alle
+  alias: Scene=house_kveld, Dager=Alle
   description: ''
   trigger:
-  - at: '20:30:00'
-    platform: time
-  condition: []
+  - below: '300'
+    entity_id: sensor.outside_avg_lux
+    platform: numeric_state
+  condition:
+  - after: '18:00:00'
+    before: '22:30:00'
+    condition: time
   action:
   - scene: scene.house_kveld
 - id: '1583432394622'
@@ -432,12 +441,22 @@
     entity_id: scene.tv_rom_film
     service: scene.turn_on
 - id: '1586799578619'
-  alias: cover=rullgardiner_side, tid=15:30, rullgardiner=70%
+  alias: cover=rullgardiner_side, rullgardiner=70%
   description: ''
   trigger:
-  - at: '15:30:00'
-    platform: time
-  condition: []
+  - above: '1000'
+    below: '2500'
+    entity_id: sensor.south_246_0_2_249
+    platform: numeric_state
+  condition:
+  - condition: and
+    conditions:
+    - after: '13:00:00'
+      before: '21:00:00'
+      condition: time
+    - condition: state
+      entity_id: switch.tv_rom_scene_film
+      state: 'off'
   action:
   - data:
       position: 30
@@ -459,28 +478,55 @@
       title: Dør åpen
     service: notify.mobile_app_simens_galaxy_s10
 - id: '1592669514031'
-  alias: notify roborock maintenance
+  alias: notify roborock sensor maintenance
   description: ''
   trigger:
+  - at: '16:00:00'
+    platform: time
+  condition:
   - below: '3'
+    condition: numeric_state
     entity_id: vacuum.xiaomi_vacuum_cleaner
-    platform: numeric_state
     value_template: '{{ state.attributes.sensor_dirty_left}}'
-  - below: '3'
-    entity_id: vacuum.xiaomi_vacuum_cleaner
-    platform: numeric_state
-    value_template: '{{ state.attributes.main_brush_left}}'
-  - below: '3'
-    entity_id: vacuum.xiaomi_vacuum_cleaner
-    platform: numeric_state
-    value_template: '{{ state.attributes.side_brush_left}}'
-  - below: '3'
-    entity_id: vacuum.xiaomi_vacuum_cleaner
-    platform: numeric_state
-    value_template: '{{ state.attributes.filter_left}}'
-  condition: []
   action:
   - data:
-      message: En av vedlikeholdsoppgavene trenger tilsyn
+      message: Sensor må rengjøres
       title: LingLing - Vedlikehold
     service: notify.mobile_app_simens_galaxy_s10
+  - data:
+      command: app_goto_target
+      params:
+      - 30500
+      - 21500
+    entity_id: vacuum.xiaomi_vacuum_cleaner
+    service: vacuum.send_command
+- id: '1593011968093'
+  alias: cover=rullgardiner_side, rullgardiner=100%
+  description: ''
+  trigger:
+  - above: '2500'
+    entity_id: sensor.south_246_0_2_249
+    platform: numeric_state
+  condition:
+  - after: '13:00:00'
+    before: '21:00:00'
+    condition: time
+  action:
+  - data: {}
+    entity_id: cover.rullgardiner_side
+    service: cover.close_cover
+- id: '1593029744963'
+  alias: cover=rullgardiner_side, rullgardiner=0%
+  description: ''
+  trigger:
+  - below: '200'
+    entity_id: sensor.south_246_0_2_249
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_boolean.scene_tv_rom_film
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: cover.rullgardiner_side
+    service: cover.open_cover

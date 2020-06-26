@@ -4,7 +4,7 @@
             {
                 "id": "e8a732232d5b40e6ad03216211f5bc20",
                 "type": "module",
-                "url": "/local/custom_ui/cards/netatmo-weather/weather-card.js"
+                "url": "/local/custom_ui/cards/netatmo-weather/weather-card.js?v=1"
             },
             {
                 "id": "d0130eef90c24489b9ff994696ccdc1b",
