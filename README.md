@@ -17,9 +17,9 @@
 * [Aeotec MultiSensor 6](https://aeotec.com/z-wave-sensor/)
 
 # Images
-![](doc/images/hac_1.png)
-![](doc/images/hac_2.png)
-![](doc/images/hac_3.png)
-![](doc/images/hac_4.png)
-![](doc/images/hac_5.png)
-![](doc/images/hac_6.png)
+![](doc/images/hac_1_v1.png)
+![](doc/images/hac_2_v1.png)
+![](doc/images/hac_3_v1.png)
+![](doc/images/hac_4_v1.png)
+![](doc/images/hac_5_v1.png)
+![](doc/images/hac_6_v1.png)
