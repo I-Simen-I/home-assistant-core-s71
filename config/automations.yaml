@@ -512,9 +512,10 @@
     before: '21:00:00'
     condition: time
   action:
-  - data: {}
+  - data:
+      position: 0
     entity_id: cover.rullgardiner_side
-    service: cover.close_cover
+    service: cover.set_cover_position
 - id: '1593029744963'
   alias: cover=rullgardiner_side, rullgardiner=0%
   description: ''
@@ -527,6 +528,7 @@
     entity_id: input_boolean.scene_tv_rom_film
     state: 'off'
   action:
-  - data: {}
+  - data:
+      position: 100
     entity_id: cover.rullgardiner_side
-    service: cover.open_cover
+    service: cover.set_cover_position
