@@ -22,6 +22,7 @@ auth_provider.homeassistant
 cloud
 frontend.*
 
+core.uuid
 core.config
 core.area_registry
 core.device_registry
