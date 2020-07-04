@@ -1,5 +1,5 @@
 thermostat_counter:
-    name: Antall varmematter på
+    name: Varmematter på
     icon: mdi:thermostat
     initial: 0
     step: 1

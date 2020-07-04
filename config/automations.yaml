@@ -271,15 +271,20 @@
     platform: state
     to: 'on'
   condition:
-  - condition: device
-    device_id: 14ec831b103f4488bf9338477abab59d
-    domain: device_tracker
-    entity_id: device_tracker.sm_g975f_2
-    type: is_not_home
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: input_boolean.house_security
+      state: 'on'
+    - condition: device
+      device_id: 14ec831b103f4488bf9338477abab59d
+      domain: device_tracker
+      entity_id: device_tracker.sm_g975f_2
+      type: is_not_home
   action:
   - data:
       message: Det er bevegelse ved inngangsdøren
-      title: Bevegelse oppdaget
+      title: Sikkerhetsbrudd
     service: notify.mobile_app_simens_galaxy_s10
 - id: '1584649059617'
   alias: notify slow internet
@@ -393,9 +398,9 @@
   alias: notify tørketommel finished
   description: ''
   trigger:
-  - entity_id: sensor.bosch_wtwh7579sn_state
+  - entity_id: sensor.bosch_wtwh7579sn_remaining
     platform: state
-    to: Ferdig
+    to: 0:00:00
   condition: []
   action:
   - data:
@@ -532,3 +537,109 @@
       position: 100
     entity_id: cover.rullgardiner_side
     service: cover.set_cover_position
+- id: '1593455354865'
+  alias: counter door_counter increment
+  description: ''
+  trigger:
+  - entity_id: sensor.fibaro_door_sensor_laundry_room
+    platform: state
+    to: Åpen
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.door_counter
+    service: counter.increment
+- id: '1593455460433'
+  alias: counter door_counter decrement
+  description: ''
+  trigger:
+  - entity_id: sensor.fibaro_door_sensor_laundry_room
+    platform: state
+    to: Lukket
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.door_counter
+    service: counter.decrement
+- id: '1593455558302'
+  alias: notify security breach door
+  description: ''
+  trigger:
+  - above: '0'
+    entity_id: counter.door_counter
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_boolean.house_security
+    state: 'on'
+  action:
+  - data:
+      message: En eller flere dører er åpnet
+      title: Sikkerhetsbrudd
+    service: notify.mobile_app_simens_galaxy_s10
+- id: '1593455676622'
+  alias: notify security breach window
+  description: ''
+  trigger:
+  - above: '0'
+    entity_id: counter.window_counter
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_boolean.house_security
+    state: 'on'
+  action:
+  - data:
+      message: En eller flere vinduer er åpnet
+      title: Sikkerhetsbrudd
+    service: notify.mobile_app_simens_galaxy_s10
+- id: '1593543809275'
+  alias: notify security off
+  description: ''
+  trigger:
+  - entity_id: switch.house_security
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      message: Sikkerhet er skrudd av
+      title: Sikkerhet
+    service: notify.mobile_app_simens_galaxy_s10
+- id: '1593592653157'
+  alias: climate office-nora heat-on
+  description: ''
+  trigger:
+  - at: 06:00:00
+    platform: time
+  condition:
+  - condition: and
+    conditions:
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+    - below: '22'
+      condition: numeric_state
+      entity_id: sensor.office_nora_144_3_151
+  action:
+  - data:
+      temperature: 24
+    entity_id: climate.office_nora_144_1_147
+    service: climate.set_temperature
+- id: '1593596702494'
+  alias: climate office-nora heat-off
+  description: ''
+  trigger:
+  - at: '14:00:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      temperature: 21
+    entity_id: climate.office_nora_144_1_147
+    service: climate.set_temperature

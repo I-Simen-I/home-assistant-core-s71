@@ -1,0 +1,6 @@
+door_counter:
+  name: Dører oppe
+  icon: mdi:door-open
+  initial: 0
+  step: 1
+  minimum: 0

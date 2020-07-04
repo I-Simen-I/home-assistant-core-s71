@@ -105,6 +105,21 @@
                             "type": "entities"
                         },
                         {
+                            "entities": [
+                                {
+                                    "entity": "switch.house_security"
+                                },
+                                {
+                                    "entity": "counter.door_counter"
+                                },
+                                {
+                                    "entity": "counter.window_counter"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "type": "entities"
+                        },
+                        {
                             "entity_sun": "sensor.sun_state",
                             "entity_weather": "weather.s71",
                             "sensor_humidity": "sensor.outside_avg_humidity",

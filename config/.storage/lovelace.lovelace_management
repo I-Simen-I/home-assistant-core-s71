@@ -9,6 +9,50 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "switch.house_security"
+                                },
+                                {
+                                    "entity": "counter.door_counter"
+                                },
+                                {
+                                    "entity": "counter.window_counter"
+                                }
+                            ],
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "counter.door_counter"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_door_sensor_laundry_room",
+                                    "name": "Ytterd\u00f8r vaskerom"
+                                }
+                            ],
+                            "title": "D\u00f8rer",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "counter.window_counter"
+                                }
+                            ],
+                            "title": "Vinduer",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:shield-home",
+                    "path": "security",
+                    "title": "security"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
                                     "entity": "sensor.netatmo_s71_ute_ost_battery_percent"
                                 },
                                 {

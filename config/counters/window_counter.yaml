@@ -1,0 +1,6 @@
+window_counter:
+  name: Vinduer oppe
+  icon: mdi:window-open-variant
+  initial: 0
+  step: 1
+  minimum: 0

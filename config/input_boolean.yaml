@@ -25,3 +25,7 @@ scene_tv_rom_film:
 
 scene_tv_rom_av:
   initial: off
+
+# SECURITY
+house_security:
+  initial: off
