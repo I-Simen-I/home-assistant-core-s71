@@ -216,8 +216,7 @@
     entity_id: input_boolean.scene_tv_rom_av
     service: input_boolean.turn_off
 - id: '1583436784718'
-  alias: input_boolean=scene_alt_av, service=turn_on, condition=light_counter is equal
-    to 0
+  alias: input_boolean scene_alt_av turn_on if light_counter = 0
   description: ''
   trigger:
   - above: '-1'
@@ -234,8 +233,7 @@
       input_boolean.scene_selskap
     service: input_boolean.turn_off
 - id: '1583436934987'
-  alias: input_boolean=scene_alt_av, service=turn_off, condition=light_counter is
-    greater than 0
+  alias: input_boolean scene_alt_av turn_off if light_counter > 0
   description: ''
   trigger:
   - above: '0'
@@ -263,7 +261,7 @@
   action:
   - scene: scene.house_alt_av
 - id: '1584648685473'
-  alias: notify motion detected ring_doorbel
+  alias: notify security ring_doorbel motion detected
   description: ''
   trigger:
   - entity_id: binary_sensor.front_door_motion
@@ -283,11 +281,14 @@
       type: is_not_home
   action:
   - data:
+      data:
+        clickAction: /lovelace-management/security
+        color: red
       message: Det er bevegelse ved inngangsdøren
       title: Sikkerhetsbrudd
     service: notify.mobile_app_simens_galaxy_s10
 - id: '1584649059617'
-  alias: notify slow internet
+  alias: notify internet slow
   description: ''
   trigger:
   - below: '50'
@@ -299,52 +300,40 @@
   condition: []
   action:
   - data:
+      data:
+        clickAction: /lovelace-management/network
+        color: red
       message: DL eller UL er under 50 mbits
       title: Internett
     service: notify.mobile_app_simens_galaxy_s10
   - data:
+      data:
+        clickAction: /lovelace-management/network
+        color: red
       message: DL eller UL er under 50 mbits
       title: Internett
     service: notify.mobile_app_simen_sin_ipad
 - id: '1585150325058'
-  alias: notify low battery
+  alias: notify battery low
   description: ''
   trigger:
   - below: '20'
     entity_id: sensor.front_door_battery
     platform: numeric_state
   - below: '30'
-    entity_id: sensor.fibaro_door_sensor_battery_level_laundry_room
-    platform: numeric_state
-  - below: '30'
-    entity_id: sensor.fibaro_motion_sensor_battery_level_etg0_hall
-    platform: numeric_state
-  - below: '30'
-    entity_id: sensor.fibaro_motion_sensor_battery_level_etg0_stairway
-    platform: numeric_state
-  - below: '30'
-    entity_id: sensor.stairway_228_battery_level
-    platform: numeric_state
-  - below: '30'
-    entity_id: sensor.living_room_234_battery_level
-    platform: numeric_state
-  - below: '30'
-    entity_id: sensor.living_room_240_battery_level
-    platform: numeric_state
-  - below: '30'
-    entity_id: sensor.east_252_battery_level
-    platform: numeric_state
-  - below: '30'
-    entity_id: sensor.south_246_battery_level
+    entity_id: sensor.east_252_battery_level,sensor.south_246_battery_level,sensor.fibaro_door_sensor_battery_level_laundry_room,sensor.fibaro_motion_sensor_battery_level_etg0_hall,sensor.fibaro_motion_sensor_battery_level_etg0_stairway,sensor.stairway_228_battery_level,sensor.living_room_234_battery_level,sensor.living_room_240_battery_level
     platform: numeric_state
   condition: []
   action:
   - data:
+      data:
+        clickAction: /lovelace-management/battery
+        color: yellow
       message: Sjekk batteri på enheter
-      title: Lavt batteri
+      title: Vedlikehold
     service: notify.mobile_app_simens_galaxy_s10
 - id: '1585677159829'
-  alias: notify stekeovn finished
+  alias: notify siemens_oven finished
   description: ''
   trigger:
   - entity_id: sensor.siemens_hm876gdb6s_state
@@ -361,7 +350,7 @@
       title: Stekeovn
     service: notify.mobile_app_nora_sin_iphone
 - id: '1585677575120'
-  alias: notify dampovn finished
+  alias: notify siemens_steam_oven finished
   description: ''
   trigger:
   - entity_id: sensor.siemens_cs856gdb7s_state
@@ -378,7 +367,7 @@
       title: Dampovn
     service: notify.mobile_app_nora_sin_iphone
 - id: '1585677715815'
-  alias: notify vaskemaskin finished
+  alias: notify bosch_washing_machine finished
   description: ''
   trigger:
   - entity_id: sensor.bosch_wawh26m9sn_state
@@ -395,7 +384,7 @@
       title: Vaskemaskin
     service: notify.mobile_app_nora_sin_iphone
 - id: '1585677804672'
-  alias: notify tørketommel finished
+  alias: notify bosch_tumble_dryer finished
   description: ''
   trigger:
   - entity_id: sensor.bosch_wtwh7579sn_remaining
@@ -424,7 +413,7 @@
   action:
   - data:
       message: Støvbeholder må tømmes
-      title: LingLing
+      title: Vedlikehold - LingLing
     service: notify.mobile_app_simens_galaxy_s10
   - data:
       command: app_goto_target
@@ -446,7 +435,7 @@
     entity_id: scene.tv_rom_film
     service: scene.turn_on
 - id: '1586799578619'
-  alias: cover=rullgardiner_side, rullgardiner=70%
+  alias: cover rullgardiner_side 70%
   description: ''
   trigger:
   - above: '1000'
@@ -479,6 +468,8 @@
   condition: []
   action:
   - data:
+      data:
+        color: red
       message: Ytterdøren på vaskerommet er åpen
       title: Dør åpen
     service: notify.mobile_app_simens_galaxy_s10
@@ -495,8 +486,10 @@
     value_template: '{{ state.attributes.sensor_dirty_left}}'
   action:
   - data:
+      data:
+        color: yellow
       message: Sensor må rengjøres
-      title: LingLing - Vedlikehold
+      title: Vedlikehold - LingLing
     service: notify.mobile_app_simens_galaxy_s10
   - data:
       command: app_goto_target
@@ -506,7 +499,7 @@
     entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.send_command
 - id: '1593011968093'
-  alias: cover=rullgardiner_side, rullgardiner=100%
+  alias: cover rullgardiner_side 100%
   description: ''
   trigger:
   - above: '2500'
@@ -522,7 +515,7 @@
     entity_id: cover.rullgardiner_side
     service: cover.set_cover_position
 - id: '1593029744963'
-  alias: cover=rullgardiner_side, rullgardiner=0%
+  alias: cover rullgardiner_side 0%
   description: ''
   trigger:
   - below: '200'
@@ -562,7 +555,7 @@
     entity_id: counter.door_counter
     service: counter.decrement
 - id: '1593455558302'
-  alias: notify security breach door
+  alias: notify security_breach door
   description: ''
   trigger:
   - above: '0'
@@ -574,11 +567,14 @@
     state: 'on'
   action:
   - data:
+      data:
+        clickAction: /lovelace-management/security
+        color: red
       message: En eller flere dører er åpnet
       title: Sikkerhetsbrudd
     service: notify.mobile_app_simens_galaxy_s10
 - id: '1593455676622'
-  alias: notify security breach window
+  alias: notify security_breach window
   description: ''
   trigger:
   - above: '0'
@@ -590,6 +586,9 @@
     state: 'on'
   action:
   - data:
+      data:
+        clickAction: /lovelace-management/security
+        color: red
       message: En eller flere vinduer er åpnet
       title: Sikkerhetsbrudd
     service: notify.mobile_app_simens_galaxy_s10
@@ -643,3 +642,59 @@
       temperature: 21
     entity_id: climate.office_nora_144_1_147
     service: climate.set_temperature
+- id: '1593984295539'
+  alias: notify potential fire
+  description: ''
+  trigger:
+  - above: '40'
+    entity_id: sensor.laundry_room_206_0_1_208,sensor.hall_194_0_1_196,sensor.stairway_200_0_1_202,sensor.stairway_228_0_1_230,sensor.living_room_234_0_1_236,sensor.living_room_240_0_1_242
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      data:
+        clickAction: /lovelace-climate/temperature
+        color: red
+      message: En av sensorene inne reporterer høy temperatur
+      title: Potensiell brann
+    service: notify.mobile_app_simens_galaxy_s10
+  - data:
+      data:
+        clickAction: /lovelace-climate/temperature
+        color: red
+      message: En av sensorene inne reporterer høy temperatur
+      title: Potensiell brann
+    service: notify.mobile_app_nora_sin_iphone
+- id: '1593986869525'
+  alias: cleaning LingLing weekdays
+  description: ''
+  trigger:
+  - at: 09:45:00
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - data: {}
+    entity_id: vacuum.xiaomi_vacuum_cleaner
+    service: vacuum.start
+- id: '1593986999335'
+  alias: cleaning LingLing weekends
+  description: ''
+  trigger:
+  - at: '11:00:00'
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - sat
+    - sun
+  action:
+  - data: {}
+    entity_id: vacuum.xiaomi_vacuum_cleaner
+    service: vacuum.start

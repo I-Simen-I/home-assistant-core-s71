@@ -227,11 +227,6 @@
                                 }
                             ],
                             "type": "horizontal-stack"
-                        },
-                        {
-                            "aspect_ratio": "80%",
-                            "type": "iframe",
-                            "url": "https://homesolutions.systemair.com/"
                         }
                     ],
                     "icon": "mdi:fan",
@@ -303,7 +298,7 @@
                                             "entity": "sensor.stairway_228_0_1_230",
                                             "max": 40,
                                             "min": 0,
-                                            "name": "Kjeller",
+                                            "name": "Trapp",
                                             "severity": {
                                                 "green": 17,
                                                 "red": 26,
@@ -311,6 +306,35 @@
                                             },
                                             "type": "gauge"
                                         },
+                                        {
+                                            "entity": "sensor.stairway_200_0_1_202",
+                                            "max": 40,
+                                            "min": 0,
+                                            "name": "Tak",
+                                            "severity": {
+                                                "green": 17,
+                                                "red": 26,
+                                                "yellow": 23
+                                            },
+                                            "type": "gauge"
+                                        },
+                                        {
+                                            "entity": "sensor.hall_194_0_1_196",
+                                            "max": 40,
+                                            "min": 0,
+                                            "name": "Gang",
+                                            "severity": {
+                                                "green": 17,
+                                                "red": 26,
+                                                "yellow": 23
+                                            },
+                                            "type": "gauge"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
                                         {
                                             "entity": "sensor.laundry_room_206_0_1_208",
                                             "max": 40,

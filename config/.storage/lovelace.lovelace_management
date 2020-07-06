@@ -41,6 +41,14 @@
                             ],
                             "title": "Vinduer",
                             "type": "entities"
+                        },
+                        {
+                            "aspect_ratio": "0%",
+                            "camera_image": "camera.front_door",
+                            "entity": "camera.front_door",
+                            "show_name": true,
+                            "show_state": false,
+                            "type": "picture-entity"
                         }
                     ],
                     "icon": "mdi:shield-home",
@@ -52,9 +60,6 @@
                     "cards": [
                         {
                             "entities": [
-                                {
-                                    "entity": "sensor.netatmo_s71_ute_ost_battery_percent"
-                                },
                                 {
                                     "entity": "sensor.front_door_battery"
                                 }
