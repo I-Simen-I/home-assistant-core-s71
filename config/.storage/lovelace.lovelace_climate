@@ -346,6 +346,18 @@
                                                 "yellow": 23
                                             },
                                             "type": "gauge"
+                                        },
+                                        {
+                                            "entity": "sensor.technical_room_264_0_1_266",
+                                            "max": 40,
+                                            "min": 0,
+                                            "name": "Teknisk rom",
+                                            "severity": {
+                                                "green": 17,
+                                                "red": 26,
+                                                "yellow": 23
+                                            },
+                                            "type": "gauge"
                                         }
                                     ],
                                     "type": "horizontal-stack"
@@ -366,6 +378,18 @@
                                             "max": 40,
                                             "min": 0,
                                             "name": "Stue",
+                                            "severity": {
+                                                "green": 17,
+                                                "red": 26,
+                                                "yellow": 23
+                                            },
+                                            "type": "gauge"
+                                        },
+                                        {
+                                            "entity": "sensor.kitchen_258_0_1_260",
+                                            "max": 40,
+                                            "min": 0,
+                                            "name": "Kj\u00f8kken",
                                             "severity": {
                                                 "green": 17,
                                                 "red": 26,

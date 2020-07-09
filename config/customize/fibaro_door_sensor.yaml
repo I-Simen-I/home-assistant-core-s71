@@ -1,3 +1,10 @@
 # ETG 0
 sensor.laundry_room_206_0_1_208:
   friendly_name: Temperatur
+
+sensor.technical_room_264_0_1_266:
+  friendly_name: Temperatur
+
+# ETG 1
+sensor.kitchen_258_0_1_260:
+  friendly_name: Temperatur

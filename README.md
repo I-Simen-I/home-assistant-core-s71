@@ -15,6 +15,7 @@
 * [IKEA Trådfri RGB pære](https://www.ikea.com/no/no/p/tradfri-led-paere-e27-600-lumen-kan-dimmes-tradlost-farge-og-varmhvit-til-kaldhvit-farge-og-hvitt-spektrum-globe-opalhvit-00408612/)
 * [Speedtest.net](https://www.speedtest.net/)
 * [Aeotec MultiSensor 6](https://aeotec.com/z-wave-sensor/)
+* [Sensative Strips Guard](https://sensative.com/sensors/strips-zwave/guard/)
 
 # Images
 ![](doc/images/hac_1_v1.png)

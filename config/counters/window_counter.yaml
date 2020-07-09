@@ -4,3 +4,10 @@ window_counter:
   initial: 0
   step: 1
   minimum: 0
+
+etg1_living_room_window_counter:
+  name: Vinduer oppe
+  icon: mdi:window-open-variant
+  initial: 0
+  step: 1
+  minimum: 0

@@ -321,7 +321,7 @@
     entity_id: sensor.front_door_battery
     platform: numeric_state
   - below: '30'
-    entity_id: sensor.east_252_battery_level,sensor.south_246_battery_level,sensor.fibaro_door_sensor_battery_level_laundry_room,sensor.fibaro_motion_sensor_battery_level_etg0_hall,sensor.fibaro_motion_sensor_battery_level_etg0_stairway,sensor.stairway_228_battery_level,sensor.living_room_234_battery_level,sensor.living_room_240_battery_level
+    entity_id: sensor.east_252_battery_level,sensor.south_246_battery_level,sensor.fibaro_door_sensor_battery_level_laundry_room,sensor.fibaro_motion_sensor_battery_level_etg0_hall,sensor.fibaro_motion_sensor_battery_level_etg0_stairway,sensor.stairway_228_battery_level,sensor.living_room_234_battery_level,sensor.living_room_240_battery_level,sensor.fibaro_door_sensor_battery_level_kitchen,sensor.sensative_strips_guard_living_room_window_east_1_battery_level,sensor.fibaro_door_sensor_battery_level_technical_room
     platform: numeric_state
   condition: []
   action:
@@ -534,9 +534,9 @@
   alias: counter door_counter increment
   description: ''
   trigger:
-  - entity_id: sensor.fibaro_door_sensor_laundry_room
+  - entity_id: binary_sensor.laundry_room_206_0_207,binary_sensor.kitchen_258_0_259,binary_sensor.technical_room_264_0_265
     platform: state
-    to: Åpen
+    to: 'on'
   condition: []
   action:
   - data: {}
@@ -546,9 +546,9 @@
   alias: counter door_counter decrement
   description: ''
   trigger:
-  - entity_id: sensor.fibaro_door_sensor_laundry_room
+  - entity_id: binary_sensor.laundry_room_206_0_207,binary_sensor.kitchen_258_0_259,binary_sensor.technical_room_264_0_265
     platform: state
-    to: Lukket
+    to: 'off'
   condition: []
   action:
   - data: {}
@@ -647,7 +647,7 @@
   description: ''
   trigger:
   - above: '40'
-    entity_id: sensor.laundry_room_206_0_1_208,sensor.hall_194_0_1_196,sensor.stairway_200_0_1_202,sensor.stairway_228_0_1_230,sensor.living_room_234_0_1_236,sensor.living_room_240_0_1_242
+    entity_id: sensor.laundry_room_206_0_1_208,sensor.hall_194_0_1_196,sensor.stairway_200_0_1_202,sensor.stairway_228_0_1_230,sensor.living_room_234_0_1_236,sensor.living_room_240_0_1_242,sensor.technical_room_264_0_1_266,sensor.kitchen_258_0_1_260
     platform: numeric_state
   condition: []
   action:
@@ -669,7 +669,7 @@
   alias: cleaning LingLing weekdays
   description: ''
   trigger:
-  - at: 09:45:00
+  - at: '10:15:00'
     platform: time
   condition:
   - condition: time
@@ -698,3 +698,51 @@
   - data: {}
     entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.start
+- id: '1594318430717'
+  alias: counter window_counter decrement
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.living_room_262_0_263
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.window_counter
+    service: counter.decrement
+- id: '1594318488239'
+  alias: counter window_counter increment
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.living_room_262_0_263
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.window_counter
+    service: counter.increment
+- id: '1594318618005'
+  alias: counter etg1_living_room_window increment
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.living_room_262_0_263
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.etg1_living_room_window_counter
+    service: counter.increment
+- id: '1594318661417'
+  alias: counter etg1_living_room_window decrement
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.living_room_262_0_263
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.etg1_living_room_window_counter
+    service: counter.decrement
