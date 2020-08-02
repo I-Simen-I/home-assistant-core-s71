@@ -1,5 +1,5 @@
 thermostat_counter:
-    name: Varmematter på
+    name: Gulvvarme på
     icon: mdi:thermostat
     initial: 0
     step: 1
