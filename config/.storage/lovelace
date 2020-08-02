@@ -7,6 +7,126 @@
                     "badges": [],
                     "cards": [
                         {
+                            "card": {
+                                "entities": [
+                                    {
+                                        "entities": [
+                                            {
+                                                "entity": "sensor.siemens_hm876gdb6s_program",
+                                                "name": "Program"
+                                            },
+                                            {
+                                                "entity": "sensor.siemens_hm876gdb6s_elapsed",
+                                                "name": "Aktiv"
+                                            }
+                                        ],
+                                        "entity": "sensor.siemens_hm876gdb6s_state",
+                                        "show_state": false,
+                                        "type": "custom:multiple-entity-row"
+                                    }
+                                ],
+                                "show_header_toggle": false,
+                                "type": "entities"
+                            },
+                            "conditions": [
+                                {
+                                    "entity": "sensor.siemens_hm876gdb6s_state",
+                                    "state": "Aktiv"
+                                }
+                            ],
+                            "type": "conditional"
+                        },
+                        {
+                            "card": {
+                                "entities": [
+                                    {
+                                        "entities": [
+                                            {
+                                                "entity": "sensor.siemens_cs856gdb7s_program",
+                                                "name": "Program"
+                                            },
+                                            {
+                                                "entity": "sensor.siemens_cs856gdb7s_elapsed",
+                                                "name": "Aktiv"
+                                            }
+                                        ],
+                                        "entity": "sensor.siemens_cs856gdb7s_state",
+                                        "show_state": false,
+                                        "type": "custom:multiple-entity-row"
+                                    }
+                                ],
+                                "show_header_toggle": false,
+                                "type": "entities"
+                            },
+                            "conditions": [
+                                {
+                                    "entity": "sensor.siemens_cs856gdb7s_state",
+                                    "state": "Aktiv"
+                                }
+                            ],
+                            "type": "conditional"
+                        },
+                        {
+                            "card": {
+                                "entities": [
+                                    {
+                                        "entities": [
+                                            {
+                                                "entity": "sensor.bosch_wtwh7579sn_program",
+                                                "name": "Program"
+                                            },
+                                            {
+                                                "entity": "sensor.bosch_wtwh7579sn_remaining",
+                                                "name": "Gjenst\u00e5ende"
+                                            }
+                                        ],
+                                        "entity": "sensor.bosch_wtwh7579sn_state",
+                                        "show_state": false,
+                                        "type": "custom:multiple-entity-row"
+                                    }
+                                ],
+                                "show_header_toggle": false,
+                                "type": "entities"
+                            },
+                            "conditions": [
+                                {
+                                    "entity": "sensor.bosch_wtwh7579sn_state",
+                                    "state": "Aktiv"
+                                }
+                            ],
+                            "type": "conditional"
+                        },
+                        {
+                            "card": {
+                                "entities": [
+                                    {
+                                        "entities": [
+                                            {
+                                                "entity": "sensor.bosch_wawh26m9sn_program",
+                                                "name": "Program"
+                                            },
+                                            {
+                                                "entity": "sensor.bosch_wawh26m9sn_remaining",
+                                                "name": "Gjenst\u00e5ende"
+                                            }
+                                        ],
+                                        "entity": "sensor.bosch_wawh26m9sn_state",
+                                        "show_state": false,
+                                        "type": "custom:multiple-entity-row"
+                                    }
+                                ],
+                                "show_header_toggle": false,
+                                "type": "entities"
+                            },
+                            "conditions": [
+                                {
+                                    "entity": "sensor.bosch_wawh26m9sn_state",
+                                    "state": "Aktiv"
+                                }
+                            ],
+                            "type": "conditional"
+                        },
+                        {
                             "entities": [
                                 {
                                     "entity": "switch.house_scene_morgen",
@@ -127,6 +247,37 @@
                             "type": "custom:weather-card"
                         },
                         {
+                            "card": {
+                                "entities": [
+                                    {
+                                        "entities": [
+                                            {
+                                                "entity": "sensor.netatmo_s70_rain_gauge_sum_rain_1",
+                                                "name": "Siste time"
+                                            },
+                                            {
+                                                "entity": "sensor.netatmo_s70_rain_gauge_sum_rain_24",
+                                                "name": "Siste 24t"
+                                            }
+                                        ],
+                                        "entity": "sensor.netatmo_s70_rain_gauge_sum_rain_1",
+                                        "name": "Regnm\u00e5ler",
+                                        "show_state": false,
+                                        "type": "custom:multiple-entity-row"
+                                    }
+                                ],
+                                "show_header_toggle": false,
+                                "type": "entities"
+                            },
+                            "conditions": [
+                                {
+                                    "entity": "sensor.netatmo_s70_rain_gauge_rain",
+                                    "state_not": "unavailable"
+                                }
+                            ],
+                            "type": "conditional"
+                        },
+                        {
                             "aspect_ratio": "50%",
                             "camera_image": "camera.front_door",
                             "entity": "camera.front_door",
@@ -150,9 +301,19 @@
                                     "entities": [
                                         {
                                             "entity": "sensor.laundry_room_206_0_1_208"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
                                         }
                                     ],
-                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "entity": "climate.etg_0_laundry_room",
                                     "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
@@ -212,9 +373,19 @@
                                         },
                                         {
                                             "entity": "sensor.stairway_228_0_3_232"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
                                         }
                                     ],
-                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "entity": "climate.etg_0_hall",
                                     "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
@@ -280,6 +451,23 @@
                         {
                             "entities": [
                                 {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_0_bedroom_east",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
                                     "entity": "light.bedroom_east_129_1_132"
                                 }
                             ],
@@ -290,6 +478,23 @@
                         {
                             "entities": [
                                 {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_0_bedroom_north",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
                                     "entity": "light.bedroom_north_124_1_127"
                                 }
                             ],
@@ -299,6 +504,23 @@
                         },
                         {
                             "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_0_bathroom",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
                                 {
                                     "entity": "light.bathroom_114_1_117"
                                 },
@@ -321,6 +543,23 @@
                         {
                             "entities": [
                                 {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_1_hall",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
                                     "entity": "light.hall_44_1_47"
                                 }
                             ],
@@ -330,6 +569,23 @@
                         },
                         {
                             "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_1_bathroom",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
                                 {
                                     "entity": "light.bathroom_39_1_42"
                                 },
@@ -347,9 +603,19 @@
                                     "entities": [
                                         {
                                             "entity": "sensor.kitchen_258_0_1_260"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
                                         }
                                     ],
-                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "entity": "climate.etg_1_kitchen",
                                     "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
@@ -396,7 +662,28 @@
                                     "type": "custom:multiple-entity-row"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_door_sensor_kitchen"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.fibaro_door_sensor_kitchen",
+                                            "name": "Status"
+                                        },
+                                        {
+                                            "entity": "cover.kitchen_278_1_281"
+                                        }
+                                    ],
+                                    "entity": "sensor.fibaro_door_sensor_kitchen",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "cover.kitchen_268_1_271"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_windows",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -405,6 +692,23 @@
                         },
                         {
                             "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_1_tv_room",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
                                 {
                                     "entity": "light.tv_room_89_1_92"
                                 },
@@ -415,10 +719,17 @@
                                     "entity": "switch.tv_room_181_0_182"
                                 },
                                 {
-                                    "entity": "cover.rullgardiner_side"
-                                },
-                                {
-                                    "entity": "cover.rullgardin_bak"
+                                    "entities": [
+                                        {
+                                            "entity": "cover.rullgardiner_side"
+                                        },
+                                        {
+                                            "entity": "cover.rullgardin_bak"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_windows",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "footer": {
@@ -451,9 +762,19 @@
                                         },
                                         {
                                             "entity": "sensor.living_room_234_0_3_238"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
                                         }
                                     ],
-                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "entity": "climate.etg_1_living_room",
                                     "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
@@ -464,7 +785,18 @@
                                     "entity": "light.living_room_94_1_97"
                                 },
                                 {
-                                    "entity": "counter.etg1_living_room_window_counter"
+                                    "entities": [
+                                        {
+                                            "entity": "counter.etg1_living_room_window_counter",
+                                            "name": "Oppe"
+                                        },
+                                        {
+                                            "entity": "cover.living_room_288_1_291"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_windows",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -488,10 +820,24 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "light.office_simen_4_1_7"
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.office_simen_153_1_156",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 },
                                 {
-                                    "entity": "climate.office_simen_153_1_156"
+                                    "entity": "light.office_simen_4_1_7"
                                 },
                                 {
                                     "entities": [
@@ -521,9 +867,19 @@
                                         },
                                         {
                                             "entity": "sensor.living_room_240_0_3_244"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
                                         }
                                     ],
-                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "entity": "climate.living_room_135_1_138",
                                     "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
@@ -532,9 +888,6 @@
                                 },
                                 {
                                     "entity": "light.living_room_177_0_178"
-                                },
-                                {
-                                    "entity": "climate.living_room_135_1_138"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -544,10 +897,24 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "light.office_nora_14_1_17"
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.office_nora_144_1_147",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 },
                                 {
-                                    "entity": "climate.office_nora_144_1_147"
+                                    "entity": "light.office_nora_14_1_17"
                                 },
                                 {
                                     "entities": [
@@ -568,6 +935,23 @@
                         {
                             "entities": [
                                 {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_2_bathroom",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
                                     "entity": "light.bathroom_29_1_32"
                                 },
                                 {
@@ -585,6 +969,21 @@
                             "entities": [
                                 {
                                     "entity": "light.walk_in_closet_59_1_62"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "cover.walk_in_closet_283_1_286",
+                                            "name": "Screen \u00d8st"
+                                        },
+                                        {
+                                            "entity": "cover.bedroom_273_1_276",
+                                            "name": "Screens S\u00f8r"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_windows",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -595,6 +994,17 @@
                             "entities": [
                                 {
                                     "entity": "light.bedroom_84_1_87"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "cover.bedroom_273_1_276",
+                                            "name": "Screens"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_window",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 }
                             ],
                             "show_header_toggle": false,

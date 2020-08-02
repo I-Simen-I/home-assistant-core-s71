@@ -1,0 +1,38 @@
+## ETG 0
+climate.etg_0_bathroom:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+climate.etg_0_hall:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+climate.etg_0_laundry_room:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+climate.etg_0_bedroom_east:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+climate.etg_0_bedroom_north:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+
+## ETG 1
+climate.etg_1_bathroom:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+climate.etg_1_hall:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+climate.etg_1_kitchen:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+climate.etg_1_living_room:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+climate.etg_1_tv_room:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'
+
+## ETG 2:
+climate.etg_2_bathroom:
+  friendly_name: 'Klima'
+  icon: 'mdi:home-heart'

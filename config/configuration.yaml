@@ -39,7 +39,7 @@ netatmo:
   client_secret: !secret netatmo_client_secret_key
 
 speedtestdotnet:
-  server_id: 8018
+  server_id: 11787 #Broadnet
   scan_interval:
     minutes: 120
   monitored_conditions:
@@ -52,5 +52,6 @@ vacuum:
     host: !secret roborock_s5_ip_lingling
     token: !secret roborock_s5_token_lingling
 
-tradfri:
-  host: !secret ikea_tradfri_gateway_ip
+climate:
+  - platform: touchline
+    host: !secret roth_touchline_ip

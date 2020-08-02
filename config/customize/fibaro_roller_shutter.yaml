@@ -1,0 +1,16 @@
+# ETG 1
+cover.kitchen_268_1_271:
+  friendly_name: "Screens"
+
+cover.kitchen_278_1_281:
+  friendly_name: "Screen"
+
+cover.living_room_288_1_291:
+  friendly_name: "Screen"
+
+# ETG 2
+cover.bedroom_273_1_276:
+  friendly_name: "Screens"
+
+cover.walk_in_closet_283_1_286:
+    friendly_name: "Screen"

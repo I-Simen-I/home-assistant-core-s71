@@ -13,3 +13,13 @@ multiple_entity_row_humidity:
   friendly_name: 'Luftfuktighet'
   icon_template: 'mdi:water-percent'
   value_template: 1
+
+multiple_entity_row_window:
+  friendly_name: 'Vindu'
+  icon_template: 'mdi:window-closed-variant'
+  value_template: 1
+
+multiple_entity_row_windows:
+  friendly_name: 'Vinduer'
+  icon_template: 'mdi:window-closed-variant'
+  value_template: 1

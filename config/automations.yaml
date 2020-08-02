@@ -12,6 +12,7 @@
     condition: time
   action:
   - scene: scene.house_dag
+  mode: single
 - id: '1583432092936'
   alias: Scene=house_kveld, Dager=Alle
   description: ''
@@ -25,6 +26,7 @@
     condition: time
   action:
   - scene: scene.house_kveld
+  mode: single
 - id: '1583432394622'
   alias: Scene=house_morgen, Tid=05:30, Dager=Ukedager
   description: ''
@@ -41,6 +43,7 @@
     - fri
   action:
   - scene: scene.house_morgen
+  mode: single
 - id: '1583432669456'
   alias: Scene=house_alt_av, Tid=22:45, Dager=Man,Tir,Ons,Tor,Sun
   description: ''
@@ -57,6 +60,7 @@
     - sun
   action:
   - scene: scene.house_alt_av
+  mode: single
 - id: '1583432767167'
   alias: Scene=house_alt_av, Tid=01:30, Dager=Lør,Søn
   description: ''
@@ -70,6 +74,7 @@
     - sun
   action:
   - scene: scene.house_alt_av
+  mode: single
 - id: '1583433106041'
   alias: Switch=Støvsuger, Service=turn_on, Tid=15:00
   description: ''
@@ -81,6 +86,7 @@
   - data: {}
     entity_id: switch.office_simen_175_0_176
     service: switch.turn_on
+  mode: single
 - id: '1583433154447'
   alias: Switch=Støvsuger, Service=turn_off, Tid=22:00
   description: ''
@@ -92,6 +98,7 @@
   - data: {}
     entity_id: switch.office_simen_175_0_176
     service: switch.turn_off
+  mode: single
 - id: '1583433214285'
   alias: Switch=Servantskap, Service=turn_on, Tid=16:00
   description: ''
@@ -103,6 +110,7 @@
   - data: {}
     entity_id: switch.bathroom_187_1_190
     service: switch.turn_on
+  mode: single
 - id: '1583433271638'
   alias: Switch=Servantskap, Service=turn_off, Tid=23:00
   description: ''
@@ -114,6 +122,7 @@
   - data: {}
     entity_id: switch.bathroom_187_1_190
     service: switch.turn_off
+  mode: single
 - id: '1583434699664'
   alias: counter light_counter increment
   description: ''
@@ -134,6 +143,8 @@
   - data: {}
     entity_id: counter.light_counter
     service: counter.increment
+  mode: queued
+  max: 10
 - id: '1583435215986'
   alias: counter light_counter decrement
   description: ''
@@ -154,6 +165,8 @@
   - data: {}
     entity_id: counter.light_counter
     service: counter.decrement
+  mode: queued
+  max: 10
 - id: '1583435633930'
   alias: counter thermostat_counter decrement
   description: ''
@@ -167,6 +180,8 @@
   - data: {}
     entity_id: counter.thermostat_counter
     service: counter.decrement
+  mode: queued
+  max: 10
 - id: '1583435692725'
   alias: counter thermostat_counter increment
   description: ''
@@ -180,6 +195,8 @@
   - data: {}
     entity_id: counter.thermostat_counter
     service: counter.increment
+  mode: queued
+  max: 10
 - id: '1583436389800'
   alias: Scene=tv_room_av, condition=light is off
   description: ''
@@ -215,6 +232,7 @@
   - data: {}
     entity_id: input_boolean.scene_tv_rom_av
     service: input_boolean.turn_off
+  mode: single
 - id: '1583436784718'
   alias: input_boolean scene_alt_av turn_on if light_counter = 0
   description: ''
@@ -232,6 +250,7 @@
     entity_id: input_boolean.scene_morgen, input_boolean.scene_dag, input_boolean.scene_kveld,
       input_boolean.scene_selskap
     service: input_boolean.turn_off
+  mode: single
 - id: '1583436934987'
   alias: input_boolean scene_alt_av turn_off if light_counter > 0
   description: ''
@@ -244,6 +263,7 @@
   - data: {}
     entity_id: input_boolean.scene_alt_av
     service: input_boolean.turn_off
+  mode: single
 - id: '1583472778798'
   alias: Scene=house_alt_av, Tid=06:30, Dager=Ukedager
   description: ''
@@ -260,6 +280,7 @@
     - fri
   action:
   - scene: scene.house_alt_av
+  mode: single
 - id: '1584648685473'
   alias: notify security ring_doorbel motion detected
   description: ''
@@ -287,6 +308,7 @@
       message: Det er bevegelse ved inngangsdøren
       title: Sikkerhetsbrudd
     service: notify.mobile_app_simens_galaxy_s10
+  mode: single
 - id: '1584649059617'
   alias: notify internet slow
   description: ''
@@ -313,6 +335,7 @@
       message: DL eller UL er under 50 mbits
       title: Internett
     service: notify.mobile_app_simen_sin_ipad
+  mode: single
 - id: '1585150325058'
   alias: notify battery low
   description: ''
@@ -332,6 +355,7 @@
       message: Sjekk batteri på enheter
       title: Vedlikehold
     service: notify.mobile_app_simens_galaxy_s10
+  mode: single
 - id: '1585677159829'
   alias: notify siemens_oven finished
   description: ''
@@ -349,6 +373,7 @@
       message: Ovnsprogrammet er ferdig
       title: Stekeovn
     service: notify.mobile_app_nora_sin_iphone
+  mode: single
 - id: '1585677575120'
   alias: notify siemens_steam_oven finished
   description: ''
@@ -366,6 +391,7 @@
       message: Ovnsprogrammet er ferdig
       title: Dampovn
     service: notify.mobile_app_nora_sin_iphone
+  mode: single
 - id: '1585677715815'
   alias: notify bosch_washing_machine finished
   description: ''
@@ -383,6 +409,7 @@
       message: Programmet er ferdig
       title: Vaskemaskin
     service: notify.mobile_app_nora_sin_iphone
+  mode: single
 - id: '1585677804672'
   alias: notify bosch_tumble_dryer finished
   description: ''
@@ -400,6 +427,7 @@
       message: Programmet er ferdig
       title: Tørketormmel
     service: notify.mobile_app_nora_sin_iphone
+  mode: single
 - id: '1586126529481'
   alias: notify roborock empty dust bin
   description: ''
@@ -422,6 +450,7 @@
       - 21500
     entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.send_command
+  mode: single
 - id: '1586292981334'
   alias: Scene=tv_rom_film, condition=plex_apple_tv_state is playing
   description: ''
@@ -456,6 +485,7 @@
       position: 30
     entity_id: cover.rullgardiner_side
     service: cover.set_cover_position
+  mode: single
 - id: '1591997443760'
   alias: nodify laundry_room_door open
   description: ''
@@ -473,6 +503,7 @@
       message: Ytterdøren på vaskerommet er åpen
       title: Dør åpen
     service: notify.mobile_app_simens_galaxy_s10
+  mode: single
 - id: '1592669514031'
   alias: notify roborock sensor maintenance
   description: ''
@@ -514,6 +545,7 @@
       position: 0
     entity_id: cover.rullgardiner_side
     service: cover.set_cover_position
+  mode: single
 - id: '1593029744963'
   alias: cover rullgardiner_side 0%
   description: ''
@@ -530,6 +562,7 @@
       position: 100
     entity_id: cover.rullgardiner_side
     service: cover.set_cover_position
+  mode: single
 - id: '1593455354865'
   alias: counter door_counter increment
   description: ''
@@ -542,6 +575,8 @@
   - data: {}
     entity_id: counter.door_counter
     service: counter.increment
+  mode: queued
+  max: 10
 - id: '1593455460433'
   alias: counter door_counter decrement
   description: ''
@@ -554,6 +589,8 @@
   - data: {}
     entity_id: counter.door_counter
     service: counter.decrement
+  mode: queued
+  max: 10
 - id: '1593455558302'
   alias: notify security_breach door
   description: ''
@@ -573,6 +610,7 @@
       message: En eller flere dører er åpnet
       title: Sikkerhetsbrudd
     service: notify.mobile_app_simens_galaxy_s10
+  mode: single
 - id: '1593455676622'
   alias: notify security_breach window
   description: ''
@@ -592,6 +630,7 @@
       message: En eller flere vinduer er åpnet
       title: Sikkerhetsbrudd
     service: notify.mobile_app_simens_galaxy_s10
+  mode: single
 - id: '1593543809275'
   alias: notify security off
   description: ''
@@ -606,6 +645,7 @@
       message: Sikkerhet er skrudd av
       title: Sikkerhet
     service: notify.mobile_app_simens_galaxy_s10
+  mode: single
 - id: '1593592653157'
   alias: climate office-nora heat-on
   description: ''
@@ -630,6 +670,7 @@
       temperature: 24
     entity_id: climate.office_nora_144_1_147
     service: climate.set_temperature
+  mode: single
 - id: '1593596702494'
   alias: climate office-nora heat-off
   description: ''
@@ -642,6 +683,7 @@
       temperature: 21
     entity_id: climate.office_nora_144_1_147
     service: climate.set_temperature
+  mode: single
 - id: '1593984295539'
   alias: notify potential fire
   description: ''
@@ -665,6 +707,7 @@
       message: En av sensorene inne reporterer høy temperatur
       title: Potensiell brann
     service: notify.mobile_app_nora_sin_iphone
+  mode: single
 - id: '1593986869525'
   alias: cleaning LingLing weekdays
   description: ''
@@ -683,6 +726,7 @@
   - data: {}
     entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.start
+  mode: single
 - id: '1593986999335'
   alias: cleaning LingLing weekends
   description: ''
@@ -698,6 +742,7 @@
   - data: {}
     entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.start
+  mode: single
 - id: '1594318430717'
   alias: counter window_counter decrement
   description: ''
@@ -710,6 +755,8 @@
   - data: {}
     entity_id: counter.window_counter
     service: counter.decrement
+  mode: queued
+  max: 10
 - id: '1594318488239'
   alias: counter window_counter increment
   description: ''
@@ -722,6 +769,8 @@
   - data: {}
     entity_id: counter.window_counter
     service: counter.increment
+  mode: queued
+  max: 10
 - id: '1594318618005'
   alias: counter etg1_living_room_window increment
   description: ''
@@ -734,6 +783,8 @@
   - data: {}
     entity_id: counter.etg1_living_room_window_counter
     service: counter.increment
+  mode: queued
+  max: 10
 - id: '1594318661417'
   alias: counter etg1_living_room_window decrement
   description: ''
@@ -746,3 +797,37 @@
   - data: {}
     entity_id: counter.etg1_living_room_window_counter
     service: counter.decrement
+  mode: queued
+  max: 10
+- id: '1596144711926'
+  alias: cover screens east open
+  description: ''
+  trigger:
+  - below: '1500'
+    entity_id: sensor.east_252_0_2_255
+    platform: numeric_state
+  condition:
+  - after: '18:00:00'
+    condition: time
+  action:
+  - data: {}
+    entity_id: cover.living_room_288_1_291,cover.walk_in_closet_283_1_286
+    service: cover.open_cover
+  mode: single
+- id: '1596312646611'
+  alias: restart
+  description: ''
+  trigger:
+  - at: 04:30:00
+    platform: time
+  condition: []
+  action:
+  - data:
+      data:
+        color: yellow
+      message: Restarter app
+      title: Home Assistant
+    service: notify.mobile_app_simens_galaxy_s10
+  - data: {}
+    service: homeassistant.restart
+  mode: single

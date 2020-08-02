@@ -5,6 +5,7 @@
 * [Fibaro wall plugs](https://www.fibaro.com/no/products/smart-stikkontakt-wall-plug/)
 * [Fibaro motion sensor](https://www.fibaro.com/no/products/bevegelsessensor-motion-sensor/)
 * [Fibaro door / window sensor](https://www.fibaro.com/no/products/door-window-sensor/)
+* [Fibaro roller shutter 3](https://www.fibaro.com/no/products/smart-roller-shutter/)
 * [Heatit z-wave thermostat](https://www.heatit.com/heating-control/floor-heating-thermostats/heatit-z-wave-thermostat/)
 * [Tibber](https://tibber.com/no/)
 * [Netatmo Weather station](https://www.netatmo.com/no-no/weather/weatherstation)
