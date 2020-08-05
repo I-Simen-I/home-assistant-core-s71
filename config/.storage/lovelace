@@ -234,6 +234,9 @@
                                 },
                                 {
                                     "entity": "counter.window_counter"
+                                },
+                                {
+                                    "entity": "counter.screens_counter"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -678,6 +681,10 @@
                                 {
                                     "entities": [
                                         {
+                                            "entity": "counter.etg1_kitchen_window_counter",
+                                            "name": "Oppe"
+                                        },
+                                        {
                                             "entity": "cover.kitchen_268_1_271"
                                         }
                                     ],
@@ -973,6 +980,10 @@
                                 {
                                     "entities": [
                                         {
+                                            "entity": "counter.etg2_walk_in_closet_window_counter",
+                                            "name": "Oppe"
+                                        },
+                                        {
                                             "entity": "cover.walk_in_closet_283_1_286",
                                             "name": "Screen \u00d8st"
                                         },
@@ -993,10 +1004,27 @@
                         {
                             "entities": [
                                 {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.bedroom_293_0_1_295"
+                                        },
+                                        {
+                                            "entity": "sensor.bedroom_293_0_2_296"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_climate",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
                                     "entity": "light.bedroom_84_1_87"
                                 },
                                 {
                                     "entities": [
+                                        {
+                                            "entity": "sensor.sensative_strips_guard_bedroom_window",
+                                            "name": "Status"
+                                        },
                                         {
                                             "entity": "cover.bedroom_273_1_276",
                                             "name": "Screens"

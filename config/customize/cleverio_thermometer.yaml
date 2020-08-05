@@ -1,0 +1,5 @@
+sensor.bedroom_293_0_1_295:
+  friendly_name: Temperatur
+
+sensor.bedroom_293_0_2_296:
+  friendly_name: Luftfuktighet

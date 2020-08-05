@@ -1,0 +1,15 @@
+bedroom_293_0_1_295_battery_level:
+  friendly_name: 'Sensor soverom batterinivå'
+  icon_template: >-
+    {% if (state_attr('sensor.bedroom_293_0_1_295', 'battery_level') > 70) %}
+      mdi:battery
+    {% elif (state_attr('sensor.bedroom_293_0_1_295', 'battery_level') > 50) %}
+      mdi:battery-70
+    {% elif (state_attr('sensor.bedroom_293_0_1_295', 'battery_level') > 20) %}
+      mdi:battery-30
+    {% elif (state_attr('sensor.bedroom_293_0_1_295', 'battery_level') < 20) %}
+      mdi:battery-10
+    {% endif %}
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ state_attr('sensor.bedroom_293_0_1_295', 'battery_level') }}

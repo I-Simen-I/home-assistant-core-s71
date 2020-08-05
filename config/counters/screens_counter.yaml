@@ -1,0 +1,6 @@
+screens_counter:
+    name: Screens lukket
+    icon: mdi:archive-arrow-down-outline
+    initial: 0
+    step: 1
+    minimum: 0

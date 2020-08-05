@@ -17,6 +17,7 @@
 * [Speedtest.net](https://www.speedtest.net/)
 * [Aeotec MultiSensor 6](https://aeotec.com/z-wave-sensor/)
 * [Sensative Strips Guard](https://sensative.com/sensors/strips-zwave/guard/)
+* Cleverio Thermometer
 
 # Images
 ![](doc/images/hac_1_v1.png)

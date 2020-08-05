@@ -1,6 +1,6 @@
 # ETG 1
 sensative_strips_guard_living_room_window_east_1:
-  friendly_name: 'Vindu Øst 1'
+  friendly_name: 'Vindu øst venstre'
   icon_template: >-
     {% if is_state('binary_sensor.living_room_262_0_263', 'on') %}
       mdi:window-open-variant
@@ -15,7 +15,7 @@ sensative_strips_guard_living_room_window_east_1:
     {% endif %}
 
 sensative_strips_guard_living_room_window_east_1_battery_level:
-  friendly_name: 'Vindussensor stue øst 1 batterinivå'
+  friendly_name: 'Vindussensor stue øst venstre batterinivå'
   icon_template: >-
     {% if (state_attr('binary_sensor.living_room_262_0_263', 'battery_level') > 70) %}
       mdi:battery
@@ -29,3 +29,190 @@ sensative_strips_guard_living_room_window_east_1_battery_level:
   unit_of_measurement: "%"
   value_template: >-
     {{ state_attr('binary_sensor.living_room_262_0_263', 'battery_level') }}
+
+sensative_strips_guard_living_room_window_east_2:
+  friendly_name: 'Vindu øst høyre'
+  icon_template: >-
+    {% if is_state('binary_sensor.living_room_311_0_312', 'on') %}
+      mdi:window-open-variant
+    {% else %}
+      mdi:window-closed-variant
+    {% endif %}
+  value_template: >-
+    {% if is_state('binary_sensor.living_room_311_0_312', 'on') %}
+      Åpen
+    {% else %}
+      Lukket
+    {% endif %}
+
+sensative_strips_guard_living_room_window_east_2_battery_level:
+  friendly_name: 'Vindussensor stue øst høyre batterinivå'
+  icon_template: >-
+    {% if (state_attr('binary_sensor.living_room_311_0_312', 'battery_level') > 70) %}
+      mdi:battery
+    {% elif (state_attr('binary_sensor.living_room_311_0_312', 'battery_level') > 50) %}
+      mdi:battery-70
+    {% elif (state_attr('binary_sensor.living_room_311_0_312', 'battery_level') > 20) %}
+      mdi:battery-30
+    {% elif (state_attr('binary_sensor.living_room_311_0_312', 'battery_level') < 20) %}
+      mdi:battery-10
+    {% endif %}
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ state_attr('binary_sensor.living_room_311_0_312', 'battery_level') }}
+
+sensative_strips_guard_kitchen_window_1:
+  friendly_name: 'Vindu venstre'
+  icon_template: >-
+    {% if is_state('binary_sensor.kitchen_305_0_306', 'on') %}
+      mdi:window-open-variant
+    {% else %}
+      mdi:window-closed-variant
+    {% endif %}
+  value_template: >-
+    {% if is_state('binary_sensor.kitchen_305_0_306', 'on') %}
+      Åpen
+    {% else %}
+      Lukket
+    {% endif %}
+
+sensative_strips_guard_kitchen_window_1_battery_level:
+  friendly_name: 'Vindussensor kjøkken venstre batterinivå'
+  icon_template: >-
+    {% if (state_attr('binary_sensor.kitchen_305_0_306', 'battery_level') > 70) %}
+      mdi:battery
+    {% elif (state_attr('binary_sensor.kitchen_305_0_306', 'battery_level') > 50) %}
+      mdi:battery-70
+    {% elif (state_attr('binary_sensor.kitchen_305_0_306', 'battery_level') > 20) %}
+      mdi:battery-30
+    {% elif (state_attr('binary_sensor.kitchen_305_0_306', 'battery_level') < 20) %}
+      mdi:battery-10
+    {% endif %}
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ state_attr('binary_sensor.kitchen_305_0_306', 'battery_level') }}
+
+sensative_strips_guard_kitchen_window_2:
+  friendly_name: 'Vindu høyre'
+  icon_template: >-
+    {% if is_state('binary_sensor.kitchen_307_0_308', 'on') %}
+      mdi:window-open-variant
+    {% else %}
+      mdi:window-closed-variant
+    {% endif %}
+  value_template: >-
+    {% if is_state('binary_sensor.kitchen_307_0_308', 'on') %}
+      Åpen
+    {% else %}
+      Lukket
+    {% endif %}
+
+sensative_strips_guard_kitchen_window_2_battery_level:
+  friendly_name: 'Vindussensor kjøkken høyre batterinivå'
+  icon_template: >-
+    {% if (state_attr('binary_sensor.kitchen_307_0_308', 'battery_level') > 70) %}
+      mdi:battery
+    {% elif (state_attr('binary_sensor.kitchen_307_0_308', 'battery_level') > 50) %}
+      mdi:battery-70
+    {% elif (state_attr('binary_sensor.kitchen_307_0_308', 'battery_level') > 20) %}
+      mdi:battery-30
+    {% elif (state_attr('binary_sensor.kitchen_307_0_308', 'battery_level') < 20) %}
+      mdi:battery-10
+    {% endif %}
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ state_attr('binary_sensor.kitchen_307_0_308', 'battery_level') }}
+
+#ETG 2
+sensative_strips_guard_walk_in_closet_window_1:
+  friendly_name: 'Vindu øst'
+  icon_template: >-
+    {% if is_state('binary_sensor.walk_in_closet_303_0_304', 'on') %}
+      mdi:window-open-variant
+    {% else %}
+      mdi:window-closed-variant
+    {% endif %}
+  value_template: >-
+    {% if is_state('binary_sensor.walk_in_closet_303_0_304', 'on') %}
+      Åpen
+    {% else %}
+      Lukket
+    {% endif %}
+
+sensative_strips_guard_walk_in_closet_window_1_battery_level:
+  friendly_name: 'Vindussensor walk in closet øst batterinivå'
+  icon_template: >-
+    {% if (state_attr('binary_sensor.walk_in_closet_303_0_304', 'battery_level') > 70) %}
+      mdi:battery
+    {% elif (state_attr('binary_sensor.walk_in_closet_303_0_304', 'battery_level') > 50) %}
+      mdi:battery-70
+    {% elif (state_attr('binary_sensor.walk_in_closet_303_0_304', 'battery_level') > 20) %}
+      mdi:battery-30
+    {% elif (state_attr('binary_sensor.walk_in_closet_303_0_304', 'battery_level') < 20) %}
+      mdi:battery-10
+    {% endif %}
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ state_attr('binary_sensor.walk_in_closet_303_0_304', 'battery_level') }}
+
+sensative_strips_guard_walk_in_closet_window_2:
+  friendly_name: 'Vindu sør'
+  icon_template: >-
+    {% if is_state('binary_sensor.walk_in_closet_301_0_302', 'on') %}
+      mdi:window-open-variant
+    {% else %}
+      mdi:window-closed-variant
+    {% endif %}
+  value_template: >-
+    {% if is_state('binary_sensor.walk_in_closet_301_0_302', 'on') %}
+      Åpen
+    {% else %}
+      Lukket
+    {% endif %}
+
+sensative_strips_guard_walk_in_closet_window_2_battery_level:
+  friendly_name: 'Vindussensor walk in closet sør batterinivå'
+  icon_template: >-
+    {% if (state_attr('binary_sensor.walk_in_closet_301_0_302', 'battery_level') > 70) %}
+      mdi:battery
+    {% elif (state_attr('binary_sensor.walk_in_closet_301_0_302', 'battery_level') > 50) %}
+      mdi:battery-70
+    {% elif (state_attr('binary_sensor.walk_in_closet_301_0_302', 'battery_level') > 20) %}
+      mdi:battery-30
+    {% elif (state_attr('binary_sensor.walk_in_closet_301_0_302', 'battery_level') < 20) %}
+      mdi:battery-10
+    {% endif %}
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ state_attr('binary_sensor.walk_in_closet_301_0_302', 'battery_level') }}
+
+sensative_strips_guard_bedroom_window:
+  friendly_name: 'Vindu'
+  icon_template: >-
+    {% if is_state('binary_sensor.bedroom_297_0_298', 'on') %}
+      mdi:window-open-variant
+    {% else %}
+      mdi:window-closed-variant
+    {% endif %}
+  value_template: >-
+    {% if is_state('binary_sensor.bedroom_297_0_298', 'on') %}
+      Åpen
+    {% else %}
+      Lukket
+    {% endif %}
+
+sensative_strips_guard_bedroom_window_battery_level:
+  friendly_name: 'Vindussensor soverom batterinivå'
+  icon_template: >-
+    {% if (state_attr('binary_sensor.bedroom_297_0_298', 'battery_level') > 70) %}
+      mdi:battery
+    {% elif (state_attr('binary_sensor.bedroom_297_0_298', 'battery_level') > 50) %}
+      mdi:battery-70
+    {% elif (state_attr('binary_sensor.bedroom_297_0_298', 'battery_level') > 20) %}
+      mdi:battery-30
+    {% elif (state_attr('binary_sensor.bedroom_297_0_298', 'battery_level') < 20) %}
+      mdi:battery-10
+    {% endif %}
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ state_attr('binary_sensor.bedroom_297_0_298', 'battery_level') }}

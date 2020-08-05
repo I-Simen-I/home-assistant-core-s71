@@ -422,6 +422,18 @@
                                                 "yellow": 23
                                             },
                                             "type": "gauge"
+                                        },
+                                        {
+                                            "entity": "sensor.bedroom_293_0_1_295",
+                                            "max": 40,
+                                            "min": 0,
+                                            "name": "Soverom",
+                                            "severity": {
+                                                "green": 17,
+                                                "red": 25,
+                                                "yellow": 23
+                                            },
+                                            "type": "gauge"
                                         }
                                     ],
                                     "type": "horizontal-stack"
@@ -552,6 +564,18 @@
                                             "max": 100,
                                             "min": 0,
                                             "name": "Loftstue",
+                                            "severity": {
+                                                "green": 25,
+                                                "red": 60,
+                                                "yellow": 40
+                                            },
+                                            "type": "gauge"
+                                        },
+                                        {
+                                            "entity": "sensor.bedroom_293_0_2_296",
+                                            "max": 100,
+                                            "min": 0,
+                                            "name": "Soverom",
                                             "severity": {
                                                 "green": 25,
                                                 "red": 60,

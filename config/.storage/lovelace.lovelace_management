@@ -47,7 +47,32 @@
                                     "entity": "counter.window_counter"
                                 },
                                 {
-                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_1"
+                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_1",
+                                    "name": "Stue venstre"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_2",
+                                    "name": "Stue h\u00f8yre"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_bedroom_window",
+                                    "name": "Soverom"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_kitchen_window_1",
+                                    "name": "Kj\u00f8kken venstre"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_kitchen_window_2",
+                                    "name": "Kj\u00f8kken h\u00f8yre"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_1",
+                                    "name": "Walk in closet \u00f8st"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_2",
+                                    "name": "Walk in closet s\u00f8r"
                                 }
                             ],
                             "title": "Vinduer",
@@ -124,10 +149,31 @@
                                     "entity": "sensor.fibaro_door_sensor_battery_level_kitchen"
                                 },
                                 {
+                                    "entity": "sensor.fibaro_door_sensor_battery_level_technical_room"
+                                },
+                                {
                                     "entity": "sensor.sensative_strips_guard_living_room_window_east_1_battery_level"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_door_sensor_battery_level_technical_room"
+                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_2_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_bedroom_window_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_1_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_2_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_kitchen_window_1_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_kitchen_window_2_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.bedroom_293_0_1_295_battery_level"
                                 }
                             ],
                             "show_header_toggle": false,
