@@ -6,8 +6,7 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "counter.light_counter",
-                            "name": "Antall lys p\u00e5",
+                            "entity": "sensor.counter_lights_on",
                             "type": "entity"
                         },
                         {
@@ -204,7 +203,7 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "counter.door_counter",
+                            "entity": "sensor.counter_doors_open",
                             "type": "entity"
                         },
                         {
@@ -242,7 +241,7 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "counter.window_counter",
+                            "entity": "sensor.counter_windows_open",
                             "type": "entity"
                         },
                         {
@@ -294,7 +293,7 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "counter.screens_counter",
+                            "entity": "sensor.counter_screens_closed",
                             "type": "entity"
                         },
                         {
@@ -560,7 +559,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "counter.thermostat_counter",
+                                    "entity": "sensor.counter_thermostats_on",
                                     "name": "Varmematter p\u00e5"
                                 },
                                 {
@@ -654,7 +653,7 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "counter.power_socket_counter",
+                            "entity": "sensor.counter_power_sockets_on",
                             "type": "entity"
                         },
                         {

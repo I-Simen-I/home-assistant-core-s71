@@ -1,6 +1,0 @@
-thermostat_counter:
-    name: Gulvvarme på
-    icon: mdi:thermostat
-    initial: 0
-    step: 1
-    minimum: 0

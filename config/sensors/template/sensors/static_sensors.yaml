@@ -23,3 +23,134 @@ multiple_entity_row_windows:
   friendly_name: 'Vinduer'
   icon_template: 'mdi:window-closed-variant'
   value_template: 1
+
+counter_lights_on:
+  friendly_name: 'Lys på'
+  icon_template: 'mdi:lightbulb-on'
+  value_template: >
+    {% set lights = [
+          states.light.laundry_room_104_1_107,
+          states.light.bathroom_114_1_117,
+          states.light.bathroom_119_1_122,
+          states.light.hall_74_1_77,
+          states.light.stairway_54_1_57,
+          states.light.fitnessroom_99_1_102,
+          states.light.technical_room_109_1_112,
+          states.light.bedroom_north_124_1_127,
+          states.light.bedroom_east_129_1_132,
+          states.light.hall_44_1_47,
+          states.light.bathroom_9_1_12,
+          states.light.bathroom_39_1_42,
+          states.light.tv_room_89_1_92,
+          states.light.tv_room_sofa,
+          states.light.living_room_19_1_22,
+          states.light.living_room_94_1_97,
+          states.light.kitchen_49_1_52,
+          states.light.kitchen_79_1_82,
+          states.light.living_room_24_1_27,
+          states.light.living_room_69_1_72,
+          states.light.living_room_177_0_178,
+          states.light.bedroom_84_1_87,
+          states.light.walk_in_closet_59_1_62,
+          states.light.bathroom_29_1_32,
+          states.light.bathroom_34_1_37,
+          states.light.office_simen_4_1_7,
+          states.light.office_nora_14_1_17
+    ] %}
+    {{ lights | selectattr('state','eq','on') | list | count }}
+
+counter_doors_open:
+  friendly_name: 'Dører oppe'
+  icon_template: 'mdi:door-open'
+  value_template: >
+    {% set doors = [
+          states.binary_sensor.laundry_room_206_0_207,
+          states.binary_sensor.kitchen_258_0_259,
+          states.binary_sensor.technical_room_264_0_265
+    ] %}
+    {{ doors | selectattr('state','eq','on') | list | count }}
+
+counter_windows_open:
+  friendly_name: 'Vinduer oppe'
+  icon_template: 'mdi:window-open-variant'
+  value_template: >
+    {% set windows = [
+          states.binary_sensor.kitchen_305_0_306,
+          states.binary_sensor.kitchen_307_0_308,
+          states.binary_sensor.living_room_262_0_263,
+          states.binary_sensor.living_room_311_0_312,
+          states.binary_sensor.walk_in_closet_301_0_302,
+          states.binary_sensor.walk_in_closet_303_0_304,
+          states.binary_sensor.bedroom_297_0_298
+    ] %}
+    {{ windows | selectattr('state','eq','on') | list | count }}
+
+counter_windows_open_etg1_kitchen:
+  friendly_name: 'Vinduer oppe'
+  icon_template: 'mdi:window-open-variant'
+  value_template: >
+    {% set windows = [
+          states.binary_sensor.kitchen_305_0_306,
+          states.binary_sensor.kitchen_307_0_308
+    ] %}
+    {{ windows | selectattr('state','eq','on') | list | count }}
+
+counter_windows_open_etg1_living_room:
+  friendly_name: 'Vinduer oppe'
+  icon_template: 'mdi:window-open-variant'
+  value_template: >
+    {% set windows = [
+          states.binary_sensor.living_room_262_0_263,
+          states.binary_sensor.living_room_311_0_312
+    ] %}
+    {{ windows | selectattr('state','eq','on') | list | count }}
+
+counter_windows_open_etg2_walk_in_closet:
+  friendly_name: 'Vinduer oppe'
+  icon_template: 'mdi:window-open-variant'
+  value_template: >
+    {% set windows = [
+          states.binary_sensor.walk_in_closet_301_0_302,
+          states.binary_sensor.walk_in_closet_303_0_304,
+    ] %}
+    {{ windows | selectattr('state','eq','on') | list | count }}
+
+counter_screens_closed:
+  friendly_name: 'Screens lukket'
+  icon_template: 'mdi:archive-arrow-down-outline'
+  value_template: >
+    {% set covers = [
+          states.cover.bedroom_273_1_276,
+          states.cover.walk_in_closet_283_1_286,
+          states.cover.kitchen_268_1_271,
+          states.cover.kitchen_278_1_281,
+          states.cover.living_room_288_1_291,
+          states.cover.rullgardiner_side,
+          states.cover.rullgardin_bak
+    ] %}
+    {{ covers | selectattr('state','eq','closed') | list | count }}
+
+counter_power_sockets_on:
+  friendly_name: 'Stikkontakter på'
+  icon_template: 'mdi:power-socket-de'
+  value_template: >
+    {% set power_sockets = [
+          states.switch.tv_room_181_0_182,
+          states.switch.office_simen_173_0_174,
+          states.switch.office_nora_192_0_193,
+          states.switch.bedroom_313_0_314,
+          states.switch.bathroom_187_1_190,
+          states.switch.office_simen_175_0_176
+    ] %}
+    {{ power_sockets | selectattr('state','eq','on') | list | count }}
+
+counter_thermostats_on:
+  friendly_name: 'Gulvvarme på'
+  icon_template: 'mdi:thermostat'
+  value_template: >
+    {% set thermostats = [
+          states.switch.office_nora_144_4_152,
+          states.switch.office_simen_153_4_161,
+          states.switch.living_room_135_4_143
+    ] %}
+    {{ thermostats | selectattr('state','eq','on') | list | count }}

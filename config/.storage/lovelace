@@ -192,42 +192,42 @@
                                         "action": "navigate",
                                         "navigation_path": "/lovelace-stats/lights"
                                     },
-                                    "entity": "counter.light_counter"
+                                    "entity": "sensor.counter_lights_on"
                                 },
                                 {
                                     "double_tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace-stats/doors"
                                     },
-                                    "entity": "counter.door_counter"
+                                    "entity": "sensor.counter_doors_open"
                                 },
                                 {
                                     "double_tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace-stats/windows"
                                     },
-                                    "entity": "counter.window_counter"
+                                    "entity": "sensor.counter_windows_open"
                                 },
                                 {
                                     "double_tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace-stats/screens"
                                     },
-                                    "entity": "counter.screens_counter"
+                                    "entity": "sensor.counter_screens_closed"
                                 },
                                 {
                                     "double_tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace-stats/power_sockets"
                                     },
-                                    "entity": "counter.power_socket_counter"
+                                    "entity": "sensor.counter_power_sockets_on"
                                 },
                                 {
                                     "double_tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace-stats/thermostats"
                                     },
-                                    "entity": "counter.thermostat_counter"
+                                    "entity": "sensor.counter_thermostats_on"
                                 }
                             ],
                             "show_icon": true,
@@ -674,7 +674,7 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "counter.etg1_kitchen_window_counter",
+                                            "entity": "sensor.counter_windows_open_etg1_kitchen",
                                             "name": "Oppe"
                                         },
                                         {
@@ -787,7 +787,7 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "counter.etg1_living_room_window_counter",
+                                            "entity": "sensor.counter_windows_open_etg1_living_room",
                                             "name": "Oppe"
                                         },
                                         {
@@ -973,7 +973,7 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "counter.etg2_walk_in_closet_window_counter",
+                                            "entity": "sensor.counter_windows_open_etg2_walk_in_closet",
                                             "name": "Oppe"
                                         },
                                         {
