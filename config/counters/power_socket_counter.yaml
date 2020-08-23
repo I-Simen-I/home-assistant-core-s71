@@ -1,0 +1,6 @@
+power_socket_counter:
+  name: Stikkontakter på
+  icon: mdi:power-socket-de
+  initial: 0
+  step: 1
+  minimum: 0

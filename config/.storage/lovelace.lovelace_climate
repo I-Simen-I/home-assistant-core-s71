@@ -205,38 +205,6 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "counter.thermostat_counter",
-                            "type": "entity"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "entity": "climate.living_room_135_1_138",
-                                    "name": "Loftstue",
-                                    "type": "thermostat"
-                                },
-                                {
-                                    "entity": "climate.office_nora_144_1_147",
-                                    "name": "Kontor (Nora)",
-                                    "type": "thermostat"
-                                },
-                                {
-                                    "entity": "climate.office_simen_153_1_156",
-                                    "name": "Kontor (Simen)",
-                                    "type": "thermostat"
-                                }
-                            ],
-                            "type": "horizontal-stack"
-                        }
-                    ],
-                    "icon": "mdi:fan",
-                    "path": "controller",
-                    "title": "controller"
-                },
-                {
-                    "badges": [],
-                    "cards": [
-                        {
                             "cards": [
                                 {
                                     "content": "# UTE",

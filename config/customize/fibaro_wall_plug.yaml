@@ -23,3 +23,7 @@ switch.office_simen_175_0_176:
 switch.office_nora_192_0_193:
   icon: mdi:desk
   friendly_name: Skrivebord
+
+switch.bedroom_313_0_314:
+  icon: mdi:cellphone-charging
+  friendly_name: Nattbordslader

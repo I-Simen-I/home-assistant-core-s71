@@ -1,0 +1,701 @@
+{
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "counter.light_counter",
+                            "name": "Antall lys p\u00e5",
+                            "type": "entity"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.laundry_room_104_1_107",
+                                    "name": "Vaskerom"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.stairway_54_1_57",
+                                            "toggle": true
+                                        },
+                                        {
+                                            "entity": "light.hall_74_1_77",
+                                            "toggle": true
+                                        }
+                                    ],
+                                    "entity": "light.hall_74_1_77",
+                                    "name": "Gang",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entity": "light.technical_room_109_1_112",
+                                    "name": "Teknisk rom"
+                                },
+                                {
+                                    "entity": "light.fitnessroom_99_1_102",
+                                    "name": "Treningsrom"
+                                },
+                                {
+                                    "entity": "light.bedroom_east_129_1_132",
+                                    "name": "Soverom \u00d8st"
+                                },
+                                {
+                                    "entity": "light.bedroom_north_124_1_127",
+                                    "name": "Soverom Nord"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.bathroom_114_1_117",
+                                            "toggle": true
+                                        },
+                                        {
+                                            "entity": "light.bathroom_119_1_122",
+                                            "toggle": true
+                                        }
+                                    ],
+                                    "entity": "light.bathroom_114_1_117",
+                                    "name": "Bad",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                }
+                            ],
+                            "title": "ETG 0",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.hall_44_1_47",
+                                    "name": "Gang"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.bathroom_39_1_42",
+                                            "toggle": true
+                                        },
+                                        {
+                                            "entity": "light.bathroom_9_1_12",
+                                            "toggle": true
+                                        }
+                                    ],
+                                    "entity": "light.bathroom_39_1_42",
+                                    "name": "Bad",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.kitchen_49_1_52",
+                                            "toggle": true
+                                        },
+                                        {
+                                            "entity": "light.kitchen_79_1_82",
+                                            "toggle": true
+                                        }
+                                    ],
+                                    "entity": "light.kitchen_49_1_52",
+                                    "name": "Kj\u00f8kken",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.tv_room_89_1_92",
+                                            "toggle": true
+                                        },
+                                        {
+                                            "entity": "light.tv_room_sofa",
+                                            "toggle": true
+                                        }
+                                    ],
+                                    "entity": "light.tv_room_89_1_92",
+                                    "name": "Tv-rom",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.living_room_94_1_97",
+                                            "toggle": true
+                                        },
+                                        {
+                                            "entity": "light.living_room_19_1_22",
+                                            "toggle": true
+                                        }
+                                    ],
+                                    "entity": "light.living_room_94_1_97",
+                                    "name": "Stue",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                }
+                            ],
+                            "title": "ETG 1",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.office_simen_4_1_7",
+                                    "name": "Kontor Simen"
+                                },
+                                {
+                                    "entity": "light.office_nora_14_1_17",
+                                    "name": "Kontor Nora"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.living_room_69_1_72",
+                                            "toggle": true
+                                        },
+                                        {
+                                            "entity": "light.living_room_177_0_178",
+                                            "toggle": true
+                                        }
+                                    ],
+                                    "entity": "light.living_room_69_1_72",
+                                    "name": "Loftstue",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.bathroom_29_1_32",
+                                            "toggle": true
+                                        },
+                                        {
+                                            "entity": "light.bathroom_34_1_37",
+                                            "toggle": true
+                                        }
+                                    ],
+                                    "entity": "light.bathroom_29_1_32",
+                                    "name": "Bad",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entity": "light.walk_in_closet_59_1_62",
+                                    "name": "Walk in closet"
+                                },
+                                {
+                                    "entity": "light.bedroom_84_1_87",
+                                    "name": "Soverom"
+                                }
+                            ],
+                            "title": "ETG 2",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:lightbulb-on",
+                    "path": "lights"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "counter.door_counter",
+                            "type": "entity"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.fibaro_door_sensor_laundry_room",
+                                    "name": "Vaskerom ytterd\u00f8r"
+                                },
+                                {
+                                    "entity": "sensor.fibaro_door_sensor_technical_room",
+                                    "name": "Teknisk rom"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "ETG 0",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.fibaro_door_sensor_kitchen",
+                                    "name": "Kj\u00f8kken"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "ETG 1",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:door-open",
+                    "path": "doors",
+                    "title": ""
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "counter.window_counter",
+                            "type": "entity"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_1",
+                                    "name": "Stue venstre"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_2",
+                                    "name": "Stue h\u00f8yre"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_kitchen_window_1",
+                                    "name": "Kj\u00f8kken venstre"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_kitchen_window_2",
+                                    "name": "Kj\u00f8kken h\u00f8yre"
+                                }
+                            ],
+                            "title": "ETG 1",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.sensative_strips_guard_bedroom_window",
+                                    "name": "Soverom"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_1",
+                                    "name": "Walk in closet \u00f8st"
+                                },
+                                {
+                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_2",
+                                    "name": "Walk in closet s\u00f8r"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "ETG 2",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:window-open-variant",
+                    "path": "windows"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "counter.screens_counter",
+                            "type": "entity"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "cover.kitchen_268_1_271",
+                                    "name": "Kj\u00f8kkenvindu"
+                                },
+                                {
+                                    "entity": "cover.kitchen_278_1_281",
+                                    "name": "Kj\u00f8kkend\u00f8r"
+                                },
+                                {
+                                    "entity": "cover.living_room_288_1_291",
+                                    "name": "Stue"
+                                },
+                                {
+                                    "entity": "cover.rullgardiner_side",
+                                    "name": "Tv-rom (Side)"
+                                },
+                                {
+                                    "entity": "cover.rullgardin_bak",
+                                    "name": "Tv-rom (Bak)"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "ETG 1",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "cover.walk_in_closet_283_1_286",
+                                    "name": "Walk in closet \u00f8st"
+                                },
+                                {
+                                    "entity": "cover.bedroom_273_1_276",
+                                    "name": "Walk in closet s\u00f8r og soverom"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "ETG 2",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:archive-arrow-down-outline",
+                    "path": "screens"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.laundry_room_206_0_1_208"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_0_laundry_room",
+                                    "name": "Vaskerom",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.stairway_228_0_1_230"
+                                        },
+                                        {
+                                            "entity": "sensor.stairway_228_0_3_232"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_0_hall",
+                                    "name": "Gang",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_0_bedroom_east",
+                                    "name": "Soverom (\u00d8st)",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_0_bedroom_north",
+                                    "name": "Soverom (Nord)",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_0_bathroom",
+                                    "name": "Bad",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                }
+                            ],
+                            "title": "ETG 0",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_1_hall",
+                                    "name": "Gang",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_1_bathroom",
+                                    "name": "Bad",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.kitchen_258_0_1_260"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_1_kitchen",
+                                    "name": "Kj\u00f8kken",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_1_tv_room",
+                                    "name": "Tv-rom",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.living_room_234_0_1_236"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_234_0_3_238"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_1_living_room",
+                                    "name": "Stue",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "ETG 1",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "counter.thermostat_counter",
+                                    "name": "Varmematter p\u00e5"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.office_simen_153_1_156",
+                                    "name": "Kontor Simen",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.office_nora_144_1_147",
+                                    "name": "Kontor Nora",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.living_room_240_0_1_242"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_240_0_3_244"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.living_room_135_1_138",
+                                    "name": "Loftstue",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_2_bathroom",
+                                    "name": "Bad",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "ETG 2",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:thermostat",
+                    "path": "thermostats"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "counter.power_socket_counter",
+                            "type": "entity"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.tv_room_181_0_182"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "ETG 1",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.office_simen_173_0_174"
+                                },
+                                {
+                                    "entity": "switch.office_nora_192_0_193"
+                                },
+                                {
+                                    "entity": "switch.bedroom_313_0_314"
+                                },
+                                {
+                                    "entity": "switch.bathroom_187_1_190"
+                                },
+                                {
+                                    "entity": "switch.office_simen_175_0_176"
+                                }
+                            ],
+                            "title": "ETG 2",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:power-socket-de",
+                    "path": "power_sockets",
+                    "title": ""
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_stats",
+    "version": 1
+}

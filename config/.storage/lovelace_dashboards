@@ -18,6 +18,15 @@
                 "show_in_sidebar": true,
                 "title": "Management",
                 "url_path": "lovelace-management"
+            },
+            {
+                "icon": "mdi:chart-bar",
+                "id": "lovelace_stats",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Stats",
+                "url_path": "lovelace-stats"
             }
         ]
     },

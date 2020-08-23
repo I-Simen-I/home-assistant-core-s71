@@ -7,9 +7,14 @@
     entity_id: sensor.outside_avg_lux
     platform: numeric_state
   condition:
-  - after: '12:00:00'
-    before: '18:00:00'
-    condition: time
+  - condition: and
+    conditions:
+    - after: '12:00:00'
+      before: '18:00:00'
+      condition: time
+    - condition: state
+      entity_id: input_boolean.scene_selskap
+      state: 'off'
   action:
   - scene: scene.house_dag
   mode: single
@@ -21,9 +26,14 @@
     entity_id: sensor.outside_avg_lux
     platform: numeric_state
   condition:
-  - after: '18:00:00'
-    before: '22:30:00'
-    condition: time
+  - condition: and
+    conditions:
+    - after: '18:00:00'
+      before: '22:30:00'
+      condition: time
+    - condition: state
+      entity_id: input_boolean.scene_selskap
+      state: 'off'
   action:
   - scene: scene.house_kveld
   mode: single
@@ -51,13 +61,9 @@
   - at: '22:45:00'
     platform: time
   condition:
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - sun
+  - condition: state
+    entity_id: input_boolean.scene_selskap
+    state: 'off'
   action:
   - scene: scene.house_alt_av
   mode: single
@@ -68,10 +74,9 @@
   - at: 01:30:00
     platform: time
   condition:
-  - condition: time
-    weekday:
-    - sat
-    - sun
+  - condition: state
+    entity_id: input_boolean.scene_selskap
+    state: 'off'
   action:
   - scene: scene.house_alt_av
   mode: single
@@ -813,7 +818,7 @@
   condition:
   - condition: and
     conditions:
-    - after: '17:00:00'
+    - after: '16:00:00'
       condition: time
     - condition: state
       entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
@@ -844,7 +849,7 @@
   alias: counter screens_counter increment
   description: ''
   trigger:
-  - entity_id: cover.bedroom_273_1_276,cover.walk_in_closet_283_1_286,cover.kitchen_268_1_271,cover.kitchen_278_1_281,cover.living_room_288_1_291
+  - entity_id: cover.bedroom_273_1_276,cover.walk_in_closet_283_1_286,cover.kitchen_268_1_271,cover.kitchen_278_1_281,cover.living_room_288_1_291,cover.rullgardiner_side,cover.rullgardin_bak
     platform: state
     to: closed
   condition: []
@@ -858,7 +863,7 @@
   alias: counter screens_counter decrement
   description: ''
   trigger:
-  - entity_id: cover.bedroom_273_1_276,cover.walk_in_closet_283_1_286,cover.kitchen_268_1_271,cover.kitchen_278_1_281,cover.living_room_288_1_291
+  - entity_id: cover.bedroom_273_1_276,cover.walk_in_closet_283_1_286,cover.kitchen_268_1_271,cover.kitchen_278_1_281,cover.living_room_288_1_291,cover.rullgardiner_side,cover.rullgardin_bak
     platform: state
     to: open
   condition: []
@@ -954,7 +959,7 @@
   condition:
   - condition: and
     conditions:
-    - after: '17:00:00'
+    - after: '16:00:00'
       condition: time
     - condition: state
       entity_id: binary_sensor.walk_in_closet_303_0_304
@@ -974,7 +979,7 @@
   condition:
   - condition: and
     conditions:
-    - after: '22:00:00'
+    - after: '21:00:00'
       condition: time
     - condition: state
       entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
@@ -984,3 +989,55 @@
     entity_id: cover.bedroom_273_1_276
     service: cover.open_cover
   mode: single
+- id: '1597073992172'
+  alias: Switch=Nattbordslader, Service=turn_off, Tid=05:45
+  description: ''
+  trigger:
+  - at: 05:45:00
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.bedroom_313_0_314
+    service: switch.turn_off
+  mode: single
+- id: '1597074052234'
+  alias: Switch=Nattbordslader, Service=turn_on, Tid=22:00
+  description: ''
+  trigger:
+  - at: '22:00:00'
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.bedroom_313_0_314
+    service: switch.turn_on
+  mode: single
+- id: '1598171504709'
+  alias: counter power_socket_counter increment
+  description: ''
+  trigger:
+  - entity_id: switch.tv_room_181_0_182,switch.office_simen_173_0_174,switch.office_nora_192_0_193,switch.bedroom_313_0_314,switch.bathroom_187_1_190,switch.office_simen_175_0_176
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.power_socket_counter
+    service: counter.increment
+  mode: queued
+  max: 10
+- id: '1598171588157'
+  alias: counter power_socket_counter decrement
+  description: ''
+  trigger:
+  - entity_id: switch.tv_room_181_0_182,switch.office_simen_173_0_174,switch.office_nora_192_0_193,switch.bedroom_313_0_314,switch.bathroom_187_1_190,switch.office_simen_175_0_176
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    entity_id: counter.power_socket_counter
+    service: counter.decrement
+  mode: queued
+  max: 10

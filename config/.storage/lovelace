@@ -168,79 +168,72 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "switch.house_security",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    }
+                                },
+                                {
+                                    "double_tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-climate/stats"
+                                    },
+                                    "entity": "sensor.inside_avg_temperature"
+                                },
+                                {
+                                    "double_tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-climate/stats"
+                                    },
+                                    "entity": "sensor.inside_avg_humidity"
+                                },
+                                {
+                                    "double_tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-stats/lights"
+                                    },
                                     "entity": "counter.light_counter"
                                 },
                                 {
-                                    "entity": "counter.thermostat_counter"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.stairway_228_0_1_230",
-                                            "name": "Etg 0"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_234_0_1_236",
-                                            "name": "Etg 1"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_240_0_1_242",
-                                            "name": "Etg 2"
-                                        }
-                                    ],
-                                    "entity": "sensor.multiple_entity_row_temperature",
-                                    "secondary_info": {
-                                        "entity": "sensor.inside_avg_temperature",
-                                        "name": null
+                                    "double_tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-stats/doors"
                                     },
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.stairway_228_0_3_232",
-                                            "name": "Etg 0"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_234_0_3_238",
-                                            "name": "Etg 1"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_240_0_3_244",
-                                            "name": "Etg 2"
-                                        }
-                                    ],
-                                    "entity": "sensor.multiple_entity_row_humidity",
-                                    "secondary_info": {
-                                        "entity": "sensor.inside_avg_humidity",
-                                        "name": null
-                                    },
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Status inne",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.house_security"
-                                },
-                                {
                                     "entity": "counter.door_counter"
                                 },
                                 {
+                                    "double_tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-stats/windows"
+                                    },
                                     "entity": "counter.window_counter"
                                 },
                                 {
+                                    "double_tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-stats/screens"
+                                    },
                                     "entity": "counter.screens_counter"
+                                },
+                                {
+                                    "double_tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-stats/power_sockets"
+                                    },
+                                    "entity": "counter.power_socket_counter"
+                                },
+                                {
+                                    "double_tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-stats/thermostats"
+                                    },
+                                    "entity": "counter.thermostat_counter"
                                 }
                             ],
-                            "show_header_toggle": false,
-                            "type": "entities"
+                            "show_icon": true,
+                            "show_name": false,
+                            "show_state": true,
+                            "type": "glance"
                         },
                         {
                             "entity_sun": "sensor.sun_state",
@@ -1018,6 +1011,9 @@
                                 },
                                 {
                                     "entity": "light.bedroom_84_1_87"
+                                },
+                                {
+                                    "entity": "switch.bedroom_313_0_314"
                                 },
                                 {
                                     "entities": [
