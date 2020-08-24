@@ -154,3 +154,94 @@ counter_thermostats_on:
           states.switch.living_room_135_4_143
     ] %}
     {{ thermostats | selectattr('state','eq','on') | list | count }}
+
+counter_power_usage_lights:
+  friendly_name: 'Strømforbruk lys'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >
+    {% set power = [
+          state_attr("light.laundry_room_104_1_107", "current_power_w") | float,
+          state_attr("light.bathroom_114_1_117", "current_power_w") | float,
+          state_attr("light.bathroom_119_1_122", "current_power_w") | float,
+          state_attr("light.hall_74_1_77", "current_power_w") | float,
+          state_attr("light.stairway_54_1_57", "current_power_w") | float,
+          state_attr("light.fitnessroom_99_1_102", "current_power_w") | float,
+          state_attr("light.technical_room_109_1_112", "current_power_w") | float,
+          state_attr("light.bedroom_north_124_1_127", "current_power_w") | float,
+          state_attr("light.bedroom_east_129_1_132", "current_power_w") | float,
+          state_attr("light.hall_44_1_47", "current_power_w") | float,
+          state_attr("light.bathroom_9_1_12", "current_power_w") | float,
+          state_attr("light.bathroom_39_1_42", "current_power_w") | float,
+          state_attr("light.tv_room_89_1_92", "current_power_w") | float,
+          state_attr("light.tv_room_sofa", "current_power_w") | float,
+          state_attr("light.living_room_19_1_22", "current_power_w") | float,
+          state_attr("light.living_room_94_1_97", "current_power_w") | float,
+          state_attr("light.kitchen_49_1_52", "current_power_w") | float,
+          state_attr("light.kitchen_79_1_82", "current_power_w") | float,
+          state_attr("light.living_room_24_1_27", "current_power_w") | float,
+          state_attr("light.living_room_69_1_72", "current_power_w") | float,
+          state_attr("light.living_room_177_0_178", "current_power_w") | float,
+          state_attr("light.bedroom_84_1_87", "current_power_w") | float,
+          state_attr("light.walk_in_closet_59_1_62", "current_power_w") | float,
+          state_attr("light.bathroom_29_1_32", "current_power_w") | float,
+          state_attr("light.bathroom_34_1_37", "current_power_w") | float,
+          state_attr("light.office_simen_4_1_7", "current_power_w") | float,
+          state_attr("light.office_nora_14_1_17", "current_power_w") | float
+    ] %}
+    {{ power | list | sum | round(1) }}
+
+counter_power_usage_screens:
+  friendly_name: 'Strømforbruk screens'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >
+    {% set power = [
+          state_attr("cover.bedroom_273_1_276", "current_power_w") | float,
+          state_attr("cover.walk_in_closet_283_1_286", "current_power_w") | float,
+          state_attr("cover.kitchen_268_1_271", "current_power_w") | float,
+          state_attr("cover.kitchen_278_1_281", "current_power_w") | float,
+          state_attr("cover.living_room_288_1_291", "current_power_w") | float
+    ] %}
+    {{ power | list | sum | round(1) }}
+
+counter_power_usage_power_outlets:
+  friendly_name: 'Strømforbruk stikkontakter'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >
+    {% set power = [
+          state_attr("switch.bathroom_179_0_180", "current_power_w") | float,
+          state_attr("switch.tv_room_181_0_182", "current_power_w") | float,
+          state_attr("switch.office_simen_173_0_174", "current_power_w") | float,
+          state_attr("switch.office_nora_192_0_193", "current_power_w") | float,
+          state_attr("switch.bedroom_313_0_314", "current_power_w") | float,
+          state_attr("switch.bathroom_187_1_190", "current_power_w") | float,
+          state_attr("switch.office_simen_175_0_176", "current_power_w") | float
+    ] %}
+    {{ power | list | sum | round(1) }}
+
+counter_power_usage_power_thermostats:
+  friendly_name: 'Strømforbruk varmematter'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >
+    {% set power = [
+          state_attr("switch.office_nora_144_4_152", "current_power_w") | float,
+          state_attr("switch.office_simen_153_4_161", "current_power_w") | float,
+          state_attr("switch.living_room_135_4_143", "current_power_w") | float
+    ] %}
+    {{ power | list | sum | round(1) }}
+
+counter_power_usage:
+  friendly_name: 'Strømforbruk'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >
+    {% set power = [
+          states("sensor.counter_power_usage_lights") | float,
+          states("sensor.counter_power_usage_screens") | float,
+          states("sensor.counter_power_usage_power_outlets") | float,
+          states("sensor.counter_power_usage_power_thermostats") | float
+    ] %}
+    {{ power | list | sum | round(1) }}

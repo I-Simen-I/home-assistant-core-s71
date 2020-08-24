@@ -190,6 +190,13 @@
                                 {
                                     "double_tap_action": {
                                         "action": "navigate",
+                                        "navigation_path": "/lovelace-management/live-powerusage"
+                                    },
+                                    "entity": "sensor.counter_power_usage"
+                                },
+                                {
+                                    "double_tap_action": {
+                                        "action": "navigate",
                                         "navigation_path": "/lovelace-stats/lights"
                                     },
                                     "entity": "sensor.counter_lights_on"

@@ -311,22 +311,39 @@
                     "badges": [],
                     "cards": [
                         {
+                            "entity": "sensor.counter_power_usage",
+                            "max": 14490,
+                            "min": 0,
+                            "severity": {
+                                "green": 0,
+                                "red": 13500,
+                                "yellow": 12000
+                            },
+                            "type": "gauge"
+                        },
+                        {
                             "cards": [
                                 {
-                                    "entity": "sensor.fibaro_climate_office_nora_power_usage",
-                                    "max": 600,
+                                    "entity": "sensor.counter_power_usage_lights",
+                                    "max": 1000,
                                     "min": 0,
                                     "type": "gauge"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_climate_office_simen_power_usage",
-                                    "max": 600,
+                                    "entity": "sensor.counter_power_usage_power_outlets",
+                                    "max": 5000,
                                     "min": 0,
                                     "type": "gauge"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_climate_living_room_power_usage",
-                                    "max": 600,
+                                    "entity": "sensor.counter_power_usage_power_thermostats",
+                                    "max": 2000,
+                                    "min": 0,
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.counter_power_usage_screens",
+                                    "max": 400,
                                     "min": 0,
                                     "type": "gauge"
                                 }
@@ -334,39 +351,20 @@
                             "type": "horizontal-stack"
                         },
                         {
-                            "cards": [
+                            "entities": [
                                 {
-                                    "entity": "sensor.fibaro_wall_plug_rack_power_usage",
-                                    "max": 850,
-                                    "min": 0,
-                                    "severity": {
-                                        "green": 0,
-                                        "red": 750,
-                                        "yellow": 500
-                                    },
-                                    "type": "gauge"
+                                    "entity": "sensor.fibaro_climate_living_room_power_usage"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_wall_plug_pc_power_usage",
-                                    "max": 1200,
-                                    "min": 0,
-                                    "name": "Skrivebord (Simen)",
-                                    "severity": {
-                                        "green": 0,
-                                        "red": 900,
-                                        "yellow": 700
-                                    },
-                                    "type": "gauge"
+                                    "entity": "sensor.fibaro_climate_office_nora_power_usage"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_wall_plug_desk_power_usage",
-                                    "max": 200,
-                                    "min": 0,
-                                    "name": "Skrivebord (Nora)",
-                                    "type": "gauge"
+                                    "entity": "sensor.fibaro_climate_office_simen_power_usage"
                                 }
                             ],
-                            "type": "horizontal-stack"
+                            "show_header_toggle": false,
+                            "title": "Gulvvarme",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:flash",
