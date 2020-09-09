@@ -425,11 +425,14 @@
                                             "name": "Plex"
                                         },
                                         {
-                                            "entity": "sensor.fibaro_wall_plug_rack_power_usage",
-                                            "name": "Forbruk"
+                                            "attribute": "current_power_w",
+                                            "name": "Forbruk",
+                                            "unit": "w"
                                         }
                                     ],
-                                    "entity": "sensor.fibaro_wall_plug_rack_power_usage",
+                                    "entity": "switch.bathroom_179_0_180",
+                                    "icon": "mdi:server",
+                                    "name": "Server",
                                     "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
@@ -849,8 +852,9 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.fibaro_wall_plug_pc_power_usage",
-                                            "name": "Forbruk"
+                                            "attribute": "current_power_w",
+                                            "name": "Forbruk",
+                                            "unit": "w"
                                         }
                                     ],
                                     "entity": "switch.office_simen_173_0_174",
@@ -926,8 +930,9 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.fibaro_wall_plug_desk_power_usage",
-                                            "name": "Forbruk"
+                                            "attribute": "current_power_w",
+                                            "name": "Forbruk",
+                                            "unit": "w"
                                         }
                                     ],
                                     "entity": "switch.office_nora_192_0_193",
@@ -1020,7 +1025,16 @@
                                     "entity": "light.bedroom_84_1_87"
                                 },
                                 {
-                                    "entity": "switch.bedroom_313_0_314"
+                                    "entities": [
+                                        {
+                                            "attribute": "current_power_w",
+                                            "name": "Forbruk",
+                                            "unit": "w"
+                                        }
+                                    ],
+                                    "entity": "switch.bedroom_313_0_314",
+                                    "toggle": true,
+                                    "type": "custom:multiple-entity-row"
                                 },
                                 {
                                     "entities": [

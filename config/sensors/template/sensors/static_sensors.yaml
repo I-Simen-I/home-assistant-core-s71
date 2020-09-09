@@ -145,7 +145,7 @@ counter_power_sockets_on:
     {{ power_sockets | selectattr('state','eq','on') | list | count }}
 
 counter_thermostats_on:
-  friendly_name: 'Gulvvarme på'
+  friendly_name: 'Varmematter på'
   icon_template: 'mdi:thermostat'
   value_template: >
     {% set thermostats = [

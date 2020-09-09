@@ -346,6 +346,10 @@
                     "badges": [],
                     "cards": [
                         {
+                            "entity": "sensor.counter_thermostats_on",
+                            "type": "entity"
+                        },
+                        {
                             "entities": [
                                 {
                                     "entities": [
@@ -558,10 +562,6 @@
                         },
                         {
                             "entities": [
-                                {
-                                    "entity": "sensor.counter_thermostats_on",
-                                    "name": "Varmematter p\u00e5"
-                                },
                                 {
                                     "entities": [
                                         {
