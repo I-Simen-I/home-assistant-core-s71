@@ -170,7 +170,7 @@
   trigger:
   - above: '-1'
     below: '1'
-    entity_id: counter.light_counter
+    entity_id: sensor.counter_lights_on
     platform: numeric_state
   condition: []
   action:
@@ -187,7 +187,7 @@
   description: ''
   trigger:
   - above: '0'
-    entity_id: counter.light_counter
+    entity_id: sensor.counter_lights_on
     platform: numeric_state
   condition: []
   action:
@@ -395,7 +395,7 @@
     entity_id: scene.tv_rom_film
     service: scene.turn_on
 - id: '1586799578619'
-  alias: cover rullgardiner_side 70%
+  alias: cover tv_room rullgardiner_side 70%
   description: ''
   trigger:
   - above: '1000'
@@ -461,7 +461,7 @@
     entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.send_command
 - id: '1593011968093'
-  alias: cover rullgardiner_side 100%
+  alias: cover tv_room rullgardiner_side 100%
   description: ''
   trigger:
   - above: '2500'
@@ -478,7 +478,7 @@
     service: cover.set_cover_position
   mode: single
 - id: '1593029744963'
-  alias: cover rullgardiner_side 0%
+  alias: cover tv_room rullgardiner_side 0%
   description: ''
   trigger:
   - below: '200'
@@ -553,7 +553,7 @@
   alias: climate office-nora heat-on
   description: ''
   trigger:
-  - at: 06:00:00
+  - at: 05:30:00
     platform: time
   condition:
   - condition: and
@@ -565,7 +565,7 @@
       - wed
       - thu
       - fri
-    - below: '22'
+    - below: '23'
       condition: numeric_state
       entity_id: sensor.office_nora_144_3_151
   action:
@@ -650,17 +650,13 @@
   alias: cover living_room screen open
   description: ''
   trigger:
-  - below: '1500'
+  - below: '2500'
     entity_id: sensor.east_252_0_2_255
     platform: numeric_state
   condition:
-  - condition: and
-    conditions:
-    - after: '16:00:00'
-      condition: time
-    - condition: state
-      entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
-      state: 'off'
+  - condition: state
+    entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
+    state: 'off'
   action:
   - data: {}
     entity_id: cover.living_room_288_1_291
@@ -687,17 +683,13 @@
   alias: cover kitchen screens open
   description: ''
   trigger:
-  - below: '1500'
+  - below: '2500'
     entity_id: sensor.south_246_0_2_249
     platform: numeric_state
   condition:
-  - condition: and
-    conditions:
-    - after: '21:00:00'
-      condition: time
-    - condition: state
-      entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
-      state: 'off'
+  - condition: state
+    entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
+    state: 'off'
   action:
   - data: {}
     entity_id: cover.kitchen_268_1_271
@@ -707,17 +699,13 @@
   alias: cover walk_in_closet east screen open
   description: ''
   trigger:
-  - below: '1500'
+  - below: '2500'
     entity_id: sensor.east_252_0_2_255
     platform: numeric_state
   condition:
-  - condition: and
-    conditions:
-    - after: '16:00:00'
-      condition: time
-    - condition: state
-      entity_id: binary_sensor.walk_in_closet_303_0_304
-      state: 'off'
+  - condition: state
+    entity_id: binary_sensor.walk_in_closet_303_0_304
+    state: 'off'
   action:
   - data: {}
     entity_id: cover.walk_in_closet_283_1_286
@@ -727,17 +715,13 @@
   alias: cover bedroom screens open
   description: ''
   trigger:
-  - below: '1500'
+  - below: '2500'
     entity_id: sensor.south_246_0_2_249
     platform: numeric_state
   condition:
-  - condition: and
-    conditions:
-    - after: '21:00:00'
-      condition: time
-    - condition: state
-      entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
-      state: 'off'
+  - condition: state
+    entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
+    state: 'off'
   action:
   - data: {}
     entity_id: cover.bedroom_273_1_276
@@ -766,4 +750,103 @@
   - data: {}
     entity_id: switch.bedroom_313_0_314
     service: switch.turn_on
+  mode: single
+- id: '1599162995391'
+  alias: climate fetch termostats state
+  description: ''
+  trigger:
+  - at:
+    - 06:40:00
+    - '15:00:00'
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.office_nora_144_4_152
+    service: homeassistant.update_entity
+  mode: single
+- id: '1599581966880'
+  alias: cover bedroom screens close
+  description: ''
+  trigger:
+  - above: '2500'
+    entity_id: sensor.south_246_0_2_249
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: cover.bedroom_273_1_276
+    service: cover.close_cover
+  mode: single
+- id: '1599582115767'
+  alias: cover kitchen screens close
+  description: ''
+  trigger:
+  - above: '2500'
+    entity_id: sensor.south_246_0_2_249
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: cover.kitchen_268_1_271
+    service: cover.close_cover
+  mode: single
+- id: '1599582201257'
+  alias: cover living_room screen close
+  description: ''
+  trigger:
+  - above: '2500'
+    entity_id: sensor.east_252_0_2_255
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: cover.living_room_288_1_291
+    service: cover.close_cover
+  mode: single
+- id: '1599582294718'
+  alias: cover walk_in_closet east screen close
+  description: ''
+  trigger:
+  - above: '2500'
+    entity_id: sensor.east_252_0_2_255
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: binary_sensor.walk_in_closet_303_0_304
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: cover.walk_in_closet_283_1_286
+    service: cover.close_cover
+  mode: single
+- id: '1599582419886'
+  alias: cover kitchen door screen close
+  description: ''
+  trigger:
+  - above: '2500'
+    entity_id: sensor.east_252_0_2_255
+    platform: numeric_state
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.kitchen_258_0_259
+      state: 'off'
+    - above: '20'
+      condition: numeric_state
+      entity_id: sensor.east_252_0_1_254
+  action:
+  - data: {}
+    entity_id: cover.kitchen_278_1_281
+    service: cover.close_cover
   mode: single
