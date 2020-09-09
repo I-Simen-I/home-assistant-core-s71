@@ -85,19 +85,17 @@
       brightness: 120
     light.kitchen_49_1_52:
       state: on
-      brightness: 120
-    light.kitchen_79_1_82:
-      state: on
+      brightness: 100
     light.living_room_19_1_22:
       state: on
-      brightness: 120
+      brightness: 75
     light.living_room_94_1_97:
       state: on
-      brightness: 255
+      brightness: 65
     #ETG_2
     light.living_room_69_1_72:
       state: on
-      brightness: 120
+      brightness: 100
     light.living_room_177_0_178:
       state: on
     # Input booleans
