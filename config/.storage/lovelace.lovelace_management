@@ -30,7 +30,7 @@
                                     "entity": "sensor.battery_level_2"
                                 },
                                 {
-                                    "entity": "sensor.battery_level_3"
+                                    "entity": "sensor.nora_sin_iphone_battery_level"
                                 }
                             ],
                             "show_header_toggle": false,
