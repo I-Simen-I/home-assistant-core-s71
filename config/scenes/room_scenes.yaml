@@ -1,5 +1,6 @@
 #TV-room
 - name: tv_rom_dag
+  icon: mdi:home
   entities:
     light.tv_room_89_1_92:
       state: on
@@ -15,6 +16,7 @@
     input_boolean.scene_tv_rom_av:
       state: off
 - name: tv_rom_kveld
+  icon: mdi:weather-night
   entities:
     light.tv_room_89_1_92:
       state: on
@@ -30,6 +32,7 @@
     input_boolean.scene_tv_rom_av:
       state: off
 - name: tv_rom_film
+  icon: mdi:popcorn
   entities:
     light.tv_room_89_1_92:
       state: off
@@ -48,6 +51,7 @@
     input_boolean.scene_tv_rom_av:
       state: off
 - name: tv_rom_av
+  icon: mdi:power
   entities:
     light.tv_room_89_1_92:
       state: off

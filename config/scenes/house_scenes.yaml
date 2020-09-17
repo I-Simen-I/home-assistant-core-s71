@@ -1,4 +1,5 @@
 - name: house_morgen
+  icon: mdi:weather-sunset-up
   entities:
     #ETG_1
     light.hall_44_1_47:
@@ -29,6 +30,7 @@
       state: off
 
 - name: house_dag
+  icon: mdi:home
   entities:
     #ETG_1
     light.hall_44_1_47:
@@ -51,6 +53,7 @@
       state: off
 
 - name: house_kveld
+  icon: mdi:weather-night
   entities:
     #ETG_1
     light.hall_44_1_47:
@@ -78,6 +81,7 @@
       state: off
 
 - name: house_selskap
+  icon: mdi:glass-wine
   entities:
     #ETG_1
     light.hall_44_1_47:
@@ -111,6 +115,7 @@
       state: off
 
 - name: house_alt_av
+  icon: mdi:power
   entities:
     #ETG_0
     light.laundry_room_104_1_107:
