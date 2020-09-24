@@ -1,9 +1,15 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_climate",
     "data": {
         "config": {
             "title": "Klima",
             "views": [
                 {
+                    "icon": "mdi:home",
+                    "panel": false,
+                    "path": "stats",
+                    "title": "stats",
                     "badges": [],
                     "cards": [
                         {
@@ -119,87 +125,197 @@
                                 "state": false
                             },
                             "type": "custom:mini-graph-card"
-                        },
-                        {
-                            "content": "# Atmosf\u00e6re",
-                            "type": "markdown"
-                        },
-                        {
-                            "align_state": "center",
-                            "color_thresholds": [
-                                {
-                                    "color": "#474730",
-                                    "value": 400
-                                },
-                                {
-                                    "color": "#4a491d",
-                                    "value": 700
-                                },
-                                {
-                                    "color": "#8a872b",
-                                    "value": 1200
-                                },
-                                {
-                                    "color": "#c4bf1b",
-                                    "value": 1600
-                                },
-                                {
-                                    "color": "#fff700",
-                                    "value": 2000
-                                }
-                            ],
-                            "entities": [
-                                "sensor.outside_avg_lux"
-                            ],
-                            "hours_to_show": 168,
-                            "show": {
-                                "labels": true
-                            },
-                            "type": "custom:mini-graph-card"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.east_252_0_2_255",
-                                            "name": null
-                                        },
-                                        {
-                                            "entity": "sensor.east_252_0_4_257",
-                                            "name": null
-                                        }
-                                    ],
-                                    "entity": "sensor.multiple_entity_row_climate",
-                                    "name": "\u00d8st",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.south_246_0_2_249",
-                                            "name": null
-                                        },
-                                        {
-                                            "entity": "sensor.south_246_0_4_251",
-                                            "name": null
-                                        }
-                                    ],
-                                    "entity": "sensor.multiple_entity_row_climate",
-                                    "name": "S\u00f8r",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "type": "entities"
                         }
-                    ],
-                    "icon": "mdi:chart-bar",
-                    "panel": false,
-                    "path": "stats",
-                    "title": "stats"
+                    ]
+                },
+                {
+                    "icon": "mdi:tree",
+                    "path": "stats-outside",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "# Temperatur"
+                                },
+                                {
+                                    "align_state": "center",
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#0da035",
+                                            "value": 23
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 25
+                                        },
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 26
+                                        }
+                                    ],
+                                    "entities": [
+                                        "sensor.outside_min_temperature"
+                                    ],
+                                    "hours_to_show": 168,
+                                    "show": {
+                                        "labels": true
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "# Luftfuktighet"
+                                },
+                                {
+                                    "align_state": "center",
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 20
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 25
+                                        },
+                                        {
+                                            "color": "#0da035",
+                                            "value": 35
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 45
+                                        },
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 50
+                                        }
+                                    ],
+                                    "entities": [
+                                        "sensor.outside_avg_humidity"
+                                    ],
+                                    "hours_to_show": 168,
+                                    "show": {
+                                        "labels": true
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "# Atmosf\u00e6re"
+                                },
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "align_state": "center",
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#474730",
+                                            "value": 400
+                                        },
+                                        {
+                                            "color": "#4a491d",
+                                            "value": 700
+                                        },
+                                        {
+                                            "color": "#8a872b",
+                                            "value": 1200
+                                        },
+                                        {
+                                            "color": "#c4bf1b",
+                                            "value": 1600
+                                        },
+                                        {
+                                            "color": "#fff700",
+                                            "value": 2000
+                                        }
+                                    ],
+                                    "entities": [
+                                        "sensor.outside_avg_lux"
+                                    ],
+                                    "hours_to_show": 168,
+                                    "show": {
+                                        "labels": true
+                                    }
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.east_252_0_2_255",
+                                                    "name": null
+                                                },
+                                                {
+                                                    "entity": "sensor.east_252_0_4_257",
+                                                    "name": null
+                                                }
+                                            ],
+                                            "entity": "sensor.multiple_entity_row_climate",
+                                            "name": "\u00d8st",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.south_246_0_2_249",
+                                                    "name": null
+                                                },
+                                                {
+                                                    "entity": "sensor.south_246_0_4_251",
+                                                    "name": null
+                                                }
+                                            ],
+                                            "entity": "sensor.multiple_entity_row_climate",
+                                            "name": "S\u00f8r",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "type": "entities"
+                                },
+                                {
+                                    "align_state": "center",
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#0da035",
+                                            "value": 0
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 1
+                                        },
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 2
+                                        }
+                                    ],
+                                    "entities": [
+                                        "sensor.netatmo_s70_rain_gauge_sum_rain_1"
+                                    ],
+                                    "hours_to_show": 168,
+                                    "name": "Regn",
+                                    "show": {
+                                        "labels": true
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "badges": [],
@@ -564,7 +680,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_climate",
-    "version": 1
+    }
 }
