@@ -241,7 +241,7 @@
   action:
   - data:
       data:
-        clickAction: /lovelace-management/security
+        clickAction: /lovelace/status
         color: red
       message: Det er bevegelse ved inngangsdøren
       title: Sikkerhetsbrudd
@@ -515,7 +515,7 @@
   action:
   - data:
       data:
-        clickAction: /lovelace-management/security
+        clickAction: /lovelace-stats/doors
         color: red
       message: En eller flere dører er åpnet
       title: Sikkerhetsbrudd
@@ -535,7 +535,7 @@
   action:
   - data:
       data:
-        clickAction: /lovelace-management/security
+        clickAction: /lovelace-stats/windows
         color: red
       message: En eller flere vinduer er åpnet
       title: Sikkerhetsbrudd
@@ -664,7 +664,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.east_252_0_2_255
-      below: '2500'
+      below: '4500'
     - condition: state
       entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
       state: 'off'
@@ -709,7 +709,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.south_246_0_2_249
-      below: '2500'
+      below: '4500'
     - condition: state
       entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
       state: 'off'
@@ -735,7 +735,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.east_252_0_2_255
-      below: '2500'
+      below: '4500'
     - condition: state
       entity_id: binary_sensor.walk_in_closet_303_0_304
       state: 'off'
@@ -763,7 +763,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.south_246_0_2_249
-      below: '2500'
+      below: '4500'
     - condition: state
       entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
       state: 'off'
@@ -827,7 +827,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.south_246_0_2_249
-      above: '2500'
+      above: '4500'
     - condition: state
       entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
       state: 'off'
@@ -853,7 +853,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.south_246_0_2_249
-      above: '2500'
+      above: '4500'
     - condition: state
       entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
       state: 'off'
@@ -879,7 +879,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.east_252_0_2_255
-      above: '2500'
+      above: '4500'
     - condition: state
       entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
       state: 'off'
@@ -905,7 +905,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.east_252_0_2_255
-      above: '2500'
+      above: '4500'
     - condition: state
       entity_id: binary_sensor.walk_in_closet_303_0_304
       state: 'off'
@@ -935,7 +935,7 @@
     - above: '20'
       condition: numeric_state
       entity_id: sensor.east_252_0_1_254
-    - above: '2500'
+    - above: '4500'
       condition: numeric_state
       entity_id: sensor.east_252_0_2_255
     - condition: not
