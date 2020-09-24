@@ -1,3 +1,29 @@
+- name: house_main_lights_off
+  icon: mdi:lightbulb-group-off
+  entities:
+    #ETG_1
+    light.hall_44_1_47:
+      state: off
+      brightness: 255
+    light.kitchen_49_1_52:
+      state: off
+    light.living_room_94_1_97:
+      state: off
+    #ETG_2
+    light.living_room_69_1_72:
+      state: off
+    light.living_room_177_0_178:
+      state: off
+    # Input booleans
+    input_boolean.scene_morgen:
+      state: off
+    input_boolean.scene_dag:
+      state: off
+    input_boolean.scene_kveld:
+      state: off
+    input_boolean.scene_selskap:
+      state: off
+
 - name: house_morgen
   icon: mdi:weather-sunset-up
   entities:
@@ -8,15 +34,13 @@
     light.kitchen_49_1_52:
       state: on
       brightness: 120
+    light.living_room_94_1_97:
+      state: off
     #ETG_2
     light.living_room_69_1_72:
       state: off
-      brightness: 255
-    light.bathroom_29_1_32:
+    light.living_room_177_0_178:
       state: on
-      brightness: 60
-    light.bathroom_34_1_37:
-      state: off
     # Input booleans
     input_boolean.scene_morgen:
       state: on
@@ -36,10 +60,16 @@
     light.hall_44_1_47:
       state: on
       brightness: 255
+    light.kitchen_49_1_52:
+      state: off
+    light.living_room_94_1_97:
+      state: off
     #ETG_2
     light.living_room_69_1_72:
       state: on
       brightness: 255
+    light.living_room_177_0_178:
+      state: off
     # Input booleans
     input_boolean.scene_morgen:
       state: off
