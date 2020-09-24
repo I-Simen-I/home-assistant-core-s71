@@ -38,19 +38,26 @@
   - scene: scene.house_kveld
   mode: single
 - id: '1583432394622'
-  alias: Scene=house_morgen, Tid=05:30, Dager=Ukedager
+  alias: Scene=house_morgen, Dager=Ukedager
   description: ''
   trigger:
-  - at: 05:30
-    platform: time
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.outside_avg_lux
+      below: '200'
+    - condition: time
+      after: 06:45:00
+      before: 08:59:00
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
   - scene: scene.house_morgen
   mode: single
@@ -274,7 +281,7 @@
   - below: '20'
     entity_id: sensor.front_door_battery
     platform: numeric_state
-  - below: '30'
+  - below: '20'
     entity_id: sensor.east_252_battery_level,sensor.south_246_battery_level,sensor.fibaro_door_sensor_battery_level_laundry_room,sensor.fibaro_motion_sensor_battery_level_etg0_hall,sensor.fibaro_motion_sensor_battery_level_etg0_stairway,sensor.stairway_228_battery_level,sensor.living_room_234_battery_level,sensor.living_room_240_battery_level,sensor.fibaro_door_sensor_battery_level_kitchen,sensor.sensative_strips_guard_living_room_window_east_1_battery_level,sensor.fibaro_door_sensor_battery_level_technical_room,sensor.sensative_strips_guard_living_room_window_east_2_battery_level,sensor.sensative_strips_guard_kitchen_window_1_battery_level,sensor.sensative_strips_guard_kitchen_window_2_battery_level,sensor.sensative_strips_guard_walk_in_closet_window_1_battery_level,sensor.sensative_strips_guard_walk_in_closet_window_2_battery_level,sensor.sensative_strips_guard_bedroom_window_battery_level,sensor.bedroom_293_0_1_295_battery_level
     platform: numeric_state
   condition: []
@@ -650,13 +657,25 @@
   alias: cover living_room screen open
   description: ''
   trigger:
-  - below: '2500'
-    entity_id: sensor.east_252_0_2_255
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - condition: state
-    entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
-    state: 'off'
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.east_252_0_2_255
+      below: '2500'
+    - condition: state
+      entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
+      state: 'off'
+    - condition: time
+      after: '14:00:00'
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.living_room_288_1_291
+        attribute: current_position
+        state: '100'
   action:
   - data: {}
     entity_id: cover.living_room_288_1_291
@@ -683,13 +702,23 @@
   alias: cover kitchen screens open
   description: ''
   trigger:
-  - below: '2500'
-    entity_id: sensor.south_246_0_2_249
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - condition: state
-    entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
-    state: 'off'
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.south_246_0_2_249
+      below: '2500'
+    - condition: state
+      entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
+      state: 'off'
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.kitchen_268_1_271
+        attribute: current_position
+        state: '100'
   action:
   - data: {}
     entity_id: cover.kitchen_268_1_271
@@ -699,13 +728,25 @@
   alias: cover walk_in_closet east screen open
   description: ''
   trigger:
-  - below: '2500'
-    entity_id: sensor.east_252_0_2_255
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - condition: state
-    entity_id: binary_sensor.walk_in_closet_303_0_304
-    state: 'off'
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.east_252_0_2_255
+      below: '2500'
+    - condition: state
+      entity_id: binary_sensor.walk_in_closet_303_0_304
+      state: 'off'
+    - condition: time
+      after: '14:00:00'
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.walk_in_closet_283_1_286
+        attribute: current_position
+        state: '100'
   action:
   - data: {}
     entity_id: cover.walk_in_closet_283_1_286
@@ -715,13 +756,23 @@
   alias: cover bedroom screens open
   description: ''
   trigger:
-  - below: '2500'
-    entity_id: sensor.south_246_0_2_249
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - condition: state
-    entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
-    state: 'off'
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.south_246_0_2_249
+      below: '2500'
+    - condition: state
+      entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
+      state: 'off'
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.bedroom_273_1_276
+        attribute: current_position
+        state: '100'
   action:
   - data: {}
     entity_id: cover.bedroom_273_1_276
@@ -769,13 +820,23 @@
   alias: cover bedroom screens close
   description: ''
   trigger:
-  - above: '2500'
-    entity_id: sensor.south_246_0_2_249
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - condition: state
-    entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
-    state: 'off'
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.south_246_0_2_249
+      above: '2500'
+    - condition: state
+      entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
+      state: 'off'
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.bedroom_273_1_276
+        attribute: current_position
+        state: '0'
   action:
   - data: {}
     entity_id: cover.bedroom_273_1_276
@@ -785,13 +846,23 @@
   alias: cover kitchen screens close
   description: ''
   trigger:
-  - above: '2500'
-    entity_id: sensor.south_246_0_2_249
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - condition: state
-    entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
-    state: 'off'
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.south_246_0_2_249
+      above: '2500'
+    - condition: state
+      entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
+      state: 'off'
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.kitchen_268_1_271
+        attribute: current_position
+        state: '0'
   action:
   - data: {}
     entity_id: cover.kitchen_268_1_271
@@ -801,13 +872,23 @@
   alias: cover living_room screen close
   description: ''
   trigger:
-  - above: '2500'
-    entity_id: sensor.east_252_0_2_255
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - condition: state
-    entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
-    state: 'off'
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.east_252_0_2_255
+      above: '2500'
+    - condition: state
+      entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
+      state: 'off'
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.living_room_288_1_291
+        attribute: current_position
+        state: '0'
   action:
   - data: {}
     entity_id: cover.living_room_288_1_291
@@ -817,13 +898,23 @@
   alias: cover walk_in_closet east screen close
   description: ''
   trigger:
-  - above: '2500'
-    entity_id: sensor.east_252_0_2_255
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - condition: state
-    entity_id: binary_sensor.walk_in_closet_303_0_304
-    state: 'off'
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.east_252_0_2_255
+      above: '2500'
+    - condition: state
+      entity_id: binary_sensor.walk_in_closet_303_0_304
+      state: 'off'
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.walk_in_closet_283_1_286
+        attribute: current_position
+        state: '0'
   action:
   - data: {}
     entity_id: cover.walk_in_closet_283_1_286
@@ -833,9 +924,8 @@
   alias: cover kitchen door screen close
   description: ''
   trigger:
-  - above: '2500'
-    entity_id: sensor.east_252_0_2_255
-    platform: numeric_state
+  - minutes: /10
+    platform: time_pattern
   condition:
   - condition: and
     conditions:
@@ -845,8 +935,39 @@
     - above: '20'
       condition: numeric_state
       entity_id: sensor.east_252_0_1_254
+    - above: '2500'
+      condition: numeric_state
+      entity_id: sensor.east_252_0_2_255
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.kitchen_278_1_281
+        attribute: current_position
+        state: '0'
   action:
   - data: {}
     entity_id: cover.kitchen_278_1_281
     service: cover.close_cover
+  mode: single
+- id: '1600802965667'
+  alias: Scene=house_main_lights_off, Dager=Ukedager
+  description: ''
+  trigger:
+  - platform: time
+    at: 09:00:00
+  - platform: numeric_state
+    entity_id: sensor.outside_avg_lux
+    above: '200'
+  condition:
+  - condition: time
+    after: 06:45:00
+    before: 09:01:00
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - scene: scene.house_main_lights_off
   mode: single
