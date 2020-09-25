@@ -2,10 +2,8 @@
   alias: Scene=house_dag, Dager=Alle
   description: ''
   trigger:
-  - above: '300'
-    below: '500'
-    entity_id: sensor.outside_avg_lux
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
   - condition: and
     conditions:
@@ -15,6 +13,13 @@
     - condition: state
       entity_id: input_boolean.scene_selskap
       state: 'off'
+    - condition: numeric_state
+      entity_id: sensor.outside_avg_lux
+      above: '300'
+      below: '500'
+    - condition: state
+      entity_id: input_boolean.scene_dag
+      state: 'off'
   action:
   - scene: scene.house_dag
   mode: single
@@ -22,9 +27,8 @@
   alias: Scene=house_kveld, Dager=Alle
   description: ''
   trigger:
-  - below: '300'
-    entity_id: sensor.outside_avg_lux
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
   - condition: and
     conditions:
@@ -33,6 +37,12 @@
       condition: time
     - condition: state
       entity_id: input_boolean.scene_selskap
+      state: 'off'
+    - condition: numeric_state
+      entity_id: sensor.outside_avg_lux
+      below: '300'
+    - condition: state
+      entity_id: input_boolean.scene_kveld
       state: 'off'
   action:
   - scene: scene.house_kveld
@@ -58,6 +68,9 @@
       - wed
       - thu
       - fri
+    - condition: state
+      entity_id: input_boolean.scene_morgen
+      state: 'off'
   action:
   - scene: scene.house_morgen
   mode: single
