@@ -13,124 +13,135 @@
                     "badges": [],
                     "cards": [
                         {
-                            "content": "# Temperatur",
-                            "type": "markdown"
-                        },
-                        {
-                            "align_state": "center",
-                            "color_thresholds": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "color": "#0da035",
-                                    "value": 23
+                                    "content": "# Temperatur",
+                                    "type": "markdown"
                                 },
                                 {
-                                    "color": "#f4b400",
-                                    "value": 25
+                                    "align_state": "center",
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#0da035",
+                                            "value": 23
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 25
+                                        },
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 26
+                                        }
+                                    ],
+                                    "entities": [
+                                        "sensor.inside_avg_temperature"
+                                    ],
+                                    "hours_to_show": 168,
+                                    "show": {
+                                        "labels": true
+                                    },
+                                    "type": "custom:mini-graph-card"
                                 },
                                 {
-                                    "color": "#df4c1e",
-                                    "value": 26
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.stairway_228_0_1_230",
+                                            "name": "Etg 0"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_234_0_1_236",
+                                            "name": "Etg 1"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_240_0_1_242",
+                                            "name": "Etg 2"
+                                        }
+                                    ],
+                                    "hours_to_show": 168,
+                                    "name": "Temperatur",
+                                    "show": {
+                                        "fill": false,
+                                        "labels": true,
+                                        "state": false
+                                    },
+                                    "type": "custom:mini-graph-card"
                                 }
-                            ],
-                            "entities": [
-                                "sensor.inside_avg_temperature"
-                            ],
-                            "hours_to_show": 168,
-                            "show": {
-                                "labels": true
-                            },
-                            "type": "custom:mini-graph-card"
+                            ]
                         },
                         {
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "entity": "sensor.stairway_228_0_1_230",
-                                    "name": "Etg 0"
+                                    "content": "# Luftfuktighet",
+                                    "type": "markdown"
                                 },
                                 {
-                                    "entity": "sensor.living_room_234_0_1_236",
-                                    "name": "Etg 1"
+                                    "align_state": "center",
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 20
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 25
+                                        },
+                                        {
+                                            "color": "#0da035",
+                                            "value": 35
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 45
+                                        },
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 50
+                                        }
+                                    ],
+                                    "entities": [
+                                        "sensor.inside_avg_humidity"
+                                    ],
+                                    "hours_to_show": 168,
+                                    "show": {
+                                        "labels": true
+                                    },
+                                    "type": "custom:mini-graph-card"
                                 },
                                 {
-                                    "entity": "sensor.living_room_240_0_1_242",
-                                    "name": "Etg 2"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.stairway_228_0_3_232",
+                                            "name": "Etg 0"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_234_0_3_238",
+                                            "name": "Etg 1"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_240_0_3_244",
+                                            "name": "Etg 2"
+                                        }
+                                    ],
+                                    "hours_to_show": 168,
+                                    "name": "Luftfuktighet",
+                                    "show": {
+                                        "fill": false,
+                                        "labels": true,
+                                        "state": false
+                                    },
+                                    "type": "custom:mini-graph-card"
                                 }
-                            ],
-                            "hours_to_show": 168,
-                            "name": "Temperatur",
-                            "show": {
-                                "fill": false,
-                                "labels": true,
-                                "state": false
-                            },
-                            "type": "custom:mini-graph-card"
-                        },
-                        {
-                            "content": "# Luftfuktighet",
-                            "type": "markdown"
-                        },
-                        {
-                            "align_state": "center",
-                            "color_thresholds": [
-                                {
-                                    "color": "#df4c1e",
-                                    "value": 20
-                                },
-                                {
-                                    "color": "#f4b400",
-                                    "value": 25
-                                },
-                                {
-                                    "color": "#0da035",
-                                    "value": 35
-                                },
-                                {
-                                    "color": "#f4b400",
-                                    "value": 45
-                                },
-                                {
-                                    "color": "#df4c1e",
-                                    "value": 50
-                                }
-                            ],
-                            "entities": [
-                                "sensor.inside_avg_humidity"
-                            ],
-                            "hours_to_show": 168,
-                            "show": {
-                                "labels": true
-                            },
-                            "type": "custom:mini-graph-card"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.stairway_228_0_3_232",
-                                    "name": "Etg 0"
-                                },
-                                {
-                                    "entity": "sensor.living_room_234_0_3_238",
-                                    "name": "Etg 1"
-                                },
-                                {
-                                    "entity": "sensor.living_room_240_0_3_244",
-                                    "name": "Etg 2"
-                                }
-                            ],
-                            "hours_to_show": 168,
-                            "name": "Luftfuktighet",
-                            "show": {
-                                "fill": false,
-                                "labels": true,
-                                "state": false
-                            },
-                            "type": "custom:mini-graph-card"
+                            ]
                         }
                     ]
                 },
                 {
-                    "icon": "mdi:tree",
+                    "icon": "mdi:weather-partly-cloudy",
                     "path": "stats-outside",
+                    "title": "stats-outside",
                     "badges": [],
                     "cards": [
                         {
