@@ -1,284 +1,338 @@
 {
+    "version": 1,
+    "key": "lovelace",
     "data": {
         "config": {
             "title": "S71",
             "views": [
                 {
+                    "icon": "mdi:home-assistant",
+                    "path": "status",
+                    "title": "status",
+                    "visible": [],
                     "badges": [],
                     "cards": [
                         {
-                            "card": {
-                                "entities": [
-                                    {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "card": {
                                         "entities": [
                                             {
-                                                "entity": "sensor.siemens_hm876gdb6s_program",
-                                                "name": "Program"
-                                            },
-                                            {
-                                                "entity": "sensor.siemens_hm876gdb6s_elapsed",
-                                                "name": "Aktiv"
+                                                "entities": [
+                                                    {
+                                                        "entity": "sensor.siemens_hm876gdb6s_program",
+                                                        "name": "Program"
+                                                    },
+                                                    {
+                                                        "entity": "sensor.siemens_hm876gdb6s_elapsed",
+                                                        "name": "Aktiv"
+                                                    }
+                                                ],
+                                                "entity": "sensor.siemens_hm876gdb6s_state",
+                                                "show_state": false,
+                                                "type": "custom:multiple-entity-row"
                                             }
                                         ],
-                                        "entity": "sensor.siemens_hm876gdb6s_state",
-                                        "show_state": false,
-                                        "type": "custom:multiple-entity-row"
-                                    }
-                                ],
-                                "show_header_toggle": false,
-                                "type": "entities"
-                            },
-                            "conditions": [
+                                        "show_header_toggle": false,
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "sensor.siemens_hm876gdb6s_state",
+                                            "state": "Aktiv"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                },
                                 {
-                                    "entity": "sensor.siemens_hm876gdb6s_state",
-                                    "state": "Aktiv"
-                                }
-                            ],
-                            "type": "conditional"
-                        },
-                        {
-                            "card": {
-                                "entities": [
-                                    {
+                                    "card": {
                                         "entities": [
                                             {
-                                                "entity": "sensor.siemens_cs856gdb7s_program",
-                                                "name": "Program"
-                                            },
-                                            {
-                                                "entity": "sensor.siemens_cs856gdb7s_elapsed",
-                                                "name": "Aktiv"
+                                                "entities": [
+                                                    {
+                                                        "entity": "sensor.siemens_cs856gdb7s_program",
+                                                        "name": "Program"
+                                                    },
+                                                    {
+                                                        "entity": "sensor.siemens_cs856gdb7s_elapsed",
+                                                        "name": "Aktiv"
+                                                    }
+                                                ],
+                                                "entity": "sensor.siemens_cs856gdb7s_state",
+                                                "show_state": false,
+                                                "type": "custom:multiple-entity-row"
                                             }
                                         ],
-                                        "entity": "sensor.siemens_cs856gdb7s_state",
-                                        "show_state": false,
-                                        "type": "custom:multiple-entity-row"
-                                    }
-                                ],
-                                "show_header_toggle": false,
-                                "type": "entities"
-                            },
-                            "conditions": [
+                                        "show_header_toggle": false,
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "sensor.siemens_cs856gdb7s_state",
+                                            "state": "Aktiv"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                },
                                 {
-                                    "entity": "sensor.siemens_cs856gdb7s_state",
-                                    "state": "Aktiv"
-                                }
-                            ],
-                            "type": "conditional"
-                        },
-                        {
-                            "card": {
-                                "entities": [
-                                    {
+                                    "card": {
                                         "entities": [
                                             {
-                                                "entity": "sensor.bosch_wtwh7579sn_program",
-                                                "name": "Program"
-                                            },
-                                            {
-                                                "entity": "sensor.bosch_wtwh7579sn_remaining",
-                                                "name": "Gjenst\u00e5ende"
+                                                "entities": [
+                                                    {
+                                                        "entity": "sensor.bosch_wtwh7579sn_program",
+                                                        "name": "Program"
+                                                    },
+                                                    {
+                                                        "entity": "sensor.bosch_wtwh7579sn_remaining",
+                                                        "name": "Gjenst\u00e5ende"
+                                                    }
+                                                ],
+                                                "entity": "sensor.bosch_wtwh7579sn_state",
+                                                "show_state": false,
+                                                "type": "custom:multiple-entity-row"
                                             }
                                         ],
-                                        "entity": "sensor.bosch_wtwh7579sn_state",
-                                        "show_state": false,
-                                        "type": "custom:multiple-entity-row"
-                                    }
-                                ],
-                                "show_header_toggle": false,
-                                "type": "entities"
-                            },
-                            "conditions": [
+                                        "show_header_toggle": false,
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "sensor.bosch_wtwh7579sn_state",
+                                            "state": "Aktiv"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                },
                                 {
-                                    "entity": "sensor.bosch_wtwh7579sn_state",
-                                    "state": "Aktiv"
-                                }
-                            ],
-                            "type": "conditional"
-                        },
-                        {
-                            "card": {
-                                "entities": [
-                                    {
+                                    "card": {
                                         "entities": [
                                             {
-                                                "entity": "sensor.bosch_wawh26m9sn_program",
-                                                "name": "Program"
-                                            },
-                                            {
-                                                "entity": "sensor.bosch_wawh26m9sn_remaining",
-                                                "name": "Gjenst\u00e5ende"
+                                                "entities": [
+                                                    {
+                                                        "entity": "sensor.bosch_wawh26m9sn_program",
+                                                        "name": "Program"
+                                                    },
+                                                    {
+                                                        "entity": "sensor.bosch_wawh26m9sn_remaining",
+                                                        "name": "Gjenst\u00e5ende"
+                                                    }
+                                                ],
+                                                "entity": "sensor.bosch_wawh26m9sn_state",
+                                                "show_state": false,
+                                                "type": "custom:multiple-entity-row"
                                             }
                                         ],
-                                        "entity": "sensor.bosch_wawh26m9sn_state",
-                                        "show_state": false,
-                                        "type": "custom:multiple-entity-row"
-                                    }
-                                ],
-                                "show_header_toggle": false,
-                                "type": "entities"
-                            },
-                            "conditions": [
-                                {
-                                    "entity": "sensor.bosch_wawh26m9sn_state",
-                                    "state": "Aktiv"
-                                }
-                            ],
-                            "type": "conditional"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.house_scene_morgen",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    }
-                                },
-                                {
-                                    "entity": "switch.house_scene_dag",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    }
-                                },
-                                {
-                                    "entity": "switch.house_scene_kveld",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    }
-                                },
-                                {
-                                    "entity": "switch.house_scene_selskap",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    }
-                                },
-                                {
-                                    "entity": "switch.house_scene_alt_av",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    }
-                                }
-                            ],
-                            "show_icon": true,
-                            "show_name": true,
-                            "show_state": false,
-                            "title": "Stemning",
-                            "type": "glance"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.house_security",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    }
-                                },
-                                {
-                                    "double_tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace-climate/stats"
+                                        "show_header_toggle": false,
+                                        "type": "entities"
                                     },
-                                    "entity": "sensor.inside_avg_temperature"
+                                    "conditions": [
+                                        {
+                                            "entity": "sensor.bosch_wawh26m9sn_state",
+                                            "state": "Aktiv"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 },
                                 {
-                                    "double_tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace-climate/stats"
-                                    },
-                                    "entity": "sensor.inside_avg_humidity"
-                                },
-                                {
-                                    "double_tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace-management/live-powerusage"
-                                    },
-                                    "entity": "sensor.counter_power_usage"
-                                },
-                                {
-                                    "double_tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace-stats/lights"
-                                    },
-                                    "entity": "sensor.counter_lights_on"
-                                },
-                                {
-                                    "double_tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace-stats/doors"
-                                    },
-                                    "entity": "sensor.counter_doors_open"
-                                },
-                                {
-                                    "double_tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace-stats/windows"
-                                    },
-                                    "entity": "sensor.counter_windows_open"
-                                },
-                                {
-                                    "double_tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace-stats/screens"
-                                    },
-                                    "entity": "sensor.counter_screens_closed"
-                                },
-                                {
-                                    "double_tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace-stats/power_sockets"
-                                    },
-                                    "entity": "sensor.counter_power_sockets_on"
-                                },
-                                {
-                                    "double_tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace-stats/thermostats"
-                                    },
-                                    "entity": "sensor.counter_thermostats_on"
-                                }
-                            ],
-                            "show_icon": true,
-                            "show_name": false,
-                            "show_state": true,
-                            "type": "glance"
-                        },
-                        {
-                            "entity_sun": "sensor.sun_state",
-                            "entity_weather": "weather.s71",
-                            "sensor_humidity": "sensor.outside_avg_humidity",
-                            "sensor_temp": "sensor.outside_min_temperature",
-                            "type": "custom:weather-card"
-                        },
-                        {
-                            "card": {
-                                "entities": [
-                                    {
+                                    "card": {
                                         "entities": [
                                             {
+                                                "entities": [
+                                                    {
+                                                        "attribute": "cleaning_time",
+                                                        "name": "Aktiv",
+                                                        "unit": "min"
+                                                    },
+                                                    {
+                                                        "attribute": "cleaned_area",
+                                                        "name": "Rengjort",
+                                                        "unit": "m2"
+                                                    },
+                                                    {
+                                                        "attribute": "battery_level",
+                                                        "name": "Batteri",
+                                                        "unit": "%"
+                                                    }
+                                                ],
+                                                "entity": "vacuum.xiaomi_vacuum_cleaner",
+                                                "name": "LingLing",
+                                                "show_state": false,
+                                                "type": "custom:multiple-entity-row"
+                                            }
+                                        ],
+                                        "show_header_toggle": false,
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                                            "state_not": "docked"
+                                        }
+                                    ],
+                                    "type": "conditional"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.house_scene_morgen",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        },
+                                        {
+                                            "entity": "switch.house_scene_dag",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        },
+                                        {
+                                            "entity": "switch.house_scene_kveld",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        },
+                                        {
+                                            "entity": "switch.house_scene_selskap",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        },
+                                        {
+                                            "entity": "switch.house_scene_alt_av",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        }
+                                    ],
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "show_state": false,
+                                    "title": "Stemning",
+                                    "type": "glance"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.house_security",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        },
+                                        {
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-climate/stats"
+                                            },
+                                            "entity": "sensor.inside_avg_temperature"
+                                        },
+                                        {
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-climate/stats"
+                                            },
+                                            "entity": "sensor.inside_avg_humidity"
+                                        },
+                                        {
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-management/live-powerusage"
+                                            },
+                                            "entity": "sensor.counter_power_usage"
+                                        },
+                                        {
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-stats/lights"
+                                            },
+                                            "entity": "sensor.counter_lights_on"
+                                        },
+                                        {
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-stats/doors"
+                                            },
+                                            "entity": "sensor.counter_doors_open"
+                                        },
+                                        {
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-stats/windows"
+                                            },
+                                            "entity": "sensor.counter_windows_open"
+                                        },
+                                        {
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-stats/screens"
+                                            },
+                                            "entity": "sensor.counter_screens_closed"
+                                        },
+                                        {
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-stats/power_sockets"
+                                            },
+                                            "entity": "sensor.counter_power_sockets_on"
+                                        },
+                                        {
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-stats/thermostats"
+                                            },
+                                            "entity": "sensor.counter_thermostats_on"
+                                        }
+                                    ],
+                                    "show_icon": true,
+                                    "show_name": false,
+                                    "show_state": true,
+                                    "type": "glance"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "entity_sun": "sensor.sun_state",
+                                    "entity_weather": "weather.s71",
+                                    "sensor_humidity": "sensor.outside_avg_humidity",
+                                    "sensor_temp": "sensor.outside_min_temperature",
+                                    "type": "custom:weather-card"
+                                },
+                                {
+                                    "card": {
+                                        "entities": [
+                                            {
+                                                "entities": [
+                                                    {
+                                                        "entity": "sensor.netatmo_s70_rain_gauge_sum_rain_1",
+                                                        "name": "Siste time"
+                                                    },
+                                                    {
+                                                        "entity": "sensor.netatmo_s70_rain_gauge_sum_rain_24",
+                                                        "name": "Siste 24t"
+                                                    }
+                                                ],
                                                 "entity": "sensor.netatmo_s70_rain_gauge_sum_rain_1",
-                                                "name": "Siste time"
-                                            },
-                                            {
-                                                "entity": "sensor.netatmo_s70_rain_gauge_sum_rain_24",
-                                                "name": "Siste 24t"
+                                                "name": "Regnm\u00e5ler",
+                                                "show_state": false,
+                                                "type": "custom:multiple-entity-row"
                                             }
                                         ],
-                                        "entity": "sensor.netatmo_s70_rain_gauge_sum_rain_1",
-                                        "name": "Regnm\u00e5ler",
-                                        "show_state": false,
-                                        "type": "custom:multiple-entity-row"
-                                    }
-                                ],
-                                "show_header_toggle": false,
-                                "type": "entities"
-                            },
-                            "conditions": [
-                                {
-                                    "entity": "sensor.netatmo_s70_rain_gauge_rain",
-                                    "state_not": "unavailable"
+                                        "show_header_toggle": false,
+                                        "type": "entities"
+                                    },
+                                    "conditions": [
+                                        {
+                                            "entity": "sensor.netatmo_s70_rain_gauge_rain",
+                                            "state_not": "unavailable"
+                                        }
+                                    ],
+                                    "type": "conditional"
                                 }
-                            ],
-                            "type": "conditional"
+                            ]
                         },
                         {
                             "aspect_ratio": "50%",
@@ -289,11 +343,7 @@
                             "show_state": true,
                             "type": "picture-entity"
                         }
-                    ],
-                    "icon": "mdi:home-assistant",
-                    "path": "status",
-                    "title": "status",
-                    "visible": []
+                    ]
                 },
                 {
                     "badges": [],
@@ -547,6 +597,75 @@
                     "badges": [],
                     "cards": [
                         {
+                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                            "image": "/local/images/devices/xiaomi_roborock_s5.png",
+                            "name": "LingLing",
+                            "type": "custom:xiaomi-vacuum-card"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.etg_1_tv_room",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entity": "light.tv_room_89_1_92"
+                                },
+                                {
+                                    "entity": "light.tv_room_sofa"
+                                },
+                                {
+                                    "entity": "switch.tv_room_181_0_182"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "cover.rullgardiner_side"
+                                        },
+                                        {
+                                            "entity": "cover.rullgardin_bak"
+                                        }
+                                    ],
+                                    "entity": "sensor.multiple_entity_row_windows",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                }
+                            ],
+                            "footer": {
+                                "entities": [
+                                    {
+                                        "entity": "switch.tv_rom_scene_dag"
+                                    },
+                                    {
+                                        "entity": "switch.tv_rom_scene_kveld"
+                                    },
+                                    {
+                                        "entity": "switch.tv_rom_scene_film"
+                                    },
+                                    {
+                                        "entity": "switch.tv_rom_scene_av"
+                                    }
+                                ],
+                                "type": "buttons"
+                            },
+                            "show_header_toggle": false,
+                            "title": "Tv-rom",
+                            "type": "entities"
+                        },
+                        {
                             "entities": [
                                 {
                                     "entities": [
@@ -705,69 +824,6 @@
                                 {
                                     "entities": [
                                         {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_1_tv_room",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entity": "light.tv_room_89_1_92"
-                                },
-                                {
-                                    "entity": "light.tv_room_sofa"
-                                },
-                                {
-                                    "entity": "switch.tv_room_181_0_182"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "cover.rullgardiner_side"
-                                        },
-                                        {
-                                            "entity": "cover.rullgardin_bak"
-                                        }
-                                    ],
-                                    "entity": "sensor.multiple_entity_row_windows",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                }
-                            ],
-                            "footer": {
-                                "entities": [
-                                    {
-                                        "entity": "switch.tv_rom_scene_dag"
-                                    },
-                                    {
-                                        "entity": "switch.tv_rom_scene_kveld"
-                                    },
-                                    {
-                                        "entity": "switch.tv_rom_scene_film"
-                                    },
-                                    {
-                                        "entity": "switch.tv_rom_scene_av"
-                                    }
-                                ],
-                                "type": "buttons"
-                            },
-                            "show_header_toggle": false,
-                            "title": "Tv-rom",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entities": [
-                                        {
                                             "entity": "sensor.living_room_234_0_1_236"
                                         },
                                         {
@@ -812,12 +868,6 @@
                             "show_header_toggle": false,
                             "title": "Stue",
                             "type": "entities"
-                        },
-                        {
-                            "entity": "vacuum.xiaomi_vacuum_cleaner",
-                            "image": "/local/images/devices/xiaomi_roborock_s5.png",
-                            "name": "LingLing",
-                            "type": "custom:xiaomi-vacuum-card"
                         }
                     ],
                     "icon": "mdi:home-floor-1",
@@ -874,42 +924,6 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.living_room_240_0_1_242"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_240_0_3_244"
-                                        },
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.living_room_135_1_138",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entity": "light.living_room_69_1_72"
-                                },
-                                {
-                                    "entity": "light.living_room_177_0_178"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Loftstue",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entities": [
-                                        {
                                             "attribute": "temperature",
                                             "name": "Termostat",
                                             "unit": "\u00b0C"
@@ -942,6 +956,42 @@
                             ],
                             "show_header_toggle": false,
                             "title": "Kontor Nora",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.living_room_240_0_1_242"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_240_0_3_244"
+                                        },
+                                        {
+                                            "attribute": "temperature",
+                                            "name": "Termostat",
+                                            "unit": "\u00b0C"
+                                        },
+                                        {
+                                            "attribute": "current_temperature",
+                                            "name": "Gulvtemperatur",
+                                            "unit": "\u00b0C"
+                                        }
+                                    ],
+                                    "entity": "climate.living_room_135_1_138",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entity": "light.living_room_69_1_72"
+                                },
+                                {
+                                    "entity": "light.living_room_177_0_178"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Loftstue",
                             "type": "entities"
                         },
                         {
@@ -1063,7 +1113,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace",
-    "version": 1
+    }
 }
