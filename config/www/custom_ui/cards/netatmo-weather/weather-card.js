@@ -74,6 +74,7 @@ class WeatherCard extends HTMLElement {
         const entity = hass.states[this.config.entity_weather];
         const currentCondition = entity.state;
         const humidity = hass.states[this.config.sensor_humidity].state;
+        const lux =  hass.states[this.config.sensor_lux].state;
         const pressure =  entity.attributes.pressure;
         const temperature = hass.states[this.config.sensor_temp].state;
         const visibility = entity.attributes.visibility;
@@ -88,11 +89,11 @@ class WeatherCard extends HTMLElement {
       <span>
         <ul class="variations right">
             <li><span class="ha-icon"><ha-icon icon="mdi:water-percent"></ha-icon></span>${humidity}<span class="unit"> %</span></li>
-            <li><span class="ha-icon"><ha-icon icon="mdi:gauge"></ha-icon></span>${pressure}<span class="unit"> ${getUnit('air_pressure')}</span></li>
+            <li><span class="ha-icon"><ha-icon icon="mdi:weather-sunny"></ha-icon></span>${lux}<span class="unit"> lux</span></li>
         </ul>
         <ul class="variations">
             <li><span class="ha-icon"><ha-icon icon="mdi:weather-windy"></ha-icon></span>${windBearing} ${windSpeed}<span class="unit"> ${getUnit('length')}/h</span></li>
-            <li><span class="ha-icon"><ha-icon icon="mdi:weather-sunny"></ha-icon></span>${sunHorizon}</li>
+            <li><span class="ha-icon"><ha-icon icon="mdi:gauge"></ha-icon></span>${pressure}<span class="unit"> ${getUnit('air_pressure')}</span></li>
         </ul>
       </span>
       <div class="forecast clear">

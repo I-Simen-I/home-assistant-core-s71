@@ -299,6 +299,7 @@
                                     "entity_weather": "weather.s71",
                                     "sensor_humidity": "sensor.outside_avg_humidity",
                                     "sensor_temp": "sensor.outside_min_temperature",
+                                    "sensor_lux": "sensor.outside_avg_lux",
                                     "type": "custom:weather-card"
                                 },
                                 {
