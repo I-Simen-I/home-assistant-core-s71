@@ -15,7 +15,6 @@
       state: 'off'
     - condition: numeric_state
       entity_id: sensor.outside_avg_lux
-      above: '300'
       below: '500'
     - condition: state
       entity_id: input_boolean.scene_dag
@@ -33,7 +32,7 @@
   - condition: and
     conditions:
     - after: '18:00:00'
-      before: '22:30:00'
+      before: '22:00:00'
       condition: time
     - condition: state
       entity_id: input_boolean.scene_selskap
@@ -983,4 +982,28 @@
     - fri
   action:
   - scene: scene.house_main_lights_off
+  mode: single
+- id: '1601405539740'
+  alias: notify garbage collection
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: calendar.garbage
+    to: 'on'
+  condition: []
+  action:
+  - service: notify.mobile_app_simens_galaxy_s10
+    data:
+      data:
+        clickAction: /lovelace/status
+        color: green
+      message: Husk å ta ut søppel
+      title: Søppeltømming
+  - service: notify.mobile_app_nora_sin_iphone
+    data:
+      data:
+        clickAction: /lovelace/status
+        color: green
+      message: Husk å ta ut søppel
+      title: Søppeltømming
   mode: single

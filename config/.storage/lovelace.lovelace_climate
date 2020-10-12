@@ -318,6 +318,7 @@
                                         "sensor.netatmo_s70_rain_gauge_sum_rain_1"
                                     ],
                                     "hours_to_show": 168,
+                                    "points_per_hour": 2,
                                     "name": "Regn",
                                     "show": {
                                         "labels": true

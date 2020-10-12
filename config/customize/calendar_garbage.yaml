@@ -1,0 +1,11 @@
+calendar.garbage:
+  icon: 'mdi:trash-can'
+
+calendar.glass:
+  icon: 'mdi:bottle-wine'
+
+calendar.paper:
+  icon: 'mdi:note-outline'
+
+calendar.plastic:
+  icon: 'mdi:delete-variant'

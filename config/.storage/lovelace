@@ -16,6 +16,37 @@
                             "type": "vertical-stack",
                             "cards": [
                                 {
+                                    "type": "conditional",
+                                    "conditions": [
+                                        {
+                                            "entity": "calendar.garbage",
+                                            "state": "on"
+                                        }
+                                    ],
+                                    "card": {
+                                        "entities": [
+                                            {
+                                                "entity": "calendar.garbage"
+                                            },
+                                            {
+                                                "entity": "calendar.paper"
+                                            },
+                                            {
+                                                "entity": "calendar.plastic"
+                                            },
+                                            {
+                                                "entity": "calendar.glass"
+                                            }
+                                        ],
+                                        "show_icon": true,
+                                        "show_name": false,
+                                        "show_state": false,
+                                        "type": "glance",
+                                        "state_color": true,
+                                        "title": "Husk \u00e5 ta ut s\u00f8ppel"
+                                    }
+                                },
+                                {
                                     "card": {
                                         "entities": [
                                             {
