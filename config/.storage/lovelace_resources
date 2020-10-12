@@ -11,12 +11,12 @@
             {
                 "id": "d0130eef90c24489b9ff994696ccdc1b",
                 "type": "module",
-                "url": "/local/custom_ui/cards/xiaomi-vacuum/xiaomi-vacuum-card.js"
+                "url": "/local/custom_ui/cards/xiaomi-vacuum/xiaomi-vacuum-card.js?v=1.0.1"
             },
             {
                 "id": "062a78e7f11749dfb75a33f9d76a7d80",
                 "type": "module",
-                "url": "/local/custom_ui/cards/multiple-entity-row/multiple-entity-row.js?v=3.1.1"
+                "url": "/local/custom_ui/cards/multiple-entity-row/multiple-entity-row.js?v=3.1.2"
             },
             {
                 "id": "25b45c33737440f5ab33977bc74ea5ad",
