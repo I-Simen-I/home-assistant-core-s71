@@ -230,13 +230,13 @@ class HCDataReader:
             self._state['door'] = DOOR_STATE_MAP[value.rsplit('.',1)[1].lower()]
         elif key == 'BSH.Common.Status.OperationState':
             self._state['state'] = OPERATION_STATE_MAP[value.rsplit('.',1)[1].lower()]
-        elif key == 'BSH.Common.Root.ActiveProgram':
-            self._state['program'] = PROGRAM_STATE_MAP[value.rsplit('.',1)[1].lower()]
         elif key == 'BSH.Common.Option.RemainingProgramTime':
             self._state['remaining'] = str(datetime.timedelta(seconds=int(value)))
         elif key == 'BSH.Common.Option.ElapsedProgramTime':
             self._state['elapsed'] = str(datetime.timedelta(seconds=int(value)))
         elif key == 'BSH.Common.Root.SelectedProgram':
+            self._state['program'] = PROGRAM_STATE_MAP[value.rsplit('.',1)[1].lower()]
+        elif key == 'BSH.Common.Root.ActiveProgram':
             self._state['program'] = PROGRAM_STATE_MAP[value.rsplit('.',1)[1].lower()]
         else:
             _LOGGER.debug('Ignored key-value pair: %s,%s', key, value)
