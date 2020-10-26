@@ -572,21 +572,12 @@
   alias: climate office-nora heat-on
   description: ''
   trigger:
-  - at: 05:30:00
+  - at: 03:30:00
     platform: time
   condition:
-  - condition: and
-    conditions:
-    - condition: time
-      weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-    - below: '23'
-      condition: numeric_state
-      entity_id: sensor.office_nora_144_3_151
+  - condition: time
+    weekday:
+    - mon
   action:
   - data:
       temperature: 24
@@ -597,12 +588,15 @@
   alias: climate office-nora heat-off
   description: ''
   trigger:
-  - at: '14:00:00'
+  - at: '15:00:00'
     platform: time
-  condition: []
+  condition:
+  - condition: time
+    weekday:
+    - fri
   action:
   - data:
-      temperature: 21
+      temperature: 22
     entity_id: climate.office_nora_144_1_147
     service: climate.set_temperature
   mode: single
