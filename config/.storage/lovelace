@@ -412,15 +412,12 @@
                                             "name": "D\u00f8r"
                                         },
                                         {
-                                            "entity": "sensor.bosch_wawh26m9sn_program",
-                                            "name": "Program"
-                                        },
-                                        {
-                                            "entity": "sensor.bosch_wawh26m9sn_remaining",
-                                            "name": "Tid"
+                                            "entity": "sensor.bosch_wawh26m9sn_state",
+                                            "name": "Status"
                                         }
                                     ],
                                     "entity": "sensor.bosch_wawh26m9sn_state",
+                                    "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
                                 {
@@ -430,15 +427,12 @@
                                             "name": "D\u00f8r"
                                         },
                                         {
-                                            "entity": "sensor.bosch_wtwh7579sn_program",
-                                            "name": "Program"
-                                        },
-                                        {
-                                            "entity": "sensor.bosch_wtwh7579sn_remaining",
-                                            "name": "Tid"
+                                            "entity": "sensor.bosch_wtwh7579sn_state",
+                                            "name": "Status"
                                         }
                                     ],
                                     "entity": "sensor.bosch_wtwh7579sn_state",
+                                    "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
                                 {
@@ -789,15 +783,12 @@
                                             "name": "D\u00f8r"
                                         },
                                         {
-                                            "entity": "sensor.siemens_hm876gdb6s_program",
-                                            "name": "Program"
-                                        },
-                                        {
-                                            "entity": "sensor.siemens_hm876gdb6s_elapsed",
-                                            "name": "Tid"
+                                            "entity": "sensor.siemens_hm876gdb6s_state",
+                                            "name": "Status"
                                         }
                                     ],
                                     "entity": "sensor.siemens_hm876gdb6s_state",
+                                    "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
                                 {
@@ -807,15 +798,12 @@
                                             "name": "D\u00f8r"
                                         },
                                         {
-                                            "entity": "sensor.siemens_cs856gdb7s_program",
-                                            "name": "Program"
-                                        },
-                                        {
-                                            "entity": "sensor.siemens_cs856gdb7s_elapsed",
-                                            "name": "Tid"
+                                            "entity": "sensor.siemens_cs856gdb7s_state",
+                                            "name": "Status"
                                         }
                                     ],
                                     "entity": "sensor.siemens_cs856gdb7s_state",
+                                    "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },
                                 {
@@ -1063,6 +1051,9 @@
                             "entities": [
                                 {
                                     "entity": "light.walk_in_closet_59_1_62"
+                                },
+                                {
+                                    "entity": "light.walk_in_closet_315_0_316"
                                 },
                                 {
                                     "entities": [

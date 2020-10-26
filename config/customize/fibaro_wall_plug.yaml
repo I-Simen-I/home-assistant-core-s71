@@ -27,3 +27,7 @@ switch.office_nora_192_0_193:
 switch.bedroom_313_0_314:
   icon: mdi:cellphone-charging
   friendly_name: Nattbordslader
+
+light.walk_in_closet_315_0_316:
+  icon: mdi:wardrobe
+  friendly_name: Garderobeskap

@@ -218,6 +218,8 @@
       state: off
     light.walk_in_closet_59_1_62:
       state: off
+    light.walk_in_closet_315_0_316:
+      state: off
     light.bathroom_29_1_32:
       state: off
       brightness: 255

@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_stats",
     "data": {
         "config": {
             "views": [
@@ -184,8 +186,20 @@
                                     "type": "custom:multiple-entity-row"
                                 },
                                 {
+                                    "entities": [
+                                        {
+                                            "entity": "light.walk_in_closet_59_1_62",
+                                            "toggle": true
+                                        },
+                                        {
+                                            "entity": "light.walk_in_closet_315_0_316",
+                                            "toggle": true
+                                        }
+                                    ],
                                     "entity": "light.walk_in_closet_59_1_62",
-                                    "name": "Walk in closet"
+                                    "name": "Walk in closet",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
                                 },
                                 {
                                     "entity": "light.bedroom_84_1_87",
@@ -694,7 +708,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_stats",
-    "version": 1
+    }
 }
