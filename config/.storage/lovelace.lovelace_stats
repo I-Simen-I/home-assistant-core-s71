@@ -67,6 +67,7 @@
                                 }
                             ],
                             "title": "ETG 0",
+                            "show_header_toggle": false,
                             "type": "entities"
                         },
                         {
@@ -141,6 +142,7 @@
                                 }
                             ],
                             "title": "ETG 1",
+                            "show_header_toggle": false,
                             "type": "entities"
                         },
                         {
@@ -207,6 +209,7 @@
                                 }
                             ],
                             "title": "ETG 2",
+                            "show_header_toggle": false,
                             "type": "entities"
                         }
                     ],
