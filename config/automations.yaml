@@ -136,10 +136,10 @@
     service: switch.turn_on
   mode: single
 - id: '1583433271638'
-  alias: Switch=Servantskap, Service=turn_off, Tid=23:00
+  alias: Switch=Servantskap, Service=turn_off, Tid=00:00
   description: ''
   trigger:
-  - at: '23:00:00'
+  - at: 00:00:00
     platform: time
   condition: []
   action:
