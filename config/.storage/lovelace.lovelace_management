@@ -332,25 +332,29 @@
                                     "entity": "sensor.counter_power_usage_lights",
                                     "max": 1000,
                                     "min": 0,
-                                    "type": "gauge"
+                                    "type": "gauge",
+                                    "name": "Lys"
                                 },
                                 {
                                     "entity": "sensor.counter_power_usage_power_outlets",
                                     "max": 5000,
                                     "min": 0,
-                                    "type": "gauge"
+                                    "type": "gauge",
+                                    "name": "Kontakter"
                                 },
                                 {
                                     "entity": "sensor.counter_power_usage_power_thermostats",
                                     "max": 2000,
                                     "min": 0,
-                                    "type": "gauge"
+                                    "type": "gauge",
+                                    "name": "Gulv"
                                 },
                                 {
                                     "entity": "sensor.counter_power_usage_screens",
                                     "max": 400,
                                     "min": 0,
-                                    "type": "gauge"
+                                    "type": "gauge",
+                                    "name": "Screens"
                                 }
                             ],
                             "type": "horizontal-stack"
@@ -481,6 +485,17 @@
                                         }
                                     ],
                                     "entity": "switch.office_simen_175_0_176",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "attribute": "current_power_w",
+                                            "unit": "w"
+                                        }
+                                    ],
+                                    "entity": "switch.kitchen_325_0_326",
                                     "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 }

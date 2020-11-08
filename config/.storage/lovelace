@@ -58,6 +58,10 @@
                                                     {
                                                         "entity": "sensor.siemens_hm876gdb6s_elapsed",
                                                         "name": "Aktiv"
+                                                    },
+                                                    {
+                                                        "entity": "sensor.siemens_hm876gdb6s_remaining",
+                                                        "name": "Gjenst\u00e5ende"
                                                     }
                                                 ],
                                                 "entity": "sensor.siemens_hm876gdb6s_state",
@@ -88,6 +92,10 @@
                                                     {
                                                         "entity": "sensor.siemens_cs856gdb7s_elapsed",
                                                         "name": "Aktiv"
+                                                    },
+                                                    {
+                                                        "entity": "sensor.siemens_cs856gdb7s_remaining",
+                                                        "name": "Gjenst\u00e5ende"
                                                     }
                                                 ],
                                                 "entity": "sensor.siemens_cs856gdb7s_state",
@@ -105,6 +113,32 @@
                                         }
                                     ],
                                     "type": "conditional"
+                                },
+                                {
+                                    "type": "conditional",
+                                    "conditions": [
+                                        {
+                                            "entity": "sensor.switch_kitchen_325_0_326_state",
+                                            "state_not": "Av"
+                                        }
+                                    ],
+                                    "card": {
+                                        "entities": [
+                                            {
+                                                "entities": [
+                                                    {
+                                                        "entity": "sensor.switch_kitchen_325_0_326_state",
+                                                        "name": "Aktiv"
+                                                    }
+                                                ],
+                                                "entity": "sensor.switch_kitchen_325_0_326_state",
+                                                "show_state": false,
+                                                "type": "custom:multiple-entity-row"
+                                            }
+                                        ],
+                                        "show_header_toggle": false,
+                                        "type": "entities"
+                                    }
                                 },
                                 {
                                     "card": {
@@ -803,6 +837,17 @@
                                         }
                                     ],
                                     "entity": "sensor.siemens_cs856gdb7s_state",
+                                    "show_state": false,
+                                    "type": "custom:multiple-entity-row"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.switch_kitchen_325_0_326_state",
+                                            "name": "Status"
+                                        }
+                                    ],
+                                    "entity": "sensor.switch_kitchen_325_0_326_state",
                                     "show_state": false,
                                     "type": "custom:multiple-entity-row"
                                 },

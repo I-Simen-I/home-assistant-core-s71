@@ -3,6 +3,10 @@ switch.tv_room_181_0_182:
   icon: mdi:television
   friendly_name: TV
 
+switch.kitchen_325_0_326:
+  icon: mdi:silverware-clean
+  friendly_name: Oppvaskmaskin
+
 # ETG 2
 light.living_room_177_0_178:
   icon: mdi:floor-lamp
