@@ -7,6 +7,10 @@ switch.kitchen_325_0_326:
   icon: mdi:silverware-clean
   friendly_name: Oppvaskmaskin
 
+sensor.kitchen_325_0_32_active:
+  icon: mdi:silverware-clean
+  friendly_name: Oppvaskmaskin
+
 # ETG 2
 light.living_room_177_0_178:
   icon: mdi:floor-lamp

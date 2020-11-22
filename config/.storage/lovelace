@@ -127,11 +127,11 @@
                                             {
                                                 "entities": [
                                                     {
-                                                        "entity": "sensor.switch_kitchen_325_0_326_state",
+                                                        "attribute": "value",
                                                         "name": "Aktiv"
                                                     }
                                                 ],
-                                                "entity": "sensor.switch_kitchen_325_0_326_state",
+                                                "entity": "sensor.kitchen_325_0_32_active",
                                                 "show_state": false,
                                                 "type": "custom:multiple-entity-row"
                                             }

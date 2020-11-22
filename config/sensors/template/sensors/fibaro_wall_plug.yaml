@@ -9,9 +9,7 @@ switch_kitchen_325_0_326_state:
   friendly_name: 'Oppvaskmaskin'
   icon_template: "mdi:silverware-clean"
   value_template: >-
-    {% if (state_attr("switch.kitchen_325_0_326", "current_power_w") > 150) %}
-      Oppvarming
-    {% elif (state_attr("switch.kitchen_325_0_326", "current_power_w") > 3) %}
+    {% if (state_attr("switch.kitchen_325_0_326", "current_power_w") > 3) %}
       Aktiv
     {% elif (state_attr("switch.kitchen_325_0_326", "current_power_w") > 1) %}
       På

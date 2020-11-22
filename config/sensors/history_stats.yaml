@@ -1,0 +1,7 @@
+- platform: history_stats
+  name: kitchen_325_0_32_active
+  entity_id: sensor.switch_kitchen_325_0_326_state
+  state: 'Aktiv'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
