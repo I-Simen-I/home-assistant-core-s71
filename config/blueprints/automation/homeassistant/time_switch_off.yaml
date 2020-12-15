@@ -1,0 +1,25 @@
+blueprint:
+  name: Switches off
+  description: Turn off switches at given time
+  domain: automation
+  input:
+    time_to_trigger:
+      name: Time to turn off switches
+      selector:
+        time:
+    smart_switches:
+      name: Switches
+      selector:
+        target:
+          entity:
+            domain: switch
+
+mode: single
+
+trigger:
+  - platform: time
+    at: !input time_to_trigger
+
+action:
+  - service: switch.turn_off
+    target: !input smart_switches

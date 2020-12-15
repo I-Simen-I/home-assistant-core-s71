@@ -99,54 +99,6 @@
   action:
   - scene: scene.house_alt_av
   mode: single
-- id: '1583433106041'
-  alias: Switch=Støvsuger, Service=turn_on, Tid=15:00
-  description: ''
-  trigger:
-  - at: '15:00:00'
-    platform: time
-  condition: []
-  action:
-  - data: {}
-    entity_id: switch.office_simen_175_0_176
-    service: switch.turn_on
-  mode: single
-- id: '1583433154447'
-  alias: Switch=Støvsuger, Service=turn_off, Tid=22:00
-  description: ''
-  trigger:
-  - at: '22:00:00'
-    platform: time
-  condition: []
-  action:
-  - data: {}
-    entity_id: switch.office_simen_175_0_176
-    service: switch.turn_off
-  mode: single
-- id: '1583433214285'
-  alias: Switch=Servantskap, Service=turn_on, Tid=16:00
-  description: ''
-  trigger:
-  - at: '16:00:00'
-    platform: time
-  condition: []
-  action:
-  - data: {}
-    entity_id: switch.bathroom_187_1_190
-    service: switch.turn_on
-  mode: single
-- id: '1583433271638'
-  alias: Switch=Servantskap, Service=turn_off, Tid=00:00
-  description: ''
-  trigger:
-  - at: 00:00:00
-    platform: time
-  condition: []
-  action:
-  - data: {}
-    entity_id: switch.bathroom_187_1_190
-    service: switch.turn_off
-  mode: single
 - id: '1583436389800'
   alias: Scene=tv_room_av, condition=light is off
   description: ''
@@ -784,30 +736,6 @@
     entity_id: cover.bedroom_273_1_276
     service: cover.open_cover
   mode: single
-- id: '1597073992172'
-  alias: Switch=Nattbordslader, Service=turn_off, Tid=05:45
-  description: ''
-  trigger:
-  - at: 05:45:00
-    platform: time
-  condition: []
-  action:
-  - data: {}
-    entity_id: switch.bedroom_313_0_314
-    service: switch.turn_off
-  mode: single
-- id: '1597074052234'
-  alias: Switch=Nattbordslader, Service=turn_on, Tid=22:00
-  description: ''
-  trigger:
-  - at: '22:00:00'
-    platform: time
-  condition: []
-  action:
-  - data: {}
-    entity_id: switch.bedroom_313_0_314
-    service: switch.turn_on
-  mode: single
 - id: '1599162995391'
   alias: climate fetch termostats state
   description: ''
@@ -1001,3 +929,57 @@
       message: Husk å ta ut søppel
       title: Søppeltømming
   mode: single
+- id: '1608057463277'
+  alias: Switch=Støvsuger, Service=turn_off, Tid=22:00
+  description: ''
+  use_blueprint:
+    path: homeassistant/time_switch_off.yaml
+    input:
+      time_to_trigger: '22:00:00'
+      smart_switches:
+        entity_id: switch.office_simen_175_0_176
+- id: '1608058158029'
+  alias: Switch=Støvsuger, Service=turn_on, Tid=15:00
+  description: ''
+  use_blueprint:
+    path: homeassistant/time_switch_on.yaml
+    input:
+      time_to_trigger: '15:00:00'
+      smart_switches:
+        entity_id: switch.office_simen_175_0_176
+- id: '1608058290346'
+  alias: Switch=Servantskap, Service=turn_on, Tid=16:00
+  description: ''
+  use_blueprint:
+    path: homeassistant/time_switch_on.yaml
+    input:
+      time_to_trigger: '16:00:00'
+      smart_switches:
+        entity_id: switch.bathroom_187_1_190
+- id: '1608058330582'
+  alias: Switch=Servantskap, Service=turn_off, Tid=00:00
+  description: ''
+  use_blueprint:
+    path: homeassistant/time_switch_off.yaml
+    input:
+      time_to_trigger: 00:00:00
+      smart_switches:
+        entity_id: switch.bathroom_187_1_190
+- id: '1608058379424'
+  alias: Switch=Nattbordslader, Service=turn_on, Tid=22:00
+  description: ''
+  use_blueprint:
+    path: homeassistant/time_switch_on.yaml
+    input:
+      time_to_trigger: '22:00:00'
+      smart_switches:
+        entity_id: switch.bedroom_313_0_314
+- id: '1608058409863'
+  alias: Switch=Nattbordslader, Service=turn_off, Tid=05:45
+  description: ''
+  use_blueprint:
+    path: homeassistant/time_switch_off.yaml
+    input:
+      time_to_trigger: 05:45:00
+      smart_switches:
+        entity_id: switch.bedroom_313_0_314
