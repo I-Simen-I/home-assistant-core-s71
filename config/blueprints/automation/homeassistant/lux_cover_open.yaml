@@ -1,0 +1,54 @@
+blueprint:
+  name: Covers open
+  description: Open covers if lux is below a given number and windows is closed
+  domain: automation
+  input:
+    covers_to_open:
+      name: Covers
+      selector:
+        entity:
+          domain: cover
+    lux_value:
+      name: Lux before open
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 100000
+          mode: slider
+    lux_sensor:
+      name: Lux sensor
+      selector:
+        entity:
+          domain: sensor
+          device_class: illuminance
+    windows:
+      name: Windows
+      selector:
+        entity:
+          domain: binary_sensor
+          device_class: window
+
+mode: single
+
+trigger:
+  - platform: time_pattern
+    minutes: /10
+condition:
+  - condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: !input lux_sensor
+        below: !input lux_value
+      - condition: state
+        entity_id: !input windows
+        state: 'off'
+      - condition: not
+        conditions:
+          - condition: state
+            entity_id: !input covers_to_open
+            attribute: current_position
+            state: '100'
+action:
+  - service: cover.close_cover
+    entity_id: !input covers_to_open
