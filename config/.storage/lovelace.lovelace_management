@@ -29,7 +29,8 @@
                                     "entity": "sensor.simen_sin_ipad_battery_level"
                                 },
                                 {
-                                    "entity": "sensor.battery_level_2"
+                                    "entity": "sensor.simens_galaxy_s10_battery_level",
+                                    "name": "Simen sin Galaxy S10+ Battery Level"
                                 },
                                 {
                                     "entity": "sensor.nora_sin_iphone_battery_level"

@@ -60,8 +60,6 @@
     light.hall_44_1_47:
       state: on
       brightness: 255
-    light.kitchen_49_1_52:
-      state: off
     light.living_room_94_1_97:
       state: off
     #ETG_2
