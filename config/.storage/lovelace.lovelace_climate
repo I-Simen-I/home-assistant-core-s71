@@ -45,28 +45,141 @@
                                     "type": "custom:mini-graph-card"
                                 },
                                 {
-                                    "entities": [
+                                    "type": "horizontal-stack",
+                                    "cards": [
                                         {
-                                            "entity": "sensor.stairway_228_0_1_230",
-                                            "name": "Etg 0"
+                                            "align_state": "center",
+                                            "font_size": 75,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 100,
+                                            "upper_bound": 35,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "color_thresholds": [
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 15
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 18
+                                                },
+                                                {
+                                                    "color": "#0da035",
+                                                    "value": 20
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 24
+                                                },
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 27
+                                                }
+                                            ],
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.stairway_228_0_1_230",
+                                                    "name": "Etg 0"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar"
+                                            },
+                                            "type": "custom:mini-graph-card"
                                         },
                                         {
-                                            "entity": "sensor.living_room_234_0_1_236",
-                                            "name": "Etg 1"
+                                            "align_state": "center",
+                                            "font_size": 75,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 100,
+                                            "upper_bound": 35,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "color_thresholds": [
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 15
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 18
+                                                },
+                                                {
+                                                    "color": "#0da035",
+                                                    "value": 20
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 24
+                                                },
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 27
+                                                }
+                                            ],
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.living_room_234_0_1_236",
+                                                    "name": "Etg 1"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar"
+                                            },
+                                            "type": "custom:mini-graph-card"
                                         },
                                         {
-                                            "entity": "sensor.living_room_240_0_1_242",
-                                            "name": "Etg 2"
+                                            "align_state": "center",
+                                            "font_size": 75,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 100,
+                                            "upper_bound": 35,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "color_thresholds": [
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 15
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 18
+                                                },
+                                                {
+                                                    "color": "#0da035",
+                                                    "value": 20
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 24
+                                                },
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 27
+                                                }
+                                            ],
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.living_room_240_0_1_242",
+                                                    "name": "Etg 2"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar"
+                                            },
+                                            "type": "custom:mini-graph-card"
                                         }
-                                    ],
-                                    "hours_to_show": 168,
-                                    "name": "Temperatur",
-                                    "show": {
-                                        "fill": false,
-                                        "labels": true,
-                                        "state": false
-                                    },
-                                    "type": "custom:mini-graph-card"
+                                    ]
                                 }
                             ]
                         },
@@ -111,28 +224,141 @@
                                     "type": "custom:mini-graph-card"
                                 },
                                 {
-                                    "entities": [
+                                    "type": "horizontal-stack",
+                                    "cards": [
                                         {
-                                            "entity": "sensor.stairway_228_0_3_232",
-                                            "name": "Etg 0"
+                                            "align_state": "center",
+                                            "font_size": 75,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 100,
+                                            "upper_bound": 100,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "color_thresholds": [
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 20
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 23
+                                                },
+                                                {
+                                                    "color": "#0da035",
+                                                    "value": 28
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 40
+                                                },
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 45
+                                                }
+                                            ],
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.stairway_228_0_3_232",
+                                                    "name": "Etg 0"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar"
+                                            },
+                                            "type": "custom:mini-graph-card"
                                         },
                                         {
-                                            "entity": "sensor.living_room_234_0_3_238",
-                                            "name": "Etg 1"
+                                            "align_state": "center",
+                                            "font_size": 75,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 100,
+                                            "upper_bound": 100,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "color_thresholds": [
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 20
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 23
+                                                },
+                                                {
+                                                    "color": "#0da035",
+                                                    "value": 28
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 40
+                                                },
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 45
+                                                }
+                                            ],
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.living_room_234_0_3_238",
+                                                    "name": "Etg 1"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar"
+                                            },
+                                            "type": "custom:mini-graph-card"
                                         },
                                         {
-                                            "entity": "sensor.living_room_240_0_3_244",
-                                            "name": "Etg 2"
+                                            "align_state": "center",
+                                            "font_size": 75,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 100,
+                                            "upper_bound": 100,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "color_thresholds": [
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 20
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 23
+                                                },
+                                                {
+                                                    "color": "#0da035",
+                                                    "value": 28
+                                                },
+                                                {
+                                                    "color": "#f4b400",
+                                                    "value": 40
+                                                },
+                                                {
+                                                    "color": "#df4c1e",
+                                                    "value": 45
+                                                }
+                                            ],
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.living_room_240_0_3_244",
+                                                    "name": "Etg 2"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar"
+                                            },
+                                            "type": "custom:mini-graph-card"
                                         }
-                                    ],
-                                    "hours_to_show": 168,
-                                    "name": "Luftfuktighet",
-                                    "show": {
-                                        "fill": false,
-                                        "labels": true,
-                                        "state": false
-                                    },
-                                    "type": "custom:mini-graph-card"
+                                    ]
                                 }
                             ]
                         }

@@ -237,7 +237,7 @@ counter_power_usage_power_thermostats:
     {{ power | list | sum | round(1) }}
 
 counter_power_usage:
-  friendly_name: 'Strømforbruk'
+  friendly_name: 'Strømforbruk (Smarthus)'
   icon_template: 'mdi:flash'
   unit_of_measurement: "w"
   value_template: >

@@ -18,6 +18,7 @@
 * [Aeotec MultiSensor 6](https://aeotec.com/z-wave-sensor/)
 * [Sensative Strips Guard](https://sensative.com/sensors/strips-zwave/guard/)
 * Cleverio Thermometer
+* [Tibber Pulse](https://tibber.com/no/produkt/pulse)
 
 # Images
 ![](doc/images/hac_1_v1.png)

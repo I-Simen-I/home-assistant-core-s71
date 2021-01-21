@@ -31,3 +31,65 @@ tibber_price_max:
   unit_of_measurement: "NOK/kWh"
   value_template: >-
     {{ state_attr('sensor.electricity_price_soholsgata_71', 'max_price') }}
+
+#REALTIME
+tibber_real_time_w:
+  friendly_name: 'Strømforbruk'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >-
+    {{ states('sensor.real_time_consumption_soholsgata_71') }}
+
+tibber_real_time_w_avg:
+  friendly_name: 'Gjennomsnitt'
+  icon_template: 'mdi:flash'
+  unit_of_measurement: "w"
+  value_template: >-
+    {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'averagePower') }}
+
+tibber_accumulated_consumption:
+  friendly_name: 'Forbruk i dag'
+  icon_template: 'mdi:chart-line'
+  unit_of_measurement: "kWk"
+  value_template: >-
+    {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'accumulatedConsumption') | float | round(2) }}
+
+tibber_accumulated_cost:
+  friendly_name: 'Kostnad i dag'
+  icon_template: 'mdi:currency-usd'
+  unit_of_measurement: "NOK"
+  value_template: >-
+    {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'accumulatedCost') | float | round(2) }}
+
+tibber_real_time_l1:
+  friendly_name: 'L1'
+  icon_template: 'mdi:flash-auto'
+  unit_of_measurement: "A"
+  value_template: >-
+    {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'currentL1') | float | round(2) }}
+
+tibber_real_time_l2:
+  friendly_name: 'L2'
+  icon_template: 'mdi:flash-auto'
+  unit_of_measurement: "A"
+  value_template: >-
+    {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'currentL2') | float | round(2) }}
+
+tibber_real_time_l3:
+  friendly_name: 'L3'
+  icon_template: 'mdi:flash-auto'
+  unit_of_measurement: "A"
+  value_template: >-
+    {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'currentL3') | float | round(2) }}
+
+tibber_real_time_voltage_phase:
+  friendly_name: 'Spenning'
+  icon_template: 'mdi:pulse'
+  unit_of_measurement: "V"
+  value_template: >
+    {% set power = [
+          state_attr("sensor.real_time_consumption_soholsgata_71", "voltagePhase1") | float,
+          state_attr("sensor.real_time_consumption_soholsgata_71", "voltagePhase2") | float,
+          state_attr("sensor.real_time_consumption_soholsgata_71", "voltagePhase3") | float
+    ] %}
+    {{ power | list | sum / 3 | round(1) }}

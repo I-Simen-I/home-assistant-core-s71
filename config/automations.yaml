@@ -15,7 +15,7 @@
       state: 'off'
     - condition: numeric_state
       entity_id: sensor.outside_avg_lux
-      below: '250'
+      below: '200'
     - condition: state
       entity_id: input_boolean.scene_dag
       state: 'off'
