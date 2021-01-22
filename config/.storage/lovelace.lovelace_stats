@@ -5,6 +5,306 @@
         "config": {
             "views": [
                 {
+                    "path": "live-powerusage",
+                    "icon": "mdi:flash",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "align_state": "center",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.tibber_real_time_w",
+                                                    "name": "Tibber"
+                                                }
+                                            ],
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 30,
+                                            "height": 200,
+                                            "tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-management/tibber"
+                                            },
+                                            "show": {
+                                                "labels": true
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        },
+                                        {
+                                            "align_state": "center",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.counter_power_usage",
+                                                    "name": "IoT"
+                                                }
+                                            ],
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 30,
+                                            "height": 200,
+                                            "show": {
+                                                "labels": true
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "align_state": "center",
+                                            "font_size": 50,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 70,
+                                            "upper_bound": 1000,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.counter_power_usage_lights",
+                                                    "name": "Lys"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar",
+                                                "icon": false
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        },
+                                        {
+                                            "align_state": "center",
+                                            "font_size": 50,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 70,
+                                            "upper_bound": 6000,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.counter_power_usage_power_outlets",
+                                                    "name": "Kontakter"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar",
+                                                "icon": false
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        },
+                                        {
+                                            "align_state": "center",
+                                            "font_size": 50,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 70,
+                                            "upper_bound": 2000,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.counter_power_usage_power_thermostats",
+                                                    "name": "Gulv"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar",
+                                                "icon": false
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        },
+                                        {
+                                            "align_state": "center",
+                                            "font_size": 50,
+                                            "hour24": true,
+                                            "hours_to_show": 1,
+                                            "points_per_hour": 1,
+                                            "bar_spacing": 70,
+                                            "upper_bound": 400,
+                                            "lower_bound": 0,
+                                            "height": 500,
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.counter_power_usage_screens",
+                                                    "name": "Screens"
+                                                }
+                                            ],
+                                            "show": {
+                                                "labels": true,
+                                                "graph": "bar",
+                                                "icon": false
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.bathroom_179_0_180",
+                                            "icon": "mdi:server",
+                                            "name": "Server",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.tv_room_181_0_182",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.office_simen_173_0_174",
+                                            "name": "Kontor Simen - PC",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.office_nora_192_0_193",
+                                            "name": "Kontor Nora - Skrivebord",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.bedroom_313_0_314",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.bathroom_187_1_190",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.office_simen_175_0_176",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.kitchen_325_0_326",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Stikkontakter",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.office_simen_153_4_161",
+                                            "icon": "mdi:thermostat",
+                                            "name": "Gulvvarme Kontor Simen",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.office_nora_144_4_152",
+                                            "icon": "mdi:thermostat",
+                                            "name": "Gulvvarme Kontor Nora",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "current_power_w",
+                                                    "unit": "w"
+                                                }
+                                            ],
+                                            "entity": "switch.living_room_135_4_143",
+                                            "icon": "mdi:thermostat",
+                                            "name": "Gulvvarme Loftstue",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Gulvvarme",
+                                    "type": "entities"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "badges": [],
                     "cards": [
                         {

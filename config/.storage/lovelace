@@ -302,7 +302,7 @@
                                         {
                                             "double_tap_action": {
                                                 "action": "navigate",
-                                                "navigation_path": "/lovelace-management/live-powerusage"
+                                                "navigation_path": "/lovelace-stats/live-powerusage"
                                             },
                                             "entity": "sensor.tibber_real_time_w"
                                         },
