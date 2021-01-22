@@ -38,8 +38,7 @@ netatmo:
   client_id: !secret netatmo_client_id_key
   client_secret: !secret netatmo_client_secret_key
 
-speedtestdotnet:
-  server_id: 11787 #Broadnet
+speedtestdotnet: #Telenor Norge AS 12919
   scan_interval:
     minutes: 120
   monitored_conditions:
