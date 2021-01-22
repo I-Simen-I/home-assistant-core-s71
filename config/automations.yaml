@@ -983,3 +983,37 @@
       time_to_trigger: 05:45:00
       smart_switches:
         entity_id: switch.bedroom_313_0_314
+- id: '1611332564511'
+  alias: notify 100 kWh used
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.tibber_accumulated_consumption
+    above: '100'
+  condition: []
+  action:
+  - service: notify.mobile_app_simens_galaxy_s10
+    data:
+      data:
+        clickAction: /lovelace-management/tibber
+        color: yellow
+      message: Dagens strømforbruk har passert 100 kWh
+      title: Strømforbruket
+  mode: single
+- id: '1611332716853'
+  alias: notify 200 kWh used
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.tibber_accumulated_consumption
+    above: '200'
+  condition: []
+  action:
+  - service: notify.mobile_app_simens_galaxy_s10
+    data:
+      data:
+        clickAction: /lovelace-management/tibber
+        color: red
+      message: Dagens strømforbruk har passert 200 kWh
+      title: Strømforbruket
+  mode: single

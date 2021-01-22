@@ -50,13 +50,13 @@ tibber_real_time_w_avg:
 tibber_accumulated_consumption:
   friendly_name: 'Forbruk i dag'
   icon_template: 'mdi:chart-line'
-  unit_of_measurement: "kWk"
+  unit_of_measurement: "kWh"
   value_template: >-
     {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'accumulatedConsumption') | float | round(2) }}
 
 tibber_accumulated_cost:
   friendly_name: 'Kostnad i dag'
-  icon_template: 'mdi:currency-usd'
+  icon_template: 'mdi:cash-multiple'
   unit_of_measurement: "NOK"
   value_template: >-
     {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'accumulatedCost') | float | round(2) }}
@@ -84,7 +84,7 @@ tibber_real_time_l3:
 
 tibber_real_time_voltage_phase:
   friendly_name: 'Spenning'
-  icon_template: 'mdi:pulse'
+  icon_template: 'mdi:waveform'
   unit_of_measurement: "V"
   value_template: >
     {% set power = [
