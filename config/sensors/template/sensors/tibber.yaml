@@ -62,21 +62,21 @@ tibber_accumulated_cost:
     {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'accumulatedCost') | float | round(2) }}
 
 tibber_real_time_l1:
-  friendly_name: 'L1'
+  friendly_name: 'Fase 1'
   icon_template: 'mdi:flash-auto'
   unit_of_measurement: "A"
   value_template: >-
     {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'currentL1') | float | round(2) }}
 
 tibber_real_time_l2:
-  friendly_name: 'L2'
+  friendly_name: 'Fase 2'
   icon_template: 'mdi:flash-auto'
   unit_of_measurement: "A"
   value_template: >-
     {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'currentL2') | float | round(2) }}
 
 tibber_real_time_l3:
-  friendly_name: 'L3'
+  friendly_name: 'Fase 3'
   icon_template: 'mdi:flash-auto'
   unit_of_measurement: "A"
   value_template: >-
@@ -93,3 +93,10 @@ tibber_real_time_voltage_phase:
           state_attr("sensor.real_time_consumption_soholsgata_71", "voltagePhase3") | float
     ] %}
     {{ power | list | sum / 3 | round(1) }}
+
+tibber_last_meter_consumption:
+  friendly_name: 'Målerstand'
+  icon_template: 'mdi:counter'
+  unit_of_measurement: "kWh"
+  value_template: >-
+    {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'lastMeterConsumption') | float | round(2) }}
