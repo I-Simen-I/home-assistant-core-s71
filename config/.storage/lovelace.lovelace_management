@@ -205,131 +205,145 @@
                     "title": "Tibber"
                 },
                 {
+                    "icon": "mdi:wan",
+                    "path": "network",
+                    "title": "Network",
+                    "panel": false,
                     "badges": [],
                     "cards": [
                         {
-                            "align_state": "center",
-                            "color_thresholds": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "color": "#0da035",
-                                    "value": 10
+                                    "align_state": "center",
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#0da035",
+                                            "value": 10
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 15
+                                        },
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 25
+                                        }
+                                    ],
+                                    "entities": [
+                                        "sensor.speedtest_ping"
+                                    ],
+                                    "hours_to_show": 72,
+                                    "hour24": true,
+                                    "icon": "mdi:pulse",
+                                    "name": "Ping",
+                                    "show": {
+                                        "labels": true,
+                                        "extrema": true
+                                    },
+                                    "type": "custom:mini-graph-card"
                                 },
                                 {
-                                    "color": "#f4b400",
-                                    "value": 15
+                                    "align_state": "center",
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 60
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 75
+                                        },
+                                        {
+                                            "color": "#0da035",
+                                            "value": 90
+                                        }
+                                    ],
+                                    "entities": [
+                                        "sensor.speedtest_download"
+                                    ],
+                                    "hours_to_show": 72,
+                                    "hour24": true,
+                                    "icon": "mdi:download-network",
+                                    "name": "Nedlasting",
+                                    "show": {
+                                        "labels": true,
+                                        "extrema": true
+                                    },
+                                    "type": "custom:mini-graph-card"
                                 },
                                 {
-                                    "color": "#df4c1e",
-                                    "value": 25
+                                    "align_state": "center",
+                                    "color_thresholds": [
+                                        {
+                                            "color": "#df4c1e",
+                                            "value": 60
+                                        },
+                                        {
+                                            "color": "#f4b400",
+                                            "value": 75
+                                        },
+                                        {
+                                            "color": "#0da035",
+                                            "value": 90
+                                        }
+                                    ],
+                                    "entities": [
+                                        "sensor.speedtest_upload"
+                                    ],
+                                    "hours_to_show": 72,
+                                    "hour24": true,
+                                    "icon": "mdi:upload-network",
+                                    "name": "Opplasting",
+                                    "show": {
+                                        "labels": true,
+                                        "extrema": true
+                                    },
+                                    "type": "custom:mini-graph-card"
                                 }
-                            ],
-                            "entities": [
-                                "sensor.speedtest_ping"
-                            ],
-                            "hours_to_show": 72,
-                            "hour24": true,
-                            "icon": "mdi:pulse",
-                            "name": "Ping",
-                            "show": {
-                                "labels": true
-                            },
-                            "type": "custom:mini-graph-card"
-                        },
-                        {
-                            "align_state": "center",
-                            "color_thresholds": [
-                                {
-                                    "color": "#df4c1e",
-                                    "value": 60
-                                },
-                                {
-                                    "color": "#f4b400",
-                                    "value": 75
-                                },
-                                {
-                                    "color": "#0da035",
-                                    "value": 90
-                                }
-                            ],
-                            "entities": [
-                                "sensor.speedtest_download"
-                            ],
-                            "hours_to_show": 72,
-                            "hour24": true,
-                            "icon": "mdi:download-network",
-                            "name": "Nedlasting",
-                            "show": {
-                                "labels": true
-                            },
-                            "type": "custom:mini-graph-card"
-                        },
-                        {
-                            "align_state": "center",
-                            "color_thresholds": [
-                                {
-                                    "color": "#df4c1e",
-                                    "value": 60
-                                },
-                                {
-                                    "color": "#f4b400",
-                                    "value": 75
-                                },
-                                {
-                                    "color": "#0da035",
-                                    "value": 90
-                                }
-                            ],
-                            "entities": [
-                                "sensor.speedtest_upload"
-                            ],
-                            "hours_to_show": 72,
-                            "hour24": true,
-                            "icon": "mdi:upload-network",
-                            "name": "Opplasting",
-                            "show": {
-                                "labels": true
-                            },
-                            "type": "custom:mini-graph-card"
+                            ]
                         }
-                    ],
-                    "icon": "mdi:wan",
-                    "path": "network",
-                    "title": "Network"
+                    ]
                 },
                 {
                     "badges": [],
                     "cards": [
                         {
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "entity": "sensor.front_door_battery"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.simen_sin_ipad_battery_level"
+                                        },
+                                        {
+                                            "entity": "sensor.simens_galaxy_s10_battery_level",
+                                            "name": "Simen sin Galaxy S10+ Battery Level"
+                                        },
+                                        {
+                                            "entity": "sensor.nora_sin_iphone_battery_level"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Enheter",
+                                    "type": "entities"
                                 },
                                 {
-                                    "entity": "sensor.south_246_battery_level"
-                                },
-                                {
-                                    "entity": "sensor.east_252_battery_level"
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.front_door_battery"
+                                        },
+                                        {
+                                            "entity": "sensor.south_246_battery_level"
+                                        },
+                                        {
+                                            "entity": "sensor.east_252_battery_level"
+                                        }
+                                    ],
+                                    "title": "Ute",
+                                    "type": "entities"
                                 }
-                            ],
-                            "title": "Ute",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.simen_sin_ipad_battery_level"
-                                },
-                                {
-                                    "entity": "sensor.simens_galaxy_s10_battery_level",
-                                    "name": "Simen sin Galaxy S10+ Battery Level"
-                                },
-                                {
-                                    "entity": "sensor.nora_sin_iphone_battery_level"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Enheter",
-                            "type": "entities"
+                            ]
                         },
                         {
                             "entities": [
