@@ -24,6 +24,7 @@
                                                 }
                                             ],
                                             "hours_to_show": 1,
+                                            "hour24": true,
                                             "points_per_hour": 30,
                                             "height": 200,
                                             "tap_action": {
@@ -44,6 +45,7 @@
                                                 }
                                             ],
                                             "hours_to_show": 1,
+                                            "hour24": true,
                                             "points_per_hour": 30,
                                             "height": 200,
                                             "show": {

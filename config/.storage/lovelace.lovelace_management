@@ -30,6 +30,9 @@
                                                 },
                                                 {
                                                     "entity": "sensor.tibber_accumulated_cost"
+                                                },
+                                                {
+                                                    "entity": "sensor.tibber_last_meter_consumption"
                                                 }
                                             ],
                                             "show_icon": false,
@@ -58,6 +61,7 @@
                                         "sensor.electricity_price_soholsgata_71"
                                     ],
                                     "hours_to_show": 168,
+                                    "hour24": true,
                                     "icon": "mdi:cash-multiple",
                                     "name": "NOK/kWh siste 7 dager",
                                     "show": {
@@ -93,12 +97,14 @@
                                     "entities": [
                                         "sensor.tibber_real_time_voltage_phase"
                                     ],
-                                    "hours_to_show": 1,
-                                    "points_per_hour": 20,
+                                    "hours_to_show": 12,
+                                    "hour24": true,
+                                    "points_per_hour": 12,
                                     "height": 150,
-                                    "name": "Spenning siste 24t",
+                                    "name": "Spenning siste 12t",
                                     "show": {
-                                        "labels": true
+                                        "labels": true,
+                                        "points": false
                                     },
                                     "type": "custom:mini-graph-card"
                                 }
@@ -116,8 +122,9 @@
                                         },
                                         "sensor.tibber_real_time_w_avg"
                                     ],
-                                    "hours_to_show": 1,
-                                    "points_per_hour": 60,
+                                    "hours_to_show": 24,
+                                    "hour24": true,
+                                    "points_per_hour": 12,
                                     "height": 350,
                                     "upper_bound": 24633,
                                     "lower_bound": 0,
@@ -220,6 +227,7 @@
                                 "sensor.speedtest_ping"
                             ],
                             "hours_to_show": 72,
+                            "hour24": true,
                             "icon": "mdi:pulse",
                             "name": "Ping",
                             "show": {
@@ -247,6 +255,7 @@
                                 "sensor.speedtest_download"
                             ],
                             "hours_to_show": 72,
+                            "hour24": true,
                             "icon": "mdi:download-network",
                             "name": "Nedlasting",
                             "show": {
@@ -274,6 +283,7 @@
                                 "sensor.speedtest_upload"
                             ],
                             "hours_to_show": 72,
+                            "hour24": true,
                             "icon": "mdi:upload-network",
                             "name": "Opplasting",
                             "show": {
