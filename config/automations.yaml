@@ -215,10 +215,10 @@
   alias: notify internet slow
   description: ''
   trigger:
-  - below: '50'
+  - below: '100'
     entity_id: sensor.speedtest_download
     platform: numeric_state
-  - below: '50'
+  - below: '100'
     entity_id: sensor.speedtest_upload
     platform: numeric_state
   condition: []
@@ -227,14 +227,14 @@
       data:
         clickAction: /lovelace-management/network
         color: red
-      message: DL eller UL er under 50 mbits
+      message: DL eller UL er under 100 mbits
       title: Internett
     service: notify.mobile_app_simens_galaxy_s10
   - data:
       data:
         clickAction: /lovelace-management/network
         color: red
-      message: DL eller UL er under 50 mbits
+      message: DL eller UL er under 100 mbits
       title: Internett
     service: notify.mobile_app_simen_sin_ipad
   mode: single
