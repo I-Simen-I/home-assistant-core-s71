@@ -665,304 +665,314 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entity": "sensor.counter_thermostats_on",
-                            "type": "entity"
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "entity": "sensor.counter_thermostats_on",
+                                    "type": "entity"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.laundry_room_206_0_1_208"
+                                                },
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_0_laundry_room",
+                                            "name": "Vaskerom",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.stairway_228_0_1_230"
+                                                },
+                                                {
+                                                    "entity": "sensor.stairway_228_0_3_232"
+                                                },
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_0_hall",
+                                            "name": "Gang",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_0_bedroom_east",
+                                            "name": "Soverom (\u00d8st)",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_0_bedroom_north",
+                                            "name": "Soverom (Nord)",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_0_bathroom",
+                                            "name": "Bad",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        }
+                                    ],
+                                    "title": "ETG 0",
+                                    "type": "entities"
+                                }
+                            ]
                         },
                         {
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.laundry_room_206_0_1_208"
+                                            "entities": [
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_1_hall",
+                                            "name": "Gang",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
                                         },
                                         {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
+                                            "entities": [
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_1_bathroom",
+                                            "name": "Bad",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
                                         },
                                         {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.kitchen_258_0_1_260"
+                                                },
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_1_kitchen",
+                                            "name": "Kj\u00f8kken",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_1_tv_room",
+                                            "name": "Tv-rom",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.living_room_234_0_1_236"
+                                                },
+                                                {
+                                                    "entity": "sensor.living_room_234_0_3_238"
+                                                },
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_1_living_room",
+                                            "name": "Stue",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
                                         }
                                     ],
-                                    "entity": "climate.etg_0_laundry_room",
-                                    "name": "Vaskerom",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
+                                    "show_header_toggle": false,
+                                    "title": "ETG 1",
+                                    "type": "entities"
                                 },
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.stairway_228_0_1_230"
+                                            "entities": [
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.office_simen_153_1_156",
+                                            "name": "Kontor Simen",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
                                         },
                                         {
-                                            "entity": "sensor.stairway_228_0_3_232"
+                                            "entities": [
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.office_nora_144_1_147",
+                                            "name": "Kontor Nora",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
                                         },
                                         {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.living_room_240_0_1_242"
+                                                },
+                                                {
+                                                    "entity": "sensor.living_room_240_0_3_244"
+                                                },
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.living_room_135_1_138",
+                                            "name": "Loftstue",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
                                         },
                                         {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
+                                            "entities": [
+                                                {
+                                                    "attribute": "temperature",
+                                                    "name": "Termostat",
+                                                    "unit": "\u00b0C"
+                                                },
+                                                {
+                                                    "attribute": "current_temperature",
+                                                    "name": "Gulvtemperatur",
+                                                    "unit": "\u00b0C"
+                                                }
+                                            ],
+                                            "entity": "climate.etg_2_bathroom",
+                                            "name": "Bad",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
                                         }
                                     ],
-                                    "entity": "climate.etg_0_hall",
-                                    "name": "Gang",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_0_bedroom_east",
-                                    "name": "Soverom (\u00d8st)",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_0_bedroom_north",
-                                    "name": "Soverom (Nord)",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_0_bathroom",
-                                    "name": "Bad",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
+                                    "show_header_toggle": false,
+                                    "title": "ETG 2",
+                                    "type": "entities"
                                 }
-                            ],
-                            "title": "ETG 0",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entities": [
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_1_hall",
-                                    "name": "Gang",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_1_bathroom",
-                                    "name": "Bad",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.kitchen_258_0_1_260"
-                                        },
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_1_kitchen",
-                                    "name": "Kj\u00f8kken",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_1_tv_room",
-                                    "name": "Tv-rom",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.living_room_234_0_1_236"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_234_0_3_238"
-                                        },
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_1_living_room",
-                                    "name": "Stue",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "ETG 1",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entities": [
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.office_simen_153_1_156",
-                                    "name": "Kontor Simen",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.office_nora_144_1_147",
-                                    "name": "Kontor Nora",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.living_room_240_0_1_242"
-                                        },
-                                        {
-                                            "entity": "sensor.living_room_240_0_3_244"
-                                        },
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.living_room_135_1_138",
-                                    "name": "Loftstue",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                },
-                                {
-                                    "entities": [
-                                        {
-                                            "attribute": "temperature",
-                                            "name": "Termostat",
-                                            "unit": "\u00b0C"
-                                        },
-                                        {
-                                            "attribute": "current_temperature",
-                                            "name": "Gulvtemperatur",
-                                            "unit": "\u00b0C"
-                                        }
-                                    ],
-                                    "entity": "climate.etg_2_bathroom",
-                                    "name": "Bad",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "ETG 2",
-                            "type": "entities"
+                            ]
                         }
                     ],
                     "icon": "mdi:thermostat",
