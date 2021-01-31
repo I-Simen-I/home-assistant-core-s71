@@ -100,3 +100,19 @@ tibber_last_meter_consumption:
   unit_of_measurement: "kWh"
   value_template: >-
     {{ state_attr('sensor.real_time_consumption_soholsgata_71', 'lastMeterConsumption') | float | round(2) }}
+
+tibber_grid_rent:
+  friendly_name: 'Nettleie'
+  icon_template: 'mdi:cash-multiple'
+  unit_of_measurement: "NOK"
+  value_template: >-
+    {{
+      (float(states('sensor.tibber_accumulated_consumption')) *
+      (
+        float(states('input_number.rik_consumption_tax'))
+        + float(states('input_number.rik_energy_fund_cost'))
+        + float(states('input_number.rik_energy_transfer_cost'))
+      )
+      + float(states('input_number.rik_daily_cost'))) | round(2)
+
+    }}

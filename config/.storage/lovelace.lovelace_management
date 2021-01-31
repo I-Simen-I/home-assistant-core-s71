@@ -26,10 +26,15 @@
                                             "type": "glance",
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.tibber_accumulated_consumption"
+                                                    "entity": "sensor.tibber_accumulated_consumption",
+                                                    "name": "Forbruk"
                                                 },
                                                 {
-                                                    "entity": "sensor.tibber_accumulated_cost"
+                                                    "entity": "sensor.tibber_accumulated_cost",
+                                                    "name": "Kostnad"
+                                                },
+                                                {
+                                                    "entity": "sensor.tibber_grid_rent"
                                                 },
                                                 {
                                                     "entity": "sensor.tibber_last_meter_consumption"
@@ -37,7 +42,9 @@
                                             ],
                                             "show_icon": false,
                                             "show_state": true,
-                                            "show_name": true
+                                            "show_name": true,
+                                            "title": "I dag",
+                                            "state_color": false
                                         }
                                     ]
                                 },
@@ -100,7 +107,7 @@
                                     "hours_to_show": 12,
                                     "hour24": true,
                                     "points_per_hour": 12,
-                                    "height": 150,
+                                    "height": 90,
                                     "name": "Spenning siste 12t",
                                     "show": {
                                         "labels": true,
