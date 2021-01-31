@@ -38,10 +38,11 @@
                                     "entities": [
                                         "sensor.inside_avg_temperature"
                                     ],
-                                    "hours_to_show": 168,
+                                    "hours_to_show": 72,
                                     "hour24": true,
                                     "show": {
-                                        "labels": true
+                                        "labels": true,
+                                        "extrema": true
                                     },
                                     "type": "custom:mini-graph-card"
                                 },
@@ -218,10 +219,11 @@
                                     "entities": [
                                         "sensor.inside_avg_humidity"
                                     ],
-                                    "hours_to_show": 168,
+                                    "hours_to_show": 72,
                                     "hour24": true,
                                     "show": {
-                                        "labels": true
+                                        "labels": true,
+                                        "extrema": true
                                     },
                                     "type": "custom:mini-graph-card"
                                 },
@@ -398,10 +400,11 @@
                                     "entities": [
                                         "sensor.outside_min_temperature"
                                     ],
-                                    "hours_to_show": 168,
+                                    "hours_to_show": 72,
                                     "hour24": true,
                                     "show": {
-                                        "labels": true
+                                        "labels": true,
+                                        "extrema": true
                                     },
                                     "type": "custom:mini-graph-card"
                                 }
@@ -441,10 +444,11 @@
                                     "entities": [
                                         "sensor.outside_avg_humidity"
                                     ],
-                                    "hours_to_show": 168,
+                                    "hours_to_show": 72,
                                     "hour24": true,
                                     "show": {
-                                        "labels": true
+                                        "labels": true,
+                                        "extrema": true
                                     },
                                     "type": "custom:mini-graph-card"
                                 }
@@ -485,7 +489,7 @@
                                     "entities": [
                                         "sensor.outside_avg_lux"
                                     ],
-                                    "hours_to_show": 168,
+                                    "hours_to_show": 72,
                                     "hour24": true,
                                     "show": {
                                         "labels": true
@@ -548,7 +552,7 @@
                                     "entities": [
                                         "sensor.netatmo_s70_rain_gauge_sum_rain_1"
                                     ],
-                                    "hours_to_show": 168,
+                                    "hours_to_show": 72,
                                     "hour24": true,
                                     "points_per_hour": 2,
                                     "name": "Regn",
