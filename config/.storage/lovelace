@@ -975,7 +975,7 @@
                                                     "unit": "\u00b0C"
                                                 },
                                                 {
-                                                    "attribute": "current_temperature",
+                                                    "entity": "sensor.office_simen_153_3_160",
                                                     "name": "Gulvtemperatur",
                                                     "unit": "\u00b0C"
                                                 }
@@ -1017,7 +1017,7 @@
                                                     "unit": "\u00b0C"
                                                 },
                                                 {
-                                                    "attribute": "current_temperature",
+                                                    "entity": "sensor.office_nora_144_3_151",
                                                     "name": "Gulvtemperatur",
                                                     "unit": "\u00b0C"
                                                 }
@@ -1100,7 +1100,7 @@
                                                     "unit": "\u00b0C"
                                                 },
                                                 {
-                                                    "attribute": "current_temperature",
+                                                    "entity": "sensor.living_room_135_3_142",
                                                     "name": "Gulvtemperatur",
                                                     "unit": "\u00b0C"
                                                 }
