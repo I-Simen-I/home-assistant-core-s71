@@ -3,6 +3,6 @@
   "name": "Home Connect",
   "documentation": "https://github.com/I-Simen-I/home-assistant-core-s71",
   "dependencies": [],
-  "requirements": ["aiohttp-sse-client==0.1.6", "aiohttp==3.5.4"],
+  "requirements": ["aiohttp-sse-client==0.2.0", "aiohttp==3.5.4"],
   "codeowners": ["@I-Simen-I"]
 }
