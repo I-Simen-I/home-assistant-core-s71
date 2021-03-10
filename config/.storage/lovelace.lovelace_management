@@ -50,6 +50,33 @@
                                 },
                                 {
                                     "align_state": "center",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.tibber_real_time_w",
+                                            "name": "Forbruk"
+                                        },
+                                        "sensor.tibber_real_time_w_avg"
+                                    ],
+                                    "hours_to_show": 24,
+                                    "hour24": true,
+                                    "points_per_hour": 12,
+                                    "height": 300,
+                                    "upper_bound": 24633,
+                                    "lower_bound": 0,
+                                    "show": {
+                                        "labels": true,
+                                        "extrema": true
+                                    },
+                                    "type": "custom:mini-graph-card",
+                                    "name": "Str\u00f8mforbruk"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "align_state": "center",
                                     "color_thresholds": [
                                         {
                                             "color": "#0da035",
@@ -71,6 +98,7 @@
                                     "hour24": true,
                                     "icon": "mdi:cash-multiple",
                                     "name": "NOK/kWh siste 7 dager",
+                                    "height": 150,
                                     "show": {
                                         "labels": true,
                                         "extrema": true
@@ -107,40 +135,12 @@
                                     "hours_to_show": 12,
                                     "hour24": true,
                                     "points_per_hour": 12,
-                                    "height": 90,
                                     "name": "Spenning siste 12t",
                                     "show": {
                                         "labels": true,
                                         "points": false
                                     },
                                     "type": "custom:mini-graph-card"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "align_state": "center",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.tibber_real_time_w",
-                                            "name": "Forbruk"
-                                        },
-                                        "sensor.tibber_real_time_w_avg"
-                                    ],
-                                    "hours_to_show": 24,
-                                    "hour24": true,
-                                    "points_per_hour": 12,
-                                    "height": 350,
-                                    "upper_bound": 24633,
-                                    "lower_bound": 0,
-                                    "show": {
-                                        "labels": true,
-                                        "extrema": true
-                                    },
-                                    "type": "custom:mini-graph-card",
-                                    "name": "Str\u00f8mforbruk"
                                 },
                                 {
                                     "type": "horizontal-stack",
@@ -154,7 +154,7 @@
                                             "bar_spacing": 100,
                                             "upper_bound": 63,
                                             "lower_bound": 0,
-                                            "height": 500,
+                                            "height": 550,
                                             "entities": [
                                                 "sensor.tibber_real_time_l1"
                                             ],
