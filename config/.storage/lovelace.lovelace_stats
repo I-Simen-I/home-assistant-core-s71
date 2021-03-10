@@ -23,9 +23,9 @@
                                                     "name": "Tibber"
                                                 }
                                             ],
-                                            "hours_to_show": 1,
+                                            "hours_to_show": 12,
                                             "hour24": true,
-                                            "points_per_hour": 30,
+                                            "points_per_hour": 10,
                                             "height": 200,
                                             "tap_action": {
                                                 "action": "navigate",
@@ -44,9 +44,9 @@
                                                     "name": "IoT"
                                                 }
                                             ],
-                                            "hours_to_show": 1,
+                                            "hours_to_show": 12,
                                             "hour24": true,
-                                            "points_per_hour": 30,
+                                            "points_per_hour": 10,
                                             "height": 200,
                                             "show": {
                                                 "labels": true
@@ -651,6 +651,14 @@
                                 {
                                     "entity": "cover.bedroom_273_1_276",
                                     "name": "Walk in closet s\u00f8r og soverom"
+                                },
+                                {
+                                    "entity": "cover.office_simen_blind_north",
+                                    "name": "Kontor-Simen (Nord)"
+                                },
+                                {
+                                    "entity": "cover.office_simen_blind_east",
+                                    "name": "Kontor-Simen (\u00d8st)"
                                 }
                             ],
                             "show_header_toggle": false,

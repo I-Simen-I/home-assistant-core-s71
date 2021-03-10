@@ -1000,7 +1000,19 @@
                                             "type": "custom:multiple-entity-row"
                                         },
                                         {
+                                            "entity": "media_player.philips_the_one",
+                                            "icon": "mdi:television"
+                                        },
+                                        {
                                             "entity": "switch.office_simen_175_0_176"
+                                        },
+                                        {
+                                            "entity": "cover.office_simen_blind_north",
+                                            "name": "Rullgardin nord"
+                                        },
+                                        {
+                                            "entity": "cover.office_simen_blind_east",
+                                            "name": "Rullgardin \u00f8st"
                                         }
                                     ],
                                     "show_header_toggle": false,

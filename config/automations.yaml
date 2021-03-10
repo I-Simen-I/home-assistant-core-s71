@@ -1017,3 +1017,23 @@
       message: Dagens strømforbruk har passert 200 kWh
       title: Strømforbruket
   mode: single
+- id: '1615397898798'
+  alias: Scene=office-simen-plex-playing
+  description: ''
+  trigger:
+  - platform: device
+    device_id: b73a6f0ab17fa336fe72af74a8847dec
+    domain: media_player
+    entity_id: media_player.plex_plex_for_android_tv_tpm191e
+    type: playing
+  condition: []
+  action:
+  - service: cover.close_cover
+    target:
+      entity_id:
+      - cover.office_simen_blind_east
+      - cover.office_simen_blind_north
+  - service: light.turn_off
+    target:
+      entity_id: light.office_simen_4_1_7
+  mode: single

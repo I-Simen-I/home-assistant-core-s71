@@ -127,7 +127,8 @@ counter_screens_closed:
           states.cover.kitchen_278_1_281,
           states.cover.living_room_288_1_291,
           states.cover.rullgardiner_side,
-          states.cover.rullgardin_bak
+          states.cover.office_simen_blind_north,
+          states.cover.office_simen_blind_east
     ] %}
     {{ covers | selectattr('state','eq','closed') | list | count }}
 

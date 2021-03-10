@@ -227,6 +227,12 @@
       state: off
     light.office_nora_14_1_17:
       state: off
+    cover.office_simen_blind_north:
+      state: open
+      current_position: 100
+    cover.office_simen_blind_east:
+      state: open
+      current_position: 100
     cover.bedroom_273_1_276:
       state: open
     cover.walk_in_closet_283_1_286:
