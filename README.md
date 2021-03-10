@@ -21,9 +21,19 @@
 * [Tibber Pulse](https://tibber.com/no/produkt/pulse)
 
 # Images
-![](doc/images/hac_1_v1.png)
-![](doc/images/hac_2_v1.png)
-![](doc/images/hac_3_v1.png)
-![](doc/images/hac_4_v1.png)
-![](doc/images/hac_5_v1.png)
-![](doc/images/hac_6_v1.png)
+
+## Main
+![](doc/images/ha_main.png)
+![](doc/images/ha_etg_1.png)
+![](doc/images/ha_etg_2.png)
+
+## Tibber
+![](doc/images/ha_tibber.png)
+
+## Stats
+![](doc/images/ha_stats_power.png)
+![](doc/images/ha_stats_light.png)
+
+## Climate
+![](doc/images/ha_climate.png)
+![](doc/images/ha_climate_outside.png)
