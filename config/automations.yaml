@@ -87,10 +87,10 @@
   - scene: scene.house_alt_av
   mode: single
 - id: '1583432767167'
-  alias: Scene=house_alt_av, Tid=01:30, Dager=Lør,Søn
+  alias: Scene=house_alt_av, Tid=01:30, Dager=Alle
   description: ''
   trigger:
-  - at: 01:30:00
+  - at: 02:15:00
     platform: time
   condition:
   - condition: state
@@ -1036,4 +1036,23 @@
   - service: light.turn_off
     target:
       entity_id: light.office_simen_4_1_7
+  mode: single
+- id: '1616011977214'
+  alias: notify dishwasher finished
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.switch_kitchen_325_0_326_state
+    from: Aktiv
+    to: Av
+  condition: []
+  action:
+  - service: notify.mobile_app_simens_galaxy_s10
+    data:
+      message: Oppvaskmaskin er ferdig
+      title: Oppvaskmaskin
+  - service: notify.mobile_app_nora_sin_iphone
+    data:
+      message: Oppvaskmaskin er ferdig
+      title: Oppvaskmaskin
   mode: single
