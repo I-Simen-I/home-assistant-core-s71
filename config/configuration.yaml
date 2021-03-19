@@ -20,6 +20,7 @@ input_number: !include input_number.yaml
 scene: !include_dir_merge_list scenes/
 group: !include_dir_merge_named groups/
 sensor: !include_dir_merge_list sensors/
+binary_sensor: !include_dir_merge_list binary_sensors/
 counter: !include_dir_merge_named counters/
 switch: !include_dir_merge_list switches/
 cover: !include_dir_merge_list covers/
@@ -59,3 +60,7 @@ climate:
 google:
   client_id: !secret google_calendar_client_id
   client_secret: !secret google_calendar_client_secret
+
+home_connect:
+  client_id: !secret home_connect_client_id
+  client_secret: !secret home_connect_client_secret

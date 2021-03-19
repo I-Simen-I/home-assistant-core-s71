@@ -1,0 +1,287 @@
+# Stekeovn
+siemens_oven_status:
+  friendly_name: Stekeovn
+  icon_template: mdi:window-maximize
+  value_template: >-
+    {% if is_state("sensor.stekeovn_operation_state", "Ready") %}
+      På
+    {% elif is_state("sensor.stekeovn_operation_state", "Run") %}
+      Aktiv
+    {% elif is_state("sensor.stekeovn_operation_state", "Pause") %}
+      Pauset
+    {% elif is_state("sensor.stekeovn_operation_state", "Inactive") %}
+      Av
+    {% elif is_state("sensor.stekeovn_operation_state", "Delayedstart") %}
+      Forsinket oppstart
+    {% elif is_state("sensor.stekeovn_operation_state", "Actionrequired") %}
+      Handling påkrevd
+    {% elif is_state("sensor.stekeovn_operation_state", "Finished") %}
+      Ferdig
+    {% elif is_state("sensor.stekeovn_operation_state", "Error") %}
+      Feil
+    {% elif is_state("sensor.stekeovn_operation_state", "Aborting") %}
+      Avbryter
+    {% else %}
+      Offline
+    {% endif %}
+
+siemens_oven_program_progress:
+  friendly_name: Status
+  icon_template: mdi:progress-clock
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ states('sensor.stekeovn_program_progress') }}
+
+siemens_oven_remaining_program_time:
+  friendly_name: Gjenstående
+  icon_template: mdi:clock
+  device_class: timestamp
+  value_template: >-
+    {{ states('sensor.stekeovn_remaining_program_time') }}
+
+siemens_oven_program:
+  friendly_name: Program
+  icon_template: mdi:book-open-outline
+  value_template: >-
+    {% if is_state("switch.stekeovn_program_600watt", "on") %}
+      600watt
+    {% elif is_state("switch.stekeovn_program_hotair", "on") %}
+      4D-varmluft
+    {% elif is_state("switch.stekeovn_program_pizzasetting", "on") %}
+      Pizzainstilling
+    {% elif is_state("switch.stekeovn_program_preheating", "on") %}
+      Forvarming
+    {% elif is_state("switch.stekeovn_program_topbottomheating", "on") %}
+      Over-/undervarme
+    {% else %}
+      N/A
+    {% endif %}
+
+# Dampovn
+siemens_steam_oven_status:
+  friendly_name: Dampovn
+  icon_template: mdi:dishwasher
+  value_template: >-
+    {% if is_state("sensor.dampovn_operation_state", "Ready") %}
+      På
+    {% elif is_state("sensor.dampovn_operation_state", "Run") %}
+      Aktiv
+    {% elif is_state("sensor.dampovn_operation_state", "Pause") %}
+      Pauset
+    {% elif is_state("sensor.dampovn_operation_state", "Inactive") %}
+      Av
+    {% elif is_state("sensor.dampovn_operation_state", "Delayedstart") %}
+      Forsinket oppstart
+    {% elif is_state("sensor.dampovn_operation_state", "Actionrequired") %}
+      Handling påkrevd
+    {% elif is_state("sensor.dampovn_operation_state", "Finished") %}
+      Ferdig
+    {% elif is_state("sensor.dampovn_operation_state", "Error") %}
+      Feil
+    {% elif is_state("sensor.dampovn_operation_state", "Aborting") %}
+      Avbryter
+    {% else %}
+      Offline
+    {% endif %}
+
+siemens_steam_oven_program_progress:
+  friendly_name: Status
+  icon_template: mdi:progress-clock
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ states('sensor.dampovn_program_progress') }}
+
+siemens_steam_oven_remaining_program_time:
+  friendly_name: Gjenstående
+  icon_template: mdi:clock
+  device_class: timestamp
+  value_template: >-
+    {{ states('sensor.dampovn_remaining_program_time') }}
+
+siemens_steam_oven_program:
+  friendly_name: Program
+  icon_template: mdi:book-open-outline
+  value_template: >-
+    {% if is_state("switch.dampovn_program_hotair", "on") %}
+      4D-varmluft
+    {% elif is_state("switch.dampovn_program_pizzasetting", "on") %}
+      Pizzainstilling
+    {% elif is_state("switch.dampovn_program_preheating", "on") %}
+      Forvarming
+    {% elif is_state("switch.dampovn_program_topbottomheating", "on") %}
+      Over-/undervarme
+    {% else %}
+      N/A
+    {% endif %}
+
+# Vaskemaskin
+bosch_washing_machine_status:
+  friendly_name: Vaskemaskin
+  icon_template: mdi:washing-machine
+  value_template: >-
+    {% if is_state("sensor.vaskemaskin_operation_state", "Ready") %}
+      På
+    {% elif is_state("sensor.vaskemaskin_operation_state", "Run") %}
+      Aktiv
+    {% elif is_state("sensor.vaskemaskin_operation_state", "Pause") %}
+      Pauset
+    {% elif is_state("sensor.vaskemaskin_operation_state", "Inactive") %}
+      Av
+    {% elif is_state("sensor.vaskemaskin_operation_state", "Delayedstart") %}
+      Forsinket oppstart
+    {% elif is_state("sensor.vaskemaskin_operation_state", "Actionrequired") %}
+      Handling påkrevd
+    {% elif is_state("sensor.vaskemaskin_operation_state", "Finished") %}
+      Ferdig
+    {% elif is_state("sensor.vaskemaskin_operation_state", "Error") %}
+      Feil
+    {% elif is_state("sensor.vaskemaskin_operation_state", "Aborting") %}
+      Avbryter
+    {% else %}
+      Offline
+    {% endif %}
+
+bosch_washing_machine_program_progress:
+  friendly_name: Status
+  icon_template: mdi:progress-clock
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ states('sensor.vaskemaskin_program_progress') }}
+
+bosch_washing_machine_remaining_program_time:
+  friendly_name: Gjenstående
+  icon_template: mdi:clock
+  device_class: timestamp
+  value_template: >-
+    {{ states('sensor.vaskemaskin_remaining_program_time') }}
+
+bosch_washing_machine_program:
+  friendly_name: Program
+  icon_template: mdi:book-open-outline
+  value_template: >-
+    {% if is_state("switch.vaskemaskin_program_auto30", "on") %}
+      Auto 30
+    {% elif is_state("switch.vaskemaskin_program_auto40", "on") %}
+      Auto 40
+    {% elif is_state("switch.vaskemaskin_program_auto60", "on") %}
+      Auto 60
+    {% elif is_state("switch.vaskemaskin_program_chiffon", "on") %}
+      Bluser
+    {% elif is_state("switch.vaskemaskin_program_cotton", "on") %}
+      Bomull
+    {% elif is_state("switch.vaskemaskin_program_cottoneco", "on") %}
+      Bomull Eco
+    {% elif is_state("switch.vaskemaskin_program_curtains", "on") %}
+      Gardiner
+    {% elif is_state("switch.vaskemaskin_program_darkwash", "on") %}
+      Mørk vask
+    {% elif is_state("switch.vaskemaskin_program_delicatessilk", "on") %}
+      Finvask/silke
+    {% elif is_state("switch.vaskemaskin_program_dessous", "on") %}
+      Dessous
+    {% elif is_state("switch.vaskemaskin_program_easycare", "on") %}
+      Lettstelt
+    {% elif is_state("switch.vaskemaskin_program_mix", "on") %}
+      Blandet
+    {% elif is_state("switch.vaskemaskin_program_monsoon", "on") %}
+      Monsun
+    {% elif is_state("switch.vaskemaskin_program_outdoor", "on") %}
+      Sportstøy
+    {% elif is_state("switch.vaskemaskin_program_plushtoy", "on") %}
+      Plush toy
+    {% elif is_state("switch.vaskemaskin_program_sensitive", "on") %}
+      Allergi pluss
+    {% elif is_state("switch.vaskemaskin_program_shirtsblouses", "on") %}
+      Skjorter/Bluser
+    {% elif is_state("switch.vaskemaskin_program_sportfitness", "on") %}
+      Sportstøy
+    {% elif is_state("switch.vaskemaskin_program_towels", "on") %}
+      Håndklær
+    {% elif is_state("switch.vaskemaskin_program_waterproof", "on") %}
+      Vanntett
+    {% elif is_state("switch.vaskemaskin_program_wool", "on") %}
+      Ull
+    {% else %}
+      N/A
+    {% endif %}
+
+# Tørketrommel
+bosch_tumble_dryer_status:
+  friendly_name: Tørketrommel
+  icon_template: mdi:tumble-dryer
+  value_template: >-
+    {% if is_state("sensor.torketrommel_operation_state", "Ready") %}
+      På
+    {% elif is_state("sensor.torketrommel_operation_state", "Run") %}
+      Aktiv
+    {% elif is_state("sensor.torketrommel_operation_state", "Pause") %}
+      Pauset
+    {% elif is_state("sensor.torketrommel_operation_state", "Inactive") %}
+      Av
+    {% elif is_state("sensor.torketrommel_operation_state", "Delayedstart") %}
+      Forsinket oppstart
+    {% elif is_state("sensor.torketrommel_operation_state", "Actionrequired") %}
+      Handling påkrevd
+    {% elif is_state("sensor.torketrommel_operation_state", "Finished") %}
+      Ferdig
+    {% elif is_state("sensor.torketrommel_operation_state", "Error") %}
+      Feil
+    {% elif is_state("sensor.torketrommel_operation_state", "Aborting") %}
+      Avbryter
+    {% else %}
+      Offline
+    {% endif %}
+
+bosch_tumble_dryer_program_progress:
+  friendly_name: Status
+  icon_template: mdi:progress-clock
+  unit_of_measurement: "%"
+  value_template: >-
+    {{ states('sensor.torketrommel_program_progress') }}
+
+bosch_tumble_dryer_remaining_program_time:
+  friendly_name: Gjenstående
+  icon_template: mdi:clock
+  device_class: timestamp
+  value_template: >-
+    {{ states('sensor.torketrommel_remaining_program_time') }}
+
+bosch_tumble_dryer_program:
+  friendly_name: Program
+  icon_template: mdi:book-open-outline
+  value_template: >-
+    {% if is_state("switch.torketrommel_program_antishrink", "on") %}
+      Antikrymp
+    {% elif is_state("switch.torketrommel_program_blankets", "on") %}
+      Dyner
+    {% elif is_state("switch.torketrommel_program_businessshirts", "on") %}
+      Skjorter/Bluser
+    {% elif is_state("switch.torketrommel_program_cotton", "on") %}
+      Bomull
+    {% elif is_state("switch.torketrommel_program_delicates", "on") %}
+      Finvask
+    {% elif is_state("switch.torketrommel_program_downfeathers", "on") %}
+      Dunplagg
+    {% elif is_state("switch.torketrommel_program_hygiene", "on") %}
+      Allergi pluss
+    {% elif is_state("switch.torketrommel_program_jeans", "on") %}
+      Jeans
+    {% elif is_state("switch.torketrommel_program_mix", "on") %}
+      Blandet
+    {% elif is_state("switch.torketrommel_program_outdoor", "on") %}
+      Sportstøy
+    {% elif is_state("switch.torketrommel_program_pillow", "on") %}
+      Puter
+    {% elif is_state("switch.torketrommel_program_shirts15", "on") %}
+      Skjorter 15
+    {% elif is_state("switch.torketrommel_program_super40", "on") %}
+      Super Quick 40
+    {% elif is_state("switch.torketrommel_program_synthetic", "on") %}
+      Lettstelt
+    {% elif is_state("switch.torketrommel_program_syntheticrefresh", "on") %}
+      Lettstelt refresh
+    {% elif is_state("switch.torketrommel_program_towels", "on") %}
+      Håndklær
+    {% else %}
+      N/A
+    {% endif %}

@@ -52,19 +52,17 @@
                                             {
                                                 "entities": [
                                                     {
-                                                        "entity": "sensor.siemens_hm876gdb6s_program",
-                                                        "name": "Program"
+                                                        "entity": "sensor.siemens_oven_program"
                                                     },
                                                     {
-                                                        "entity": "sensor.siemens_hm876gdb6s_elapsed",
-                                                        "name": "Aktiv"
+                                                        "entity": "sensor.siemens_oven_program_progress"
                                                     },
                                                     {
-                                                        "entity": "sensor.siemens_hm876gdb6s_remaining",
-                                                        "name": "Gjenst\u00e5ende"
+                                                        "entity": "sensor.siemens_oven_remaining_program_time",
+                                                        "format": "total"
                                                     }
                                                 ],
-                                                "entity": "sensor.siemens_hm876gdb6s_state",
+                                                "entity": "sensor.siemens_oven_status",
                                                 "show_state": false,
                                                 "type": "custom:multiple-entity-row"
                                             }
@@ -74,7 +72,7 @@
                                     },
                                     "conditions": [
                                         {
-                                            "entity": "sensor.siemens_hm876gdb6s_state",
+                                            "entity": "sensor.siemens_oven_status",
                                             "state": "Aktiv"
                                         }
                                     ],
@@ -86,19 +84,17 @@
                                             {
                                                 "entities": [
                                                     {
-                                                        "entity": "sensor.siemens_cs856gdb7s_program",
-                                                        "name": "Program"
+                                                        "entity": "sensor.siemens_steam_oven_program"
                                                     },
                                                     {
-                                                        "entity": "sensor.siemens_cs856gdb7s_elapsed",
-                                                        "name": "Aktiv"
+                                                        "entity": "sensor.siemens_steam_oven_program_progress"
                                                     },
                                                     {
-                                                        "entity": "sensor.siemens_cs856gdb7s_remaining",
-                                                        "name": "Gjenst\u00e5ende"
+                                                        "entity": "sensor.siemens_steam_oven_remaining_program_time",
+                                                        "format": "total"
                                                     }
                                                 ],
-                                                "entity": "sensor.siemens_cs856gdb7s_state",
+                                                "entity": "sensor.siemens_steam_oven_status",
                                                 "show_state": false,
                                                 "type": "custom:multiple-entity-row"
                                             }
@@ -108,7 +104,7 @@
                                     },
                                     "conditions": [
                                         {
-                                            "entity": "sensor.siemens_cs856gdb7s_state",
+                                            "entity": "sensor.siemens_steam_oven_status",
                                             "state": "Aktiv"
                                         }
                                     ],
@@ -146,15 +142,17 @@
                                             {
                                                 "entities": [
                                                     {
-                                                        "entity": "sensor.bosch_wtwh7579sn_program",
-                                                        "name": "Program"
+                                                        "entity": "sensor.bosch_tumble_dryer_program"
                                                     },
                                                     {
-                                                        "entity": "sensor.bosch_wtwh7579sn_remaining",
-                                                        "name": "Gjenst\u00e5ende"
+                                                        "entity": "sensor.bosch_tumble_dryer_program_progress"
+                                                    },
+                                                    {
+                                                        "entity": "sensor.bosch_tumble_dryer_remaining_program_time",
+                                                        "format": "total"
                                                     }
                                                 ],
-                                                "entity": "sensor.bosch_wtwh7579sn_state",
+                                                "entity": "sensor.bosch_tumble_dryer_status",
                                                 "show_state": false,
                                                 "type": "custom:multiple-entity-row"
                                             }
@@ -164,7 +162,7 @@
                                     },
                                     "conditions": [
                                         {
-                                            "entity": "sensor.bosch_wtwh7579sn_state",
+                                            "entity": "sensor.bosch_tumble_dryer_status",
                                             "state": "Aktiv"
                                         }
                                     ],
@@ -176,15 +174,17 @@
                                             {
                                                 "entities": [
                                                     {
-                                                        "entity": "sensor.bosch_wawh26m9sn_program",
-                                                        "name": "Program"
+                                                        "entity": "sensor.bosch_washing_machine_program"
                                                     },
                                                     {
-                                                        "entity": "sensor.bosch_wawh26m9sn_remaining",
-                                                        "name": "Gjenst\u00e5ende"
+                                                        "entity": "sensor.bosch_washing_machine_program_progress"
+                                                    },
+                                                    {
+                                                        "entity": "sensor.bosch_washing_machine_remaining_program_time",
+                                                        "format": "total"
                                                     }
                                                 ],
-                                                "entity": "sensor.bosch_wawh26m9sn_state",
+                                                "entity": "sensor.bosch_washing_machine_status",
                                                 "show_state": false,
                                                 "type": "custom:multiple-entity-row"
                                             }
@@ -194,7 +194,7 @@
                                     },
                                     "conditions": [
                                         {
-                                            "entity": "sensor.bosch_wawh26m9sn_state",
+                                            "entity": "sensor.bosch_washing_machine_status",
                                             "state": "Aktiv"
                                         }
                                     ],
@@ -445,30 +445,32 @@
                                         {
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.bosch_wawh26m9sn_door",
-                                                    "name": "D\u00f8r"
+                                                    "entity": "binary_sensor.bosch_washing_machine_door"
                                                 },
                                                 {
-                                                    "entity": "sensor.bosch_wawh26m9sn_state",
+                                                    "entity": "sensor.bosch_washing_machine_status",
                                                     "name": "Status"
                                                 }
                                             ],
-                                            "entity": "sensor.bosch_wawh26m9sn_state",
+                                            "entity": "sensor.bosch_washing_machine_status",
+                                            "name": "Vaskemaskin",
+                                            "icon": "mdi:washing-machine",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         },
                                         {
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.bosch_wtwh7579sn_door",
-                                                    "name": "D\u00f8r"
+                                                    "entity": "binary_sensor.bosch_tumble_dryer_door"
                                                 },
                                                 {
-                                                    "entity": "sensor.bosch_wtwh7579sn_state",
+                                                    "entity": "sensor.bosch_tumble_dryer_status",
                                                     "name": "Status"
                                                 }
                                             ],
-                                            "entity": "sensor.bosch_wtwh7579sn_state",
+                                            "entity": "sensor.bosch_tumble_dryer_status",
+                                            "name": "T\u00f8rketrommel",
+                                            "icon": "mdi:tumble-dryer",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         },
@@ -769,30 +771,32 @@
                                         {
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.siemens_hm876gdb6s_door",
-                                                    "name": "D\u00f8r"
+                                                    "entity": "binary_sensor.siemens_oven_door"
                                                 },
                                                 {
-                                                    "entity": "sensor.siemens_hm876gdb6s_state",
+                                                    "entity": "sensor.siemens_oven_status",
                                                     "name": "Status"
                                                 }
                                             ],
-                                            "entity": "sensor.siemens_hm876gdb6s_state",
+                                            "entity": "sensor.siemens_oven_status",
+                                            "name": "Stekeovn",
+                                            "icon": "mdi:window-maximize",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         },
                                         {
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.siemens_cs856gdb7s_door",
-                                                    "name": "D\u00f8r"
+                                                    "entity": "binary_sensor.siemens_steam_oven_door"
                                                 },
                                                 {
-                                                    "entity": "sensor.siemens_cs856gdb7s_state",
+                                                    "entity": "sensor.siemens_steam_oven_status",
                                                     "name": "Status"
                                                 }
                                             ],
-                                            "entity": "sensor.siemens_cs856gdb7s_state",
+                                            "entity": "sensor.siemens_steam_oven_status",
+                                            "name": "Dampovn",
+                                            "icon": "mdi:dishwasher",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         },

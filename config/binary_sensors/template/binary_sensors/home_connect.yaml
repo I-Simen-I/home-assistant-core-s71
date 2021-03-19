@@ -1,0 +1,27 @@
+# Stekeovn
+siemens_oven_door:
+  friendly_name: Dør
+  device_class: door
+  value_template: >-
+    {{ states('binary_sensor.stekeovn_door') }}
+
+# Dampovn
+siemens_steam_oven_door:
+  friendly_name: Dør
+  device_class: door
+  value_template: >-
+    {{ states('binary_sensor.dampovn_door') }}
+
+# Vaskemaskin
+bosch_washing_machine_door:
+  friendly_name: Dør
+  device_class: door
+  value_template: >-
+    {{ states('binary_sensor.vaskemaskin_door') }}
+
+# Tørketrommel
+bosch_tumble_dryer_door:
+  friendly_name: Dør
+  device_class: door
+  value_template: >-
+    {{ states('binary_sensor.torketrommel_door') }}

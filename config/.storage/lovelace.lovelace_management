@@ -449,6 +449,27 @@
                             "show_header_toggle": false,
                             "title": "Enheter",
                             "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.stekeovn_remaining_program_time",
+                                            "format": "total",
+                                            "name": "Gjenst\u00e5ende"
+                                        }
+                                    ],
+                                    "entity": "sensor.stekeovn_operation_state",
+                                    "secondary_info": "last-changed",
+                                    "show_state": false,
+                                    "icon": "mdi:window-maximize",
+                                    "name": "Stekeovn",
+                                    "type": "custom:multiple-entity-row"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:tools",
