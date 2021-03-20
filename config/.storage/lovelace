@@ -453,8 +453,6 @@
                                                 }
                                             ],
                                             "entity": "sensor.bosch_washing_machine_status",
-                                            "name": "Vaskemaskin",
-                                            "icon": "mdi:washing-machine",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         },
@@ -469,8 +467,6 @@
                                                 }
                                             ],
                                             "entity": "sensor.bosch_tumble_dryer_status",
-                                            "name": "T\u00f8rketrommel",
-                                            "icon": "mdi:tumble-dryer",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         },
@@ -779,8 +775,6 @@
                                                 }
                                             ],
                                             "entity": "sensor.siemens_oven_status",
-                                            "name": "Stekeovn",
-                                            "icon": "mdi:window-maximize",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         },
@@ -795,8 +789,6 @@
                                                 }
                                             ],
                                             "entity": "sensor.siemens_steam_oven_status",
-                                            "name": "Dampovn",
-                                            "icon": "mdi:dishwasher",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         },
