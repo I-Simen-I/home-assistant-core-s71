@@ -227,14 +227,16 @@
       data:
         clickAction: /lovelace-management/network
         color: red
-      message: DL eller UL er under 140/120 mbits
+      message: 'Speedtest: {{ states(''sensor.speedtest_download'') }}/{{ states(''sensor.speedtest_upload'')
+        }} Mbit/s'
       title: Internett
     service: notify.mobile_app_simens_galaxy_s10
   - data:
       data:
         clickAction: /lovelace-management/network
         color: red
-      message: DL eller UL er under 140/120 mbits
+      message: 'Speedtest: {{ states(''sensor.speedtest_download'') }}/{{ states(''sensor.speedtest_upload'')
+        }} Mbit/s'
       title: Internett
     service: notify.mobile_app_simen_sin_ipad
   mode: single
@@ -1026,7 +1028,10 @@
     domain: media_player
     entity_id: media_player.plex_plex_for_android_tv_tpm191e
     type: playing
-  condition: []
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.outside_avg_lux
+    above: '300'
   action:
   - service: cover.close_cover
     target:
@@ -1055,4 +1060,48 @@
     data:
       message: Oppvaskmaskin er ferdig
       title: Oppvaskmaskin
+  mode: single
+- id: '1616439411254'
+  alias: notify tibber high power usage
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.tibber_real_time_w
+    above: '18000'
+  condition: []
+  action:
+  - service: notify.mobile_app_simens_galaxy_s10
+    data:
+      data:
+        clickAction: /lovelace-management/tibber
+        color: red
+      title: Høyt strømforbruk
+      message: Tibber har registrert et forbruk på  {{states('sensor.tibber_real_time_w')}}
+        w
+  mode: single
+- id: '1616439703722'
+  alias: notify tibber high price
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.electricity_price_soholsgata_71
+    above: '1'
+  condition: []
+  action:
+  - service: notify.mobile_app_simens_galaxy_s10
+    data:
+      title: Høy strømpris
+      message: Tibber rapporterer at strømprisen er {{states('sensor.electricity_price_soholsgata_71')}}
+        NOK/kWh
+      data:
+        clickAction: /lovelace-stats/live-powerusage
+        color: yellow
+  - service: notify.mobile_app_nora_sin_iphone
+    data:
+      message: Tibber rapporterer at strømprisen er {{states('sensor.electricity_price_soholsgata_71')}}
+        NOK/kWh
+      title: Høy strømpris
+      data:
+        clickAction: /lovelace-stats/live-powerusage
+        color: yellow
   mode: single
