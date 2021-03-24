@@ -21,7 +21,7 @@
             {
                 "id": "25b45c33737440f5ab33977bc74ea5ad",
                 "type": "module",
-                "url": "/local/custom_ui/cards/mini-graph-card/mini-graph-card-bundle.js"
+                "url": "/local/custom_ui/cards/mini-graph-card/mini-graph-card-bundle.js?v=1.0.1"
             }
         ]
     }
