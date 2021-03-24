@@ -30,11 +30,8 @@
                                                     "name": "Forbruk"
                                                 },
                                                 {
-                                                    "entity": "sensor.tibber_accumulated_cost",
+                                                    "entity": "sensor.tibber_total_cost",
                                                     "name": "Kostnad"
-                                                },
-                                                {
-                                                    "entity": "sensor.tibber_grid_rent"
                                                 },
                                                 {
                                                     "entity": "sensor.tibber_last_meter_consumption"
@@ -205,6 +202,59 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "align_state": "center",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.tibber_accumulated_cost",
+                                            "name": "Str\u00f8m"
+                                        },
+                                        "sensor.tibber_grid_rent"
+                                    ],
+                                    "hours_to_show": 168,
+                                    "aggregate_func": "max",
+                                    "group_by": "date",
+                                    "name": "Kostnad siste 7 dager",
+                                    "hour24": true,
+                                    "height": 200,
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-management/tibber"
+                                    },
+                                    "show": {
+                                        "labels": true,
+                                        "graph": "bar"
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                },
+                                {
+                                    "align_state": "center",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.tibber_accumulated_consumption",
+                                            "name": "Forbruk siste 7 dager"
+                                        }
+                                    ],
+                                    "hours_to_show": 168,
+                                    "aggregate_func": "max",
+                                    "group_by": "date",
+                                    "hour24": true,
+                                    "height": 200,
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-management/tibber"
+                                    },
+                                    "show": {
+                                        "labels": true,
+                                        "graph": "bar"
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                }
+                            ]
                         }
                     ],
                     "icon": "mdi:transmission-tower",
@@ -226,15 +276,15 @@
                                     "color_thresholds": [
                                         {
                                             "color": "#0da035",
-                                            "value": 10
+                                            "value": 20
                                         },
                                         {
                                             "color": "#f4b400",
-                                            "value": 15
+                                            "value": 30
                                         },
                                         {
                                             "color": "#df4c1e",
-                                            "value": 25
+                                            "value": 40
                                         }
                                     ],
                                     "entities": [
@@ -255,15 +305,15 @@
                                     "color_thresholds": [
                                         {
                                             "color": "#df4c1e",
-                                            "value": 60
+                                            "value": 120
                                         },
                                         {
                                             "color": "#f4b400",
-                                            "value": 75
+                                            "value": 130
                                         },
                                         {
                                             "color": "#0da035",
-                                            "value": 90
+                                            "value": 140
                                         }
                                     ],
                                     "entities": [
@@ -284,15 +334,15 @@
                                     "color_thresholds": [
                                         {
                                             "color": "#df4c1e",
-                                            "value": 60
+                                            "value": 90
                                         },
                                         {
                                             "color": "#f4b400",
-                                            "value": 75
+                                            "value": 110
                                         },
                                         {
                                             "color": "#0da035",
-                                            "value": 90
+                                            "value": 120
                                         }
                                     ],
                                     "entities": [

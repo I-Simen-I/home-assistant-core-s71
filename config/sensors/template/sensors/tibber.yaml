@@ -116,3 +116,10 @@ tibber_grid_rent:
       + float(states('input_number.rik_daily_cost'))) | round(2)
 
     }}
+
+tibber_total_cost:
+  friendly_name: 'Totalkostnad i dag'
+  icon_template: 'mdi:cash-multiple'
+  unit_of_measurement: "NOK"
+  value_template: >-
+    {{ (float(states('sensor.tibber_accumulated_cost')) + float(states('sensor.tibber_grid_rent'))) | round(2) }}
