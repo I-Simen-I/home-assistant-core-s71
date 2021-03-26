@@ -60,11 +60,11 @@ light.tv_room_89_1_92:
   icon: mdi:ceiling-light
   friendly_name: Takspotter
 
-light.living_room_19_1_22:
+light.living_room_19_1_329:
   icon: mdi:ceiling-light
   friendly_name: Taklamper
 
-light.living_room_94_1_97:
+light.living_room_94_1_333:
   icon: mdi:floor-lamp
   friendly_name: Gulvlamper
 

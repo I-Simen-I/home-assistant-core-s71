@@ -7,7 +7,7 @@
       brightness: 255
     light.kitchen_49_1_52:
       state: off
-    light.living_room_94_1_97:
+    light.living_room_94_1_333:
       state: off
     #ETG_2
     light.living_room_69_1_72:
@@ -34,7 +34,7 @@
     light.kitchen_49_1_52:
       state: on
       brightness: 120
-    light.living_room_94_1_97:
+    light.living_room_94_1_333:
       state: off
     #ETG_2
     light.living_room_69_1_72:
@@ -60,7 +60,7 @@
     light.hall_44_1_47:
       state: on
       brightness: 255
-    light.living_room_94_1_97:
+    light.living_room_94_1_333:
       state: off
     #ETG_2
     light.living_room_69_1_72:
@@ -87,7 +87,7 @@
     light.hall_44_1_47:
       state: on
       brightness: 80
-    light.living_room_94_1_97:
+    light.living_room_94_1_333:
       state: on
       brightness: 255
     #ETG_2
@@ -118,10 +118,10 @@
     light.kitchen_49_1_52:
       state: on
       brightness: 100
-    light.living_room_19_1_22:
+    light.living_room_19_1_329:
       state: on
       brightness: 75
-    light.living_room_94_1_97:
+    light.living_room_94_1_333:
       state: on
       brightness: 65
     #ETG_2
@@ -180,10 +180,10 @@
       brightness: 255
     light.tv_room_sofa:
       state: off
-    light.living_room_19_1_22:
+    light.living_room_19_1_329:
       state: off
       brightness: 255
-    light.living_room_94_1_97:
+    light.living_room_94_1_333:
       state: off
       brightness: 255
     light.kitchen_49_1_52:

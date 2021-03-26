@@ -472,7 +472,7 @@
   description: ''
   trigger:
   - above: '0'
-    entity_id: counter.door_counter
+    entity_id: sensor.counter_doors_open
     platform: numeric_state
   condition:
   - condition: state

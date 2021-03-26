@@ -429,15 +429,15 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "light.living_room_94_1_97",
+                                            "entity": "light.living_room_94_1_333",
                                             "toggle": true
                                         },
                                         {
-                                            "entity": "light.living_room_19_1_22",
+                                            "entity": "light.living_room_19_1_329",
                                             "toggle": true
                                         }
                                     ],
-                                    "entity": "light.living_room_94_1_97",
+                                    "entity": "light.living_room_94_1_333",
                                     "name": "Stue",
                                     "show_state": false,
                                     "type": "custom:multiple-entity-row"

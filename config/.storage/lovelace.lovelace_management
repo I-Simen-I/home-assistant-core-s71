@@ -50,13 +50,17 @@
                                     "entities": [
                                         {
                                             "entity": "sensor.tibber_real_time_w",
-                                            "name": "Forbruk"
+                                            "name": "Totalt forbruk"
                                         },
-                                        "sensor.tibber_real_time_w_avg"
+                                        "sensor.tibber_real_time_w_avg",
+                                        {
+                                            "entity": "sensor.counter_power_usage",
+                                            "name": "IoT"
+                                        }
                                     ],
                                     "hours_to_show": 24,
                                     "hour24": true,
-                                    "points_per_hour": 12,
+                                    "points_per_hour": 8,
                                     "height": 300,
                                     "upper_bound": 24633,
                                     "lower_bound": 0,
