@@ -56,7 +56,7 @@ counter_lights_on:
           states.light.bathroom_29_1_32,
           states.light.bathroom_34_1_37,
           states.light.office_simen_4_1_7,
-          states.light.office_nora_14_1_17
+          states.light.office_nora_14_1_338
     ] %}
     {{ lights | selectattr('state','eq','on') | list | count }}
 
@@ -190,7 +190,7 @@ counter_power_usage_lights:
           state_attr("light.bathroom_29_1_32", "current_power_w") | float,
           state_attr("light.bathroom_34_1_37", "current_power_w") | float,
           state_attr("light.office_simen_4_1_7", "current_power_w") | float,
-          state_attr("light.office_nora_14_1_17", "current_power_w") | float
+          state_attr("light.office_nora_14_1_338", "current_power_w") | float
     ] %}
     {{ power | list | sum | round(1) }}
 

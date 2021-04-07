@@ -145,9 +145,6 @@
                                                         "entity": "sensor.bosch_tumble_dryer_program"
                                                     },
                                                     {
-                                                        "entity": "sensor.bosch_tumble_dryer_program_progress"
-                                                    },
-                                                    {
                                                         "entity": "sensor.bosch_tumble_dryer_remaining_program_time",
                                                         "format": "total"
                                                     }
@@ -1035,7 +1032,7 @@
                                             "type": "custom:multiple-entity-row"
                                         },
                                         {
-                                            "entity": "light.office_nora_14_1_17"
+                                            "entity": "light.office_nora_14_1_338"
                                         },
                                         {
                                             "entities": [
