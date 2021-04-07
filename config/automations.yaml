@@ -318,9 +318,9 @@
   alias: notify bosch_tumble_dryer finished
   description: ''
   trigger:
-  - entity_id: sensor.bosch_tumble_dryer_status
+  - entity_id: sensor.bosch_tumble_dryer_program_progress
     platform: state
-    to: Ferdig
+    to: '100'
   condition: []
   action:
   - data:
