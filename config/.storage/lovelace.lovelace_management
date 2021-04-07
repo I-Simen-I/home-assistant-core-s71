@@ -247,7 +247,30 @@
                                     "aggregate_func": "max",
                                     "group_by": "date",
                                     "hour24": true,
-                                    "height": 200,
+                                    "height": 130,
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace-management/tibber"
+                                    },
+                                    "show": {
+                                        "labels": true,
+                                        "graph": "bar"
+                                    },
+                                    "type": "custom:mini-graph-card"
+                                },
+                                {
+                                    "align_state": "center",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.tibber_accumulated_consumption",
+                                            "name": "Forbruk siste 24t"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "aggregate_func": "delta",
+                                    "group_by": "hour",
+                                    "hour24": true,
+                                    "height": 130,
                                     "tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace-management/tibber"
@@ -470,39 +493,178 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
+                                    "type": "markdown",
+                                    "content": "# LingLing"
+                                },
+                                {
+                                    "type": "markdown",
+                                    "content": "## Timer f\u00f8r vedlikehold"
+                                },
+                                {
+                                    "type": "entities",
                                     "entities": [
                                         {
-                                            "attribute": "main_brush_left",
-                                            "name": "B\u00f8rste",
-                                            "unit": "t"
-                                        },
-                                        {
-                                            "attribute": "side_brush_left",
-                                            "name": "Sideb\u00f8rste",
-                                            "unit": "t"
-                                        },
-                                        {
-                                            "attribute": "filter_left",
-                                            "name": "Filter",
-                                            "unit": "t"
-                                        },
-                                        {
+                                            "entity": "vacuum.xiaomi_vacuum_cleaner",
                                             "attribute": "sensor_dirty_left",
+                                            "type": "attribute",
                                             "name": "Sensor",
-                                            "unit": "t"
+                                            "unit": "t",
+                                            "icon": "mdi:leak"
+                                        },
+                                        {
+                                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                                            "attribute": "filter_left",
+                                            "type": "attribute",
+                                            "name": "Filter",
+                                            "unit": "t",
+                                            "icon": "mdi:air-filter"
+                                        },
+                                        {
+                                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                                            "attribute": "main_brush_left",
+                                            "type": "attribute",
+                                            "name": "Hovedb\u00f8rste",
+                                            "unit": "t",
+                                            "icon": "mdi:backup-restore"
+                                        },
+                                        {
+                                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                                            "attribute": "side_brush_left",
+                                            "type": "attribute",
+                                            "name": "Sideb\u00f8rste",
+                                            "unit": "t",
+                                            "icon": "mdi:axis"
                                         }
-                                    ],
-                                    "entity": "vacuum.xiaomi_vacuum_cleaner",
-                                    "name": "LingLing",
-                                    "show_state": false,
-                                    "type": "custom:multiple-entity-row"
+                                    ]
+                                },
+                                {
+                                    "type": "markdown",
+                                    "content": "## Vedlikehold utf\u00f8rt"
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "vacuum.send_command",
+                                                "service_data": {
+                                                    "command": "reset_consumable",
+                                                    "params": "sensor_dirty_time"
+                                                },
+                                                "target": {
+                                                    "entity_id": "vacuum.xiaomi_vacuum_cleaner"
+                                                }
+                                            },
+                                            "name": "Sensor",
+                                            "icon": "mdi:leak",
+                                            "show_icon": true
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "vacuum.send_command",
+                                                "service_data": {
+                                                    "command": "reset_consumable",
+                                                    "params": "filter_work_time"
+                                                },
+                                                "target": {
+                                                    "entity_id": "vacuum.xiaomi_vacuum_cleaner"
+                                                }
+                                            },
+                                            "name": "Filter",
+                                            "icon": "mdi:air-filter",
+                                            "show_icon": true
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "vacuum.send_command",
+                                                "service_data": {
+                                                    "command": "reset_consumable",
+                                                    "params": "main_brush_work_time"
+                                                },
+                                                "target": {
+                                                    "entity_id": "vacuum.xiaomi_vacuum_cleaner"
+                                                }
+                                            },
+                                            "name": "Hovedb\u00f8rste",
+                                            "icon": "mdi:backup-restore",
+                                            "show_icon": true
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "vacuum.send_command",
+                                                "service_data": {
+                                                    "command": "reset_consumable",
+                                                    "params": "side_brush_work_time"
+                                                },
+                                                "target": {
+                                                    "entity_id": "vacuum.xiaomi_vacuum_cleaner"
+                                                }
+                                            },
+                                            "name": "Sideb\u00f8rste",
+                                            "icon": "mdi:axis",
+                                            "show_icon": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "markdown",
+                                    "content": "## G\u00e5 til"
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "vacuum.send_command",
+                                                "service_data": {
+                                                    "command": "app_goto_target",
+                                                    "params": [
+                                                        30500,
+                                                        21500
+                                                    ]
+                                                },
+                                                "target": {
+                                                    "entity_id": "vacuum.xiaomi_vacuum_cleaner"
+                                                }
+                                            },
+                                            "name": "D\u00f8r",
+                                            "icon": "mdi:door",
+                                            "show_icon": true
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        }
+                                    ]
                                 }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Enheter",
-                            "type": "entities"
+                            ]
                         }
                     ],
                     "icon": "mdi:tools",
