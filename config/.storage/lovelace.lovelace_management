@@ -300,24 +300,12 @@
                             "cards": [
                                 {
                                     "align_state": "center",
-                                    "color_thresholds": [
-                                        {
-                                            "color": "#0da035",
-                                            "value": 20
-                                        },
-                                        {
-                                            "color": "#f4b400",
-                                            "value": 30
-                                        },
-                                        {
-                                            "color": "#df4c1e",
-                                            "value": 40
-                                        }
-                                    ],
                                     "entities": [
-                                        "sensor.speedtest_ping"
+                                        "sensor.network_ping_vg",
+                                        "sensor.network_ping_google",
+                                        "sensor.network_ping_1111"
                                     ],
-                                    "hours_to_show": 72,
+                                    "hours_to_show": 24,
                                     "hour24": true,
                                     "icon": "mdi:pulse",
                                     "name": "Ping",
@@ -397,6 +385,10 @@
                             "cards": [
                                 {
                                     "entities": [
+                                        {
+                                            "entity": "sensor.oneplus_9_pro_battery_level",
+                                            "name": "Simen sin OnePlus 9 Pro Battery Level"
+                                        },
                                         {
                                             "entity": "sensor.simen_sin_ipad_battery_level"
                                         },

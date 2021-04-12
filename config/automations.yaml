@@ -209,7 +209,7 @@
         color: red
       message: Det er bevegelse ved inngangsdøren
       title: Sikkerhetsbrudd
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   mode: single
 - id: '1584649059617'
   alias: notify internet slow
@@ -230,7 +230,7 @@
       message: 'Speedtest: {{ states(''sensor.speedtest_download'') }}/{{ states(''sensor.speedtest_upload'')
         }} Mbit/s'
       title: Internett
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   - data:
       data:
         clickAction: /lovelace-management/network
@@ -258,7 +258,7 @@
         color: yellow
       message: Sjekk batteri på enheter
       title: Vedlikehold
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   mode: single
 - id: '1585677159829'
   alias: notify siemens_oven finished
@@ -272,7 +272,7 @@
   - data:
       message: Ovnsprogrammet er ferdig
       title: Stekeovn
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   - data:
       message: Ovnsprogrammet er ferdig
       title: Stekeovn
@@ -290,7 +290,7 @@
   - data:
       message: Ovnsprogrammet er ferdig
       title: Dampovn
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   - data:
       message: Ovnsprogrammet er ferdig
       title: Dampovn
@@ -308,7 +308,7 @@
   - data:
       message: Programmet er ferdig
       title: Vaskemaskin
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   - data:
       message: Programmet er ferdig
       title: Vaskemaskin
@@ -326,7 +326,7 @@
   - data:
       message: Programmet er ferdig
       title: Tørketormmel
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   - data:
       message: Programmet er ferdig
       title: Tørketormmel
@@ -346,7 +346,7 @@
   - data:
       message: Støvbeholder må tømmes
       title: Vedlikehold - LingLing
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   - data:
       command: app_goto_target
       params:
@@ -406,7 +406,7 @@
         color: red
       message: Ytterdøren på vaskerommet er åpen
       title: Dør åpen
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   mode: single
 - id: '1592669514031'
   alias: notify roborock sensor maintenance
@@ -425,7 +425,7 @@
         color: yellow
       message: Sensor må rengjøres
       title: Vedlikehold - LingLing
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   - data:
       command: app_goto_target
       params:
@@ -485,15 +485,15 @@
         color: red
       message: En eller flere dører er åpnet
       title: Sikkerhetsbrudd
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   mode: single
 - id: '1593455676622'
   alias: notify security_breach window
   description: ''
   trigger:
   - above: '0'
-    entity_id: counter.window_counter
     platform: numeric_state
+    entity_id: sensor.counter_windows_open
   condition:
   - condition: state
     entity_id: input_boolean.house_security
@@ -505,7 +505,7 @@
         color: red
       message: En eller flere vinduer er åpnet
       title: Sikkerhetsbrudd
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   mode: single
 - id: '1593543809275'
   alias: notify security off
@@ -520,7 +520,7 @@
   - data:
       message: Sikkerhet er skrudd av
       title: Sikkerhet
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   mode: single
 - id: '1593592653157'
   alias: climate office-nora heat-on
@@ -569,7 +569,7 @@
         color: red
       message: En av sensorene inne reporterer høy temperatur
       title: Potensiell brann
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   - data:
       data:
         clickAction: /lovelace-climate/temperature
@@ -654,7 +654,7 @@
         color: yellow
       message: Restarter app
       title: Home Assistant
-    service: notify.mobile_app_simens_galaxy_s10
+    service: notify.mobile_app_oneplus_9_pro
   - data: {}
     service: homeassistant.restart
   mode: single
@@ -916,7 +916,7 @@
     to: 'on'
   condition: []
   action:
-  - service: notify.mobile_app_simens_galaxy_s10
+  - service: notify.mobile_app_oneplus_9_pro
     data:
       data:
         clickAction: /lovelace/status
@@ -994,7 +994,7 @@
     above: '100'
   condition: []
   action:
-  - service: notify.mobile_app_simens_galaxy_s10
+  - service: notify.mobile_app_oneplus_9_pro
     data:
       data:
         clickAction: /lovelace-management/tibber
@@ -1011,7 +1011,7 @@
     above: '200'
   condition: []
   action:
-  - service: notify.mobile_app_simens_galaxy_s10
+  - service: notify.mobile_app_oneplus_9_pro
     data:
       data:
         clickAction: /lovelace-management/tibber
@@ -1052,7 +1052,7 @@
     to: Av
   condition: []
   action:
-  - service: notify.mobile_app_simens_galaxy_s10
+  - service: notify.mobile_app_oneplus_9_pro
     data:
       message: Oppvaskmaskin er ferdig
       title: Oppvaskmaskin
@@ -1070,7 +1070,7 @@
     above: '18000'
   condition: []
   action:
-  - service: notify.mobile_app_simens_galaxy_s10
+  - service: notify.mobile_app_oneplus_9_pro
     data:
       data:
         clickAction: /lovelace-management/tibber
@@ -1088,7 +1088,7 @@
     above: '1'
   condition: []
   action:
-  - service: notify.mobile_app_simens_galaxy_s10
+  - service: notify.mobile_app_oneplus_9_pro
     data:
       title: Høy strømpris
       message: Tibber rapporterer at strømprisen er {{states('sensor.electricity_price_soholsgata_71')}}
@@ -1104,4 +1104,23 @@
       data:
         clickAction: /lovelace-stats/live-powerusage
         color: yellow
+  mode: single
+- id: '1618254398552'
+  alias: notify internet ping high
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.network_ping_vg
+    above: '100'
+  condition: []
+  action:
+  - data:
+      data:
+        clickAction: /lovelace-management/network
+        color: red
+      message: "Ping er høy: <br>\n - vg.no: {{ states('sensor.network_ping_vg') }}ms\
+        \ <br>\n - google: {{ states('sensor.network_ping_google') }}ms <br>\n - 1.1.1.1:\
+        \ {{ states('sensor.network_ping_1111') }}ms"
+      title: Internett (ping)
+    service: notify.mobile_app_oneplus_9_pro
   mode: single

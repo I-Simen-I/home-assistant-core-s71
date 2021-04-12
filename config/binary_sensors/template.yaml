@@ -1,3 +1,21 @@
 # Custom sensor template
 - platform: template
   sensors: !include_dir_merge_named template/binary_sensors/
+
+- platform: ping
+  host: 8.8.8.8
+  name: "ping_google"
+  count: 1
+  scan_interval: 30
+
+- platform: ping
+  host: "vg.no"
+  name: "ping_vg"
+  count: 1
+  scan_interval: 30
+
+- platform: ping
+  host: 1.1.1.1
+  name: "ping_1111"
+  count: 1
+  scan_interval: 30
