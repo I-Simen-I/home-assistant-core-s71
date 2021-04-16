@@ -1112,6 +1112,8 @@
   - platform: numeric_state
     entity_id: sensor.network_ping_vg
     above: '100'
+    for:
+      minutes: 2
   condition: []
   action:
   - data:
