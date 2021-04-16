@@ -306,6 +306,7 @@
                                         "sensor.network_ping_1111"
                                     ],
                                     "hours_to_show": 24,
+                                    "points_per_hour": 4,
                                     "hour24": true,
                                     "icon": "mdi:pulse",
                                     "name": "Ping",
