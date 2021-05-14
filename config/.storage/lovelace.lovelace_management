@@ -640,8 +640,15 @@
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "toggle"
-                                            }
+                                                "action": "call-service",
+                                                "service": "vacuum.return_to_base",
+                                                "service_data": {},
+                                                "target": {
+                                                    "device_id": "6d3e7d434e0cb87e13e569be7c3a2edc"
+                                                }
+                                            },
+                                            "name": "Lader",
+                                            "icon": "mdi:ev-station"
                                         },
                                         {
                                             "type": "button",
