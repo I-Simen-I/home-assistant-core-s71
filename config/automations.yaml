@@ -669,7 +669,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.south_246_0_2_249
-      below: '4500'
+      below: '3500'
     - condition: state
       entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
       state: 'off'
@@ -723,7 +723,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.south_246_0_2_249
-      below: '4500'
+      below: '3000'
     - condition: state
       entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
       state: 'off'
@@ -763,7 +763,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.south_246_0_2_249
-      above: '4500'
+      above: '3000'
     - condition: state
       entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
       state: 'off'
@@ -789,7 +789,7 @@
     conditions:
     - condition: numeric_state
       entity_id: sensor.south_246_0_2_249
-      above: '4500'
+      above: '3500'
     - condition: state
       entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
       state: 'off'
@@ -868,9 +868,9 @@
     - condition: state
       entity_id: binary_sensor.kitchen_258_0_259
       state: 'off'
-    - above: '20'
-      condition: numeric_state
+    - condition: numeric_state
       entity_id: sensor.east_252_0_1_254
+      above: '15'
     - above: '4500'
       condition: numeric_state
       entity_id: sensor.east_252_0_2_255
@@ -1125,4 +1125,45 @@
         \ {{ states('sensor.network_ping_1111') }}ms"
       title: Internett (ping)
     service: notify.mobile_app_oneplus_9_pro
+  mode: single
+- id: '1619971409631'
+  alias: notify doorbell
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.front_door_ding
+    to: 'on'
+    from: 'off'
+  condition: []
+  action:
+  - service: notify.mobile_app_oneplus_9_pro
+    data:
+      data:
+        clickAction: /lovelace/status
+        color: yellow
+      title: Ringeklokke
+      message: Noen ringte på dørklokken
+  mode: single
+- id: '1620479990478'
+  alias: cover office_simen east screen close
+  description: ''
+  trigger:
+  - platform: time_pattern
+    minutes: /10
+  condition:
+  - condition: and
+    conditions:
+    - condition: numeric_state
+      entity_id: sensor.east_252_0_2_255
+      above: '4000'
+    - condition: not
+      conditions:
+      - condition: state
+        entity_id: cover.office_simen_blind_east
+        attribute: current_position
+        state: '0'
+  action:
+  - service: cover.close_cover
+    target:
+      entity_id: cover.office_simen_blind_east
   mode: single
