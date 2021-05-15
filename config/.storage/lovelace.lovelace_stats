@@ -910,7 +910,7 @@
                                                     "unit": "\u00b0C"
                                                 }
                                             ],
-                                            "entity": "climate.office_simen_153_1_156",
+                                            "entity": "climate.office_simen_153_1_1_343",
                                             "name": "Kontor Simen",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
@@ -928,7 +928,7 @@
                                                     "unit": "\u00b0C"
                                                 }
                                             ],
-                                            "entity": "climate.office_nora_144_1_147",
+                                            "entity": "climate.office_nora_144_1_1_346",
                                             "name": "Kontor Nora",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
@@ -952,7 +952,7 @@
                                                     "unit": "\u00b0C"
                                                 }
                                             ],
-                                            "entity": "climate.living_room_135_1_138",
+                                            "entity": "climate.living_room_135_1_1_340",
                                             "name": "Loftstue",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"

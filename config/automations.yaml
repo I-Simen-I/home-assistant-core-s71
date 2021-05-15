@@ -535,7 +535,7 @@
   action:
   - data:
       temperature: 24
-    entity_id: climate.office_nora_144_1_147
+      entity_id: climate.office_nora_144_1_1_346
     service: climate.set_temperature
   mode: single
 - id: '1593596702494'
@@ -551,7 +551,7 @@
   action:
   - data:
       temperature: 22
-    entity_id: climate.office_nora_144_1_147
+      entity_id: climate.office_nora_144_1_1_346
     service: climate.set_temperature
   mode: single
 - id: '1593984295539'
