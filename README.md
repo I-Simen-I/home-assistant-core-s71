@@ -19,6 +19,7 @@
 * [Sensative Strips Guard](https://sensative.com/sensors/strips-zwave/guard/)
 * Cleverio Thermometer
 * [Tibber Pulse](https://tibber.com/no/produkt/pulse)
+* [UniFi Protect G4 Bullet](https://store.ui.com/collections/unifi-protect-cameras/products/unifi-protect-g4-bullet-camera)
 
 # Images
 

@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace_dashboards",
     "data": {
         "items": [
             {
@@ -27,9 +29,16 @@
                 "show_in_sidebar": true,
                 "title": "Stats",
                 "url_path": "lovelace-stats"
+            },
+            {
+                "require_admin": true,
+                "show_in_sidebar": true,
+                "icon": "mdi:cctv",
+                "title": "UNVR",
+                "url_path": "lovelace-unvr",
+                "mode": "storage",
+                "id": "lovelace_unvr"
             }
         ]
-    },
-    "key": "lovelace_dashboards",
-    "version": 1
+    }
 }

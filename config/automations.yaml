@@ -205,7 +205,7 @@
   action:
   - data:
       data:
-        clickAction: /lovelace/status
+        clickAction: /lovelace-unvr/cctv
         color: red
       message: Det er bevegelse ved inngangsdøren
       title: Sikkerhetsbrudd
@@ -1139,7 +1139,7 @@
   - service: notify.mobile_app_oneplus_9_pro
     data:
       data:
-        clickAction: /lovelace/status
+        clickAction: /lovelace-unvr/cctv
         color: yellow
       title: Ringeklokke
       message: Noen ringte på dørklokken
