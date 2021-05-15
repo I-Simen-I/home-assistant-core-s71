@@ -153,7 +153,7 @@ counter_thermostats_on:
   value_template: >
     {% set thermostats = [
           states.switch.office_nora_144_4_152,
-          states.switch.office_simen_153_4_161,
+          states.light.office_simen_153_4_161,
           states.switch.living_room_135_4_143
     ] %}
     {{ thermostats | selectattr('state','eq','on') | list | count }}
@@ -233,7 +233,7 @@ counter_power_usage_power_thermostats:
   value_template: >
     {% set power = [
           state_attr("switch.office_nora_144_4_152", "current_power_w") | float,
-          state_attr("switch.office_simen_153_4_161", "current_power_w") | float,
+          state_attr("light.office_simen_153_4_161", "current_power_w") | float,
           state_attr("switch.living_room_135_4_143", "current_power_w") | float
     ] %}
     {{ power | list | sum | round(1) }}

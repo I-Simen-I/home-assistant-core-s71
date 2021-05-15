@@ -265,7 +265,7 @@
                                                     "unit": "w"
                                                 }
                                             ],
-                                            "entity": "switch.office_simen_153_4_161",
+                                            "entity": "light.office_simen_153_4_161",
                                             "icon": "mdi:thermostat",
                                             "name": "Gulvvarme Kontor Simen",
                                             "show_state": false,
