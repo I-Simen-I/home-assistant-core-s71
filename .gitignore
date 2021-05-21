@@ -21,6 +21,8 @@ auth
 auth_provider.homeassistant
 cloud
 frontend.*
+*.august.conf
+.google.token
 
 core.uuid
 core.config
