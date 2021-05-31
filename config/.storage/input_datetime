@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "key": "input_datetime",
+    "data": {
+        "items": [
+            {
+                "has_time": true,
+                "has_date": false,
+                "name": "\u00c5pnes etter",
+                "icon": "mdi:archive-arrow-up-outline",
+                "id": "cover_east_open"
+            },
+            {
+                "has_time": true,
+                "has_date": false,
+                "name": "\u00c5pnes etter",
+                "icon": "mdi:archive-arrow-up-outline",
+                "id": "cover_south_open"
+            },
+            {
+                "has_time": true,
+                "has_date": false,
+                "name": "Lukkes f\u00f8r",
+                "icon": "mdi:archive-arrow-down-outline",
+                "id": "cover_west_close_before"
+            }
+        ]
+    }
+}

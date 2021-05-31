@@ -277,9 +277,10 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "switch.house_security",
-                                            "tap_action": {
-                                                "action": "toggle"
+                                            "entity": "switch.house_secured",
+                                            "double_tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "/lovelace-stats/security"
                                             }
                                         },
                                         {
@@ -400,11 +401,15 @@
                         {
                             "aspect_ratio": "50%",
                             "camera_image": "camera.front_door",
-                            "entity": "camera.front_door",
-                            "name": "D\u00f8rklokke",
+                            "entity": "camera.uvc_g4_bullet_west",
+                            "name": "G\u00e5rdsplassen",
                             "show_name": true,
-                            "show_state": true,
-                            "type": "picture-entity"
+                            "show_state": false,
+                            "type": "picture-entity",
+                            "hold_action": {
+                                "action": "navigate",
+                                "navigation_path": "/lovelace-unvr/cctv"
+                            }
                         }
                     ]
                 },
@@ -468,7 +473,14 @@
                                             "type": "custom:multiple-entity-row"
                                         },
                                         {
-                                            "entity": "sensor.fibaro_door_sensor_laundry_room"
+                                            "entities": [
+                                                {
+                                                    "entity": "lock.vaskeromsdor",
+                                                    "name": "Status"
+                                                }
+                                            ],
+                                            "entity": "sensor.fibaro_door_sensor_laundry_room",
+                                            "type": "custom:multiple-entity-row"
                                         }
                                     ],
                                     "show_header_toggle": false,
@@ -859,6 +871,17 @@
                                         },
                                         {
                                             "entity": "light.hall_44_1_47"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "lock.inngangsdor",
+                                                    "name": "Status"
+                                                }
+                                            ],
+                                            "entity": "binary_sensor.inngangsdor_open",
+                                            "type": "custom:multiple-entity-row",
+                                            "name": "Inngangsd\u00f8r"
                                         }
                                     ],
                                     "show_header_toggle": false,

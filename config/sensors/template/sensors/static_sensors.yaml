@@ -67,9 +67,20 @@ counter_doors_open:
     {% set doors = [
           states.binary_sensor.laundry_room_206_0_207,
           states.binary_sensor.kitchen_258_0_259,
-          states.binary_sensor.technical_room_264_0_265
+          states.binary_sensor.technical_room_264_0_265,
+          states.binary_sensor.inngangsdor_open
     ] %}
     {{ doors | selectattr('state','eq','on') | list | count }}
+
+counter_doors_locked:
+  friendly_name: 'Dører låst'
+  icon_template: 'mdi:door-closed-lock'
+  value_template: >
+    {% set doors = [
+          states.lock.vaskeromsdor,
+          states.lock.inngangsdor
+    ] %}
+    {{ doors | selectattr('state','eq','locked') | list | count }}
 
 counter_windows_open:
   friendly_name: 'Vinduer oppe'

@@ -526,9 +526,20 @@
                             "type": "entity"
                         },
                         {
+                            "type": "entity",
+                            "entity": "sensor.counter_doors_locked"
+                        },
+                        {
                             "entities": [
                                 {
+                                    "entities": [
+                                        {
+                                            "entity": "lock.vaskeromsdor",
+                                            "name": "Status"
+                                        }
+                                    ],
                                     "entity": "sensor.fibaro_door_sensor_laundry_room",
+                                    "type": "custom:multiple-entity-row",
                                     "name": "Vaskerom ytterd\u00f8r"
                                 },
                                 {
@@ -542,6 +553,17 @@
                         },
                         {
                             "entities": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "lock.inngangsdor",
+                                            "name": "Status"
+                                        }
+                                    ],
+                                    "entity": "binary_sensor.inngangsdor_open",
+                                    "type": "custom:multiple-entity-row",
+                                    "name": "Inngangsd\u00f8r"
+                                },
                                 {
                                     "entity": "sensor.fibaro_door_sensor_kitchen",
                                     "name": "Kj\u00f8kken"
@@ -1028,6 +1050,51 @@
                     "icon": "mdi:power-socket-de",
                     "path": "power_sockets",
                     "title": ""
+                },
+                {
+                    "title": "security",
+                    "path": "security",
+                    "icon": "mdi:shield-home",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.house_secured",
+                                    "show_name": true
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.house_security",
+                                    "show_name": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.counter_doors_locked"
+                                },
+                                {
+                                    "entity": "sensor.counter_doors_open"
+                                },
+                                {
+                                    "entity": "sensor.counter_windows_open"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "state_color": true
+                        }
+                    ]
                 }
             ]
         }

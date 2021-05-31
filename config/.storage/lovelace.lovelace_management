@@ -411,6 +411,12 @@
                                             "entity": "sensor.front_door_battery"
                                         },
                                         {
+                                            "entity": "sensor.inngangsdor_battery"
+                                        },
+                                        {
+                                            "entity": "sensor.vaskeromsdor_battery"
+                                        },
+                                        {
                                             "entity": "sensor.south_246_battery_level"
                                         },
                                         {
@@ -663,6 +669,56 @@
                                             }
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "# Screens"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_datetime.cover_south_open"
+                                        },
+                                        {
+                                            "entity": "input_number.cover_south_lux"
+                                        }
+                                    ],
+                                    "title": "S\u00f8r",
+                                    "show_header_toggle": false
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_datetime.cover_east_open"
+                                        },
+                                        {
+                                            "entity": "input_number.cover_east_lux"
+                                        },
+                                        {
+                                            "entity": "input_number.cover_east_office_simen_lux"
+                                        }
+                                    ],
+                                    "title": "\u00d8st"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_datetime.cover_west_close"
+                                        },
+                                        {
+                                            "entity": "input_number.cover_west_lux"
+                                        }
+                                    ],
+                                    "title": "Vest",
+                                    "show_header_toggle": false
                                 }
                             ]
                         }

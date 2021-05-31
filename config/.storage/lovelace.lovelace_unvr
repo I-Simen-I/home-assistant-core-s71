@@ -1,0 +1,42 @@
+{
+    "version": 1,
+    "key": "lovelace.lovelace_unvr",
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "title": "CCTV",
+                    "icon": "mdi:cctv",
+                    "path": "cctv",
+                    "panel": true,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "picture-entity",
+                                            "entity": "camera.front_door",
+                                            "show_state": false,
+                                            "name": "Inngangsparti"
+                                        },
+                                        {
+                                            "type": "picture-entity",
+                                            "entity": "camera.uvc_g4_bullet_west",
+                                            "show_state": false,
+                                            "name": "G\u00e5rdsplassen",
+                                            "camera_view": "live"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

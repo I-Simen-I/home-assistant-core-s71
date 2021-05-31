@@ -247,8 +247,8 @@
   - below: '20'
     entity_id: sensor.front_door_battery
     platform: numeric_state
-  - below: '20'
-    entity_id: sensor.east_252_battery_level,sensor.south_246_battery_level,sensor.fibaro_door_sensor_battery_level_laundry_room,sensor.fibaro_motion_sensor_battery_level_etg0_hall,sensor.fibaro_motion_sensor_battery_level_etg0_stairway,sensor.stairway_228_battery_level,sensor.living_room_234_battery_level,sensor.living_room_240_battery_level,sensor.fibaro_door_sensor_battery_level_kitchen,sensor.sensative_strips_guard_living_room_window_east_1_battery_level,sensor.fibaro_door_sensor_battery_level_technical_room,sensor.sensative_strips_guard_living_room_window_east_2_battery_level,sensor.sensative_strips_guard_kitchen_window_1_battery_level,sensor.sensative_strips_guard_kitchen_window_2_battery_level,sensor.sensative_strips_guard_walk_in_closet_window_1_battery_level,sensor.sensative_strips_guard_walk_in_closet_window_2_battery_level,sensor.sensative_strips_guard_bedroom_window_battery_level,sensor.bedroom_293_0_1_295_battery_level
+  - below: '30'
+    entity_id: sensor.east_252_battery_level,sensor.south_246_battery_level,sensor.fibaro_door_sensor_battery_level_laundry_room,sensor.fibaro_motion_sensor_battery_level_etg0_hall,sensor.fibaro_motion_sensor_battery_level_etg0_stairway,sensor.stairway_228_battery_level,sensor.living_room_234_battery_level,sensor.living_room_240_battery_level,sensor.fibaro_door_sensor_battery_level_kitchen,sensor.sensative_strips_guard_living_room_window_east_1_battery_level,sensor.fibaro_door_sensor_battery_level_technical_room,sensor.sensative_strips_guard_living_room_window_east_2_battery_level,sensor.sensative_strips_guard_kitchen_window_1_battery_level,sensor.sensative_strips_guard_kitchen_window_2_battery_level,sensor.sensative_strips_guard_walk_in_closet_window_1_battery_level,sensor.sensative_strips_guard_walk_in_closet_window_2_battery_level,sensor.sensative_strips_guard_bedroom_window_battery_level,sensor.bedroom_293_0_1_295_battery_level,sensor.vaskeromsdor_battery,sensor.inngangsdor_battery
     platform: numeric_state
   condition: []
   action:
@@ -367,29 +367,6 @@
   - data: {}
     entity_id: scene.tv_rom_film
     service: scene.turn_on
-- id: '1586799578619'
-  alias: cover tv_room rullgardiner_side 70%
-  description: ''
-  trigger:
-  - above: '1000'
-    below: '2500'
-    entity_id: sensor.south_246_0_2_249
-    platform: numeric_state
-  condition:
-  - condition: and
-    conditions:
-    - after: '13:00:00'
-      before: '21:00:00'
-      condition: time
-    - condition: state
-      entity_id: switch.tv_rom_scene_film
-      state: 'off'
-  action:
-  - data:
-      position: 30
-    entity_id: cover.rullgardiner_side
-    service: cover.set_cover_position
-  mode: single
 - id: '1591997443760'
   alias: nodify laundry_room_door open
   description: ''
@@ -434,38 +411,23 @@
     entity_id: vacuum.xiaomi_vacuum_cleaner
     service: vacuum.send_command
 - id: '1593011968093'
-  alias: cover tv_room rullgardiner_side 100%
+  alias: cover west - tv_room rullgardiner_side close
   description: ''
   trigger:
-  - above: '2500'
-    entity_id: sensor.south_246_0_2_249
-    platform: numeric_state
+  - platform: time_pattern
+    minutes: /10
   condition:
-  - after: '13:00:00'
-    before: '21:00:00'
-    condition: time
+  - condition: and
+    conditions:
+    - condition: template
+      value_template: "{{ \n  float(states('sensor.south_246_0_2_249')) > float(states('input_number.cover_west_lux'))\
+        \ and\n  states('cover.rullgardiner_side') != 'closed'\n}}"
+    - condition: time
+      before: input_datetime.cover_west_close
   action:
-  - data:
-      position: 0
-    entity_id: cover.rullgardiner_side
-    service: cover.set_cover_position
-  mode: single
-- id: '1593029744963'
-  alias: cover tv_room rullgardiner_side 0%
-  description: ''
-  trigger:
-  - below: '200'
-    entity_id: sensor.south_246_0_2_249
-    platform: numeric_state
-  condition:
-  - condition: state
-    entity_id: input_boolean.scene_tv_rom_film
-    state: 'off'
-  action:
-  - data:
-      position: 100
-    entity_id: cover.rullgardiner_side
-    service: cover.set_cover_position
+  - service: cover.close_cover
+    target:
+      entity_id: cover.rullgardiner_side
   mode: single
 - id: '1593455558302'
   alias: notify security_breach door
@@ -518,8 +480,8 @@
   condition: []
   action:
   - data:
-      message: Sikkerhet er skrudd av
-      title: Sikkerhet
+      message: Alarm er skrudd av
+      title: Alarm
     service: notify.mobile_app_oneplus_9_pro
   mode: single
 - id: '1593592653157'
@@ -614,7 +576,7 @@
     service: vacuum.start
   mode: single
 - id: '1596144711926'
-  alias: cover living_room screen open
+  alias: cover east - living_room screen open
   description: ''
   trigger:
   - platform: time_pattern
@@ -622,20 +584,13 @@
   condition:
   - condition: and
     conditions:
-    - condition: numeric_state
-      entity_id: sensor.east_252_0_2_255
-      below: '4500'
-    - condition: state
-      entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
-      state: 'off'
+    - condition: template
+      value_template: "{{ \n  float(states('sensor.east_252_0_2_255')) <= float(states('input_number.cover_east_lux'))\
+        \ and\n  states('binary_sensor.living_room_262_0_263') == 'off' and\n  states('binary_sensor.living_room_311_0_312')\
+        \ == 'off' and\n  state_attr('cover.living_room_288_1_291', 'current_position')\
+        \ != 100\n}}"
     - condition: time
-      after: '14:00:00'
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.living_room_288_1_291
-        attribute: current_position
-        state: '100'
+      after: input_datetime.cover_east_open
   action:
   - data: {}
     entity_id: cover.living_room_288_1_291
@@ -659,33 +614,24 @@
     service: homeassistant.restart
   mode: single
 - id: '1596651075382'
-  alias: cover kitchen screens open
+  alias: cover south - kitchen screens open
   description: ''
   trigger:
   - platform: time_pattern
     minutes: /10
   condition:
-  - condition: and
-    conditions:
-    - condition: numeric_state
-      entity_id: sensor.south_246_0_2_249
-      below: '3500'
-    - condition: state
-      entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
-      state: 'off'
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.kitchen_268_1_271
-        attribute: current_position
-        state: '100'
+  - condition: template
+    value_template: "{{ \n  float(states('sensor.outside_avg_lux')) <= float(states('input_number.cover_south_lux'))\
+      \ and\n  states('binary_sensor.kitchen_305_0_306') == 'off' and\n  states('binary_sensor.kitchen_307_0_308')\
+      \ == 'off' and\n  state_attr('cover.kitchen_268_1_271', 'current_position')\
+      \ != 100\n}}"
   action:
   - data: {}
     entity_id: cover.kitchen_268_1_271
     service: cover.open_cover
   mode: single
 - id: '1596651269989'
-  alias: cover walk_in_closet east screen open
+  alias: cover east - walk_in_closet screen open
   description: ''
   trigger:
   - platform: time_pattern
@@ -693,46 +639,30 @@
   condition:
   - condition: and
     conditions:
-    - condition: numeric_state
-      entity_id: sensor.east_252_0_2_255
-      below: '4500'
-    - condition: state
-      entity_id: binary_sensor.walk_in_closet_303_0_304
-      state: 'off'
+    - condition: template
+      value_template: "{{ \n  float(states('sensor.east_252_0_2_255')) <= float(states('input_number.cover_east_lux'))\
+        \ and\n  states('binary_sensor.walk_in_closet_303_0_304') == 'off' and\n \
+        \ state_attr('cover.walk_in_closet_283_1_286', 'current_position') != 100\n\
+        }}"
     - condition: time
-      after: '14:00:00'
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.walk_in_closet_283_1_286
-        attribute: current_position
-        state: '100'
+      after: input_datetime.cover_east_open
   action:
   - data: {}
     entity_id: cover.walk_in_closet_283_1_286
     service: cover.open_cover
   mode: single
 - id: '1596651511350'
-  alias: cover bedroom screens open
+  alias: cover south - bedroom screens open
   description: ''
   trigger:
   - platform: time_pattern
     minutes: /10
   condition:
-  - condition: and
-    conditions:
-    - condition: numeric_state
-      entity_id: sensor.south_246_0_2_249
-      below: '3000'
-    - condition: state
-      entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
-      state: 'off'
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.bedroom_273_1_276
-        attribute: current_position
-        state: '100'
+  - condition: template
+    value_template: "{{ \n  float(states('sensor.outside_avg_lux')) <= float(states('input_number.cover_south_lux'))\
+      \ and\n  states('binary_sensor.walk_in_closet_301_0_302') == 'off' and\n  states('binary_sensor.bedroom_297_0_298')\
+      \ == 'off' and\n  state_attr('cover.bedroom_273_1_276', 'current_position')\
+      \ != 100\n}}"
   action:
   - data: {}
     entity_id: cover.bedroom_273_1_276
@@ -753,133 +683,83 @@
     service: homeassistant.update_entity
   mode: single
 - id: '1599581966880'
-  alias: cover bedroom screens close
+  alias: cover south - bedroom screens close
   description: ''
   trigger:
   - platform: time_pattern
     minutes: /10
   condition:
-  - condition: and
-    conditions:
-    - condition: numeric_state
-      entity_id: sensor.south_246_0_2_249
-      above: '3000'
-    - condition: state
-      entity_id: binary_sensor.walk_in_closet_301_0_302,binary_sensor.bedroom_297_0_298
-      state: 'off'
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.bedroom_273_1_276
-        attribute: current_position
-        state: '0'
+  - condition: template
+    value_template: "{{ \n  float(states('sensor.outside_avg_lux')) > float(states('input_number.cover_south_lux'))\
+      \ and\n  states('binary_sensor.walk_in_closet_301_0_302') == 'off' and\n  states('binary_sensor.bedroom_297_0_298')\
+      \ == 'off' and\n  state_attr('cover.bedroom_273_1_276', 'current_position')\
+      \ != 0\n}}"
   action:
   - data: {}
     entity_id: cover.bedroom_273_1_276
     service: cover.close_cover
   mode: single
 - id: '1599582115767'
-  alias: cover kitchen screens close
+  alias: cover south - kitchen screens close
   description: ''
   trigger:
   - platform: time_pattern
     minutes: /10
   condition:
-  - condition: and
-    conditions:
-    - condition: numeric_state
-      entity_id: sensor.south_246_0_2_249
-      above: '3500'
-    - condition: state
-      entity_id: binary_sensor.kitchen_305_0_306,binary_sensor.kitchen_307_0_308
-      state: 'off'
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.kitchen_268_1_271
-        attribute: current_position
-        state: '0'
+  - condition: template
+    value_template: "{{ \n  float(states('sensor.outside_avg_lux')) > float(states('input_number.cover_south_lux'))\
+      \ and\n  states('binary_sensor.kitchen_305_0_306') == 'off' and\n  states('binary_sensor.kitchen_307_0_308')\
+      \ == 'off' and\n  state_attr('cover.kitchen_268_1_271', 'current_position')\
+      \ != 0\n}}"
   action:
   - data: {}
     entity_id: cover.kitchen_268_1_271
     service: cover.close_cover
   mode: single
 - id: '1599582201257'
-  alias: cover living_room screen close
+  alias: cover east - living_room screen close
   description: ''
   trigger:
   - platform: time_pattern
     minutes: /10
   condition:
-  - condition: and
-    conditions:
-    - condition: numeric_state
-      entity_id: sensor.east_252_0_2_255
-      above: '4500'
-    - condition: state
-      entity_id: binary_sensor.living_room_262_0_263,binary_sensor.living_room_311_0_312
-      state: 'off'
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.living_room_288_1_291
-        attribute: current_position
-        state: '0'
+  - condition: template
+    value_template: "{{ \n  float(states('sensor.east_252_0_2_255')) > float(states('input_number.cover_east_lux'))\
+      \ and\n  states('binary_sensor.living_room_262_0_263') == 'off' and\n  states('binary_sensor.living_room_311_0_312')\
+      \ == 'off' and\n  state_attr('cover.living_room_288_1_291', 'current_position')\
+      \ != 0\n}}"
   action:
   - data: {}
     entity_id: cover.living_room_288_1_291
     service: cover.close_cover
   mode: single
 - id: '1599582294718'
-  alias: cover walk_in_closet east screen close
+  alias: cover east - walk_in_closet screen close
   description: ''
   trigger:
   - platform: time_pattern
     minutes: /10
   condition:
-  - condition: and
-    conditions:
-    - condition: numeric_state
-      entity_id: sensor.east_252_0_2_255
-      above: '4500'
-    - condition: state
-      entity_id: binary_sensor.walk_in_closet_303_0_304
-      state: 'off'
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.walk_in_closet_283_1_286
-        attribute: current_position
-        state: '0'
+  - condition: template
+    value_template: "{{ \n  float(states('sensor.east_252_0_2_255')) > float(states('input_number.cover_east_lux'))\
+      \ and\n  states('binary_sensor.walk_in_closet_303_0_304') == 'off' and\n  state_attr('cover.walk_in_closet_283_1_286',\
+      \ 'current_position') != 0\n}}"
   action:
   - data: {}
     entity_id: cover.walk_in_closet_283_1_286
     service: cover.close_cover
   mode: single
 - id: '1599582419886'
-  alias: cover kitchen door screen close
+  alias: cover east - kitchen door screen close
   description: ''
   trigger:
   - minutes: /10
     platform: time_pattern
   condition:
-  - condition: and
-    conditions:
-    - condition: state
-      entity_id: binary_sensor.kitchen_258_0_259
-      state: 'off'
-    - condition: numeric_state
-      entity_id: sensor.east_252_0_1_254
-      above: '15'
-    - above: '4500'
-      condition: numeric_state
-      entity_id: sensor.east_252_0_2_255
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.kitchen_278_1_281
-        attribute: current_position
-        state: '0'
+  - condition: template
+    value_template: "{{ \n  float(states('sensor.east_252_0_2_255')) > float(states('input_number.cover_east_lux'))\
+      \ and\n  states('binary_sensor.kitchen_258_0_259') == 'off' and\n  state_attr('cover.kitchen_278_1_281',\
+      \ 'current_position') != 0\n}}"
   action:
   - data: {}
     entity_id: cover.kitchen_278_1_281
@@ -1145,25 +1025,58 @@
       message: Noen ringte på dørklokken
   mode: single
 - id: '1620479990478'
-  alias: cover office_simen east screen close
+  alias: cover east - office_simen screen close
   description: ''
   trigger:
   - platform: time_pattern
     minutes: /10
   condition:
-  - condition: and
-    conditions:
-    - condition: numeric_state
-      entity_id: sensor.east_252_0_2_255
-      above: '4000'
-    - condition: not
-      conditions:
-      - condition: state
-        entity_id: cover.office_simen_blind_east
-        attribute: current_position
-        state: '0'
+  - condition: template
+    value_template: "{{ \n  float(states('sensor.east_252_0_2_255')) > float(states('input_number.cover_east_office_simen_lux'))\
+      \ and\n  state_attr('cover.office_simen_blind_east', 'current_position') !=\
+      \ 0\n}}"
   action:
   - service: cover.close_cover
     target:
       entity_id: cover.office_simen_blind_east
+  mode: single
+- id: '1621637952993'
+  alias: Switch=Alarm, Service=turn_on, Tid=21:30
+  description: ''
+  trigger:
+  - platform: time
+    at: '21:30'
+  condition: []
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id: switch.house_security
+  mode: single
+- id: '1621638042866'
+  alias: Switch=Alarm, Service=turn_off, Tid=09:00
+  description: ''
+  trigger:
+  - platform: time
+    at: 09:00
+  condition: []
+  action:
+  - service: switch.turn_off
+    target:
+      entity_id: switch.house_security
+  mode: single
+- id: '1622235901405'
+  alias: light=laundry_room, service=turn_on
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.laundry_room_206_0_207
+    from: 'off'
+    to: 'on'
+  condition:
+  - condition: time
+    after: '20:00:00'
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.laundry_room_104_1_107
   mode: single

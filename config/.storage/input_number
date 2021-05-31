@@ -1,0 +1,48 @@
+{
+    "version": 1,
+    "key": "input_number",
+    "data": {
+        "items": [
+            {
+                "min": 2000.0,
+                "max": 5000.0,
+                "name": "\u00d8st",
+                "icon": "hass:brightness-5",
+                "mode": "slider",
+                "unit_of_measurement": "lux",
+                "step": 100.0,
+                "id": "cover_east_lux"
+            },
+            {
+                "min": 1000.0,
+                "max": 5000.0,
+                "name": "S\u00f8r",
+                "unit_of_measurement": "lux",
+                "icon": "hass:brightness-5",
+                "step": 100.0,
+                "mode": "slider",
+                "id": "cover_south_lux"
+            },
+            {
+                "min": 1000.0,
+                "max": 3500.0,
+                "name": "Kontor Simen",
+                "icon": "hass:brightness-5",
+                "step": 100.0,
+                "unit_of_measurement": "lux",
+                "mode": "slider",
+                "id": "cover_east_office_simen_lux"
+            },
+            {
+                "min": 1000.0,
+                "max": 3000.0,
+                "name": "Vest",
+                "icon": "hass:brightness-5",
+                "step": 100.0,
+                "unit_of_measurement": "lux",
+                "mode": "slider",
+                "id": "cover_west_lux"
+            }
+        ]
+    }
+}
