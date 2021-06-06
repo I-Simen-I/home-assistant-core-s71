@@ -198,9 +198,9 @@
       entity_id: input_boolean.house_security
       state: 'on'
     - condition: device
-      device_id: 14ec831b103f4488bf9338477abab59d
+      device_id: 6ebbc0759d205777338b12c9adb2d08a
       domain: device_tracker
-      entity_id: device_tracker.sm_g975f_2
+      entity_id: device_tracker.oneplus_9_pro
       type: is_not_home
   action:
   - data:
