@@ -23,6 +23,13 @@
                 "name": "Lukkes f\u00f8r",
                 "icon": "mdi:archive-arrow-down-outline",
                 "id": "cover_west_close_before"
+            },
+            {
+                "has_time": true,
+                "has_date": false,
+                "name": "Sl\u00e5 alt av",
+                "icon": "mdi:power",
+                "id": "scene_alt_av"
             }
         ]
     }

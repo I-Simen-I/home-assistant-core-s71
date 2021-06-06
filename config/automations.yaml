@@ -87,10 +87,10 @@
   - scene: scene.house_alt_av
   mode: single
 - id: '1583432767167'
-  alias: Scene=house_alt_av, Tid=01:30, Dager=Alle
+  alias: Scene=house_alt_av, Dager=Alle
   description: ''
   trigger:
-  - at: 02:15:00
+  - at: input_datetime.scene_alt_av
     platform: time
   condition:
   - condition: state

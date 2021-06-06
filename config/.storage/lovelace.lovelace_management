@@ -721,6 +721,23 @@
                                     "show_header_toggle": false
                                 }
                             ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "# Stemning"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_datetime.scene_alt_av"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "icon": "mdi:tools",
