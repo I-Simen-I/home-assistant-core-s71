@@ -1,0 +1,137 @@
+# State
+systemair_selected_modus:
+  friendly_name: 'Modus'
+  icon_template: 'mdi:clipboard-list-outline'
+  value_template: >-
+    {% if states('sensor.vsr500_modus')|int == 0 %}
+      Auto
+    {% elif states('sensor.vsr500_modus')|int == 1  %}
+      Manuell
+    {% elif states('sensor.vsr500_modus')|int == 3  %}
+      Boost
+    {% elif states('sensor.vsr500_modus')|int == 2  %}
+      Party
+    {% elif states('sensor.vsr500_modus')|int == 4  %}
+      Ildsted
+    {% elif states('sensor.vsr500_modus')|int == 5  %}
+      Borte
+    {% elif states('sensor.vsr500_modus')|int == 6  %}
+      Ferie
+    {% elif states('sensor.vsr500_modus')|int == 7 %}
+      Cooker
+    {% elif states('sensor.vsr500_modus')|int == 8 %}
+      Hood
+    {% elif states('sensor.vsr500_modus')|int == 9 %}
+      Støvsuger
+    {% elif states('sensor.vsr500_modus')|int == 10 %}
+      CDI1
+    {% elif states('sensor.vsr500_modus')|int == 11 %}
+      CDI2
+    {% elif states('sensor.vsr500_modus')|int == 12 %}
+      Komfyravtrekk
+    {% else %}
+      N/A
+    {% endif %}
+
+systemair_filter_change:
+  friendly_name: 'Filterbytte'
+  icon_template: 'mdi:air-filter'
+  unit_of_measurement: 'dager'
+  value_template: >-
+    {% set time = states.sensor.vsr500_air_filter_countdown_s.state | int %}
+    {% set days = (time / 86400) | int %}
+    {{ days | int }}
+
+systemair_modus_countdown:
+  friendly_name: 'Gjenstående tid'
+  icon_template: 'mdi:timer'
+  value_template: >-
+    {% if states('sensor.vsr500_modus') in('2', '3', '4', '6') %}
+      {% set time = states.sensor.vsr500_modus_countdown_s.state | int %}
+      {% set minutes = ((time % 3600) / 60) | int %}
+      {% set hours = ((time % 86400) / 3600) | int %}
+
+      {%- if time < 60 -%}
+        Under 1 minutt
+        {%- else -%}
+        {%- if hours > 0 -%}
+            {{ hours }}t
+          {%- endif -%}
+        {%- if minutes > 0 -%}
+          {%- if hours > 0 -%}
+            {{ ' ' }}
+          {%- endif -%}
+          {{ minutes }}m
+        {%- endif -%}
+      {%- endif -%}
+    {% else %}
+      Inaktiv
+    {% endif %}
+
+systemair_air_flow:
+  friendly_name: 'Luftmengde'
+  icon_template: 'mdi:weather-windy'
+  value_template: >-
+    {% if is_state("sensor.vsr500_modus_manual_air_flow", "0") %}
+      Stopp
+    {% elif is_state("sensor.vsr500_modus_manual_air_flow", "2") %}
+      Lav
+    {% elif is_state("sensor.vsr500_modus_manual_air_flow", "3") %}
+      Normal
+    {% elif is_state("sensor.vsr500_modus_manual_air_flow", "4") %}
+      Maksimum
+    {% else %}
+      N/A
+    {% endif %}
+
+# Temperature
+systemair_temperature_intake:
+  friendly_name: 'Inn'
+  icon_template: 'mdi:home-import-outline'
+  unit_of_measurement: '°C'
+  value_template: >-
+    {{ states('sensor.vsr500_temperature_intake') | float | round(2) }}
+
+systemair_temperature_exhaust:
+  friendly_name: 'Ut'
+  icon_template: 'mdi:home-export-outline'
+  unit_of_measurement: '°C'
+  value_template: >-
+    {{ states('sensor.vsr500_temperature_exhaust') | float | round(2) }}
+
+systemair_temperature_return:
+  friendly_name: 'Gjenbruk'
+  icon_template: 'mdi:cached'
+  unit_of_measurement: '°C'
+  value_template: >-
+    {{ states('sensor.vsr500_temperature_return') | float | round(2) }}
+
+systemair_temperature_supply_air:
+  friendly_name: 'Tilluft'
+  icon_template: 'mdi:home-thermometer-outline'
+  unit_of_measurement: '°C'
+  value_template: >-
+    {{ states('sensor.vsr500_temperature_supply_air') | float | round(2) }}
+
+# Fan
+systemair_fan_speed_intake:
+  friendly_name: 'Inn'
+  icon_template: 'mdi:fan'
+  unit_of_measurement: '%'
+  value_template: >-
+    {{ states('sensor.vsr500_fan_speed_intake') }}
+
+systemair_fan_speed_exhaust:
+  friendly_name: 'Ut'
+  icon_template: 'mdi:fan'
+  unit_of_measurement: '%'
+  value_template: >-
+    {{ states('sensor.vsr500_fan_speed_intake') }}
+
+# Usage
+systemair_heat_recovery:
+  friendly_name: 'Varmegjenvinner'
+  icon_template: 'mdi:car-defrost-rear'
+  unit_of_measurement: '%'
+  value_template: >-
+    {{ states('sensor.vsr500_heat_recovery') }}

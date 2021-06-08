@@ -743,6 +743,97 @@
                     "icon": "mdi:tools",
                     "path": "maintenance",
                     "title": "Maintenance"
+                },
+                {
+                    "path": "air systems",
+                    "icon": "mdi:fan",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "# Systemair"
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "entity",
+                                            "entity": "sensor.systemair_selected_modus"
+                                        },
+                                        {
+                                            "type": "conditional",
+                                            "conditions": [
+                                                {
+                                                    "entity": "sensor.systemair_modus_countdown",
+                                                    "state_not": "Inaktiv"
+                                                }
+                                            ],
+                                            "card": {
+                                                "type": "entity",
+                                                "entity": "sensor.systemair_modus_countdown"
+                                            }
+                                        },
+                                        {
+                                            "type": "conditional",
+                                            "conditions": [
+                                                {
+                                                    "entity": "sensor.systemair_selected_modus",
+                                                    "state": "Manuell"
+                                                }
+                                            ],
+                                            "card": {
+                                                "type": "entity",
+                                                "entity": "sensor.systemair_air_flow"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.systemair_temperature_intake"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_return"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_supply_air"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_exhaust"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.systemair_fan_speed_intake"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_heat_recovery"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_fan_speed_exhaust"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.systemair_filter_change"
+                                        }
+                                    ],
+                                    "title": "Vedlikehold"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

@@ -2,6 +2,10 @@ homeassistant:
   # Customization file
   customize: !include_dir_merge_named customize/
 
+http:
+  use_x_forwarded_for: true
+  trusted_proxies: 172.17.0.4
+
 frontend:
   themes: !include_dir_merge_named themes/
 
@@ -34,20 +38,9 @@ fibaro:
       username: !secret fibaro_username
       password: !secret fibaro_password
 
-tibber:
-  access_token: !secret tibber_token
-
 netatmo:
   client_id: !secret netatmo_client_id_key
   client_secret: !secret netatmo_client_secret_key
-
-speedtestdotnet: #Telenor Norge AS 12919
-  scan_interval:
-    minutes: 120
-  monitored_conditions:
-    - ping
-    - download
-    - upload
 
 climate:
   - platform: touchline
@@ -60,3 +53,12 @@ google:
 home_connect:
   client_id: !secret home_connect_client_id
   client_secret: !secret home_connect_client_secret
+
+modbus:
+  - name: VSR500
+    type: tcp
+    host: !secret vsr500_ip
+    port: 502
+    timeout: 3  #Timeout for slave response in seconds (default=3)
+    delay: 3
+    sensors: !include_dir_merge_list modbus/
