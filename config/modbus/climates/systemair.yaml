@@ -1,0 +1,12 @@
+- name: vsr500
+  slave: 1
+  data_type: uint
+  data_count: 1
+  scale: 0.1
+  offset: 0
+  precision: 1
+  max_temp: 25
+  min_temp: 15
+  temp_step: 1
+  target_temp_register: 2000
+  current_temp_register: 12102

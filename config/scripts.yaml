@@ -1,0 +1,36 @@
+vsr500_fan_speed_normal:
+  alias: vsr500 fan speed normal
+  sequence:
+  - condition: state
+    entity_id: sensor.systemair_selected_modus
+    state: Manuell
+  - service: modbus.write_register
+    data:
+      address: 1130
+      hub: VSR500
+      unit: 1
+      value: 3
+  - service: notify.mobile_app_oneplus_9_pro
+    data:
+      title: Ventilasjon
+      message: Luftmengde er satt til normal
+  mode: single
+  icon: mdi:fan
+vsr500_fan_speed_high:
+  alias: vsr500 fan speed high
+  sequence:
+  - condition: state
+    entity_id: sensor.systemair_selected_modus
+    state: Manuell
+  - service: modbus.write_register
+    data:
+      address: 1130
+      hub: VSR500
+      unit: 1
+      value: 4
+  - service: notify.mobile_app_oneplus_9_pro
+    data:
+      title: Ventilasjon
+      message: Luftmengde er satt til høy
+  mode: single
+  icon: mdi:fan-chevron-up

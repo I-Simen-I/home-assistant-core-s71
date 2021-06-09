@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "key": "input_select",
+    "data": {
+        "items": [
+            {
+                "name": "Luftmengde",
+                "icon": "mdi:weather-windy",
+                "options": [
+                    "Normal",
+                    "H\u00f8y"
+                ],
+                "id": "systemair_manual_air_flow"
+            }
+        ]
+    }
+}

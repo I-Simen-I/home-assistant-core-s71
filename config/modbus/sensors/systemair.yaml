@@ -9,7 +9,7 @@
   scale: 0.1
   offset: 0
   precision: 1
-  data_type: int
+  data_type: uint
 - name: vsr500_temperature_exhaust
   scan_interval: 30
   device_class: temperature
@@ -33,6 +33,28 @@
   precision: 1
   data_type: uint
 - name: vsr500_temperature_supply_air
+  scan_interval: 30
+  device_class: temperature
+  slave: 1
+  address: 12102
+  unit_of_measurement: °C
+  count: 1
+  scale: 0.1
+  offset: 0
+  precision: 1
+  data_type: uint
+- name: vsr500_temperature_over_heat
+  scan_interval: 30
+  device_class: temperature
+  slave: 1
+  address: 12107
+  unit_of_measurement: °C
+  count: 1
+  scale: 0.1
+  offset: 0
+  precision: 1
+  data_type: uint
+- name: vsr500_temperature_target
   scan_interval: 30
   device_class: temperature
   slave: 1

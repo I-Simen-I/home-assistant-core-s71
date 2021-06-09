@@ -59,6 +59,7 @@ modbus:
     type: tcp
     host: !secret vsr500_ip
     port: 502
-    timeout: 3  #Timeout for slave response in seconds (default=3)
-    delay: 3
-    sensors: !include_dir_merge_list modbus/
+    timeout: 20  #Timeout for slave response in seconds (default=3)
+    delay: 10
+    climates: !include_dir_merge_list modbus/climates
+    sensors: !include_dir_merge_list modbus/sensors

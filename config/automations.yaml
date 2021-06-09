@@ -1080,3 +1080,25 @@
     target:
       entity_id: light.laundry_room_104_1_107
   mode: single
+- id: '1623172301508'
+  alias: systemair fan speed high
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.systemair_manual_air_flow
+    to: Høy
+  condition: []
+  action:
+  - service: script.vsr500_fan_speed_high
+  mode: single
+- id: '1623172331139'
+  alias: systemair fan speed normal
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_select.systemair_manual_air_flow
+    to: Normal
+  condition: []
+  action:
+  - service: script.vsr500_fan_speed_normal
+  mode: single

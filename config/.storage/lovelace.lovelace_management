@@ -747,6 +747,7 @@
                 {
                     "path": "air systems",
                     "icon": "mdi:fan",
+                    "panel": false,
                     "badges": [],
                     "cards": [
                         {
@@ -755,6 +756,28 @@
                                 {
                                     "type": "markdown",
                                     "content": "# Systemair"
+                                },
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.vsr500",
+                                    "name": "Temperatur"
+                                },
+                                {
+                                    "type": "conditional",
+                                    "conditions": [
+                                        {
+                                            "entity": "sensor.systemair_selected_modus",
+                                            "state": "Manuell"
+                                        }
+                                    ],
+                                    "card": {
+                                        "type": "entities",
+                                        "entities": [
+                                            {
+                                                "entity": "input_select.systemair_manual_air_flow"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "type": "horizontal-stack",
@@ -792,7 +815,7 @@
                                     ]
                                 },
                                 {
-                                    "type": "glance",
+                                    "type": "entities",
                                     "entities": [
                                         {
                                             "entity": "sensor.systemair_temperature_intake"
@@ -801,12 +824,21 @@
                                             "entity": "sensor.systemair_temperature_return"
                                         },
                                         {
+                                            "entity": "sensor.systemair_temperature_target"
+                                        },
+                                        {
                                             "entity": "sensor.systemair_temperature_supply_air"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_over_heat"
                                         },
                                         {
                                             "entity": "sensor.systemair_temperature_exhaust"
                                         }
-                                    ]
+                                    ],
+                                    "show_header_toggle": false,
+                                    "state_color": false,
+                                    "title": "Temperatur"
                                 },
                                 {
                                     "type": "glance",

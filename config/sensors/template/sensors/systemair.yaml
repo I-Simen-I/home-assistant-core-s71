@@ -7,10 +7,10 @@ systemair_selected_modus:
       Auto
     {% elif states('sensor.vsr500_modus')|int == 1  %}
       Manuell
-    {% elif states('sensor.vsr500_modus')|int == 3  %}
-      Boost
     {% elif states('sensor.vsr500_modus')|int == 2  %}
       Party
+    {% elif states('sensor.vsr500_modus')|int == 3  %}
+      Boost
     {% elif states('sensor.vsr500_modus')|int == 4  %}
       Ildsted
     {% elif states('sensor.vsr500_modus')|int == 5  %}
@@ -18,15 +18,15 @@ systemair_selected_modus:
     {% elif states('sensor.vsr500_modus')|int == 6  %}
       Ferie
     {% elif states('sensor.vsr500_modus')|int == 7 %}
-      Cooker
+      Avtrekksvifte
     {% elif states('sensor.vsr500_modus')|int == 8 %}
-      Hood
-    {% elif states('sensor.vsr500_modus')|int == 9 %}
       Støvsuger
-    {% elif states('sensor.vsr500_modus')|int == 10 %}
+    {% elif states('sensor.vsr500_modus')|int == 9 %}
       CDI1
-    {% elif states('sensor.vsr500_modus')|int == 11 %}
+    {% elif states('sensor.vsr500_modus')|int == 10 %}
       CDI2
+    {% elif states('sensor.vsr500_modus')|int == 11 %}
+      CDI3
     {% elif states('sensor.vsr500_modus')|int == 12 %}
       Komfyravtrekk
     {% else %}
@@ -79,7 +79,7 @@ systemair_air_flow:
     {% elif is_state("sensor.vsr500_modus_manual_air_flow", "3") %}
       Normal
     {% elif is_state("sensor.vsr500_modus_manual_air_flow", "4") %}
-      Maksimum
+      Høy
     {% else %}
       N/A
     {% endif %}
@@ -112,6 +112,20 @@ systemair_temperature_supply_air:
   unit_of_measurement: '°C'
   value_template: >-
     {{ states('sensor.vsr500_temperature_supply_air') | float | round(2) }}
+
+systemair_temperature_target:
+  friendly_name: 'Ønsket tilluft'
+  icon_template: 'mdi:thermometer'
+  unit_of_measurement: '°C'
+  value_template: >-
+    {{ states('sensor.vsr500_temperature_target') | float | round(2) }}
+
+systemair_temperature_over_heat:
+  friendly_name: 'Overheting'
+  icon_template: 'mdi:car-defrost-rear'
+  unit_of_measurement: '°C'
+  value_template: >-
+    {{ states('sensor.vsr500_temperature_over_heat') | float | round(2) }}
 
 # Fan
 systemair_fan_speed_intake:
