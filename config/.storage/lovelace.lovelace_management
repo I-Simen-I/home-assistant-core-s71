@@ -379,6 +379,214 @@
                     ]
                 },
                 {
+                    "path": "systemair",
+                    "icon": "mdi:fan",
+                    "panel": false,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "# Betjening"
+                                },
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.vsr500",
+                                    "name": "Tilluft"
+                                },
+                                {
+                                    "type": "conditional",
+                                    "conditions": [
+                                        {
+                                            "entity": "sensor.systemair_selected_modus",
+                                            "state": "Manuell"
+                                        }
+                                    ],
+                                    "card": {
+                                        "type": "entities",
+                                        "entities": [
+                                            {
+                                                "entity": "input_select.systemair_manual_air_flow"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "entity",
+                                            "entity": "sensor.systemair_selected_modus"
+                                        },
+                                        {
+                                            "type": "conditional",
+                                            "conditions": [
+                                                {
+                                                    "entity": "sensor.systemair_modus_countdown",
+                                                    "state_not": "Inaktiv"
+                                                }
+                                            ],
+                                            "card": {
+                                                "type": "entity",
+                                                "entity": "sensor.systemair_modus_countdown"
+                                            }
+                                        },
+                                        {
+                                            "type": "conditional",
+                                            "conditions": [
+                                                {
+                                                    "entity": "sensor.systemair_selected_modus",
+                                                    "state": "Manuell"
+                                                }
+                                            ],
+                                            "card": {
+                                                "type": "entity",
+                                                "entity": "sensor.systemair_air_flow"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "align_state": "center",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.systemair_fan_speed_intake"
+                                                }
+                                            ],
+                                            "hours_to_show": 12,
+                                            "hour24": true,
+                                            "points_per_hour": 4,
+                                            "height": 200,
+                                            "show": {
+                                                "labels": true,
+                                                "extrema": true
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        },
+                                        {
+                                            "align_state": "center",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.systemair_fan_speed_exhaust"
+                                                }
+                                            ],
+                                            "hours_to_show": 12,
+                                            "hour24": true,
+                                            "points_per_hour": 4,
+                                            "height": 200,
+                                            "show": {
+                                                "labels": true,
+                                                "extrema": true
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        },
+                                        {
+                                            "align_state": "center",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.systemair_heat_recovery"
+                                                }
+                                            ],
+                                            "hours_to_show": 12,
+                                            "hour24": true,
+                                            "points_per_hour": 4,
+                                            "height": 200,
+                                            "show": {
+                                                "labels": true,
+                                                "extrema": true
+                                            },
+                                            "type": "custom:mini-graph-card"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "# Temperatur"
+                                },
+                                {
+                                    "align_state": "center",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.systemair_temperature_supply_air"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_intake"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_target"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_exhaust"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "hour24": true,
+                                    "points_per_hour": 6,
+                                    "height": 170,
+                                    "aggregate_func": "max",
+                                    "show": {
+                                        "labels": true
+                                    },
+                                    "type": "custom:mini-graph-card",
+                                    "name": "Temperatur"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.systemair_temperature_intake"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_return"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_target"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_supply_air"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_over_heat"
+                                        },
+                                        {
+                                            "entity": "sensor.systemair_temperature_exhaust"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "state_color": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "# Vedlikehold"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.systemair_filter_change"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "badges": [],
                     "cards": [
                         {
@@ -743,129 +951,6 @@
                     "icon": "mdi:tools",
                     "path": "maintenance",
                     "title": "Maintenance"
-                },
-                {
-                    "path": "air systems",
-                    "icon": "mdi:fan",
-                    "panel": false,
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "markdown",
-                                    "content": "# Systemair"
-                                },
-                                {
-                                    "type": "thermostat",
-                                    "entity": "climate.vsr500",
-                                    "name": "Temperatur"
-                                },
-                                {
-                                    "type": "conditional",
-                                    "conditions": [
-                                        {
-                                            "entity": "sensor.systemair_selected_modus",
-                                            "state": "Manuell"
-                                        }
-                                    ],
-                                    "card": {
-                                        "type": "entities",
-                                        "entities": [
-                                            {
-                                                "entity": "input_select.systemair_manual_air_flow"
-                                            }
-                                        ]
-                                    }
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "entity",
-                                            "entity": "sensor.systemair_selected_modus"
-                                        },
-                                        {
-                                            "type": "conditional",
-                                            "conditions": [
-                                                {
-                                                    "entity": "sensor.systemair_modus_countdown",
-                                                    "state_not": "Inaktiv"
-                                                }
-                                            ],
-                                            "card": {
-                                                "type": "entity",
-                                                "entity": "sensor.systemair_modus_countdown"
-                                            }
-                                        },
-                                        {
-                                            "type": "conditional",
-                                            "conditions": [
-                                                {
-                                                    "entity": "sensor.systemair_selected_modus",
-                                                    "state": "Manuell"
-                                                }
-                                            ],
-                                            "card": {
-                                                "type": "entity",
-                                                "entity": "sensor.systemair_air_flow"
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.systemair_temperature_intake"
-                                        },
-                                        {
-                                            "entity": "sensor.systemair_temperature_return"
-                                        },
-                                        {
-                                            "entity": "sensor.systemair_temperature_target"
-                                        },
-                                        {
-                                            "entity": "sensor.systemair_temperature_supply_air"
-                                        },
-                                        {
-                                            "entity": "sensor.systemair_temperature_over_heat"
-                                        },
-                                        {
-                                            "entity": "sensor.systemair_temperature_exhaust"
-                                        }
-                                    ],
-                                    "show_header_toggle": false,
-                                    "state_color": false,
-                                    "title": "Temperatur"
-                                },
-                                {
-                                    "type": "glance",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.systemair_fan_speed_intake"
-                                        },
-                                        {
-                                            "entity": "sensor.systemair_heat_recovery"
-                                        },
-                                        {
-                                            "entity": "sensor.systemair_fan_speed_exhaust"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.systemair_filter_change"
-                                        }
-                                    ],
-                                    "title": "Vedlikehold"
-                                }
-                            ]
-                        }
-                    ]
                 }
             ]
         }
