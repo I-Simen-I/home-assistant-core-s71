@@ -625,6 +625,9 @@
                                             "entity": "sensor.vaskeromsdor_battery"
                                         },
                                         {
+                                            "entity": "sensor.north_349_battery_level"
+                                        },
+                                        {
                                             "entity": "sensor.south_246_battery_level"
                                         },
                                         {
