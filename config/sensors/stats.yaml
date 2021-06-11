@@ -5,6 +5,7 @@
   entity_ids:
     - sensor.east_252_0_1_254
     - sensor.south_246_0_1_248
+    - sensor.north_349_0_1_351
 
 - platform: min_max
   name: outside_avg_humidity
@@ -13,6 +14,7 @@
   entity_ids:
     - sensor.east_252_0_3_256
     - sensor.south_246_0_3_250
+    - sensor.north_349_0_3_353
 
 - platform: min_max
   name: inside_avg_temperature
@@ -30,6 +32,7 @@
   entity_ids:
     - sensor.east_252_0_2_255
     - sensor.south_246_0_2_249
+    - sensor.north_349_0_2_352
 
 - platform: min_max
   name: inside_avg_humidity

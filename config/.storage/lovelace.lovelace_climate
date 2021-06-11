@@ -500,16 +500,16 @@
                                         {
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.east_252_0_2_255",
+                                                    "entity": "sensor.north_349_0_2_352",
                                                     "name": null
                                                 },
                                                 {
-                                                    "entity": "sensor.east_252_0_4_257",
+                                                    "entity": "sensor.north_349_0_4_354",
                                                     "name": null
                                                 }
                                             ],
                                             "entity": "sensor.multiple_entity_row_climate",
-                                            "name": "\u00d8st",
+                                            "name": "Nord",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         },
@@ -526,6 +526,22 @@
                                             ],
                                             "entity": "sensor.multiple_entity_row_climate",
                                             "name": "S\u00f8r",
+                                            "show_state": false,
+                                            "type": "custom:multiple-entity-row"
+                                        },
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.east_252_0_2_255",
+                                                    "name": null
+                                                },
+                                                {
+                                                    "entity": "sensor.east_252_0_4_257",
+                                                    "name": null
+                                                }
+                                            ],
+                                            "entity": "sensor.multiple_entity_row_climate",
+                                            "name": "\u00d8st",
                                             "show_state": false,
                                             "type": "custom:multiple-entity-row"
                                         }
@@ -571,49 +587,30 @@
                         {
                             "cards": [
                                 {
-                                    "content": "# UTE",
-                                    "type": "markdown"
-                                },
-                                {
-                                    "cards": [
+                                    "type": "entities",
+                                    "entities": [
                                         {
-                                            "entity": "sensor.east_252_0_1_254",
-                                            "max": 40,
-                                            "min": 0,
-                                            "name": "\u00d8st",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "entity": "sensor.north_349_0_1_351",
+                                            "name": "Nord",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.south_246_0_1_248",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "S\u00f8r",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
+                                        },
+                                        {
+                                            "entity": "sensor.east_252_0_1_254",
+                                            "name": "\u00d8st",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.netatmo_s70_outdoor_temperature",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "S70",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "title": "UTE"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -621,154 +618,67 @@
                         {
                             "cards": [
                                 {
-                                    "content": "# ETG 0",
-                                    "type": "markdown"
-                                },
-                                {
-                                    "cards": [
+                                    "type": "entities",
+                                    "entities": [
                                         {
                                             "entity": "sensor.stairway_228_0_1_230",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "Trapp",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.stairway_200_0_1_202",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "Tak",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.hall_194_0_1_196",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "Gang",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
+                                            "secondary_info": "last-updated"
+                                        },
                                         {
                                             "entity": "sensor.laundry_room_206_0_1_208",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "Vaskerom",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.technical_room_264_0_1_266",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "Teknisk rom",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "content": "# ETG 1",
-                                    "type": "markdown"
+                                    "title": "ETG 0"
                                 },
                                 {
-                                    "cards": [
+                                    "type": "entities",
+                                    "entities": [
                                         {
                                             "entity": "sensor.living_room_234_0_1_236",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "Stue",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.kitchen_258_0_1_260",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "Kj\u00f8kken",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "content": "# ETG 2",
-                                    "type": "markdown"
+                                    "title": "ETG 1"
                                 },
                                 {
-                                    "cards": [
+                                    "type": "entities",
+                                    "entities": [
                                         {
                                             "entity": "sensor.living_room_240_0_1_242",
-                                            "max": 40,
-                                            "min": 0,
-                                            "name": "Loftstue",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 26,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated",
+                                            "name": "Loftstue"
                                         },
                                         {
                                             "entity": "sensor.bedroom_293_0_1_295",
-                                            "max": 40,
-                                            "min": 0,
                                             "name": "Soverom",
-                                            "severity": {
-                                                "green": 17,
-                                                "red": 25,
-                                                "yellow": 23
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "title": "ETG 2"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -784,49 +694,30 @@
                         {
                             "cards": [
                                 {
-                                    "content": "# UTE",
-                                    "type": "markdown"
-                                },
-                                {
-                                    "cards": [
+                                    "type": "entities",
+                                    "entities": [
                                         {
-                                            "entity": "sensor.east_252_0_3_256",
-                                            "max": 100,
-                                            "min": 0,
-                                            "name": "\u00d8st",
-                                            "severity": {
-                                                "green": 25,
-                                                "red": 60,
-                                                "yellow": 40
-                                            },
-                                            "type": "gauge"
+                                            "entity": "sensor.north_349_0_3_353",
+                                            "name": "Nord",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.south_246_0_3_250",
-                                            "max": 100,
-                                            "min": 0,
                                             "name": "S\u00f8r",
-                                            "severity": {
-                                                "green": 25,
-                                                "red": 60,
-                                                "yellow": 40
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
+                                        },
+                                        {
+                                            "entity": "sensor.east_252_0_3_256",
+                                            "name": "\u00d8st",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.netatmo_s70_outdoor_humidity",
-                                            "max": 100,
-                                            "min": 0,
                                             "name": "S70",
-                                            "severity": {
-                                                "green": 25,
-                                                "red": 60,
-                                                "yellow": 40
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "title": "UTE"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -834,89 +725,42 @@
                         {
                             "cards": [
                                 {
-                                    "content": "# ETG 0",
-                                    "type": "markdown"
-                                },
-                                {
-                                    "cards": [
+                                    "type": "entities",
+                                    "entities": [
                                         {
                                             "entity": "sensor.stairway_228_0_3_232",
-                                            "max": 100,
-                                            "min": 0,
                                             "name": "Kjeller",
-                                            "severity": {
-                                                "green": 25,
-                                                "red": 60,
-                                                "yellow": 40
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "content": "# ETG 1",
-                                    "type": "markdown"
+                                    "title": "ETG 0"
                                 },
                                 {
-                                    "cards": [
+                                    "type": "entities",
+                                    "entities": [
                                         {
                                             "entity": "sensor.living_room_234_0_3_238",
-                                            "max": 100,
-                                            "min": 0,
                                             "name": "Stue",
-                                            "severity": {
-                                                "green": 25,
-                                                "red": 60,
-                                                "yellow": 40
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "content": "# ETG 2",
-                                    "type": "markdown"
+                                    "title": "ETG 1"
                                 },
                                 {
-                                    "cards": [
+                                    "type": "entities",
+                                    "entities": [
                                         {
                                             "entity": "sensor.living_room_240_0_3_244",
-                                            "max": 100,
-                                            "min": 0,
                                             "name": "Loftstue",
-                                            "severity": {
-                                                "green": 25,
-                                                "red": 60,
-                                                "yellow": 40
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.bedroom_293_0_2_296",
-                                            "max": 100,
-                                            "min": 0,
                                             "name": "Soverom",
-                                            "severity": {
-                                                "green": 25,
-                                                "red": 60,
-                                                "yellow": 40
-                                            },
-                                            "type": "gauge"
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
-                                    "type": "horizontal-stack"
+                                    "title": "ETG 2"
                                 }
                             ],
                             "type": "vertical-stack"
