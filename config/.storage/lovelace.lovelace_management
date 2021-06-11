@@ -943,7 +943,26 @@
                                         {
                                             "entity": "input_datetime.scene_alt_av"
                                         }
-                                    ]
+                                    ],
+                                    "title": "Alt av"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_number.scene_house_dag_lux"
+                                        }
+                                    ],
+                                    "title": "Dag"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_number.scene_house_kveld_lux"
+                                        }
+                                    ],
+                                    "title": "Kveld"
                                 }
                             ]
                         }

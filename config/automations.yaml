@@ -13,9 +13,9 @@
     - condition: state
       entity_id: input_boolean.scene_selskap
       state: 'off'
-    - condition: numeric_state
-      entity_id: sensor.outside_avg_lux
-      below: '200'
+    - condition: template
+      value_template: "{{ \n  float(states('input_number.scene_house_dag_lux')) >=\
+        \ float(states('sensor.outside_avg_lux'))\n}}"
     - condition: state
       entity_id: input_boolean.scene_dag
       state: 'off'
@@ -37,9 +37,9 @@
     - condition: state
       entity_id: input_boolean.scene_selskap
       state: 'off'
-    - condition: numeric_state
-      entity_id: sensor.outside_avg_lux
-      below: '300'
+    - condition: template
+      value_template: "{{ \n  float(states('input_number.scene_house_kveld_lux'))\
+        \ >= float(states('sensor.outside_avg_lux'))\n}}"
     - condition: state
       entity_id: input_boolean.scene_kveld
       state: 'off'

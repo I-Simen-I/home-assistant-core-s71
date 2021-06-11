@@ -42,6 +42,26 @@
                 "unit_of_measurement": "lux",
                 "mode": "slider",
                 "id": "cover_west_lux"
+            },
+            {
+                "min": 0.0,
+                "max": 500.0,
+                "name": "Aktiveres under",
+                "step": 50.0,
+                "unit_of_measurement": "lux",
+                "mode": "slider",
+                "id": "scene_house_kveld_lux",
+                "icon": "hass:brightness-5"
+            },
+            {
+                "min": 0.0,
+                "max": 500.0,
+                "name": "Aktiveres under",
+                "icon": "hass:brightness-5",
+                "step": 50.0,
+                "unit_of_measurement": "lux",
+                "mode": "slider",
+                "id": "scene_house_dag_lux"
             }
         ]
     }
