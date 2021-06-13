@@ -2,3 +2,8 @@
   name: UVC_G4_Bullet-West
   still_image_url: !secret g4_bullet_west_still_image_ip
   stream_source: !secret g4_bullet_west_stream_ip
+
+- platform: generic
+  name: UVC_G4_Bullet-East
+  still_image_url: !secret g4_bullet_east_still_image_ip
+  stream_source: !secret g4_bullet_east_stream_ip
