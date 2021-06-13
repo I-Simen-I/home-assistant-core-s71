@@ -248,3 +248,5 @@
       state: off
     input_boolean.scene_alt_av:
       state: on
+    input_boolean.cover_kitchendoor_auto:
+      state: on

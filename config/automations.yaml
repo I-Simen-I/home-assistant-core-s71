@@ -759,7 +759,8 @@
   - condition: template
     value_template: "{{ \n  float(states('sensor.east_252_0_2_255')) > float(states('input_number.cover_east_lux'))\
       \ and\n  states('binary_sensor.kitchen_258_0_259') == 'off' and\n  state_attr('cover.kitchen_278_1_281',\
-      \ 'current_position') != 0\n}}"
+      \ 'current_position') != 0 and\n  states('input_boolean.cover_kitchendoor_auto')\
+      \ == 'on'\n}}"
   action:
   - data: {}
     entity_id: cover.kitchen_278_1_281

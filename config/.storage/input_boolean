@@ -2,6 +2,12 @@
     "version": 1,
     "key": "input_boolean",
     "data": {
-        "items": []
+        "items": [
+            {
+                "name": "Auto",
+                "icon": "mdi:auto-download",
+                "id": "cover_kitchendoor_auto"
+            }
+        ]
     }
 }
