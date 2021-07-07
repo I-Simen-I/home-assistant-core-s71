@@ -1103,3 +1103,25 @@
   action:
   - service: script.vsr500_fan_speed_normal
   mode: single
+- id: '1623940642939'
+  alias: notify lamp watt usage if lamps are off
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.counter_power_usage_lights
+    above: '0'
+    for: 00:02:00
+  condition:
+  - condition: state
+    entity_id: sensor.counter_lights_on
+    state: '0'
+  action:
+  - service: notify.mobile_app_oneplus_9_pro
+    data:
+      title: Sensorfeil på lys
+      message: '{{states(''sensor.counter_lights_on'')}} lys er på, men lysene bruker
+        {{states(''sensor.counter_power_usage_lights'')}}w'
+      data:
+        clickAction: /lovelace-stats/live-powerusage
+        color: red
+  mode: single
