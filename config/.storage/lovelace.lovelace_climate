@@ -500,11 +500,11 @@
                                         {
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.north_349_0_2_352",
+                                                    "entity": "sensor.north_355_0_2_358",
                                                     "name": null
                                                 },
                                                 {
-                                                    "entity": "sensor.north_349_0_4_354",
+                                                    "entity": "sensor.north_355_0_4_360",
                                                     "name": null
                                                 }
                                             ],
@@ -590,7 +590,7 @@
                                     "type": "entities",
                                     "entities": [
                                         {
-                                            "entity": "sensor.north_349_0_1_351",
+                                            "entity": "sensor.north_355_0_1_357",
                                             "name": "Nord",
                                             "secondary_info": "last-updated"
                                         },
@@ -697,7 +697,7 @@
                                     "type": "entities",
                                     "entities": [
                                         {
-                                            "entity": "sensor.north_349_0_3_353",
+                                            "entity": "sensor.north_355_0_3_359",
                                             "name": "Nord",
                                             "secondary_info": "last-updated"
                                         },

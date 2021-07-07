@@ -632,7 +632,7 @@
                                             "secondary_info": "last-updated"
                                         },
                                         {
-                                            "entity": "sensor.north_349_battery_level",
+                                            "entity": "sensor.north_355_battery_level",
                                             "secondary_info": "last-updated"
                                         },
                                         {

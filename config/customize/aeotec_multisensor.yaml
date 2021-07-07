@@ -40,13 +40,13 @@ sensor.south_246_0_2_249:
   friendly_name: Belysning
 
 # UTE - North
-sensor.north_349_0_1_351:
+sensor.north_355_0_1_357:
   friendly_name: Temperatur
 
-sensor.north_349_0_3_353:
+sensor.north_355_0_3_359:
   friendly_name: Luftfuktighet
 
-sensor.north_349_0_2_352:
+sensor.north_355_0_2_358:
   friendly_name: Belysning
 
 # STATS

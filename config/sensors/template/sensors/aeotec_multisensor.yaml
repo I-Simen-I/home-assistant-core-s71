@@ -33,9 +33,9 @@ south_246_battery_level:
   value_template: >-
     {{ state_attr('binary_sensor.south_246_0_247', 'battery_level') }}
 
-north_349_battery_level:
+north_355_battery_level:
   friendly_name: 'Klimasensor Ute-Nord'
   icon_template: "mdi:battery-70"
   unit_of_measurement: "%"
   value_template: >-
-    {{ state_attr('binary_sensor.north_349_0_350', 'battery_level') }}
+    {{ state_attr('binary_sensor.north_355_0_356', 'battery_level') }}
