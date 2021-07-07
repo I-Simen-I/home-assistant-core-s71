@@ -596,17 +596,21 @@
                                     "entities": [
                                         {
                                             "entity": "sensor.oneplus_9_pro_battery_level",
-                                            "name": "Simen sin OnePlus 9 Pro Battery Level"
+                                            "name": "Simen sin OnePlus 9 Pro Battery Level",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
-                                            "entity": "sensor.simen_sin_ipad_battery_level"
+                                            "entity": "sensor.simen_sin_ipad_battery_level",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
                                             "entity": "sensor.simens_galaxy_s10_battery_level",
-                                            "name": "Simen sin Galaxy S10+ Battery Level"
+                                            "name": "Simen sin Galaxy S10+ Battery Level",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
-                                            "entity": "sensor.nora_sin_iphone_battery_level"
+                                            "entity": "sensor.nora_sin_iphone_battery_level",
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
                                     "show_header_toggle": false,
@@ -616,22 +620,28 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.front_door_battery"
+                                            "entity": "sensor.front_door_battery",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
-                                            "entity": "sensor.inngangsdor_battery"
+                                            "entity": "sensor.inngangsdor_battery",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
-                                            "entity": "sensor.vaskeromsdor_battery"
+                                            "entity": "sensor.vaskeromsdor_battery",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
-                                            "entity": "sensor.north_349_battery_level"
+                                            "entity": "sensor.north_349_battery_level",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
-                                            "entity": "sensor.south_246_battery_level"
+                                            "entity": "sensor.south_246_battery_level",
+                                            "secondary_info": "last-updated"
                                         },
                                         {
-                                            "entity": "sensor.east_252_battery_level"
+                                            "entity": "sensor.east_252_battery_level",
+                                            "secondary_info": "last-updated"
                                         }
                                     ],
                                     "title": "Ute",
@@ -642,52 +652,68 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "sensor.fibaro_door_sensor_battery_level_laundry_room"
+                                    "entity": "sensor.fibaro_door_sensor_battery_level_laundry_room",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_motion_sensor_battery_level_etg0_hall"
+                                    "entity": "sensor.fibaro_motion_sensor_battery_level_etg0_hall",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_motion_sensor_battery_level_etg0_stairway"
+                                    "entity": "sensor.fibaro_motion_sensor_battery_level_etg0_stairway",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.stairway_228_battery_level"
+                                    "entity": "sensor.stairway_228_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.living_room_234_battery_level"
+                                    "entity": "sensor.living_room_234_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.living_room_240_battery_level"
+                                    "entity": "sensor.living_room_240_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_door_sensor_battery_level_kitchen"
+                                    "entity": "sensor.fibaro_door_sensor_battery_level_kitchen",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.fibaro_door_sensor_battery_level_technical_room"
+                                    "entity": "sensor.fibaro_door_sensor_battery_level_technical_room",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_1_battery_level"
+                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_1_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_2_battery_level"
+                                    "entity": "sensor.sensative_strips_guard_living_room_window_east_2_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.sensative_strips_guard_bedroom_window_battery_level"
+                                    "entity": "sensor.sensative_strips_guard_bedroom_window_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_1_battery_level"
+                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_1_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_2_battery_level"
+                                    "entity": "sensor.sensative_strips_guard_walk_in_closet_window_2_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.sensative_strips_guard_kitchen_window_1_battery_level"
+                                    "entity": "sensor.sensative_strips_guard_kitchen_window_1_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.sensative_strips_guard_kitchen_window_2_battery_level"
+                                    "entity": "sensor.sensative_strips_guard_kitchen_window_2_battery_level",
+                                    "secondary_info": "last-updated"
                                 },
                                 {
-                                    "entity": "sensor.bedroom_293_0_1_295_battery_level"
+                                    "entity": "sensor.bedroom_293_0_1_295_battery_level",
+                                    "secondary_info": "last-updated"
                                 }
                             ],
                             "show_header_toggle": false,
