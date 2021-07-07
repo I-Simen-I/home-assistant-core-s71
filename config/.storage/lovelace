@@ -400,7 +400,6 @@
                         },
                         {
                             "aspect_ratio": "50%",
-                            "camera_image": "camera.front_door",
                             "entity": "camera.uvc_g4_bullet_west",
                             "name": "G\u00e5rdsplassen",
                             "show_name": true,
@@ -814,6 +813,19 @@
                                         },
                                         {
                                             "entities": [
+                                                {
+                                                    "entity": "input_boolean.cover_kitchendoor_auto",
+                                                    "name": null,
+                                                    "icon": null,
+                                                    "state_color": true,
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "input_boolean.toggle",
+                                                        "service_data": {
+                                                            "entity_id": "input_boolean.cover_kitchendoor_auto"
+                                                        }
+                                                    }
+                                                },
                                                 {
                                                     "entity": "sensor.fibaro_door_sensor_kitchen",
                                                     "name": "Status"
