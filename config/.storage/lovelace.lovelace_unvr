@@ -27,22 +27,17 @@
                                     ]
                                 },
                                 {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "picture-entity",
-                                            "entity": "camera.uvc_g4_bullet_east",
-                                            "show_state": false,
-                                            "name": "Terrasse",
-                                            "camera_view": "live"
-                                        },
-                                        {
-                                            "type": "picture-entity",
-                                            "entity": "camera.front_door",
-                                            "show_state": false,
-                                            "name": "Inngangsparti"
-                                        }
-                                    ]
+                                    "type": "picture-entity",
+                                    "entity": "camera.uvc_g4_bullet_east",
+                                    "show_state": false,
+                                    "name": "Terrasse",
+                                    "camera_view": "live"
+                                },
+                                {
+                                    "type": "picture-entity",
+                                    "entity": "camera.front_door",
+                                    "show_state": false,
+                                    "name": "Inngangsparti"
                                 }
                             ]
                         }
