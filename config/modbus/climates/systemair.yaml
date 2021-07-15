@@ -9,4 +9,4 @@
   min_temp: 15
   temp_step: 1
   target_temp_register: 2000
-  current_temp_register: 12102
+  address: 12102
