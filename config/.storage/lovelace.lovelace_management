@@ -556,6 +556,18 @@
                                             "entity": "sensor.systemair_temperature_supply_air"
                                         },
                                         {
+                                            "entity": "sensor.stairway_228_0_1_230",
+                                            "name": "Etg 0"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_234_0_1_236",
+                                            "name": "Etg 1"
+                                        },
+                                        {
+                                            "entity": "sensor.living_room_240_0_1_242",
+                                            "name": "Etg 2"
+                                        },
+                                        {
                                             "entity": "sensor.systemair_temperature_over_heat"
                                         },
                                         {
